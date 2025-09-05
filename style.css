@@ -174,6 +174,252 @@ body {
     }
 }
 
+/* Navigation Bar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navbar.visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar.scrolled {
+    background: transparent;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    position: relative;
+}
+
+.navbar-logo {
+    flex-shrink: 0;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+    color: #4ecdc4;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 800px;
+}
+
+.navbar-item {
+    position: relative;
+}
+
+.navbar-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+    transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #4ecdc4;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Toggle */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 1rem 1.5rem;
+    }
+    
+    .navbar-toggle {
+        display: flex;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 300px;
+        max-height: calc(100vh - 100px);
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 2px solid #4ecdc4;
+        border-radius: 12px 0 0 12px;
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .navbar-menu.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .navbar-item {
+        position: relative;
+        padding-left: 2rem;
+    }
+    
+    .navbar-item::before {
+        content: '▶';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #4ecdc4;
+        font-size: 0.8rem;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-item:hover::before {
+        color: #45b7d1;
+        transform: translateY(-50%) translateX(5px);
+    }
+    
+    .navbar-link {
+        font-size: 1.1rem;
+        padding: 0.75rem 0;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Custom scrollbar for mobile menu */
+    .navbar-menu::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #4ecdc4, #45b7d1);
+        border-radius: 3px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #45b7d1, #4ecdc4);
+    }
+    
+    .logo-link {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0.75rem 1rem;
+    }
+    
+    .navbar-menu {
+        width: 280px;
+        max-height: calc(100vh - 100px);
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .navbar-link {
+        font-size: 1rem;
+    }
+    
+    .logo-link {
+        font-size: 1.2rem;
+    }
+}
+
+
 /* Progress Bar Styles */
 .progress-container {
     position: fixed;
@@ -630,10 +876,29 @@ body {
 .smiley-container .roaming-particle:nth-child(9) { top: 15px; left: 40px; } /* Forehead */
 .smiley-container .roaming-particle:nth-child(10) { top: 15px; right: 40px; } /* Forehead */
 
+/* Hero section adjustments for navbar */
+#hero {
+    padding-top: 0; /* No padding initially since navbar is hidden */
+    transition: padding-top 0.3s ease;
+}
+
+/* Add padding when navbar becomes visible */
+body.navbar-visible #hero {
+    padding-top: 80px;
+}
+
 /* Responsive adjustments for all effects */
 
 /* Mobile devices */
 @media (max-width: 768px) {
+    .navbar-container {
+        padding: 1rem 1.5rem;
+    }
+    
+    .navbar-menu {
+        gap: 2rem;
+    }
+    
     /* Particle effects */
     .roaming-particle {
         width: 3px;
@@ -709,6 +974,94 @@ body {
 
 /* Tablet devices */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .navbar-container {
+        padding: 1.25rem 2rem;
+    }
+    
+    .navbar-menu {
+        gap: 2.5rem;
+    }
+    
+    .navbar-toggle {
+        display: flex;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 320px;
+        max-height: calc(100vh - 100px);
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 2px solid #4ecdc4;
+        border-radius: 12px 0 0 12px;
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .navbar-menu.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .navbar-item {
+        position: relative;
+        padding-left: 2rem;
+    }
+    
+    .navbar-item::before {
+        content: '▶';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #4ecdc4;
+        font-size: 0.8rem;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-item:hover::before {
+        color: #45b7d1;
+        transform: translateY(-50%) translateX(5px);
+    }
+    
+    .navbar-link {
+        font-size: 1rem;
+        padding: 0.75rem 0;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Custom scrollbar for tablet menu */
+    .navbar-menu::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #4ecdc4, #45b7d1);
+        border-radius: 3px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #45b7d1, #4ecdc4);
+    }
+    
     /* Particle effects */
     .roaming-particle {
         width: 3.5px;

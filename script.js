@@ -680,8 +680,120 @@ function initRoamingParticles() {
     }
 }
 
+// Mobile Navigation Menu
+function initMobileMenu() {
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarMenu = document.getElementById('navbar-menu');
+    const navbarLinks = document.querySelectorAll('.navbar-link');
+    
+    if (!navbarToggle || !navbarMenu) return;
+    
+    // Toggle mobile menu
+    navbarToggle.addEventListener('click', () => {
+        navbarToggle.classList.toggle('active');
+        navbarMenu.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (navbarMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close menu when clicking on a link
+    navbarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbarToggle.classList.remove('active');
+            navbarMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+            navbarToggle.classList.remove('active');
+            navbarMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navbarMenu.classList.contains('active')) {
+            navbarToggle.classList.remove('active');
+            navbarMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// Smooth scrolling for navbar links
+function initNavbarSmoothScroll() {
+    const navbarLinks = document.querySelectorAll('.navbar-link');
+    
+    navbarLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // Check if navbar is visible to determine offset
+                const navbar = document.getElementById('navbar');
+                const navbarHeight = navbar.classList.contains('visible') ? 80 : 0;
+                const offsetTop = targetElement.offsetTop - navbarHeight;
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// Navbar scroll effect
+function initNavbarScrollEffect() {
+    const navbar = document.getElementById('navbar');
+    let lastScrollTop = 0;
+    let isNavbarVisible = false;
+    
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const documentHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / documentHeight) * 100;
+        
+        // Show navbar when scrolling down to 5%
+        if (scrollPercent >= 5 && !isNavbarVisible) {
+            navbar.classList.add('visible');
+            document.body.classList.add('navbar-visible');
+            isNavbarVisible = true;
+        }
+        
+        // Keep navbar visible once it appears
+        if (isNavbarVisible) {
+            navbar.classList.add('visible');
+            document.body.classList.add('navbar-visible');
+        }
+        
+        // Add/remove scrolled class for styling (optional)
+        if (scrollTop > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+}
+
 // Initialize effects
 createMouseTrail();
+initMobileMenu();
+initNavbarSmoothScroll();
+initNavbarScrollEffect();
 
 // Initialize particles after DOM is ready
 if (document.readyState === 'loading') {
