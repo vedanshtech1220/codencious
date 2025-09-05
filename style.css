@@ -34,10 +34,12 @@ body {
 
 .section-heading {
     /* Using Tailwind classes in HTML instead */
+    font-size: 1.75rem;
 }
  
 .sub-heading {
     /* Using Tailwind classes in HTML instead */
+    font-size:3rem;
 }
 
 .divider {
@@ -1257,3 +1259,7 @@ body.navbar-visible #hero {
 
 
 
+/* this added by me new */
+.mt-6{
+    font-size: 1.25rem;
+}
