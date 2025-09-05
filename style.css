@@ -653,7 +653,7 @@ body {
     height: 200px;
     margin: 20px auto;
 }
-
+/* 
 .logo-particle {
     position: absolute;
     width: 2px;
@@ -664,45 +664,45 @@ body {
     transform: translate(0, 0);
     transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
-}
+} */
 
-.logo-particle.forming {
+/* .logo-particle.forming {
     opacity: 1;
     transform: translate(0, 0);
-}
-
+} */
+/* 
 .logo-particle.scattered {
     opacity: 0.6;
     transform: translate(var(--scatter-x, 0), var(--scatter-y, 0));
-}
+} */
 
-.logo-particle.node {
+/* .logo-particle.node {
     width: 3px;
     height: 3px;
     background: #4ecdc4;
     box-shadow: 0 0 8px rgba(78, 205, 196, 0.9);
-}
+} */
 
-.logo-particle.line {
+/* .logo-particle.line {
     width: 1px;
     height: 1px;
     background: #ffffff;
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
-}
+} */
 
-.logo-particle.central {
+/* .logo-particle.central {
     width: 2px;
     height: 2px;
     background: #ff6b6b;
     box-shadow: 0 0 6px rgba(255, 107, 107, 0.8);
-}
+} */
 
 /* Logo formation animation */
-.logo-particle-container.animate .logo-particle {
+/* .logo-particle-container.animate .logo-particle {
     animation: logoForm 0.5s ease-out forwards;
-}
+} */
 
-@keyframes logoForm {
+/* @keyframes logoForm {
     0% {
         opacity: 0;
         transform: scale(0) translate(var(--scatter-x, 0), var(--scatter-y, 0));
@@ -711,7 +711,7 @@ body {
         opacity: 1;
         transform: scale(1) translate(0, 0);
     }
-}
+} */
 
 /* Particle text hover effects */
 .particle-text:hover .particle {
@@ -812,7 +812,7 @@ body {
 
 /* Different colors for variety */
 .roaming-particle:nth-child(3n) {
-    background: #ff6b6b;
+    background: #4ecdc4;
     box-shadow: 0 0 6px rgba(255, 107, 107, 0.6);
 }
 
@@ -827,7 +827,7 @@ body {
 }
 
 .roaming-particle:nth-child(11n) {
-    background: #feca57;
+    background: #4ecdc4;
     box-shadow: 0 0 6px rgba(254, 202, 87, 0.6);
 }
 
@@ -850,21 +850,21 @@ body {
 }
 
 /* Smiley face formation */
-.smiley-container {
+/* .smiley-container {
     position: absolute;
     width: 80px;
     height: 80px;
     pointer-events: none;
-}
+} */
 
-.smiley-container .roaming-particle {
+/* .smiley-container .roaming-particle {
     position: absolute;
     width: 4px;
     height: 4px;
     background: #4ecdc4;
     border-radius: 50%;
     box-shadow: 0 0 8px rgba(78, 205, 196, 0.8);
-}
+} */
 
 /* Smiley face positions */
 .smiley-container .roaming-particle:nth-child(1) { top: 10px; left: 20px; } /* Left eye */
