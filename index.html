@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codenscious - A Modern Enterprise</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Section Progress Indicators -->
+    <div class="section-progress" id="sectionProgress">
+        <div class="progress-dot" data-section="hero"></div>
+        <div class="progress-dot" data-section="about"></div>
+        <div class="progress-dot" data-section="services"></div>
+        <div class="progress-dot" data-section="products"></div>
+        <div class="progress-dot" data-section="projects"></div>
+        <div class="progress-dot" data-section="research"></div>
+        <div class="progress-dot" data-section="contact"></div>
+    </div>
+
+    <main>
+
+        <section id="hero" class="scroll-snap-section h-screen w-full flex flex-col justify-center items-center text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-black z-10"></div>
+            <div class="absolute inset-0 z-0 opacity-20" style="background-image: url('https://images.pexels.com/photos/1212487/pexels-photo-1212487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center;"></div>
+            
+            <!-- Roaming Particles -->
+            <div class="particle-field" id="particleField"></div>
+            
+            <div class="relative z-20 p-6 fade-in is-visible">
+                <p class="sub-heading mb-4">Introducing</p>
+                <div class="relative inline-block mb-4">
+                    <svg class="absolute -top-8 -left-8 w-20 h-20 text-gray-700 floating" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    <h1 class="heading-font text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter">
+                        Codenscious
+                    </h1>
+                </div>
+                <p class="text-base tracking-widest uppercase">By Design</p>
+            </div>
+        </section>
+
+        <section class="parallax-section" style="background-image: url('https://images.pexels.com/photos/2156881/pexels-photo-2156881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content container mx-auto px-6 pt-32 md:pt-40 pb-24 md:pb-32 text-left max-w-4xl">
+                 <div class="fade-in">
+                    <h2 class="heading-font text-5xl md:text-7xl leading-tight">
+                        <span class="text-gray-400">This is not just code.</span><br>
+                        This is a framework for innovation.
+                    </h2>
+                    <p class="mt-8 text-gray-300 leading-relaxed text-base">
+                        Welcome to Codenscious. Where clarity is currency, narrative is the framework, and technology is engineered for signal over noise. We have a point of view. A process that works. And a bias for working with decision-makers ready to lead with conviction. We believe in the power of well-architected systems. In positioning that closes the gap between product and market.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="scroll-snap-section bg-black">
+            <div class="container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-left">
+                    <p class="sub-heading">About Codenscious</p>
+                    <div class="divider"></div>
+                    <h2 class="section-heading">Innovation Meets Functionality.</h2>
+                    <p class="text-gray-400 mt-6 leading-relaxed">
+                        From concept to deployment, we work closely with you to understand your unique needs and deliver tailored solutions that drive growth and success. Partner with Codenscious to experience excellence in development, where innovation meets functionality to create exceptional digital experiences.
+                    </p>
+                     <ul class="mt-6 space-y-3 text-gray-300">
+                        <li>- Lack of clarity around AI readiness, integration, or positioning.</li>
+                        <li>- Missed opportunities due to fragmented go-to-market strategy.</li>
+                        <li>- Disconnection between brand promise and internal narrative.</li>
+                    </ul>
+                </div>
+                <div class="fade-in-right flex justify-center items-center h-full">
+                   <img src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="max-w-md w-full object-cover rounded" alt="Abstract geometric shape"/>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services" class="scroll-snap-section parallax-section tech-section" style="background-image: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content container mx-auto px-6 py-24 md:py-32">
+                 <div class="max-w-2xl fade-in">
+                    <p class="sub-heading">Our Services</p>
+                    <div class="divider"></div>
+                    <h2 class="section-heading">Elevating Industries Through Innovative Solutions.</h2>
+                </div>
+                <div class="mt-16 space-y-12">
+                    <div class="grid md:grid-cols-3 gap-8 items-start fade-in">
+                        <h3 class="heading-font text-3xl md:col-span-1 glitch" data-text="Artificial Intelligence">Artificial Intelligence</h3>
+                        <p class="text-gray-400 md:col-span-2 text-base">At Codenscious, we're redefining possibilities with AI. Our state-of-the-art solutions are designed to push the boundaries of intelligent automation, delivering unparalleled performance and efficiency.</p>
+                    </div>
+                    <hr class="border-gray-800"/>
+                     <div class="grid md:grid-cols-3 gap-8 items-start fade-in" style="transition-delay: 100ms;">
+                        <h3 class="heading-font text-3xl md:col-span-1 glitch" data-text="Software Development">Software Development</h3>
+                        <p class="text-gray-400 md:col-span-2 text-base">We specialize in innovative software development for web and mobile platforms. Our expert team is dedicated to transforming your ideas into high-performing, user-friendly applications that exceed expectations.</p>
+                    </div>
+                     <hr class="border-gray-800"/>
+                      <div class="grid md:grid-cols-3 gap-8 items-start fade-in" style="transition-delay: 200ms;">
+                        <h3 class="heading-font text-3xl md:col-span-1 glitch" data-text="Data Science & Consulting">Data Science & Consulting</h3>
+                        <p class="text-gray-400 md:col-span-2 text-base">Unlock insights with expert data science consulting. Our team of seasoned data scientists uses cutting-edge techniques and predictive analytics to uncover hidden patterns and provide strategic insights.</p>
+                    </div>
+                     <hr class="border-gray-800"/>
+                     <div class="grid md:grid-cols-3 gap-8 items-start fade-in" style="transition-delay: 300ms;">
+                        <h3 class="heading-font text-3xl md:col-span-1 glitch" data-text="Corporate Trainings">Corporate Trainings</h3>
+                        <p class="text-gray-400 md:col-span-2 text-base">Empower your workforce with our cutting-edge corporate training programs in Artificial Intelligence (AI) and Machine Learning (ML), designed to equip your team with the skills needed to harness the power of AI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="scroll-snap-section bg-black">
+            <div class="container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-left">
+                    <p class="sub-heading">Our Products</p>
+                    <div class="divider"></div>
+                    <h2 class="section-heading">Procqy – AI-Powered Procurement.</h2>
+                    <p class="text-gray-400 mt-6 leading-relaxed">
+                        Smarter, faster, and future-ready procurement. Procqy is Codenscious.ai's secure, cloud-based AI platform that transforms procurement and materials management.
+                    </p>
+                     <ul class="mt-8 space-y-4 text-gray-300 text-base">
+                        <li><strong>Eliminates Errors:</strong> Automated workflows replace manual processes.</li>
+                        <li><strong>Data-Driven:</strong> Real-time analytics & reporting.</li>
+                        <li><strong>End-to-End Control:</strong> Store, purchase, gate entry, admin modules.</li>
+                        <li><strong>Custom Approvals:</strong> Tailored workflows for faster decisions.</li>
+                    </ul>
+                </div>
+                <div class="fade-in-right flex justify-center items-center h-full">
+                   <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="max-w-md w-full object-cover rounded" alt="Procqy Platform Dashboard"/>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="scroll-snap-section bg-black">
+            <div class="container mx-auto px-6 py-24 md:py-32">
+                <div class="max-w-2xl fade-in">
+                     <p class="sub-heading">Our Projects</p>
+                     <div class="divider"></div>
+                     <h2 class="section-heading">Choose your Arena, Discover our Innovation.</h2>
+                     <p class="mt-6 text-gray-400">Our experiences are outcome-driven offerings designed to deliver results within a defined timeframe.</p>
+                </div>
+                <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group stagger-reveal scroll-aware-hover">
+                        <div class="overflow-hidden">
+                            <img src="https://images.pexels.com/photos/5952236/pexels-photo-5952236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Surveillance" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        </div>
+                        <h3 class="heading-font text-2xl mt-4 text-reveal">Surveillance</h3>
+                        <a href="#" class="text-xs uppercase tracking-widest text-gray-500 hover:text-white transition-colors duration-300 mt-2 inline-block">Learn More</a>
+                    </div>
+                    <div class="group stagger-reveal scroll-aware-hover">
+                         <div class="overflow-hidden">
+                            <img src="https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Finance" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        </div>
+                        <h3 class="heading-font text-2xl mt-4 text-reveal">Finance</h3>
+                        <a href="#" class="text-xs uppercase tracking-widest text-gray-500 hover:text-white transition-colors duration-300 mt-2 inline-block">Learn More</a>
+                    </div>
+                     <div class="group stagger-reveal scroll-aware-hover">
+                         <div class="overflow-hidden">
+                           <img src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Manufacturing" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        </div>
+                        <h3 class="heading-font text-2xl mt-4 text-reveal">Manufacturing</h3>
+                         <a href="#" class="text-xs uppercase tracking-widest text-gray-500 hover:text-white transition-colors duration-300 mt-2 inline-block">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="scroll-snap-section parallax-section" style="background-image: url('https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-left">
+                    <p class="sub-heading">Research & Innovation</p>
+                    <div class="divider"></div>
+                    <h2 class="section-heading">Explore our Brain Computer Interface Research.</h2>
+                    <p class="text-gray-400 mt-6 leading-relaxed">
+                        Established in 2017, Codenscious is one of the first AI Companies in Indore dedicated to our mission of developing world-class technology. For the last few years, the company has been involved in developing cutting-edge technology for diverse areas such as manufacturing, healthcare, security, finance, and retail.
+                    </p>
+                     <blockquote class="mt-8 border-l-2 border-gray-600 pl-6 text-gray-300 italic">
+                        "For the first time in over a decade, I get to advise leaders with no product to push, no agenda to advance. Just service, strategy, and clarity."
+                    </blockquote>
+                </div>
+                 <div class="fade-in-right flex justify-center items-center">
+                    <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="w-full max-w-md object-cover" alt="Founder with BCI headset">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="scroll-snap-section bg-black">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                 <div class="max-w-2xl mx-auto fade-in">
+                    <p class="sub-heading mb-4">Our Method. Your Moment.</p>
+                    <h2 class="heading-font text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter">
+                        Contact Us
+                    </h2>
+                    <form class="mt-12 text-left space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Your Name and Title *" class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300">
+                            <input type="email" placeholder="Your Email *" class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300">
+                        </div>
+                         <div class="grid sm:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Company Name *" class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300">
+                            <input type="text" placeholder="Size or stage of your company? *" class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300">
+                        </div>
+                        <div>
+                            <textarea placeholder="What problems are you trying to solve? *" rows="5" class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn">Submit Your Request</button>
+                        </div>
+                    </form>
+               </div>
+            </div>
+        </section>
+        
+        <footer class="bg-black border-t border-gray-900">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                 <p class="sub-heading">Our Clients</p>
+                 <h2 class="heading-font text-3xl mt-4">Trusted By The Best</h2>
+                 <div class="mt-12 flex justify-center items-center gap-10 md:gap-16 flex-wrap">
+                     <img src="https://companieslogo.com/img/orig/ADANIPOWER.NS-625514f7.png?t=1669433230" alt="Adani Power" class="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"/>
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Cyient_logo.svg/2560px-Cyient_logo.svg.png" alt="Cyient" class="h-7 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"/>
+                     <img src="https://logowik.com/content/uploads/images/deloitte-new-20224971.jpg" alt="Deloitte" class="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                     <img src="https://1000logos.net/wp-content/uploads/2021/09/Genpact-Logo.png" alt="Genpact" class="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Unisys_logo.svg/2560px-Unisys_logo.svg.png" alt="Unisys" class="h-7 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"/>
+                </div>
+                <p class="text-gray-600 text-sm mt-24">&copy; 2025 Codenscious. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
