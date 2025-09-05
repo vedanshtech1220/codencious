@@ -75,7 +75,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    min-height: 100vh; /* Make sure it always fills the viewport */
+    scroll-snap-align: start; /* optional: makes scrolling snap cleanly */
 }
+
 .parallax-overlay {
     position: absolute;
     inset: 0;
