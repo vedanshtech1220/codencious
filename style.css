@@ -1,0 +1,1453 @@
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    background-color: #000000;
+    color: #F8F8F8;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Reusable component classes */
+.heading-font {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Note: The original code had @apply rules for .btn and .section-container.
+  Since @apply is a Tailwind directive, it only works inside a CSS file 
+  that is processed by Tailwind. For this separated file to work directly
+  with the CDN, you would need to replace these with standard CSS or 
+  manually add the Tailwind classes to the HTML elements.
+  
+  Example for .btn: 
+  The HTML already has <button class="btn">.
+  You'd change it to:
+  <button class="inline-block border border-gray-600 px-8 py-3 text-sm font-medium tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-black hover:-translate-y-1 transform">
+  
+  Since the original code did not actually use the @apply directives in the final CSS (they were commented out or applied directly in HTML), the CSS below is correct. 
+  The .btn class was unused in the <style> block.
+*/
+
+.section-heading {
+    /* Using Tailwind classes in HTML instead */
+    font-size: 1.75rem;
+    padding-left: 50px;
+}
+ 
+.sub-heading {
+    /* Using Tailwind classes in HTML instead */
+    font-size:3rem;
+    padding-left: 50px;
+}
+
+/* .divider intentionally styled via inline utility classes in HTML */
+ 
+/* Snappy fade-in animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s cubic-bezier(0.65, 0, 0.35, 1), transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+ 
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.4s cubic-bezier(0.65, 0, 0.35, 1), transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+ 
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.4s cubic-bezier(0.65, 0, 0.35, 1), transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.is-visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
+
+/* Parallax Effect */
+.parallax-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh; /* Make sure it always fills the viewport */
+    scroll-snap-align: start; /* optional: makes scrolling snap cleanly */
+}
+
+.parallax-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+.parallax-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Glitch Effects */
+.glitch {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.glitch::before {
+    animation: glitch-1 0.5s infinite;
+    color: #ff0000;
+    z-index: -1;
+}
+
+.glitch::after {
+    animation: glitch-2 0.5s infinite;
+    color: #00ff00;
+    z-index: -2;
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
+    animation-play-state: running;
+}
+
+.glitch::before,
+.glitch::after {
+    animation-play-state: paused;
+}
+
+@keyframes glitch-1 {
+    0%, 14%, 15%, 49%, 50%, 99%, 100% {
+        transform: translate(0);
+    }
+    15%, 49% {
+        transform: translate(-2px, 2px);
+    }
+}
+
+@keyframes glitch-2 {
+    0%, 20%, 21%, 62%, 63%, 99%, 100% {
+        transform: translate(0);
+    }
+    21%, 62% {
+        transform: translate(2px, -2px);
+    }
+}
+
+/* Tech Section Glitch Effect */
+.tech-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 255, 0.1), transparent);
+    animation: tech-scan 3s infinite;
+    z-index: 1;
+}
+
+@keyframes tech-scan {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navbar.visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(78, 205, 196, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Reduce navbar height when scrolled */
+.navbar.scrolled .navbar-container {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.navbar-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 2rem;
+    padding: 1.5rem 1rem 1.5rem 3rem;
+    position: relative;
+    transition: padding 0.3s ease;
+}
+
+.navbar-logo {
+    flex-shrink: 0;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    padding-left: 90px;
+}
+
+.logo-link:hover {
+    color: #4ecdc4;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+/* Ensure equal spacing purely via flex gap */
+.navbar-menu .navbar-item:first-child .navbar-link,
+.navbar-menu .navbar-item:last-child .navbar-link { padding-left: 0; padding-right: 0; }
+
+/* Right-aligned CTA (desktop) */
+.navbar-cta {
+    display: none;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(78,205,196,0.15), rgba(69,183,209,0.15));
+    border: 1px solid rgba(78,205,196,0.55);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    transition: all 0.25s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.35);
+    background: linear-gradient(135deg, rgba(78,205,196,0.25), rgba(69,183,209,0.25));
+    border-color: rgba(69,183,209,0.75);
+}
+
+/* Hide in-menu Contact on desktop; show CTA */
+.navbar-item--contact { display: none; }
+
+@media (min-width: 1025px) {
+    .navbar-container { padding: 1.5rem 1rem 1.5rem 1.25rem; }
+    .navbar-cta { display: block; }
+    .navbar-item--contact { display: none; }
+    .navbar-menu { gap: 2rem; padding-right: 0; }
+}
+
+.navbar-item {
+    position: relative;
+}
+
+.navbar-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+    transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #4ecdc4;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Toggle */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 1rem 1.5rem;
+    }
+    .navbar-cta { display: none; }
+    .navbar-item--contact { display: block; }
+    
+    .navbar-toggle {
+        display: flex;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 300px;
+        max-height: calc(100vh - 100px);
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 2px solid #4ecdc4;
+        border-radius: 12px 0 0 12px;
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .navbar-menu.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .navbar-item {
+        position: relative;
+        padding-left: 2rem;
+    }
+    
+    .navbar-item::before {
+        content: '▶';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #4ecdc4;
+        font-size: 0.8rem;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-item:hover::before {
+        color: #45b7d1;
+        transform: translateY(-50%) translateX(5px);
+    }
+    
+    .navbar-link {
+        font-size: 1.1rem;
+        padding: 0.75rem 0;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Custom scrollbar for mobile menu */
+    .navbar-menu::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #4ecdc4, #45b7d1);
+        border-radius: 3px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #45b7d1, #4ecdc4);
+    }
+    
+    .logo-link {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0.75rem 1rem;
+    }
+    
+    .navbar-menu {
+        width: 280px;
+        max-height: calc(100vh - 100px);
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .navbar-menu .navbar-item:first-child .navbar-link,
+    .navbar-menu .navbar-item:last-child .navbar-link { padding-left: 0; padding-right: 0; }
+    
+    .navbar-link {
+        font-size: 1rem;
+    }
+    
+    .logo-link {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Progress Bar Styles */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 9999;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+    background-size: 300% 100%;
+    animation: progress-gradient 3s ease infinite;
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+@keyframes progress-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Section Progress Indicators */
+.section-progress {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.progress-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.progress-dot.active {
+    background: #4ecdc4;
+    border-color: #4ecdc4;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
+}
+
+.progress-dot:hover {
+    transform: scale(1.1);
+    background: rgba(78, 205, 196, 0.7);
+}
+
+/* Enhanced Scroll Effects */
+.scroll-snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Smooth scroll momentum */
+* {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced Parallax with multiple layers */
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 120%;
+    height: 140%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    will-change: transform;
+}
+
+.parallax-overlay-enhanced {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+    z-index: 1;
+}
+
+/* Staggered reveal animations */
+.stagger-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.stagger-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stagger-reveal:nth-child(1) { transition-delay: 0.1s; }
+.stagger-reveal:nth-child(2) { transition-delay: 0.2s; }
+.stagger-reveal:nth-child(3) { transition-delay: 0.3s; }
+.stagger-reveal:nth-child(4) { transition-delay: 0.4s; }
+.stagger-reveal:nth-child(5) { transition-delay: 0.5s; }
+.stagger-reveal:nth-child(6) { transition-delay: 0.6s; }
+
+/* Scroll-triggered scale effects */
+.scale-on-scroll {
+    transform: scale(0.8);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-on-scroll.is-visible {
+    transform: scale(1);
+}
+
+/* Text reveal with masking */
+.text-reveal {
+    overflow: hidden;
+    position: relative;
+}
+
+.text-reveal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #000, transparent);
+    transform: translateX(-100%);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+.text-reveal.is-visible::before {
+    transform: translateX(100%);
+}
+
+/* Floating elements animation */
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Scroll progress indicator for sections */
+.section-progress-line {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.section-progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #ff6b6b, #4ecdc4, #45b7d1);
+    height: 0%;
+    transition: height 0.3s ease;
+}
+
+/* Enhanced hover effects with scroll context */
+.scroll-aware-hover {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-aware-hover:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Momentum scrolling enhancement */
+.momentum-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff6b6b, #4ecdc4);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff5252, #26a69a);
+}
+
+/* Logo Particle Effects */
+.logo-particle-container {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    margin: 20px auto;
+}
+/* 
+.logo-particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+} */
+
+/* .logo-particle.forming {
+    opacity: 1;
+    transform: translate(0, 0);
+} */
+/* 
+.logo-particle.scattered {
+    opacity: 0.6;
+    transform: translate(var(--scatter-x, 0), var(--scatter-y, 0));
+} */
+
+/* .logo-particle.node {
+    width: 3px;
+    height: 3px;
+    background: #4ecdc4;
+    box-shadow: 0 0 8px rgba(78, 205, 196, 0.9);
+} */
+
+/* .logo-particle.line {
+    width: 1px;
+    height: 1px;
+    background: #ffffff;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
+} */
+
+/* .logo-particle.central {
+    width: 2px;
+    height: 2px;
+    background: #ff6b6b;
+    box-shadow: 0 0 6px rgba(255, 107, 107, 0.8);
+} */
+
+/* Logo formation animation */
+/* .logo-particle-container.animate .logo-particle {
+    animation: logoForm 0.5s ease-out forwards;
+} */
+
+/* @keyframes logoForm {
+    0% {
+        opacity: 0;
+        transform: scale(0) translate(var(--scatter-x, 0), var(--scatter-y, 0));
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+    }
+} */
+
+/* Particle text hover effects */
+.particle-text:hover .particle {
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.particle-text:hover .letter {
+    transform: translateY(-5px) scale(1.05);
+    text-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
+}
+
+/* Glowing particle trail effect */
+.particle-trail {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: radial-gradient(circle, #4ecdc4, transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: trailFade 1s ease-out forwards;
+}
+
+@keyframes trailFade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+/* Particle text container */
+.particle-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.particle-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(78, 205, 196, 0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
+}
+
+/* Roaming Particles */
+.particle-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 15;
+    pointer-events: none;
+}
+
+.roaming-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #4ecdc4;
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 0 8px rgba(78, 205, 196, 0.8);
+    z-index: 5;
+}
+
+.roaming-particle.roaming {
+    animation: roam 8s linear infinite;
+}
+
+.roaming-particle.forming-smiley {
+    animation: none;
+    /* More effective transition: */
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), 
+                background-color 0.8s ease-in-out;
+}
+
+/* Different colors for variety */
+.roaming-particle:nth-child(3n) {
+    background: #4ecdc4;
+    box-shadow: 0 0 6px rgba(255, 107, 107, 0.6);
+}
+
+.roaming-particle:nth-child(5n) {
+    background: #45b7d1;
+    box-shadow: 0 0 6px rgba(69, 183, 209, 0.6);
+}
+
+.roaming-particle:nth-child(7n) {
+    background: #96ceb4;
+    box-shadow: 0 0 6px rgba(150, 206, 180, 0.6);
+}
+
+.roaming-particle:nth-child(11n) {
+    background: #4ecdc4;
+    box-shadow: 0 0 6px rgba(254, 202, 87, 0.6);
+}
+
+@keyframes roam {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, -50px);
+    }
+    50% {
+        transform: translate(-50px, 100px);
+    }
+    75% {
+        transform: translate(150px, 50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Smiley face formation */
+/* .smiley-container {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    pointer-events: none;
+} */
+
+/* .smiley-container .roaming-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #4ecdc4;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(78, 205, 196, 0.8);
+} */
+
+/* Smiley face positions */
+.smiley-container .roaming-particle:nth-child(1) { top: 10px; left: 20px; } /* Left eye */
+.smiley-container .roaming-particle:nth-child(2) { top: 10px; right: 20px; } /* Right eye */
+.smiley-container .roaming-particle:nth-child(3) { top: 30px; left: 15px; } /* Nose */
+.smiley-container .roaming-particle:nth-child(4) { top: 45px; left: 20px; } /* Mouth start */
+.smiley-container .roaming-particle:nth-child(5) { top: 50px; left: 30px; } /* Mouth middle */
+.smiley-container .roaming-particle:nth-child(6) { top: 45px; right: 20px; } /* Mouth end */
+.smiley-container .roaming-particle:nth-child(7) { top: 25px; left: 35px; } /* Cheek */
+.smiley-container .roaming-particle:nth-child(8) { top: 25px; right: 35px; } /* Cheek */
+.smiley-container .roaming-particle:nth-child(9) { top: 15px; left: 40px; } /* Forehead */
+.smiley-container .roaming-particle:nth-child(10) { top: 15px; right: 40px; } /* Forehead */
+
+/* Hero section adjustments for navbar */
+#hero {
+    padding-top: 0; /* No padding initially since navbar is hidden */
+    transition: padding-top 0.3s ease;
+}
+
+/* Add padding when navbar becomes visible */
+body.navbar-visible #hero {
+    padding-top: 80px;
+}
+
+/* Responsive adjustments for all effects */
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 1rem 1.5rem;
+    }
+    
+    .navbar-menu {
+        gap: 2rem;
+    }
+    
+    /* Particle effects */
+    .roaming-particle {
+        width: 3px;
+        height: 3px;
+    }
+    
+    .particle-field {
+        z-index: 10;
+    }
+    
+    /* Glitch effects - reduce intensity on mobile */
+    .glitch::before,
+    .glitch::after {
+        animation-duration: 1s;
+    }
+    
+    .tech-section::before {
+        animation-duration: 4s;
+    }
+    
+    /* Progress indicators */
+    .section-progress {
+        right: 15px;
+        gap: 10px;
+    }
+    
+    .progress-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    /* Scroll snap adjustments */
+    .scroll-snap-section {
+        scroll-snap-align: start;
+    }
+    
+    /* Staggered animations - reduce delays on mobile */
+    .stagger-reveal:nth-child(1) { transition-delay: 0.05s; }
+    .stagger-reveal:nth-child(2) { transition-delay: 0.1s; }
+    .stagger-reveal:nth-child(3) { transition-delay: 0.15s; }
+    .stagger-reveal:nth-child(4) { transition-delay: 0.2s; }
+    .stagger-reveal:nth-child(5) { transition-delay: 0.25s; }
+    .stagger-reveal:nth-child(6) { transition-delay: 0.3s; }
+    
+    /* Floating animation - reduce movement on mobile */
+    .floating {
+        animation-duration: 8s;
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    /* Text reveal - faster on mobile */
+    .text-reveal::before {
+        transition-duration: 0.5s;
+    }
+    
+    /* Scale effects - reduce scale on mobile */
+    .scale-on-scroll {
+        transform: scale(0.9);
+    }
+    
+    .scale-on-scroll.is-visible {
+        transform: scale(1);
+    }
+}
+
+/* Tablet devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar-container {
+        padding: 1.25rem 2rem;
+    }
+    .navbar-cta { display: none; }
+    .navbar-item--contact { display: block; }
+    
+    .navbar-menu {
+        gap: 2.5rem;
+    }
+    
+    .navbar-toggle {
+        display: flex;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 320px;
+        max-height: calc(100vh - 100px);
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 2px solid #4ecdc4;
+        border-radius: 12px 0 0 12px;
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .navbar-menu.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .navbar-item {
+        position: relative;
+        padding-left: 2rem;
+    }
+    
+    .navbar-item::before {
+        content: '▶';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #4ecdc4;
+        font-size: 0.8rem;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-item:hover::before {
+        color: #45b7d1;
+        transform: translateY(-50%) translateX(5px);
+    }
+    
+    .navbar-link {
+        font-size: 1rem;
+        padding: 0.75rem 0;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Custom scrollbar for tablet menu */
+    .navbar-menu::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #4ecdc4, #45b7d1);
+        border-radius: 3px;
+    }
+    
+    .navbar-menu::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #45b7d1, #4ecdc4);
+    }
+    
+    /* Particle effects */
+    .roaming-particle {
+        width: 3.5px;
+        height: 3.5px;
+    }
+    
+    /* Progress indicators */
+    .section-progress {
+        right: 20px;
+    }
+    
+    .progress-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* Glitch effects - moderate intensity */
+    .glitch::before,
+    .glitch::after {
+        animation-duration: 0.7s;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+    /* Full effects on large screens */
+    .roaming-particle {
+        width: 4px;
+        height: 4px;
+    }
+    
+    /* Enhanced glitch effects */
+    .glitch::before,
+    .glitch::after {
+        animation-duration: 0.5s;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Disable hover effects on touch devices */
+    .glitch:hover::before,
+    .glitch:hover::after {
+        animation-play-state: paused;
+    }
+    
+    .scroll-aware-hover:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .progress-dot:hover {
+        transform: scale(1);
+        background: rgba(78, 205, 196, 0.7);
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .roaming-particle {
+        box-shadow: 0 0 12px rgba(78, 205, 196, 0.8);
+    }
+    
+    .progress-dot.active {
+        box-shadow: 0 0 25px rgba(78, 205, 196, 0.6);
+    }
+}
+/* Container: horizontal scrollable row */
+.services-row {
+  display: flex;
+  gap: 1.5rem;              /* decent horizontal gap between boxes */
+  overflow-x: auto;         /* allow horizontal scroll */
+  overflow-y: visible;      /* allow visible overflow for hover shadows */
+  padding: 1rem 0;
+  justify-content: center;  /* center horizontally in parent */
+  min-height: 450px;        /* adjust to fit content and avoid vertical scroll */
+}
+
+/* Individual service box: bigger width and height */
+.service-box {
+  position: relative;
+  flex: 0 0 320px;          /* fixed width, no grow, no shrink */
+  min-height: 400px;        /* increased height for content */
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  border-radius: 12px;      /* rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* Headings inside service box */
+.service-box > h3 {
+  margin: 0 0 1.25rem 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1.15;
+}
+
+/* Normal description text */
+.service-description p {
+  margin: 0;
+  opacity: 0.95;
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Hover overlay background */
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.85));
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  transition: opacity 0.35s ease;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 12px;
+}
+
+/* Inner content of the overlay */
+.service-overlay .overlay-inner {
+  max-width: 100%;
+}
+
+/* Hover/focus effect: bigger scale with shadow and highlight border */
+.service-box:hover,
+.service-box:focus-within {
+  transform: scale(1.12);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.7);
+  border-color: rgba(255, 255, 255, 0.3);
+  z-index: 20;
+}
+
+/* Show overlay on hover/focus */
+.service-box:hover .service-overlay,
+.service-box:focus-within .service-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Centering and styling for headings in parallax content */
+.parallax-content > .max-w-2xl {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1.5rem;
+}
+
+.parallax-content > .max-w-2xl .sub-heading {
+  color: #a0a0a0;         /* subtle gray */
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.parallax-content > .max-w-2xl .section-heading {
+  padding-left: 50px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #f8f8f8;
+  line-height: 1.1;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Container of services section: hide any vertical overflow */
+#services .parallax-content {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  min-height: 600px; /* increase as needed for content */
+}
+
+
+
+/* this added by me new */
+.mt-6{
+    font-size: 1.25rem;
+}
+
+/* Container: horizontal scrollable row */
+.services-row {
+  display: flex;
+  gap: 1.5rem;              /* decent horizontal gap between boxes */    /* allow visible overflow for hover shadows */
+  padding: 1rem 0;
+  justify-content: center;  /* center horizontally in parent */
+  min-height: 450px;
+  overflow-x:hidden;
+  overflow-y: hidden;        /* adjust to fit content and avoid vertical scroll */
+}
+
+/* Individual service box: bigger width and height */
+.service-box {
+  position: relative;
+  flex: 0 0 320px;          /* fixed width, no grow, no shrink */
+  min-height: 400px;        /* increased height for content */
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  border-radius: 12px;      /* rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* Headings inside service box */
+.service-box > h3 {
+  margin: 0 0 1.25rem 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1.15;
+}
+
+/* Normal description text */
+.service-description p {
+  margin: 0;
+  opacity: 0.95;
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Hover overlay background */
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.85));
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  transition: opacity 0.35s ease;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 12px;
+}
+
+/* Inner content of the overlay */
+.service-overlay .overlay-inner {
+  max-width: 100%;
+}
+
+/* Hover/focus effect: bigger scale with shadow and highlight border */
+.service-box:hover,
+.service-box:focus-within {
+  transform: scale(1.12);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.7);
+  border-color: rgba(255, 255, 255, 0.3);
+  z-index: 20;
+}
+
+/* Show overlay on hover/focus */
+.service-box:hover .service-overlay,
+.service-box:focus-within .service-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Centering and styling for headings in parallax content */
+.parallax-content > .max-w-2xl {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1.5rem;
+}
+
+.parallax-content > .max-w-2xl .sub-heading {
+  color: #a0a0a0;         /* subtle gray */
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.parallax-content > .max-w-2xl .section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #f8f8f8;
+  line-height: 1.1;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Container of services section: hide any vertical overflow */
+#services .parallax-content {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  min-height: 600px; /* increase as needed for content */
+}
