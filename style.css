@@ -51,6 +51,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.4s cubic-bezier(0.65, 0, 0.35, 1), transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    margin-top: -100px;
 }
  
 .fade-in-left {
@@ -1450,4 +1451,66 @@ body.navbar-visible #hero {
   overflow-y: hidden;
   overflow-x: hidden;
   min-height: 600px; /* increase as needed for content */
+}
+.marquee-container{
+  position: relative;
+  overflow: hidden;
+  width: 1950px; /* full screen width */
+  height: 500px;
+}
+.marquee{
+  display: flex;
+  width: max-content;
+  height: 500px;
+  animation: marquee-scroll 40s linear infinite;
+  margin-top: 300px;
+}
+.marquee-content {
+  flex-shrink: 0;
+  padding-right: 4rem;
+  height: 100px;
+}
+.marquee-content span {
+    display: inline-block;
+    padding-right: 2rem;
+    font: inherit;
+    font-stretch: expanded;   /* makes it wide like in screenshot */
+    font-weight: 50px;         /* thin */
+    line-height: 0;           /* compact */
+    text-transform: uppercase;
+    
+}
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.logo-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1900px;
+  background: #000; /* optional black bg */
+  padding: 100px 0;
+  padding-right: 0px;
+  margin-bottom: 0px;
+  height: 10px;
+}
+
+.logo-track {
+  display: inline-flex;
+  gap: 90px; /* spacing between logos */
+  animation: scroll 15s linear infinite;
+  width: max-content; 
+  padding-left: 0px;
+}
+.logo-track img {
+  height: 60px;  /* adjust size */
+  width: auto;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
