@@ -557,8 +557,8 @@ function initRoamingParticles() {
     
     console.log(`Created ${particles.length} particles`);
     
-    let smileyContainer = null;
-    let isFormingSmiley = false;
+    // let smileyContainer = null;
+    // let isFormingSmiley = false;
     
     // Mouse move handler
     function handlePointerMove(e) {
@@ -616,24 +616,24 @@ function initRoamingParticles() {
         isFormingSmiley = true;
         
         // Create smiley container
-        smileyContainer = document.createElement('div');
-        smileyContainer.className = 'smiley-container';
-        smileyContainer.style.left = (centerX - 40) + 'px';
-        smileyContainer.style.top = (centerY - 40) + 'px';
+        // smileyContainer = document.createElement('div');
+        // smileyContainer.className = 'smiley-container';
+        // smileyContainer.style.left = (centerX - 40) + 'px';
+        // smileyContainer.style.top = (centerY - 40) + 'px';
         
         // Smiley face positions
-        const smileyPositions = [
-            {x: 20, y: 10}, // Left eye
-            {x: 60, y: 10}, // Right eye
-            {x: 15, y: 30}, // Nose
-            {x: 20, y: 45}, // Mouth start
-            {x: 30, y: 50}, // Mouth middle
-            {x: 60, y: 45}, // Mouth end
-            {x: 35, y: 25}, // Left cheek
-            {x: 45, y: 25}, // Right cheek
-            {x: 40, y: 15}, // Forehead
-            {x: 40, y: 15}  // Forehead duplicate
-        ];
+        // const smileyPositions = [
+        //     {x: 20, y: 10}, // Left eye
+        //     {x: 60, y: 10}, // Right eye
+        //     {x: 15, y: 30}, // Nose
+        //     {x: 20, y: 45}, // Mouth start
+        //     {x: 30, y: 50}, // Mouth middle
+        //     {x: 60, y: 45}, // Mouth end
+        //     {x: 35, y: 25}, // Left cheek
+        //     {x: 45, y: 25}, // Right cheek
+        //     {x: 40, y: 15}, // Forehead
+        //     {x: 40, y: 15}  // Forehead duplicate
+        // ];
         
         // Move selected particles to smiley positions
         selectedParticles.forEach((particle, index) => {

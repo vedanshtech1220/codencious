@@ -1,520 +1,780 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Codenscious - A Modern Enterprise</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css"> 
-</head>
-<body class="overflow-x-hidden">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="overflow-x-hidden">
     <!-- Progress Bar -->
     <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
+      <div class="progress-bar" id="progressBar"></div>
     </div>
 
     <!-- Navigation Bar -->
     <nav class="navbar" id="navbar">
-        <div class="navbar-container">
-            <!-- Logo placeholder -->
-            <div class="navbar-logo">
-                <a href="#hero" class="logo-link">
-                    <span class="logo-text">Codenscious</span>
-                </a>
-            </div>
-            
-            <!-- Navigation Menu -->
-            <ul class="navbar-menu" id="navbar-menu">
-                <li class="navbar-item">
-                    <a href="#parallax-section" class="navbar-link">About</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#services" class="navbar-link">Services</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#products" class="navbar-link">Projects</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#research" class="navbar-link">Research & Innovation</a>
-                </li>
-                <li class="navbar-item navbar-item--contact">
-                    <a href="#contact" class="navbar-link">Contact Us</a>
-                </li>
-            </ul>
-            
-            <!-- Right aligned CTA (desktop) -->
-            <div class="navbar-cta">
-                <a href="#contact" class="btn-cta">Contact Us</a>
-            </div>
-            
-            <!-- Mobile Menu Toggle -->
-            <div class="navbar-toggle" id="navbar-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+      <div class="navbar-container">
+        <!-- Logo placeholder -->
+        <div class="navbar-logo">
+          <a href="#hero" class="logo-link">
+            <span class="logo-text">Codenscious</span>
+          </a>
         </div>
+
+        <!-- Navigation Menu -->
+        <ul class="navbar-menu" id="navbar-menu">
+          <li class="navbar-item">
+            <a href="#parallax-section" class="navbar-link">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#services" class="navbar-link">Services</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#products" class="navbar-link">Projects</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#research" class="navbar-link">Research & Innovation</a>
+          </li>
+          <li class="navbar-item navbar-item--contact">
+            <a href="#contact" class="navbar-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Right aligned CTA (desktop) -->
+        <div class="navbar-cta">
+          <a href="#contact" class="btn-cta">Contact Us</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="navbar-toggle" id="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Section Progress Indicators -->
-    <div class="section-progress" id="sectionProgress">
-        <div class="progress-dot" data-section="hero"></div>
-        <div class="progress-dot" data-section="parallax-section"></div>
-        <div class="progress-dot" data-section="about"></div>
-        <div class="progress-dot" data-section="services"></div>
-        <div class="progress-dot" data-section="products"></div>
-        <div class="progress-dot" data-section="projects"></div>
-        <div class="progress-dot" data-section="research"></div>
-        <div class="progress-dot" data-section="contact"></div>
-    </div>
+    <!-- <div class="section-progress" id="sectionProgress">
+      <div class="progress-dot" data-section="hero"></div>
+      <div class="progress-dot" data-section="parallax-section"></div>
+      <div class="progress-dot" data-section="about"></div>
+      <div class="progress-dot" data-section="services"></div>
+      <div class="progress-dot" data-section="products"></div>
+      <div class="progress-dot" data-section="projects"></div>
+      <div class="progress-dot" data-section="research"></div>
+      <div class="progress-dot" data-section="contact"></div>
+    </div> -->
 
     <main>
+      <section
+        id="hero"
+        class="scroll-snap-section h-screen w-full flex flex-col justify-center items-center text-center relative overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-black z-10"></div>
+        <div
+          class="absolute inset-0 z-0 opacity-20"
+          style="
+            background-image: url('https://images.pexels.com/photos/1212487/pexels-photo-1212487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
 
-        <section id="hero" class="scroll-snap-section h-screen w-full flex flex-col justify-center items-center text-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-black z-10"></div>
-            <div class="absolute inset-0 z-0 opacity-20" style="background-image: url('https://images.pexels.com/photos/1212487/pexels-photo-1212487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center;"></div>
-            
-            <!-- Roaming Particles -->
-            <div class="particle-field" id="particleField"></div>
-            
-            <div class="relative z-20 p-6 fade-in is-visible">
-                <p class="sub-heading mb-4">Introducing</p>
-                <div class="relative inline-block mb-4">
-                    <svg class="absolute -top-8 -left-8 w-20 h-20 text-gray-700 floating" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                    <h1 class="heading-font text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter">
-                        Codenscious
-                    </h1>
-                </div>
-                <p class="text-base tracking-widest uppercase">By Design</p>
-            </div>
-        </section>
+        <!-- Roaming Particles -->
+        <div class="particle-field" id="particleField"></div>
 
-        <section id="parallax-section" class="parallax-section" style="background-image: url('https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?q=80&semt=ais_incoming&w=740');">
-            <div class="parallax-overlay"></div>
-            <div class="parallax-content container mx-auto px-6 pt-32 md:pt-40 pb-24 md:pb-32 text-left max-w-4xl">
-                 <div class="fade-in">
-                    <h2 class="heading-font leading-tight">
-  <span class="text-gray-400">
-    We have a point of view. A decade of hard-won experience.  
-    And a bias for working with founders and leaders ready to build with conviction.
-  </span>
-  <br><br>
-  <span class="text-gray-400">
-    We don’t just add AI.  
-    We don’t chase trends.  
-    We don't believe in vanity metrics or empty brand promises.
-  </span>
-  <br><br>
-  <span class="text-gray-400">
-    We believe in the power of intelligent systems.  
-    In architecture that withstands the test of time.  
-    In software that makes the complex feel effortless.
-  </span>
-</h2>
+        <div class="relative z-20 p-6 fade-in is-visible">
+          <!-- <p class="sub-heading mb-4">Introducing</p> -->
+          <div class="relative inline-block mb-4">
+            <svg
+              class="absolute -top-8 -left-8 w-20 h-20 text-gray-700 floating"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.5"
+                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+              ></path>
+            </svg>
+            <h1
+              class="heading-font text-4xl md:text-5xl font-bold font-sans tracking-tight leading-tight break-words"
+            >
+              Launch Your AI MVP — Faster, Smarter, Cheaper
+            </h1>
+          </div>
+          <p
+            class="text-4xl md:text-3xl text-base tracking-widest  font-bold mt-5 font-sans font-weight-500"
+          >
+            <span style="font-size: 0.8em; font-weight: 600;">with</span> <br />
+            <span style="text-transform:uppercase">codenscious</span>
+          </p>
+        </div>
+      </section>
 
-<p class="heading-font mt-8 text-gray-400 leading-relaxed text-base">
-  We don’t do “packages.”  
-  We do sprints, embedded partnerships, and comprehensive engagements on terms that protect the depth and integrity of the work.
-</p>
-
-<p class="heading-font mt-4 text-gray-400 leading-relaxed text-base">
-  We build for those ready to lead with conviction.
-</p>
-
-<p class="heading-font mt-4 text-gray-400 leading-relaxed text-base">
-  This is not for everyone.  
-  But if you've built something powerful and you're ready to create the product it deserves—you're in the right place.
-</p>
-
-
-<p class="heading-font mt-8 text-gray-400 leading-relaxed text-base">
-                        Welcome to Codencious.
-
-                    </p>
-
-                     <p class="heading-font mt-8 text-gray-400 leading-relaxed text-base">
-                        
-Let's bring this to life.
-                    </p>
-
-
-
-
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="scroll-snap-section bg-black">
-            <div class="container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center">
-                <div class="fade-in-left">
-                    <p class="sub-heading">About Codenscious</p>
-                    <div class="divider"></div>
-                    <h2 class="section-heading">Innovation Meets Functionality.</h2>
-                    <p style="padding-left: 50px;" class="text-gray-400 mt-6 leading-relaxed">
-                        From concept to deployment, we work closely with you to understand your unique needs and deliver tailored solutions that drive growth and success. Partner with Codenscious to experience excellence in development, where innovation meets functionality to create exceptional digital experiences.
-                    </p>
-                     <ul style="padding-left: 50px;" class="mt-6 space-y-3 text-gray-300">
-                        <li>- Lack of clarity around AI readiness, integration, or positioning.</li>
-                        <li>- Missed opportunities due to fragmented go-to-market strategy.</li>
-                        <li>- Disconnection between brand promise and internal narrative.</li>
-                    </ul>
-                </div>
-                <div class="fade-in-right flex justify-center items-center h-full">
-                   <img src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="max-w-md w-full object-cover rounded" alt="Abstract geometric shape"/>
-                </div>
-            </div>
-        </section>
-        
-        <section id="services" class="scroll-snap-section parallax-section tech-section" style="background-image: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+      <section
+  id="parallax-section"
+  class="parallax-section"
+  style="
+    background-image: url('https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?q=80&semt=ais_incoming&w=740');
+  "
+>
   <div class="parallax-overlay"></div>
+  <div
+    class="parallax-content container mx-auto px-6 pt-32 md:pt-40 pb-24 md:pb-32 text-left max-w-4xl"
+  >
+    <div class="fade-in space-y-8">
+      <!-- Opening statement -->
+      <h2 class="heading-font leading-tight text-3xl md:text-4xl font-bold text-white">
+        We have a point of view.
+      </h2>
+      <p class="text-lg text-gray-300 leading-relaxed">
+        A decade of hard-won experience.<br />
+        And a bias for working with founders and leaders<br /> ready to build with conviction.
+      </p>
 
-  <div class="parallax-content container mx-auto px-6 py-24 md:py-32">
-    <div class="max-w-2xl fade-in">
-      <p class="sub-heading">Our Services</p>
-      <div class="divider"></div>
-      <h2 class="section-heading">Elevating Industries Through Innovative Solutions.</h2>
-    </div>
+      <!-- Anti-trend statement -->
+      <p class="text-lg text-gray-300 leading-relaxed">
+        We don’t just add AI. We don’t chase trends.<br />
+        We don't believe in vanity metrics or empty brand promises.
+      </p>
 
-    <div class="services-row mt-16">
-      <!-- Service 1 -->
-      <article class="service-box fade-in" style="--bg-url: url('assets/services/ai.jpg')">
-        <h3 class="heading-font">Artificial Intelligence</h3>
-        <div class="service-description">
-          <p>State-of-the-art AI pushing boundaries of intelligent automation.</p>
-        </div>
-        <div class="service-overlay">
-          <div class="overlay-inner">
-            <p>Automation, agents, and systems delivering measurable impact.</p>
-          </div>
-        </div>
-      </article>
+      <!-- Belief statement -->
+      <p class="text-lg text-gray-300 leading-relaxed">
+        We believe in the power of intelligent systems.<br />
+        In architecture that withstands the test of time.<br />
+        In software that makes the complex feel effortless.
+      </p>
 
-      <!-- Service 2 -->
-      <article class="service-box fade-in" style="--bg-url: url('assets/services/dev.jpg')">
-        <h3 class="heading-font">Software Development</h3>
-        <div class="service-description">
-          <p>Innovative web and mobile solutions transforming ideas into reality.</p>
-        </div>
-        <div class="service-overlay">
-          <div class="overlay-inner">
-            <p>High-performing, user-friendly applications with robust pipelines.</p>
-          </div>
-        </div>
-      </article>
+      <!-- Partnerships -->
+      <p class="text-lg text-gray-300 leading-relaxed">
+        We don’t do “packages.” We do sprints, embedded partnerships, <br />and
+        comprehensive engagements on terms that protect the depth <br />and
+        integrity of the work.
+      </p>
 
-      <!-- Service 3 -->
-      <article class="service-box fade-in" style="--bg-url: url('assets/services/data.jpg')">
-        <h3 class="heading-font">Data Science & Consulting</h3>
-        <div class="service-description">
-          <p>Unlock insights and provide predictive analytics for strategic advantage.</p>
-        </div>
-        <div class="service-overlay">
-          <div class="overlay-inner">
-            <p>Turning raw data into actionable intelligence and growth.</p>
-          </div>
-        </div>
-      </article>
+      <!-- Conviction -->
+      <p class="text-xl font-semibold text-indigo-100 leading-relaxed">
+        We build for those ready to lead with conviction.
+      </p>
 
-      <!-- Service 4 -->
-      <article class="service-box fade-in" style="--bg-url: url('assets/services/training.jpg')">
-        <h3 class="heading-font">Corporate Trainings</h3>
-        <div class="service-description">
-          <p>AI/ML upskilling programs empowering your workforce.</p>
-        </div>
-        <div class="service-overlay">
-          <div class="overlay-inner">
-            <p>Role-based hands-on labs and operational AI playbooks.</p>
-          </div>
-        </div>
-      </article>
-      
-      
+      <!-- Exclusive note -->
+      <!-- <p class="text-lg italic text-gray-400 leading-relaxed">
+        This is not for everyone.<br />
+        But if you've built something powerful and you're ready to create the
+        product it deserves — you're in the right place.
+      </p> -->
+
+      <!-- Hero ending -->
+      <p class="text-4xl font-extrabold uppercase tracking-wide text-white mt-10">
+        Welcome to <span class="text-indigo-100 font-weight-100">Codencious</span>.
+      </p>
+
+      <p class="text-lg italic text-gray-300 mt-6">
+        Let’s bring this to life.
+      </p>
     </div>
   </div>
 </section>
 
-        <section id="products" class="scroll-snap-section bg-black">
-            <div class="container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center">
-                <div class="fade-in-left">
-                    <p class="sub-heading">Our Products</p>
-                    <div class="divider"></div>
-                    <h2 class="section-heading">Procqy – AI-Powered Procurement.</h2>
-                    <p style="padding-left: 50px;" class="text-gray-400 mt-6 leading-relaxed ">
-                        Smarter, faster, and future-ready procurement. Procqy is Codenscious.ai's secure, cloud-based AI platform that transforms procurement and materials management.
-                    </p>
-                     <ul style="padding-left: 50px;" class="mt-8 space-y-4 text-gray-300 text-base ">
-                        <li><strong>Eliminates Errors:</strong> Automated workflows replace manual processes.</li>
-                        <li><strong>Data-Driven:</strong> Real-time analytics & reporting.</li>
-                        <li><strong>End-to-End Control:</strong> Store, purchase, gate entry, admin modules.</li>
-                        <li><strong>Custom Approvals:</strong> Tailored workflows for faster decisions.</li>
-                    </ul>
+      <section id="about" class="scroll-snap-section bg-black">
+        <div
+          class="container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center"
+        >
+          <div class="fade-in-left">
+            <p class="sub-heading">About Codenscious</p>
+            <div class="divider"></div>
+            <h2 class="section-heading">Innovation Meets Functionality.</h2>
+            <p
+              style="padding-left: 50px"
+              class="text-gray-400 mt-6 leading-relaxed"
+            >
+              From concept to deployment, we work closely with you to understand
+              your unique needs and deliver tailored solutions that drive growth
+              and success. Partner with Codenscious to experience excellence in
+              development, where innovation meets functionality to create
+              exceptional digital experiences.
+            </p>
+            <ul style="padding-left: 50px" class="mt-6 space-y-3 text-gray-300">
+              <li>
+                - Lack of clarity around AI readiness, integration, or
+                positioning.
+              </li>
+              <li>
+                - Missed opportunities due to fragmented go-to-market strategy.
+              </li>
+              <li>
+                - Disconnection between brand promise and internal narrative.
+              </li>
+            </ul>
+          </div>
+          <div class="fade-in-right flex justify-center items-center h-full">
+            <img
+              src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              class="max-w-md w-full object-cover rounded"
+              alt="Abstract geometric shape"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="services"
+        class="scroll-snap-section parallax-section tech-section"
+        style="
+          background-image: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        "
+      >
+        <div class="parallax-overlay"></div>
+
+        <div class="parallax-content container mx-auto px-6 py-24 md:py-32">
+          <div class="max-w-2xl fade-in">
+            <p class="sub-heading">Our Services</p>
+            <div class="divider"></div>
+            <h2 class="section-heading">
+              Elevating Industries Through Innovative Solutions.
+            </h2>
+          </div>
+
+          <div class="services-row mt-16">
+            <!-- Service 1 -->
+            <article
+              class="service-box fade-in"
+              style="--bg-url: url('assets/services/ai.jpg')"
+            >
+              <h3 class="heading-font">Artificial Intelligence</h3>
+              <div class="service-description">
+                <p>
+                  State-of-the-art AI pushing boundaries of intelligent
+                  automation.
+                </p>
+              </div>
+              <div class="service-overlay">
+                <div class="overlay-inner">
+                  <p>
+                    Automation, agents, and systems delivering measurable
+                    impact.
+                  </p>
                 </div>
-                <div class="fade-in-right flex justify-center items-center h-full">
-                   <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="max-w-md w-full object-cover rounded" alt="Procqy Platform Dashboard"/>
+              </div>
+            </article>
+
+            <!-- Service 2 -->
+            <article
+              class="service-box fade-in"
+              style="--bg-url: url('assets/services/dev.jpg')"
+            >
+              <h3 class="heading-font">Software Development</h3>
+              <div class="service-description">
+                <p>
+                  Innovative web and mobile solutions transforming ideas into
+                  reality.
+                </p>
+              </div>
+              <div class="service-overlay">
+                <div class="overlay-inner">
+                  <p>
+                    High-performing, user-friendly applications with robust
+                    pipelines.
+                  </p>
                 </div>
-            </div>
-        </section>
+              </div>
+            </article>
 
-        <section id="projects" class="scroll-snap-section bg-black">
-            <div class="container mx-auto px-6 py-40 md:py-56">
-                <div class="max-w-2xl fade-in">
-                     <p class="sub-heading">Our Projects</p>
-                     <div class="divider"></div>
-                     <h2 class="section-heading">Choose your Arena, Discover our Innovation.</h2>
-                     <p style="padding-left: 50px;" class="mt-6 text-gray-400">Our experiences are outcome-driven offerings designed to deliver results within a defined timeframe.</p>
+            <!-- Service 3 -->
+            <article
+              class="service-box fade-in"
+              style="--bg-url: url('assets/services/data.jpg')"
+            >
+              <h3 class="heading-font">Data Science & Consulting</h3>
+              <div class="service-description">
+                <p>
+                  Unlock insights and provide predictive analytics for strategic
+                  advantage.
+                </p>
+              </div>
+              <div class="service-overlay">
+                <div class="overlay-inner">
+                  <p>
+                    Turning raw data into actionable intelligence and growth.
+                  </p>
                 </div>
-                <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                   <div class="group stagger-reveal scroll-aware-hover relative">
-                        <div class="overflow-hidden relative">
-                            <!-- Image -->
-                            <img src="https://www.keenfinity-group.com/media/pb/images/products/video_systems/video_analytics/video-analytics-traffic-detector-highway.jpg" 
-                                alt="Surveillance" 
-                                class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300 rounded-lg"/>
+              </div>
+            </article>
 
-                            <!-- Overlay Text -->
-                            <h3 class="absolute top-4 left-4 heading-font text-2xl text-white  rounded">
-                            Surveillance
-                            </h3>
-                        </div>
-
-                        <!-- Learn More -->
-                        <a href="#" 
-                            class="text-lg uppercase tracking-widest text-gray-500 hover:text-white transition-colors duration-300 mt-2 inline-block">
-                            Learn More
-                        </a>
-                    </div>
-
-                    <div class="group stagger-reveal scroll-aware-hover relative">
-                        <div class="overflow-hidden relative">
-                            <!-- Image with border radius -->
-                            <img src="https://blog.board.com/wp-content/uploads/2024/03/2718x1024_Blog_header_Finance-Predictions-2024-1920x723.jpg" 
-                                alt="Finance" 
-                                class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300 rounded-lg"/>
-
-                            <!-- Overlay Title -->
-                            <h3 class="absolute top-4 left-4 heading-font text-2xl text-white  rounded">
-                            Finance
-                            </h3>
-                        </div>
-
-                        <!-- Learn More -->
-                        <a href="#" 
-                            class="text-lg uppercase tracking-widest text-gray-500 hover:text-white transition-colors duration-300 mt-2 inline-block">
-                            Learn More
-                        </a>
-                    </div>
-
-                     <div class="group stagger-reveal scroll-aware-hover relative">
-                            <div class="overflow-hidden relative">
-                                <!-- Image with border radius -->
-                                <img src="https://www.jspinsider.com/wp-content/uploads/2025/05/how-ai-detects-product-defects_1_0_44718.webp" 
-                                    alt="Manufacturing" 
-                                    class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300 rounded-lg"/>
-
-                                <!-- Overlay Title -->
-                                <h3 class="absolute top-4 left-4 heading-font text-2xl text-white rounded">
-                                Manufacturing
-                                </h3>
-                            </div>
-
-                            <!-- Learn More -->
-                            <a href="#" 
-                                class="text-lg uppercase text-gray-500 hover:text-white transition-colors duration-300 mt-2 inline-block">
-                                Learn More
-                            </a>
-                        </div>
-
+            <!-- Service 4 -->
+            <article
+              class="service-box fade-in"
+              style="--bg-url: url('assets/services/training.jpg')"
+            >
+              <h3 class="heading-font">Corporate Trainings</h3>
+              <div class="service-description">
+                <p>AI/ML upskilling programs empowering your workforce.</p>
+              </div>
+              <div class="service-overlay">
+                <div class="overlay-inner">
+                  <p>Role-based hands-on labs and operational AI playbooks.</p>
                 </div>
-            </div>
-        </section>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <section id="research" class="scroll-snap-section parallax-section" style="background-image: url('https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
-            <div class="parallax-overlay"></div>
-            <div class="parallax-content container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center">
-                <div class="fade-in-left">
-                    <p class="sub-heading">Research & Innovation</p>
-                    <div class="divider"></div>
-                    <h2 class="section-heading">Explore our Brain Computer Interface Research.</h2>
-                    <p style="padding-left: 50px;" class="text-gray-400 mt-6 leading-relaxed">
-                        Established in 2017, Codenscious is one of the first AI Companies in Indore dedicated to our mission of developing world-class technology. For the last few years, the company has been involved in developing cutting-edge technology for diverse areas such as manufacturing, healthcare, security, finance, and retail.
-                    </p>
-                     <blockquote style="padding-left: 50px;" class="mt-8 border-l-2 border-gray-600 pl-6 text-gray-300 italic">
-                        "For the first time in over a decade, I get to advise leaders with no product to push, no agenda to advance. Just service, strategy, and clarity."
-                    </blockquote>
-                </div>
-                 <div class="fade-in-right flex justify-center items-center">
-                    <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="w-full max-w-md object-cover" alt="Founder with BCI headset">
-                </div>
-            </div>
-        </section>
+      <section id="products" class="scroll-snap-section bg-black">
+        <div
+          class="container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center"
+        >
+          <div class="fade-in-left">
+            <p class="sub-heading">Our Products</p>
+            <div class="divider"></div>
+            <h2 class="section-heading">Procqy – AI-Powered Procurement.</h2>
+            <p
+              style="padding-left: 50px"
+              class="text-gray-400 mt-6 leading-relaxed"
+            >
+              Smarter, faster, and future-ready procurement. Procqy is
+              Codenscious.ai's secure, cloud-based AI platform that transforms
+              procurement and materials management.
+            </p>
+            <ul
+              style="padding-left: 50px"
+              class="mt-8 space-y-4 text-gray-300 text-base"
+            >
+              <li>
+                <strong>Eliminates Errors:</strong> Automated workflows replace
+                manual processes.
+              </li>
+              <li>
+                <strong>Data-Driven:</strong> Real-time analytics & reporting.
+              </li>
+              <li>
+                <strong>End-to-End Control:</strong> Store, purchase, gate
+                entry, admin modules.
+              </li>
+              <li>
+                <strong>Custom Approvals:</strong> Tailored workflows for faster
+                decisions.
+              </li>
+            </ul>
+          </div>
+          <div class="fade-in-right flex justify-center items-center h-full">
+            <img
+              src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              class="max-w-md w-full object-cover rounded"
+              alt="Procqy Platform Dashboard"
+            />
+          </div>
+        </div>
+      </section>
 
-        <section id="contact" class="scroll-snap-section bg-black">
-            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-                 <div class="max-w-2xl mx-auto fade-in">
-                    <p class="sub-heading mb-4">Our Method. Your Moment.</p>
-                    <h2 class="heading-font text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter">
-                        Contact Us
-                    </h2>
-                    <form class="mt-12 text-left space-y-6">
-                        <div class="grid sm:grid-cols-2 gap-6">
-                            <input type="text" placeholder="Your Name and Title *" class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300">
-                            <input type="email" placeholder="Your Email *" class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300">
-                        </div>
-                         <div class="grid sm:grid-cols-2 gap-6">
-                            <input type="text" placeholder="Company Name *" class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300">
-                            <input type="text" placeholder="Size or stage of your company? *" class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300">
-                        </div>
-                        <div>
-                            <textarea placeholder="What problems are you trying to solve? *" rows="5" class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn">Submit Your Request</button>
-                        </div>
-                    </form>
-               </div>
-            </div>
-        </section>
-        
-        <footer class="bg-black border-t border-gray-900">
-            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-                 <p class="sub-heading">Our Clients</p>
-                 <h2 class="heading-font text-3xl mt-4">Trusted By The Best</h2>
-                 <div class="mt-12 flex justify-center items-center gap-10 md:gap-16 flex-wrap">
-                     <img src="https://companieslogo.com/img/orig/ADANIPOWER.NS-625514f7.png?t=1669433230" alt="Adani Power" class="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"/>
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Cyient_logo.svg/2560px-Cyient_logo.svg.png" alt="Cyient" class="h-7 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"/>
-                     <img src="https://logowik.com/content/uploads/images/deloitte-new-20224971.jpg" alt="Deloitte" class="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                     <img src="https://1000logos.net/wp-content/uploads/2021/09/Genpact-Logo.png" alt="Genpact" class="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Unisys_logo.svg/2560px-Unisys_logo.svg.png" alt="Unisys" class="h-7 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"/>
-                </div>
-                <p class="text-gray-600 text-sm mt-24">&copy; 2025 Codenscious. All rights reserved.</p>
-            </div>
-        </footer>
+      <section id="projects" class="scroll-snap-section bg-black">
+        <div class="container mx-auto px-6 py-40 md:py-56">
+          <div class="max-w-2xl fade-in">
+            <p class="sub-heading">Our Projects</p>
+            <div class="divider"></div>
+            <h2 class="section-heading">
+              Choose your Arena, Discover our Innovation.
+            </h2>
+            <p style="padding-left: 50px" class="mt-6 text-gray-400">
+              Our experiences are outcome-driven offerings designed to deliver
+              results within a defined timeframe.
+            </p>
+          </div>
+          <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group stagger-reveal scroll-aware-hover relative">
+              <div class="overflow-hidden relative">
+                <!-- Image -->
+                <img
+                  src="https://www.keenfinity-group.com/media/pb/images/products/video_systems/video_analytics/video-analytics-traffic-detector-highway.jpg"
+                  alt="Surveillance"
+                  class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300 rounded-lg"
+                />
 
-        <!-- New page-like footer section (added at the very end, existing design untouched) -->
-        <section id="newsletter" class="bg-black scroll-snap-section border-t border-gray-900">
-            <div class="max-w-6xl mx-auto px-6 py-16 md:py-20 text-center">
-                <!-- Newsletter Heading -->
-                <h3 class="heading-font text-3xl md:text-4xl font-semibold text-white">
-                    Subscribe to our newsletter
+                <!-- Overlay Text -->
+                <h3
+                  class="absolute top-4 left-4 heading-font text-2xl text-white rounded"
+                >
+                  Surveillance
                 </h3>
+              </div>
 
-                <!-- Newsletter Form -->
-                <form class="mt-6 w-full max-w-xl mx-auto flex gap-3" onsubmit="event.preventDefault()">
-                    <div
-                        class="flex items-center flex-1 bg-[#1b1b1b] border border-gray-700 rounded-lg px-4 py-3 text-gray-300 focus-within:border-white">
-                        <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M3 7l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <input type="email" placeholder="Enter your email address"
-                            class="bg-transparent outline-none w-full placeholder:text-gray-500" />
-                    </div>
-                    <button
-                        class="bg-[#1b1b1b] text-white font-medium rounded-lg px-5 py-3 whitespace-nowrap hover:bg-gray-800 transition">
-                        Get Started
-                    </button>
-                </form>
+              <!-- Learn More -->
+              <a
+                href="#"
+                class="text-lg uppercase tracking-widest text-gray-500 hover:text-white transition-colors duration-300 mt-2 inline-block"
+              >
+                Learn More
+              </a>
             </div>
 
-            <!-- Centered Empty Box -->
-            <div class="flex items-center justify-center -mt-14">
-                <div class="bg-gray-800 w-[40%] max-w-4xl h-40 rounded-lg shadow-md flex items-center justify-center">
-                    <!-- Empty box content -->
+            <div class="group stagger-reveal scroll-aware-hover relative">
+              <div class="overflow-hidden relative">
+                <!-- Image with border radius -->
+                <img
+                  src="https://blog.board.com/wp-content/uploads/2024/03/2718x1024_Blog_header_Finance-Predictions-2024-1920x723.jpg"
+                  alt="Finance"
+                  class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300 rounded-lg"
+                />
+
+                <!-- Overlay Title -->
+                <h3
+                  class="absolute top-4 left-4 heading-font text-2xl text-white rounded"
+                >
+                  Finance
+                </h3>
+              </div>
+
+              <!-- Learn More -->
+              <a
+                href="#"
+                class="text-lg uppercase tracking-widest text-gray-500 hover:text-white transition-colors duration-300 mt-2 inline-block"
+              >
+                Learn More
+              </a>
+            </div>
+
+            <div class="group stagger-reveal scroll-aware-hover relative">
+              <div class="overflow-hidden relative">
+                <!-- Image with border radius -->
+                <img
+                  src="https://www.jspinsider.com/wp-content/uploads/2025/05/how-ai-detects-product-defects_1_0_44718.webp"
+                  alt="Manufacturing"
+                  class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300 rounded-lg"
+                />
+
+                <!-- Overlay Title -->
+                <h3
+                  class="absolute top-4 left-4 heading-font text-2xl text-white rounded"
+                >
+                  Manufacturing
+                </h3>
+              </div>
+
+              <!-- Learn More -->
+              <a
+                href="#"
+                class="text-lg uppercase text-gray-500 hover:text-white transition-colors duration-300 mt-2 inline-block"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="research"
+        class="scroll-snap-section parallax-section"
+        style="
+          background-image: url('https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        "
+      >
+        <div class="parallax-overlay"></div>
+        <div
+          class="parallax-content container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center"
+        >
+          <div class="fade-in-left">
+            <p class="sub-heading">Research & Innovation</p>
+            <div class="divider"></div>
+            <h2 class="section-heading">
+              Explore our Brain Computer Interface Research.
+            </h2>
+            <p
+              style="padding-left: 50px"
+              class="text-gray-400 mt-6 leading-relaxed"
+            >
+              Established in 2017, Codenscious is one of the first AI Companies
+              in Indore dedicated to our mission of developing world-class
+              technology. For the last few years, the company has been involved
+              in developing cutting-edge technology for diverse areas such as
+              manufacturing, healthcare, security, finance, and retail.
+            </p>
+            <blockquote
+              style="padding-left: 50px"
+              class="mt-8 border-l-2 border-gray-600 pl-6 text-gray-300 italic"
+            >
+              "For the first time in over a decade, I get to advise leaders with
+              no product to push, no agenda to advance. Just service, strategy,
+              and clarity."
+            </blockquote>
+          </div>
+          <div class="fade-in-right flex justify-center items-center">
+            <img
+              src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              class="w-full max-w-md object-cover"
+              alt="Founder with BCI headset"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="scroll-snap-section bg-black">
+        <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+          <div class="max-w-2xl mx-auto fade-in">
+            <p class="sub-heading mb-4 flex justify-center align-items-center">
+              Our Method. Your Moment.
+            </p>
+            <h2
+              class="heading-font text-6xl md:text-8xl lg:text-9xl font-semibold font-bold font-sans leading-none"
+            >
+              Contact Us
+            </h2>
+            <form class="mt-12 text-left space-y-6">
+              <div class="grid sm:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  placeholder="Your Name and Title *"
+                  class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300"
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email *"
+                  class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300"
+                />
+              </div>
+              <div class="grid sm:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  placeholder="Company Name *"
+                  class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300"
+                />
+                <input
+                  type="text"
+                  placeholder="Size or stage of your company? *"
+                  class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300"
+                />
+              </div>
+              <div>
+                <textarea
+                  placeholder="What problems are you trying to solve? *"
+                  rows="5"
+                  class="bg-transparent border border-gray-700 p-4 w-full focus:outline-none focus:border-white transition-colors duration-300"
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn">Submit Your Request</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-black border-t border-gray-900">
+        <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+          <p class="sub-heading">Our Clients</p>
+          <h2 class="heading-font text-3xl mt-4">Trusted By The Best</h2>
+          <div
+            class="mt-12 flex justify-center items-center gap-10 md:gap-16 flex-wrap"
+          >
+            <img
+              src="https://companieslogo.com/img/orig/ADANIPOWER.NS-625514f7.png?t=1669433230"
+              alt="Adani Power"
+              class="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Cyient_logo.svg/2560px-Cyient_logo.svg.png"
+              alt="Cyient"
+              class="h-7 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            />
+            <img
+              src="https://logowik.com/content/uploads/images/deloitte-new-20224971.jpg"
+              alt="Deloitte"
+              class="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            />
+            <img
+              src="https://1000logos.net/wp-content/uploads/2021/09/Genpact-Logo.png"
+              alt="Genpact"
+              class="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Unisys_logo.svg/2560px-Unisys_logo.svg.png"
+              alt="Unisys"
+              class="h-7 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            />
+          </div>
+          <!-- <p class="text-gray-600 text-sm mt-24">
+            &copy; 2025 Codenscious. All rights reserved. -->
+          <!-- </p> -->
+        </div>
+      </footer>
+
+      <!-- New page-like footer section (added at the very end, existing design untouched) -->
+      <section
+        id="newsletter"
+        class="bg-black scroll-snap-section border-t border-gray-900"
+      >
+        <div class="max-w-6xl mx-auto px-6 py-16 md:py-20 text-center">
+          <!-- Newsletter Heading -->
+          <h3
+            class="heading-font text-3xl md:text-4xl font-semibold text-white"
+          >
+            Subscribe to our newsletter
+          </h3>
+
+          <!-- Newsletter Form -->
+          <form
+            class="mt-6 w-full max-w-xl mx-auto flex gap-3"
+            onsubmit="event.preventDefault()"
+          >
+            <div
+              class="flex items-center flex-1 bg-[#1b1b1b] border border-gray-700 rounded-lg px-4 py- text-gray-300 focus-within:border-white"
+            >
+              <svg
+                class="w-5 h-5 text-gray-400 mr-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3 7l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="bg-transparent outline-none w-full placeholder:text-gray-500"
+              />
+            </div>
+            <button
+              class="bg-[#1b1b1b] text-white font-medium rounded-lg px-5 py-3 whitespace-nowrap hover:bg-gray-800 transition"
+            >
+              Get Started
+            </button>
+          </form>
+        </div>
+
+        <!-- Centered Empty Box -->
+        <div class="flex items-center justify-center -mt-14">
+          <!-- <div
+            class="bg-gray-800 w-[40%] max-w-4xl h-40 rounded-lg shadow-md flex items-center justify-center"
+          >
+            <!-- Empty box content -->
+          <!-- </div> -->
+        </div>
+
+        <!-- Footer Box -->
+        <div class="max-w-6xl mx-auto px-6 pb-20 md:pb-24 -mt-28">
+          <div
+            class="bg-black rounded-lg p-5 mt-12 md:mt-16 pt-20 border border-white"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+              <!-- Left Side (Logo + Address) -->
+              <div class="md:col-span-2">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-26 h-16 bg-transparent flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="Logo.png"
+                      alt="Logo"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  <div>
+                    <p class="heading-font text-2xl text-white">Codenscious</p>
+                    <p class="text-xs text-gray-400">The Code Conscious</p>
+                  </div>
                 </div>
-            </div>
-
-            <!-- Footer Box -->
-            <div class="max-w-6xl mx-auto px-6  pb-20 md:pb-24 -mt-28">
-                <div class="bg-black rounded-lg p-5 mt-12 md:mt-16 pt-20 border border-white">
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-                        <!-- Left Side (Logo + Address) -->
-                        <div class="md:col-span-2">
-                            <div class="flex items-center gap-4">
-                                <div class="w-26 h-16  bg-transparent flex items-center justify-center overflow-hidden">
-                                    <img src="Logo.png" alt="Logo" class="w-full h-full object-cover">
-                                </div>
-
-                                <div>
-                                    <p class="heading-font text-2xl text-white">Codenscious</p>
-                                    <p class="text-xs text-gray-400">The Code Conscious</p>
-                                </div>
-                            </div>
-                            <div class="mt-6 space-y-4 text-sm text-gray-400">
-                                <p>
-                                    IT Park, 28,<br />Indore – Dhar Rd, Sinhasa,<br />Indore, Madhya
-                                    Pradesh 452009
-                                </p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <div>
-                                        <p class="text-gray-500">Phone Number</p>
-                                        <p class="mt-1">1-800-201-1019</p>
-                                    </div>
-                                    <div>
-                                        <p class="text-gray-500">Email</p>
-                                        <p class="mt-1">support@codenscious.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Quick Links -->
-                        <div>
-                            <p class="text-gray-500 tracking-widest uppercase text-xs">
-                                Quick Links
-                            </p>
-                            <ul class="mt-4 space-y-3 text-sm text-gray-300">
-                                <li><a class="hover:text-white" href="#about">About us</a></li>
-                                <li><a class="hover:text-white" href="#services">FAQ</a></li>
-                                <li><a class="hover:text-white" href="#contact">Contact us</a></li>
-                                <li><a class="hover:text-white" href="#blog">Blog</a></li>
-                                <li><a class="hover:text-white" href="#projects">Projects</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Social + Legal -->
-                        <div class="grid grid-cols-2 gap-10">
-                            <div>
-                                <p class="text-gray-500 tracking-widest uppercase text-xs">
-                                    Social
-                                </p>
-                                <ul class="mt-4 space-y-3 text-sm text-gray-300">
-                                    <li><a class="hover:text-white" href="#">Facebook</a></li>
-                                    <li><a class="hover:text-white" href="#">Instagram</a></li>
-                                    <li><a class="hover:text-white" href="#">Twitter</a></li>
-                                    <li><a class="hover:text-white" href="#">LinkedIn</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <p class="text-gray-500 tracking-widest uppercase text-xs">
-                                    Legal
-                                </p>
-                                <ul class="mt-4 space-y-3 text-sm text-gray-300">
-                                    <li><a class="hover:text-white" href="#">Terms of service</a></li>
-                                    <li><a class="hover:text-white" href="#">Privacy Policy</a></li>
-                                    <li><a class="hover:text-white" href="#">Cookie Policy</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                <div class="mt-6 space-y-4 text-sm text-gray-400">
+                  <p>
+                    IT Park, 28,<br />Indore – Dhar Rd, Sinhasa,<br />Indore,
+                    Madhya Pradesh 452009
+                  </p>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <p class="text-gray-500">Phone Number</p>
+                      <p class="mt-1">1-800-201-1019</p>
                     </div>
-
-                    <!-- Bottom -->
-                    <div class="mt-10 pt-6 border-t border-gray-900 text-center text-xs text-gray-500">
-                        © Codenscious. All Rights Reserved
+                    <div>
+                      <p class="text-gray-500">Email</p>
+                      <p class="mt-1">support@codenscious.com</p>
                     </div>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Quick Links -->
+              <div>
+                <p class="text-gray-500 tracking-widest uppercase text-xs">
+                  Quick Links
+                </p>
+                <ul class="mt-4 space-y-3 text-sm text-gray-300">
+                  <li>
+                    <a class="hover:text-white" href="#about">About us</a>
+                  </li>
+                  <li><a class="hover:text-white" href="#services">FAQ</a></li>
+                  <li>
+                    <a class="hover:text-white" href="#contact">Contact us</a>
+                  </li>
+                  <li><a class="hover:text-white" href="#blog">Blog</a></li>
+                  <li>
+                    <a class="hover:text-white" href="#projects">Projects</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Social + Legal -->
+              <div class="grid grid-cols-2 gap-10">
+                <div>
+                  <p class="text-gray-500 tracking-widest uppercase text-xs">
+                    Social
+                  </p>
+                  <ul class="mt-4 space-y-3 text-sm text-gray-300">
+                    <li><a class="hover:text-white" href="#">Facebook</a></li>
+                    <li><a class="hover:text-white" href="#">Instagram</a></li>
+                    <li><a class="hover:text-white" href="#">Twitter</a></li>
+                    <li><a class="hover:text-white" href="#">LinkedIn</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-gray-500 tracking-widest uppercase text-xs">
+                    Legal
+                  </p>
+                  <ul class="mt-4 space-y-3 text-sm text-gray-300">
+                    <li>
+                      <a class="hover:text-white" href="#">Terms of service</a>
+                    </li>
+                    <li>
+                      <a class="hover:text-white" href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a class="hover:text-white" href="#">Cookie Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-        </section>
+
+            <!-- Bottom -->
+            <div
+              class="mt-10 pt-6 border-t border-gray-900 text-center text-xs text-gray-500"
+            >
+              © Codenscious. All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
