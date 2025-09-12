@@ -1,0 +1,4778 @@
+.finaldoorbell-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.finaldoorbell-finaldoorbell {
+  width: 100%;
+  height: 3592px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.finaldoorbell-herosection {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 507px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(0deg, #00122C 100%, #032446 100%);
+  align-items: center;
+  flex-shrink: 0;
+  padding: 2rem 5rem;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.header-logo-container {
+
+  display: flex; /* Elements ko ek line me laayega */
+  align-items: center; /* Vertically center karega */
+  gap: 1rem; /* Logo aur text ke beech thoda space dega */
+}
+
+
+ 
+.finaldoorbell-text100 {
+   top: 91px;
+  left: 52px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 42px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 600; /* Changed from 700 to 600 */
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text104 {
+  top: 214px;
+  left: 52px;
+  color: rgba(255, 255, 255, 0.85);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group834 {
+  top: 320px;
+  left: 52px;
+  width: 168px;
+  height: 43px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-group695 {
+  top: 0px;
+  left: 0px;
+  width: 168px;
+  height: 43px;
+  display: flex;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(123, 203, 215, 1) 0%, rgba(3, 192, 221, 1) 98%);
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  border-radius: 8px; /* Added for rounded corners */
+}
+ 
+.finaldoorbell-text110 {
+  color: rgba(255, 255, 255, 1);
+  width: auto; /* Let flexbox handle positioning */
+  height: auto;
+  font-size: 22px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  /* Removed top, left, width properties */
+}
+
+.finaldoorbell-text110:hover{
+  transform: scale(1.1);
+}
+
+ 
+.finaldoorbell-group835 {
+  top: 320px;
+  left: 270px;
+  width: 168px;
+  height: 43px;
+  display: flex;
+  position: absolute;
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+}
+ 
+.finaldoorbell-rectangle172 {
+  top: 0px;
+  left: 0px;
+  width: 168px;
+  height: 43px;
+  position: absolute;
+  border-color: rgba(12, 193, 221, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+}
+ 
+.finaldoorbell-text111 {
+  color: rgba(255, 255, 255, 1);
+    width: auto;
+    height: auto;
+    font-size: 22px;
+    font-style: Medium;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    /* Removed top, left, width properties */
+}
+ 
+.finaldoorbell-group1 {
+  top: 403px;
+  left: 81px;
+  width: 22px;
+  height: 36.66677474975586px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-vector10 {
+  top: -2px;
+  left: -5px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector11 {
+  top: 29.333385467529297px;
+  left: 3.666738271713257px;
+  width: 15px;
+  height: 7px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector12 {
+  top: 6.416503429412842px;
+  left: 5.5px;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector13 {
+  top: 21.083410263061523px;
+  left: 9.166738510131836px;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group8371 {
+  top: 404px;
+  left: 259px;
+  width: 22px;
+  height: 34.29411697387695px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(230, 221, 221, 0);
+}
+ 
+.finaldoorbell-line821 {
+  position: relative; /* ::before aur ::after ko position karne ke liye zaroori */
+  top: -2px;
+  left: 5px;
+  width: 22.5px;       /* Icon ki chaudai */
+  height: 36px;      /* Icon ki lambai */
+  border: 2px;
+  color: #D9D9D9;
+  border-color: #FFFFFF;
+  border-radius: 4px;      /* Halka sa rounded corner */
+  background-color: transparent;
+}
+ 
+.finaldoorbell-line831 {
+  top: 3.882352828979492px;
+  left: 8.411765098571777px;
+  width: 6px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text112 {
+  top: 398px;
+  left: 113px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text116 {
+  top: 398px;
+  left: 297px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-header {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 66px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.nav-right-container {
+  display: flex; /* Iske children (nav links aur button) ko ek line me laayega */
+  align-items: center; /* Unhe aapas me vertically align karega */
+  gap: 2.5rem; /* Nav links aur 'Join Us' button ke beech me space */
+}
+
+.finaldoorbell-header {
+  position: absolute; /* Header ko upar fix rakha */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 5rem; /* Header ke liye alag se padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+ 
+.finaldoorbell-group7641 {
+  top: 7px;
+  left: 42px;
+  width: 98.99946594238281px;
+  height: 52.14521789550781px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-logog1 {
+  top: 0px;
+  left: 0px;
+  width: 98.99946594238281px;
+  height: 52.14521789550781px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-line411 {
+  top: 15.15576171875px;
+  left: 1.5539441108703613px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line471 {
+  top: 15.138671875px;
+  left: 97.36341857910156px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line421 {
+  top: 39.24658203125px;
+  left: 1.1652272939682007px;
+  width: 32px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line481 {
+  top: 39.14404296875px;
+  left: 97.9792709350586px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line451 {
+  top: 51.42724609375px;
+  left: 30.303756713867188px;
+  width: 39px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line461 {
+  top: 1.35302734375px;
+  left: 29.915502548217773px;
+  width: 39px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line431 {
+  top: 39.24658203125px;
+  left: 1.5539441108703613px;
+  width: 47px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line581 {
+  top: 39.24658203125px;
+  left: 1.1652272939682007px;
+  width: 32px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line521 {
+  top: 25.71337890625px;
+  left: 69.1551284790039px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line531 {
+  top: 15.138671875px;
+  left: 97.36341857910156px;
+  width: 30px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line491 {
+  top: 50.462890625px;
+  left: 30.2728271484375px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line571 {
+  top: 51.42724609375px;
+  left: 69.1551284790039px;
+  width: 47px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line501 {
+  top: 25.71337890625px;
+  left: 29.526784896850586px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line561 {
+  top: 38.908203125px;
+  left: 97.51669311523438px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line441 {
+  top: 51.42724609375px;
+  left: 69.15559387207031px;
+  width: 45px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line541 {
+  top: 38.908203125px;
+  left: 97.90540313720703px;
+  width: 48px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line511 {
+  top: 25.71337890625px;
+  left: 30.303756713867188px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line551 {
+  top: 51.42724609375px;
+  left: 30.303756713867188px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse261 {
+  top: 13.456779479980469px;
+  left: 0px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse231 {
+  top: 0px;
+  left: 28.636245727539062px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse221 {
+  top: 37.84716796875px;
+  left: 96.54535675048828px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse211 {
+  top: 14.2978515625px;
+  left: 95.72730255126953px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse201 {
+  top: 37.00634765625px;
+  left: 0.8180597424507141px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse241 {
+  top: 0px;
+  left: 67.90911102294922px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse251 {
+  top: 49.6220703125px;
+  left: 29.45476722717285px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse191 {
+  top: 49.6220703125px;
+  left: 67.09105682373047px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-group7491 {
+  top: 19.9619140625px;
+  left: 22.909147262573242px;
+  width: 61.01002883911133px;
+  height: 11.50336742401123px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-vector231 {
+  top: 0px;
+  left: 1.0253130197525024px;
+  width: 60px;
+  height: 12px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse271 {
+  top: 6.95166015625px;
+  left: -0.00007383283809758723px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text120 {
+  top: 16.82080078125px;
+  left: 31.09088706970215px;
+  color: rgba(255, 255, 255, 1);
+  width: 38px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Kalam;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text121 {
+  top: 16px;
+  left: 165px;
+  color: white;
+  width: 190px;
+  height: auto;
+  position: static;
+  font-size: 28px;
+  font-style: Bold;
+  text-align: left;
+  font-family: 'Inria Sans', sans-serif;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group599 {
+  top: 15px;
+  left: 1375px;
+  width: 123px;
+  height: 36px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(3, 192, 221, 1);
+  border-radius: 999px; /* Added for rounded corners */
+  padding: 0.7rem 1.8rem;
+  cursor: pointer;
+}
+ 
+.finaldoorbell-text122 {
+ /* Removed top and left properties to let flexbox center it */
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: center;
+    font-family: Inria Sans;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+ 
+.finaldoorbell-group844 {
+  top: 21px;
+  left: 910px;
+  width: 422px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  gap: 2.5rem;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-text123 {
+  left: 249px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text124 {
+  left: 343px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text125 {
+  left: 115px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text126 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-phonemock {
+  top: 179px;
+  left: 913px;
+  width: 155px;
+  height: 313px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.finaldoorbell-phonemock {
+  width: 170px;
+  height: auto;
+  z-index: 1;
+}
+
+/* --- Media Query for Responsiveness --- */
+/* Yeh code tab chalega jab screen 1024px se choti hogi */
+@media (max-width: 1024px) {
+  .finaldoorbell-herosection {
+    flex-direction: column; /* Content ko ek ke neeche ek rakha */
+    text-align: center;
+    padding: 2rem; /* Choti screen par padding kam ki */
+    min-height: auto;
+  }
+
+  .finaldoorbell-header {
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Choti screen par nav links hide kar diye */
+  .finaldoorbell-group844 {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .finaldoorbell-group844 span {
+    color: white;
+    font-size: 20px;
+    font-family: 'Inria Sans', sans-serif;
+    cursor: pointer;
+}
+
+
+  /* Images ko content ke neeche rakha */
+  .finaldoorbell-doorbell, .finaldoorbell-phonemock {
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+}
+ 
+/* Naye logo ka size control karne ke liye */
+.new-logo-image {
+  width: 100px;  /* Aap isko apne hisaab se chota-bada kar sakte hain */
+  height: auto; /* Height apne aap adjust ho jayegi */
+}
+
+.finaldoorbell-group8481 {
+  top: 0px;
+  left: 2px;
+  width: 150px;
+  height: 310px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-iphone1411 {
+  top: 0.00009918212890625px;
+  left: 170px;
+  width: 150px;
+  height: 310px;
+  display: flex;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 11, 30, 1) 13%, rgba(3, 44, 93, 1) 100%);
+  box-shadow: 0px 4px 4px 0px rgba(8, 20, 49, 0.5) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 28px;
+}
+ 
+.finaldoorbell-text127 {
+  top: 31px;
+  left: 40px;
+  color: rgba(255, 255, 255, 1);
+  width: 71px;
+  height: auto;
+  position: absolute;
+  font-size: 35px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text128 {
+  top: 69px;
+  left: 39px;
+  color: rgba(255, 255, 255, 1);
+  width: 73px;
+  height: auto;
+  position: absolute;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-line841 {
+  top: 301px;
+  left: 48px;
+  width: 54px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group850 {
+  top: 92px;
+  left: 10px;
+  width: 130px;
+  height: 47px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(115, 148, 184, 0.6299999952316284);
+}
+ 
+.finaldoorbell-text129 {
+  top: 8px;
+  left: 108px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 6px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text130 {
+  top: 36px;
+  left: 12px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 6px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text131 {
+  top: 19px;
+  left: 24px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 6px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group2 {
+  top: 8px;
+  left: 6px;
+  width: 15px;
+  height: 16.715198516845703px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-vector14 {
+  top: 0px;
+  left: 0px;
+  width: 15px;
+  height: 13px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector15 {
+  top: 15.598594665527344px;
+  left: 5.92401123046875px;
+  width: 3px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text135 {
+  top: 6px;
+  left: 24px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 8px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group8491 {
+  top: 0px;
+  left: 0px;
+  width: 155px;
+  height: 313px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-blue1 {
+  top: 0px;
+  left: 170px;
+  width: 155px;
+  height: 313px;
+  position: relative;
+}
+ 
+.finaldoorbell-group845 {
+  top: 5px;
+  left: 170px;
+  width: 137px;
+  height: 22px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-frame688 {
+  top: 0px;
+  left: 170px;
+  width: 137px;
+  height: 22px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 40px 40px 0 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+ 
+.finaldoorbell-time1 {
+  top: 6px;
+  left: 15px;
+  width: 32px;
+  height: 12px;
+  display: flex;
+  position: absolute;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0);
+}
+ 
+.finaldoorbell-time2 {
+  top: -1px;
+  left: 3px;
+  width: 31px;
+  height: 13px;
+  position: absolute;
+}
+ 
+.finaldoorbell-icons {
+  gap: 4px;
+  top: 4px;
+  left: 99px;
+  height: 10px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0);
+}
+ 
+.finaldoorbell-reception1 {
+  width: 8px;
+  height: 5px;
+}
+ 
+.finaldoorbell-wifi1 {
+  width: 9px;
+  height: 6px;
+}
+ 
+.finaldoorbell-battery1 {
+  width: 12px;
+  height: 5px;
+}
+ 
+.finaldoorbell-doorbell {
+  top: 91px;
+  left: 1024px;
+  width: 181px;
+  height: 359px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+
+ 
+.finaldoorbell-image451 {
+  position: absolute;
+  top: 200px;
+  left: 285px;
+  width: 230px;
+  height: 359px;
+  transform: translate(-50%, -50%);
+  
+}
+ 
+.finaldoorbell-vector24 {
+  top: 358.28515625px;
+  left: 153.8544921875px;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector25 {
+  top: 357.181640625px;
+  left: 154.4453125px;
+  width: 9px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector26 {
+  top: 357.052734375px;
+  left: 161.764892578125px;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector27 {
+  top: 356.4619140625px;
+  left: 158.503173828125px;
+  width: 6px;
+  height: 2px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector28 {
+  top: 351.3857421875px;
+  left: 164.396240234375px;
+  width: 13px;
+  height: 5px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector29 {
+  top: 342.8271484375px;
+  left: 176.829345703125px;
+  width: 4px;
+  height: 8px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector33 {
+  top: 357.6689453125px;
+  left: 175.365234375px;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector34 {
+  top: 347.0703125px;
+  left: 178.64990234375px;
+  width: 2px;
+  height: 4px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector35 {
+  top: 350.65625px;
+  left: 175.4833984375px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.finaldoorbell-keyfeature {
+  top: 982px;
+  left: 0px;
+  width: 100vw;
+  height: 426px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(242, 246, 251, 1);
+}
+ 
+.finaldoorbell-text136 {
+  top: 55px;
+  left: 596px;
+  color: rgba(3, 34, 67, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group842 {
+  top: 123px;
+  left: 742px;
+  width: 206px;
+  height: 262px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-rectangle2551 {
+  top: 0px;
+  left: 0px;
+  width: 206px;
+  height: 262px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 16px;
+}
+ 
+.finaldoorbell-group838 {
+  top: 17.5px;
+  left: 73px;
+  width: 60px;
+  height: 77px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-vector16 {
+  top: 0px;
+  left: 0px;
+  width: 60px;
+  height: 77px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector17 {
+  top: 22px;
+  left: 18px;
+  width: 25px;
+  height: 33px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text137 {
+  top: 112px;
+  left: 9px;
+  color: rgba(3, 34, 67, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text141 {
+  top: 177px;
+  left: 17px;
+  color: rgba(135, 132, 132, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group841 {
+  top: 123px;
+  left: 452px;
+  width: 206px;
+  height: 262px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-rectangle2552 {
+  top: 0px;
+  left: 0px;
+  width: 206px;
+  height: 262px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 16px;
+}
+ 
+.finaldoorbell-group8372 {
+  top: 17px;
+  left: 78px;
+  width: 50px;
+  height: 77.94117736816406px;
+  border-radius: 10px;
+  border-width: 3px;
+  border-color: rgba(3, 192, 221, 1);
+  z-index: 1000;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(217, 217, 217, 0);
+}
+ 
+.finaldoorbell-line822 {
+  top: 70.58772277832031px;
+  left: 17.646928787231445px;
+  width: 15px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line832 {
+  top: 8.82457447052002px;
+  left: 19.117765426635742px;
+  width: 13px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text149 {
+  top: 112px;
+  left: 38px;
+  color: rgba(3, 34, 67, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text153 {
+  top: 177px;
+  left: 10px;
+  color: rgba(135, 132, 132, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group840 {
+  top: 123px;
+  left: 162px;
+  width: 206px;
+  height: 262px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-rectangle2553 {
+  top: 0px;
+  left: 0px;
+  width: 206px;
+  height: 262px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 16px;
+}
+ 
+.finaldoorbell-vector18 {
+  top: 21px;
+  left: 68px;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text159 {
+  top: 112px;
+  left: 20px;
+  color: rgba(3, 34, 67, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text163 {
+  top: 177px;
+  left: 24px;
+  color: rgba(135, 132, 132, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group843 {
+  top: 123px;
+  left: 1032px;
+  width: 206px;
+  height: 262px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-rectangle2554 {
+  top: 0px;
+  left: 0px;
+  width: 206px;
+  height: 262px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 16px;
+}
+ 
+.finaldoorbell-group839 {
+  top: 14.763031005859375px;
+  left: 58px;
+  width: 89.99980163574219px;
+  height: 82.47392272949219px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-vector19 {
+  top: 0px;
+  left: 0px;
+  width: 66px;
+  height: 66px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector20 {
+  top: 48.919857025146484px;
+  left: 56.44599151611328px;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text169 {
+  top: 112px;
+  left: 20px;
+  color: rgba(3, 34, 67, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text173 {
+  top: 177px;
+  left: 16px;
+  color: rgba(135, 132, 132, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-cta {
+  display: grid;
+  place-items: center;
+  top: 2876px;
+  left: 0px;
+  width: 100vw;
+  height: 443px;
+  overflow: hidden;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 18, 44, 1) 0%, rgba(3, 36, 70, 1) 55%);
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-group891 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: 51px;
+  left: 150px;
+  width: 1166px;
+  height: 342px;
+  border-radius: 20px;
+  border-color: lightskyblue;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 21, 48, 1) 0%, rgba(7, 45, 85, 1) 100%);
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-rectangle267 {
+  top: 167px;
+  left: 135px;
+  width: 583px;
+  height: 124px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text179 {
+  top: 40px;
+  left: 151px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 46px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text183 {
+  top: 179px;
+  left: 162px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group884 {
+  top: 266px;
+  left: 151px;
+  width: 271px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-rectangle263 {
+  top: 0px;
+  left: 0px;
+  width: 271px;
+  height: 40px;
+  position: absolute;
+  border-radius: 6px;
+}
+ 
+.finaldoorbell-text187 {
+  top: 6px;
+  left: 20px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group885 {
+  top: 266px;
+  left: 461px;
+  width: 187px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-text188 {
+  top: 6px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-rectangle264 {
+  top: 0px;
+  left: 0px;
+  width: 187px;
+  height: 40px;
+  position: absolute;
+  border-color: rgba(4, 192, 220, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+}
+ 
+.finaldoorbell-group890 {
+  top: 20px;
+  left: 728px;
+  width: 302px;
+  height: 297px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-ellipse43 {
+  top: 236px;
+  left: 171px;
+  width: 61px;
+  height: 61px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse42 {
+  top: 0px;
+  left: 111px;
+  width: 121px;
+  height: 118px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse46 {
+  top: 97px;
+  left: 111px;
+  width: 191px;
+  height: 165px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse44 {
+  top: 102px;
+  left: 0px;
+  width: 191px;
+  height: 184px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse45 {
+  top: 82px;
+  left: 75px;
+  width: 116px;
+  height: 204px;
+  position: absolute;
+}
+ 
+.finaldoorbell-image51 {
+  top: 20px;
+  left: 45px;
+  width: 216px;
+  height: 266px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse491 {
+  top: 33px;
+  left: 142px;
+  width: 59px;
+  height: 59px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-ellipse492 {
+  top: 0px;
+  left: 0px;
+  width: 59px;
+  height: 59px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse481 {
+  top: 261px;
+  left: 189px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-ellipse482 {
+  top: 0px;
+  left: 0px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group892 {
+  top: 169px;
+  left: 151px;
+  width: 592px;
+  height: 67px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-line951 {
+  top: 4px;
+  left: -35px;
+  width: 67px;
+  height: 65px;
+  z-index: 1000;
+  position: absolute;
+  color: lightblue ;
+}
+ 
+.finaldoorbell-line93 {
+  top: -1.8189894035458565e-12px;
+  left: 0px;
+  width: 592px;
+  height: 5px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line941 {
+  top: 66.96365356445312px;
+  left: 0px;
+  width: 592px;
+  height: 5px;
+  position: absolute;
+}
+ 
+.finaldoorbell-working {
+  top: 1408px;
+  left: 0px;
+  width: 100vw;
+  height: 444px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(242, 246, 251, 1);
+}
+ 
+.finaldoorbell-ellipse11 {
+  top: 371px;
+  left: 29.140033721923828px;
+  width: 201px;
+  height: 38px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse28 {
+  top: 62px;
+  left: 12.109375px;
+  width: 297px;
+  height: 365px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text189 {
+  top: 26px;
+  left: 604px;
+  color: rgba(3, 34, 67, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-rectangle258 {
+  top: 95px;
+  left: 299px;
+  width: 1008px;
+  height: 310px;
+  position: absolute;
+  border-radius: 16px;
+}
+ 
+.finaldoorbell-image46 {
+  top: 86px;
+  left: 65px;
+  width: 153px;
+  height: 319px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group877 {
+  top: 138px;
+  left: 337px;
+  width: 946px;
+  height: 215px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-group869 {
+  top: 0px;
+  left: 0px;
+  width: 160px;
+  height: 215px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 16px;
+}
+ 
+.finaldoorbell-group872 {
+  top: 19.48828125px;
+  left: 40.931640625px;
+  width: 78px;
+  height: 77px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text190 {
+  top: 102.98297882080078px;
+  left: 32.52734375px;
+  color: rgba(3, 34, 67, 1);
+  width: 95px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text191 {
+  top: 136px;
+  left: 11px;
+  color: rgba(135, 132, 132, 1);
+  width: 138px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group870 {
+  top: 0px;
+  left: 524px;
+  width: 160px;
+  height: 215px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 16px;
+}
+ 
+.finaldoorbell-group875 {
+  top: 14.876556396484375px;
+  left: 52.43170166015625px;
+  width: 55px;
+  height: 85.73529052734375px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-group8373 {
+  top: 0px;
+  left: 0px;
+  width: 55px;
+  height: 85.73529052734375px;
+  border-radius: 10px ;
+  border-width: 2px;
+  border-color: rgba(3, 192, 221, 1);
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(217, 217, 217, 0);
+}
+ 
+.finaldoorbell-line823 {
+  top: 77.646484375px;
+  left: 19.41158103942871px;
+  width: 16px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line833 {
+  top: 9.7060546875px;
+  left: 21.02962303161621px;
+  width: 15px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-proiconsbell {
+  top: 31px;
+  left: 16px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-group3 {
+  top: 2.749000072479248px;
+  left: 3.8259975910186768px;
+  width: 16.348005294799805px;
+  height: 18.500999450683594px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-vector21 {
+  top: 0px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector22 {
+  top: 18.500999450683594px;
+  left: 6.174002647399902px;
+  width: 4px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text192 {
+  top: 103px;
+  left: 20px;
+  color: rgba(3, 34, 67, 1);
+  width: 120px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text193 {
+  top: 136px;
+  left: 18px;
+  color: rgba(135, 132, 132, 1);
+  width: 123px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group871 {
+  top: 0px;
+  left: 786px;
+  width: 160px;
+  height: 215px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 16px;
+}
+ 
+.finaldoorbell-group876 {
+  top: 14.8765869140625px;
+  left: 52.43170166015625px;
+  width: 55px;
+  height: 85.73529052734375px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-group8374 {
+  top: 0px;
+  left: 0px;
+  width: 55px;
+  height: 85.73529052734375px;
+  border-radius: 10px ;
+  border-width: 2px;
+  border-color: rgba(3, 192, 221, 1);
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(217, 217, 217, 0);
+}
+ 
+.finaldoorbell-line834 {
+  top: 10px;
+  left: 16px;
+  width: 23px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector30 {
+  top: 32px;
+  left: 19px;
+  width: 16px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text194 {
+  top: 102.98297882080078px;
+  left: 32.52734375px;
+  color: rgba(3, 34, 67, 1);
+  width: 95px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text195 {
+  top: 135.50401306152344px;
+  left: 18.46142578125px;
+  color: rgba(135, 132, 132, 1);
+  width: 123px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-rectangle2555 {
+  top: 0px;
+  left: 262px;
+  width: 160px;
+  height: 215px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 16px;
+}
+ 
+.finaldoorbell-text196 {
+  top: 103px;
+  left: 276px;
+  color: rgba(3, 34, 67, 1);
+  width: 132px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text197 {
+  top: 136px;
+  left: 278px;
+  color: rgba(135, 132, 132, 1);
+  width: 127px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group874 {
+  top: 29px;
+  left: 312px;
+  width: 60px;
+  height: 58px;
+  position: absolute;
+}
+ 
+
+.finaldoorbell-arrow14 {
+  top: 114px;
+  left: 175px;
+  width: 72px;
+  position: absolute;
+}
+
+ 
+.finaldoorbell-arrow16 {
+  top: 114px;
+  left: 437px;
+  width: 72px;
+  position: absolute;
+}
+ 
+.finaldoorbell-arrow15 {
+  top: 114px;
+  left: 699px;
+  width: 72px;
+  position: absolute;
+}
+ 
+.finaldoorbell-impact {
+  top: 1852px;
+  left: 0px;
+  width: 100vw;
+  height: 491px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(242, 246, 251, 1);
+}
+ 
+.finaldoorbell-group897 {
+  top: 41px;
+  left: 97px;
+  width: 1278px;
+  height: 410px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.finaldoorbell-text198 {
+  top: 24px;
+  left: 518px;
+  color: rgba(3, 34, 67, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text199 {
+  top: 69px;
+  left: 47px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Light;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group883 {
+  top: 135px;
+  left: 149px;
+  width: 281.0601501464844px;
+  height: 140.8824005126953px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-rectangle261 {
+  top: 11.996763229370117px;
+  left: 7.59765625px;
+  width: 265px;
+  height: 115px;
+  position: absolute;
+}
+ 
+.finaldoorbell-rectangle260 {
+  top: 11.996763229370117px;
+  left: 7.59765625px;
+  width: 265px;
+  height: 115px;
+  position: absolute;
+  box-shadow: 3px 6px 25px 0px #595959;
+}
+ 
+.finaldoorbell-line91 {
+  top: -80px;
+  left: 5px;
+  width: 267px;
+  height: 299px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text203 {
+  top: 113.99956512451172px;
+  left: 99px;
+  color: rgba(3, 34, 67, 1);
+  width: 85px;
+  height: auto;
+  position: absolute;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text204 {
+  top: 70px;
+  left: 228px;
+  color: rgba(3, 34, 67, 1);
+  width: 71px;
+  height: auto;
+  position: absolute;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  transform: rotate(270deg);
+}
+ 
+.finaldoorbell-text205 {
+  top: 24.999492645263672px;
+  left: 23px;
+  color: rgba(3, 34, 67, 1);
+  width: 122px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group882 {
+  top: 147px;
+  left: 736px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-ellipse36 {
+  top: 0px;
+  left: 0px;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse38 {
+  top: 0px;
+  left: 0px;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line90 {
+  top: -1px;
+  left: 45px;
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  border: 11px;
+  color: rgba(214, 229, 237, 1);
+}
+ 
+.finaldoorbell-union {
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text206 {
+  top: 42px;
+  left: 25px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group896 {
+  top: 175px;
+  left: 880px;
+  width: 184px;
+  height: 28px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-text207 {
+  top: 18px;
+  color: rgba(46, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text208 {
+  color: rgba(3, 34, 67, 1);
+  width: 184px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group881 {
+  top: 298px;
+  left: 153px;
+  width: 973px;
+  height: 79px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-group878 {
+  top: 0px;
+  left: 0px;
+  width: 277px;
+  height: 79px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-text209 {
+  color: rgba(3, 34, 67, 1);
+  width: 150px;
+  top: -5px;
+  height: auto;
+  position: absolute;
+  font-size: 28px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.finaldoorbell-text209A {
+  color: rgba(3, 34, 67, 10);
+  width: 150px;
+  top: 0px;
+  left: 2px;
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text210 {
+  top: 61px;
+  left: 2px;
+  width: 350px;
+  color: rgba(56, 57, 65, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group879 {
+  top: 0px;
+  left: 344px;
+  width: 284px;
+  height: 79px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-text211 {
+  color: rgba(3, 34, 67, 1);
+  width: 150px;
+  top: -5px;
+  height: auto;
+  position: absolute;
+  font-size: 28px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.finaldoorbell-text211A {
+  color: rgba(3, 34, 67, 10);
+  width: 250px;
+  top: 0px;
+  left: 0px;
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text212 {
+  top: 61px;
+  left: 2px;
+  width: 350px;
+  color: rgba(56, 57, 65, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group880 {
+  top: 0px;
+  left: 695px;
+  width: 278px;
+  height: 79px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-text213 {
+  color: rgba(3, 34, 67, 1);
+  width: 150px;
+  top: -5px;
+  height: auto;
+  position: absolute;
+  font-size: 28px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.finaldoorbell-text213A {
+  color: rgba(3, 34, 67, 10);
+  width: 350px;
+  top: 27px;
+  left: 0px;
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text214 {
+  top: 60px;
+  color: rgba(56, 57, 65, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-client {
+  top: 2343px;
+  left: 0px;
+  width: 100vw;
+  height: 533px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(242, 246, 251, 1);
+}
+ 
+.finaldoorbell-text215 {
+  top: 26px;
+  left: 580px;
+  color: rgba(3, 34, 67, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text216 {
+  top: 65px;
+  left: 455px;
+  color: rgba(46, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-line92 {
+  top: 105px;
+  left: 59px;
+  width: 1400px;
+  height: 6px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group888 {
+  top: 169px;
+  left: 1200px;
+  width: 245px;
+  height: 290.370361328125px;
+  border-radius: 20px;
+  border-color: lightskyblue;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.finaldoorbell-text217 {
+  top: 36.296875px;
+  left: 19.0556640625px;
+  color: rgba(56, 57, 65, 1);
+  height: auto;
+  position: absolute;
+  font-size: 13.61111068725586px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-ellipse411 {
+  top: 145.185546875px;
+  left: 88.92591094970703px;
+  width: 68px;
+  height: 68px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text225 {
+  top: 233.2041015625px;
+  left: 37.348876953125px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14.518518447875977px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text226 {
+  color: rgba(3, 26, 48, 1);
+  font-weight: 700;
+}
+ 
+.finaldoorbell-group7931 {
+  top: 110.7041015625px;
+  left: 54.444580078125px;
+  width: 136.1112060546875px;
+  height: 19.44444465637207px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-star10 {
+  top: 0px;
+  left: 0px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star11 {
+  top: 0px;
+  left: 29.16650390625px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star12 {
+  top: 0px;
+  left: 58.333251953125px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star13 {
+  top: 0px;
+  left: 87.499755859375px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star14 {
+  top: 0px;
+  left: 116.666748046875px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group887 {
+  top: 159px;
+  left: 910px;
+  width: 265px;
+  height: 314.0740661621094px;
+  border-radius: 20px;
+  border-color: lightskyblue;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.finaldoorbell-text229 {
+  top: 39.2587890625px;
+  left: 20.611083984375px;
+  color: rgba(56, 57, 65, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14.722222328186035px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-ellipse412 {
+  top: 157.03712463378906px;
+  left: 96.18516540527344px;
+  width: 74px;
+  height: 74px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text237 {
+  top: 252.24044799804688px;
+  left: 82.7977523803711px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 15.703704833984375px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text238 {
+  color: rgba(3, 26, 48, 1);
+  font-weight: 700;
+}
+ 
+.finaldoorbell-group7932 {
+  top: 119.74044799804688px;
+  left: 58.88900375366211px;
+  width: 147.2223358154297px;
+  height: 21.03174591064453px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-star15 {
+  top: 0px;
+  left: 0px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star16 {
+  top: 0.00021270752768032253px;
+  left: 31.547388076782227px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star17 {
+  top: 0.00021270752768032253px;
+  left: 63.095069885253906px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star18 {
+  top: 0.00021270752768032253px;
+  left: 94.64248657226562px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star19 {
+  top: 0.00021270752768032253px;
+  left: 126.1904296875px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group8861 {
+  top: 166px;
+  left: 40px;
+  width: 245px;
+  height: 290.3703918457031px;
+  border-radius: 20px;
+  border-color: lightskyblue;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.finaldoorbell-text241 {
+  top: 36.2958984375px;
+  left: 24.159912109375px;
+  color: rgba(56, 57, 65, 1);
+  height: auto;
+  position: absolute;
+  font-size: 13.611111640930176px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-ellipse413 {
+  top: 145.18556213378906px;
+  left: 88.92589569091797px;
+  width: 68px;
+  height: 68px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text249 {
+  top: 233.2041015625px;
+  left: 81.326416015625px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14.518519401550293px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text250 {
+  color: rgba(3, 26, 48, 1);
+  font-weight: 700;
+}
+ 
+.finaldoorbell-group7933 {
+  top: 110.7041015625px;
+  left: 54.4443359375px;
+  width: 136.11122131347656px;
+  height: 19.44444465637207px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-star20 {
+  top: 0px;
+  left: 0px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star21 {
+  top: 0px;
+  left: 29.166748046875px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star22 {
+  top: 0px;
+  left: 58.333251953125px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star23 {
+  top: 0px;
+  left: 87.5px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star24 {
+  top: 0px;
+  left: 116.6669921875px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group889 {
+  top: 159px;
+  left: 310px;
+  width: 265px;
+  height: 314.0740966796875px;
+  border-radius: 20px;
+  border-color: lightskyblue;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.finaldoorbell-text253 {
+  top: 39.25901794433594px;
+  left: 20.6112003326416px;
+  color: rgba(56, 57, 65, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14.722221374511719px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-ellipse414 {
+  top: 157.0371551513672px;
+  left: 96.1851577758789px;
+  width: 74px;
+  height: 74px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text261 {
+  top: 252.2413330078125px;
+  left: 33.861202239990234px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 15.703702926635742px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text262 {
+  color: rgba(3, 26, 48, 1);
+  font-weight: 700;
+}
+ 
+.finaldoorbell-group7934 {
+  top: 119.74134063720703px;
+  left: 58.888797760009766px;
+  width: 147.2223358154297px;
+  height: 21.03174591064453px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-star25 {
+  top: 0px;
+  left: 0px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star26 {
+  top: 0.000125885009765625px;
+  left: 31.547616958618164px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star27 {
+  top: 0.000125885009765625px;
+  left: 63.0950813293457px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star28 {
+  top: 0.000125885009765625px;
+  left: 94.64281463623047px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star29 {
+  top: 0.000125885009765625px;
+  left: 126.1905517578125px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group8862 {
+  top: 145px;
+  left: 600px;
+  width: 285px;
+  height: 337.77777099609375px;
+  border-radius: 20px;
+  border-color: lightskyblue;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.finaldoorbell-text265 {
+  top: 42.2216796875px;
+  left: 22.166748046875px;
+  color: rgba(56, 57, 65, 1);
+  height: auto;
+  position: absolute;
+  font-size: 15.833333969116211px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-ellipse415 {
+  top: 168.888671875px;
+  left: 103.44445037841797px;
+  width: 79px;
+  height: 79px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text273 {
+  top: 271.27734375px;
+  left: 69.666748046875px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16.88888931274414px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text274 {
+  color: rgba(3, 26, 48, 1);
+  font-weight: 700;
+}
+ 
+.finaldoorbell-group7935 {
+  top: 128.77734375px;
+  left: 63.333251953125px;
+  width: 158.33389282226562px;
+  height: 22.619049072265625px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-star30 {
+  top: 0px;
+  left: 0px;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star31 {
+  top: 0px;
+  left: 33.9287109375px;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star32 {
+  top: 0px;
+  left: 67.857177734375px;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star33 {
+  top: 0px;
+  left: 101.78564453125px;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+}
+ 
+.finaldoorbell-star34 {
+  top: 0px;
+  left: 135.714599609375px;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+}
+ 
+.finaldoorbell-footer {
+  top: 3312px;
+  left: 0px;
+  width: 100vw;
+  height: 280px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(1, 19, 45, 1);
+}
+ 
+.finaldoorbell-group895 {
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 270px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-line942 {
+  top: 0px;
+  left: 0px;
+  width: 1400px;
+  height: 5px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line952 {
+  top: 245px;
+  left: 25px;
+  width: 1349px;
+  height: 5px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group7642 {
+  top: 24px;
+  left: 22px;
+  width: 293px;
+  height: 52.14521789550781px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-logog2 {
+  top: 13.45703125px;
+  left: 0px;
+  width: 3.272416591644287px;
+  height: 26.07197380065918px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-ellipse262 {
+  top: -0.00025177001953125px;
+  left: 0px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse202 {
+  top: 23.54931640625px;
+  left: 0.8180597424507141px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-group893 {
+  top: 0px;
+  left: 1.1650390625px;
+  width: 291.8349609375px;
+  height: 52.14521789550781px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-text277 {
+  top: 12px;
+  left: 111.8349609375px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-line412 {
+  top: 15.15625px;
+  left: 0.388671875px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line472 {
+  top: 15.138671875px;
+  left: 96.1982421875px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line422 {
+  top: 39.24609375px;
+  left: 0px;
+  width: 32px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line482 {
+  top: 39.14453125px;
+  left: 96.814453125px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line452 {
+  top: 51.427734375px;
+  left: 29.138671875px;
+  width: 39px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line462 {
+  top: 1.353515625px;
+  left: 28.75048828125px;
+  width: 39px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line432 {
+  top: 39.24609375px;
+  left: 0.388671875px;
+  width: 47px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line582 {
+  top: 39.24609375px;
+  left: 0px;
+  width: 32px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line522 {
+  top: 25.712890625px;
+  left: 67.990234375px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line532 {
+  top: 15.138671875px;
+  left: 96.1982421875px;
+  width: 30px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line492 {
+  top: 50.462890625px;
+  left: 29.10791015625px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line572 {
+  top: 51.427734375px;
+  left: 67.990234375px;
+  width: 47px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line502 {
+  top: 25.712890625px;
+  left: 28.36181640625px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line562 {
+  top: 38.908203125px;
+  left: 96.3515625px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line442 {
+  top: 51.427734375px;
+  left: 67.99072265625px;
+  width: 45px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line542 {
+  top: 38.908203125px;
+  left: 96.740234375px;
+  width: 48px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line512 {
+  top: 25.712890625px;
+  left: 29.138671875px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-line552 {
+  top: 51.427734375px;
+  left: 29.138671875px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse232 {
+  top: 0px;
+  left: 27.47119140625px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse222 {
+  top: 37.84765625px;
+  left: 95.38037109375px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse212 {
+  top: 14.2978515625px;
+  left: 94.5625px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse242 {
+  top: 0px;
+  left: 66.744140625px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse252 {
+  top: 49.6220703125px;
+  left: 28.28955078125px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-ellipse192 {
+  top: 49.6220703125px;
+  left: 65.92578125px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-group7492 {
+  top: 19.9619140625px;
+  left: 21.744140625px;
+  width: 61.01002883911133px;
+  height: 11.50336742401123px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-vector232 {
+  top: 0px;
+  left: 1.0253130197525024px;
+  width: 60px;
+  height: 12px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse272 {
+  top: 6.95166015625px;
+  left: -0.00007383283809758723px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text278 {
+  top: 16.8203125px;
+  left: 29.92578125px;
+  color: rgba(255, 255, 255, 1);
+  width: 38px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Kalam;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group894 {
+  top: 250px;
+  left: 47px;
+  width: 80.94937896728516px;
+  height: 20px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-vector31 {
+  top: 0px;
+  left: 60.93408203125px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector32 {
+  top: 0px;
+  left: 30.919921875px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector36 {
+  top: 3px;
+  left: 0px;
+  width: 21px;
+  height: 17px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text279 {
+  top: 98px;
+  left: 45px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-frame6241 {
+  gap: 8px;
+  top: 154px;
+  left: 47px;
+  width: 113px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.finaldoorbell-text283 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 22px;
+  align-self: stretch;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-vector37 {
+  width: 17px;
+  height: 15px;
+}
+ 
+.finaldoorbell-vector38 {
+  width: 17px;
+  height: 17px;
+}
+ 
+.finaldoorbell-text284 {
+  top: 56px;
+  left: 473px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-frame625 {
+  gap: 4px;
+  top: 98px;
+  left: 473px;
+  width: 107px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: rgba(9, 13, 33, 0);
+}
+ 
+.finaldoorbell-text285 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text286 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text287 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text288 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text289 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-frame6242 {
+  gap: 4px;
+  top: 96px;
+  left: 850px;
+  width: 168px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0);
+}
+ 
+.finaldoorbell-text290 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text291 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text292 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text293 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text294 {
+  top: 56px;
+  left: 850px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text295 {
+  top: 58px;
+  left: 1145px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text296 {
+  top: 98px;
+  left: 1145px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group625 {
+  top: 146px;
+  left: 1145px;
+  width: 218px;
+  height: 38px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.finaldoorbell-text300 {
+  top: 8.738821029663086px;
+  left: 17.999977111816406px;
+  color: rgba(5, 47, 95, 1);
+  width: 137px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group624 {
+  top: 205px;
+  left: 1145px;
+  width: 156px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 253, 253, 0);
+}
+ 
+.finaldoorbell-text301 {
+  top: 3.5358142852783203px;
+  left: 34.44140625px;
+  color: rgba(255, 255, 255, 1);
+  width: 110px;
+  height: 30px;
+  position: relative;
+  font-size: 18px;
+  font-style: Light;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: 30px;
+  font-stretch: normal;
+  text-decoration: none;
+  border-radius: 9px;
+  border: 2px solid white;
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.finaldoorbell-aboutsection {
+  top: 507px;
+  left: 0px;
+  width: 100vw;
+  height: 475px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: rgba(241, 246, 250, 1);
+}
+ 
+
+.finaldoorbell-group868 {
+  top: 29px;
+  left: 100px;
+  width: 1283px;
+  height: 418px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.finaldoorbell-text302 {
+  top: 22px;
+  left: 68px;
+  color: rgba(3, 34, 67, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text303 {
+  top: 68px;
+  left: 70px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text309 {
+  top: 323px;
+  left: 68px;
+  color: rgba(45, 45, 45, 1);
+  width: 749px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group862 {
+  top: 15px;
+  left: 821.999755859375px;
+  width: 427.1048278808594px;
+  height: 285.83050537109375px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-ellipse12 {
+  top: 218.38916015625px;
+  left: 156.10641479492188px;
+  width: 271px;
+  height: 38px;
+  position: absolute;
+}
+ 
+.finaldoorbell-ellipse29 {
+  top: 216.38916015625px;
+  left: 3.857147455215454px;
+  width: 268px;
+  height: 48px;
+  position: absolute;
+}
+ 
+.finaldoorbell-image452 {
+  top: 0px;
+  left: 198px;
+  width: 123px;
+  height: 243px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group857 {
+  top: 31.951171875px;
+  left: 89.99996948242188px;
+  width: 120.33539581298828px;
+  height: 243.000244140625px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-group854 {
+  top: 0px;
+  left: 0px;
+  width: 120.33539581298828px;
+  height: 243.000244140625px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-group8482 {
+  top: -0.3879682277392362px;
+  left: 2.9748043102179054px;
+  width: 115px;
+  height: 243px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-iphone1412 {
+  top: 0px;
+  left: 0px;
+  width: 115px;
+  height: 243px;
+  display: flex;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 11, 30, 1) 0%, rgba(0, 20, 44, 1) 100%);
+  box-shadow: 0px 4px 4px 0px rgba(8, 20, 49, 0.5) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 28px;
+  transform:rotate(-7deg);
+}
+ 
+.finaldoorbell-line842 {
+  top: 235px;
+  left: 37px;
+  width: 39px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text310 {
+  top: 29px;
+  left: 30px;
+  color: rgba(255, 255, 255, 1);
+  width: 55px;
+  height: auto;
+  position: absolute;
+  font-size: 28px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group856 {
+  top: 9px;
+  left: 79px;
+  width: 26.999765396118164px;
+  height: 4.000315189361572px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-battery2 {
+  top: 0px;
+  left: 18px;
+  width: 9px;
+  height: 4px;
+  position: absolute;
+}
+ 
+.finaldoorbell-wifi2 {
+  top: 0px;
+  left: 9px;
+  width: 6px;
+  height: 4px;
+  position: absolute;
+}
+ 
+.finaldoorbell-reception2 {
+  top: 0px;
+  left: 0px;
+  width: 6px;
+  height: 4px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector39 {
+  top: 9px;
+  left: 13px;
+  width: 14px;
+  height: 4px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text311 {
+  top: 59px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  width: 61px;
+  height: auto;
+  position: absolute;
+  font-size: 8px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group855 {
+  top: 74px;
+  left: 6px;
+  width: 103px;
+  height: 29px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(115, 148, 184, 0.6299999952316284);
+}
+ 
+.finaldoorbell-text312 {
+  top: 5px;
+  left: 90px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 4px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text313 {
+  top: 23px;
+  left: 14px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 4px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text314 {
+  top: 11px;
+  left: 23px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 4px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group4 {
+  top: 3px;
+  left: 5px;
+  width: 13px;
+  height: 14.486242294311523px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-vector40 {
+  top: 0px;
+  left: 0px;
+  width: 13px;
+  height: 12px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector41 {
+  top: 13.518784523010254px;
+  left: 5.134142875671387px;
+  width: 3px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-text318 {
+  top: 3px;
+  left: 23px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 6px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group8492 {
+  top: 0.0000018152916254621232px;
+  left: -0.000013919019579589076px;
+  width: 120.33539581298828px;
+  height: 243px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  transform: rotate(-7.43deg);
+}
+ 
+.finaldoorbell-blue2 {
+  top: -8px;
+  left: -14px;
+  width: 150px;
+  height: 257px;
+  position: absolute;
+  transform: rotate(7deg);
+
+}
+ 
+.finaldoorbell-text319 {
+  top: 156px;
+  left: 68px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text320 {
+  top: 286px;
+  left: 68px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group898 {
+  top: 193px;
+  left: 68px;
+  width: 774px;
+  height: 83px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-text321 {
+  top: 30px;
+  left: 23px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text325 {
+  top: 30px;
+  left: 277px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+ 
+.finaldoorbell-text331 {
+  top: 28px;
+  left: 484px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group859 {
+  top: 3px;
+  left: 0px;
+  width: 214px;
+  height: 25px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-text335 {
+  top: 0px;
+  left: 22px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group5 {
+  top: 0px;
+  left: 0px;
+  width: 15px;
+  height: 25px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-vector42 {
+  top: -5px;
+  left: -6.5px;
+  width: 25px;
+  height: 30px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector43 {
+  top: 19.99998664855957px;
+  left: 2.5000555515289307px;
+  width: 10px;
+  height: 5px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector44 {
+  top: 4.3746018409729px;
+  left: 3.75px;
+  width: 7px;
+  height: 8px;
+  position: absolute;
+}
+ 
+.finaldoorbell-vector45 {
+  top: 14.374927520751953px;
+  left: 6.250055313110352px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group861 {
+  top: 0px;
+  left: 251px;
+  width: 163px;
+  height: 34.29411697387695px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-text336 {
+  top: 2px;
+  left: 25px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group8375 {
+  top: 0px;
+  left: 0px;
+  width: 22px;
+  height: 34.29411697387695px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(217, 217, 217, 0);
+}
+ 
+.finaldoorbell-line824 {
+  left: -3px;
+  top: -3px;
+  position: relative; /* Required to position the notch and bar inside */
+  width: 24px;       /* Width of the icon */
+  height: 33px;      /* Height of the icon */
+  border: 2px ; /* Icon's dark blue border color */
+  border-radius: 5px;      /* Rounds the corners */
+  background-color: transparent;
+}
+ 
+.finaldoorbell-line835 {
+  top: 3.882352828979492px;
+  left: 8.411765098571777px;
+  width: 6px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group860 {
+  top: 5px;
+  left: 451px;
+  width: 323px;
+  height: 22px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finaldoorbell-text337 {
+  top: -2.7px;
+  left: 33px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-vector46 {
+  top: -1.5px;
+  left: 0px;
+  width: 24px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.finaldoorbell-group867 {
+  top: 314px;
+  left: 888px;
+  width: 90px;
+  height: 60px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-rectangle2571 {
+  top: 0px;
+  left: 0px;
+  width: 90px;
+  height: 60px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+}
+ 
+.finaldoorbell-text338 {
+  top: 11px;
+  left: 27px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text339 {
+  top: 38px;
+  left: 15px;
+  color: rgba(46, 45, 45, 1);
+  width: 61px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group866 {
+  top: 314px;
+  left: 1015px;
+  width: 90px;
+  height: 60px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-rectangle2572 {
+  top: 0px;
+  left: 0px;
+  width: 90px;
+  height: 60px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+}
+ 
+.finaldoorbell-text340 {
+  top: 11px;
+  left: 24px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text341 {
+  top: 38px;
+  left: 8px;
+  color: rgba(46, 45, 45, 1);
+  width: 75px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-group865 {
+  top: 314px;
+  left: 1142px;
+  width: 90px;
+  height: 60px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.finaldoorbell-group864 {
+  top: 0px;
+  left: 0px;
+  width: 90px;
+  height: 60px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: rgba(242, 246, 251, 1);
+}
+ 
+.finaldoorbell-text342 {
+  top: 11px;
+  left: 18px;
+  color: rgba(3, 26, 48, 1);
+  width: 54px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.finaldoorbell-text343 {
+  top: 38px;
+  left: 13px;
+  color: rgba(46, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
