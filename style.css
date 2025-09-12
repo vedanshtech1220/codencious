@@ -1804,4 +1804,5 @@ body.navbar-visible #hero {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(180deg, #
+    background: linear-gradient(180deg);
+}
