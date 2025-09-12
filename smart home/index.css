@@ -1,0 +1,2921 @@
+.smarthome-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.smarthome-smarthome {
+  width: 100%;
+  height: 3491px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.smarthome-hero {
+  top: 0px;
+  left: 0px;
+  width: 1400px;
+  height: 700px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.smarthome-text100 {
+  top: 169px;
+  left: 124px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-frame10 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 77px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  background-color: #fff;
+  padding: 0 20px;
+  z-index: 10;
+}
+ 
+.smarthome-rectangle30 {
+  top: 0px;
+  left: 0px;
+  width: 1400px;
+  height: 51px;
+  position: absolute;
+  display: none;
+}
+ 
+.smarthome-group599 {
+  top: 22px;
+  left: 1340px;
+  width: 123px;
+  height: 36px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 15px;
+  cursor: pointer;
+}
+ 
+.smarthome-text104 {
+  top: 6px;
+  left: 31px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+
+.smarthome-group7641 {
+  top: 12px;
+  left: 35px;
+  width: 99px;
+  height: 52.14501953125px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-logog1 {
+  top: 0px;
+  left: 0px;
+  width: 99px;
+  height: 52.14501953125px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-line411 {
+  top: 15.15576171875px;
+  left: 1.5539441108703613px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+  transform-origin: left center;
+  transform: rotate(0deg) scaleX(17);
+}
+ 
+.smarthome-line471 {
+  top: 15.138671875px;
+  left: 97.36341857910156px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.smarthome-line421 {
+  position: absolute;
+  width: 1.2px;;
+  height: 1.5px;
+  background: black;
+  top: 15px;
+  left: 2px;
+  transform-origin: left center;
+  transform: rotate(-25deg) scaleX(19);
+}
+ 
+.smarthome-line481 {
+  position: absolute;
+  width: 7px;
+  height: 1.5px;
+  background: black;
+  top: 40px;
+  left: 90px;
+  transform-origin: right center;
+  transform: rotate(-19deg) scaleX(4.5);
+}
+ 
+.smarthome-line451 {
+  position: absolute;
+  width: 7px;
+  height: 1.5px;
+  background: black;
+  top: 49px;
+  left: 30px;
+  transform-origin: left center;
+  transform: rotate(-0.4deg) scaleX(5.3);
+    
+}
+ 
+.smarthome-line461 {
+  position: absolute;
+  width: 7px;
+  height: 1.5px;
+  background: black;
+  top: 1px;
+  left: 30px;
+  transform-origin: left center;
+  transform: rotate(0deg) scaleX(5.3);
+  
+}
+ 
+.smarthome-line431 {
+  position: absolute;
+  width: 6.9px;
+  height: 1.5px;
+  background: black;
+  top: 37px;
+  left: -1px;
+  transform-origin: left center;
+  transform: rotate(20deg) scaleX(5);
+  
+}
+ 
+.smarthome-line581 {
+  position: absolute;
+  width: 13px;
+  height: 1.5px;
+  background: black;
+  top: 37px;
+  left: 0.9px;
+  transform-origin: left center;
+  transform: rotate(-28deg) scaleX(6);
+  
+}
+ 
+.smarthome-line521 {
+  position: absolute;
+  width: 13px;
+  height: 1.5px;
+  background: black;
+  top: 1px;
+  left: 30px;
+  transform-origin: left center;
+  transform: rotate(30deg) scaleX(6);
+    
+}
+ 
+.smarthome-line531 {
+  position: absolute;
+  width: 5.8px;
+  height: 1.5px;
+  background: black;
+  top: 17px;
+  left: 92px;
+  transform-origin: right center;
+  transform: rotate(30deg) scaleX(6);
+    
+}
+ 
+.smarthome-line491 {
+  position: absolute;
+  width: 7px;
+  height: 1.5px;
+  background: black;
+  top: 50px;
+  left: 31px;
+  transform-origin: left center;
+  transform: rotate(-129deg) scaleX(6.6);
+  
+}
+ 
+.smarthome-line571 {
+  position: absolute;
+  width: 7px;
+  height: 1.5px;
+  background: black;
+  top: 51px;
+  left: 70px;
+  transform-origin: left center;
+  transform: rotate(-52deg) scaleX(6.4);
+}
+ 
+.smarthome-line501 {
+  position: absolute;
+  width: 7.6px;
+  height: 1.5px;
+  background: black;
+  top: 23px;
+  left: 22px;
+  transform-origin: left center;
+  transform: rotate(30deg) scaleX(7);
+   
+}
+ 
+.smarthome-line561 {
+  position: absolute;
+  width: 7px;
+  height: 1.5px;
+  background: black;
+  top: 39px;
+  left: 90px;
+  transform-origin: right center;
+  transform: rotate(55deg) scaleX(7);
+
+}
+ 
+.smarthome-line441 {
+  position: absolute;
+  width: 7px;
+  height: 1.5px;
+  background: black;
+  top: 52px;
+  left: 30px;
+  transform-origin: left center;
+  transform: rotate(-37deg) scaleX(6.8);
+}
+ 
+.smarthome-line541 {
+  position: absolute;
+  width: 5.6px;
+  height: 1.5px;
+  background: black;
+  top: 17px;
+  left: 92px;
+  transform-origin: right center;
+  transform: rotate(-15deg) scaleX(6);
+   
+}
+ 
+.smarthome-line511 {
+  position: absolute;
+  width: 6.8px;
+  height: 1.5px;
+  background: black;
+  top: 40px;
+  left: 0px;
+  transform-origin: left center;
+  transform: rotate(-53deg) scaleX(6.8);
+ 
+}
+ 
+.smarthome-line551 {
+  position: absolute;
+  width: 5px;
+  height: 1.5px;
+  background: black;
+  top: 15px;
+  left: 5px;
+  transform-origin: left center;
+  transform: rotate(25deg) scaleX(5);
+    
+}
+ 
+.smarthome-ellipse261 {
+  top: 13.456779479980469px;
+  left: 0px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.smarthome-ellipse231 {
+  top: 0px;
+  left: 28.636245727539062px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.smarthome-ellipse221 {
+  top: 37.84716796875px;
+  left: 96.54535675048828px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.smarthome-ellipse211 {
+  top: 14.2978515625px;
+  left: 95.72730255126953px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.smarthome-ellipse201 {
+  top: 37.00634765625px;
+  left: 0.8180597424507141px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.smarthome-ellipse241 {
+  top: 0px;
+  left: 67.90911102294922px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.smarthome-ellipse251 {
+  top: 49.6220703125px;
+  left: 29.45476722717285px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.smarthome-ellipse191 {
+  top: 49.6220703125px;
+  left: 67.09105682373047px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.smarthome-group7491 {
+  top: 19.9619140625px;
+  left: 22.908903121948242px;
+  width: 61.01002883911133px;
+  height: 11.50336742401123px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-vector231 {
+  top: 0px;
+  left: 1.0255571603775024px;
+  width: 60px;
+  height: 12px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse271 {
+  top: 6.95166015625px;
+  left: 0.00017030778690241277px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.smarthome-text105 {
+  top: 16.82080078125px;
+  left: 31.09088706970215px;
+  color: rgba(0, 0, 0, 1);
+  width: 38px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Kalam;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text106 {
+  top: 17px;
+  left: 166px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ; */
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group845 {
+  top: 25px;
+  left: 779px;
+  width: 422px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-text107 {
+  left: 320px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text108 {
+  left: 440px;
+  width:90px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal; 
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text109 {
+  left: 185px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text110 {
+  left:60px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text111 {
+  top: 307px;
+  left: 124px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-frame111 {
+  top: 431px;
+  left: 124px;
+  width: 295px;
+  height: 66px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.smarthome-rectangle331 {
+  top: 0px;
+  left: 0px;
+  width: 295px;
+  height: 66px;
+  position: absolute;
+  border-radius: 10px;
+}
+ 
+.smarthome-text117 {
+  top: 19px;
+  left: 82px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-materialsymbolsdownload1 {
+  top: 18px;
+  left: 33px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+ 
+.smarthome-frame12 {
+  top: 431px;
+  left: 443px;
+  width: 347px;
+  height: 66px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.smarthome-rectangle332 {
+  top: 0px;
+  left: 0px;
+  width: 347px;
+  height: 66px;
+  position: absolute;
+  border-color: rgba(54, 55, 55, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+}
+ 
+.smarthome-text118 {
+  top: 19px;
+  left: 82px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-materialsymbolsdownload2 {
+  top: 18px;
+  left: 33px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+ 
+.smarthome-iphone1411 {
+  top: 119px;
+  left: 937px;
+  width: 265px;
+  height: 542px;
+  display: flex;
+  position: absolute;
+  /* box-shadow: 0px 4px 4px 0px rgba(8, 20, 49, 0.5) ; */
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.smarthome-blue1 {
+  top: 0px;
+  left: 50px;
+  width: 265px;
+  height: 542px;
+  position: absolute;
+  box-shadow: 0px 4px 4px 0px rgba(8, 20, 49, 0.5) ;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.smarthome-frame13 {
+  top: 11px;
+  left: 14px;
+  width: 237px;
+  height: 520px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.smarthome-rectangle34 {
+  top: 27px;
+  left: 50px;
+  width: 237px;
+  height: 493px;
+  position: absolute;
+  border-radius: 0 0 30px 30px;
+}
+ 
+.smarthome-change-this1 {
+  top: 0px;
+  left: 50px;
+  width: 237px;
+  height: 520px;
+  position: absolute;
+}
+ 
+.smarthome-features {
+  top: 700px;
+  left: 0px;
+  width: 100%;
+  height: 422px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.smarthome-text119 {
+  top: 30px;
+  left: 56px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group609 {
+  top: 100px;
+  left: 190px;
+  width: 1149px;
+  height: 231px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-group605 {
+  top: 0px;
+  left: 0px;
+  width: 240px;
+  height: 230px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 1;
+  background-color: rgba(53, 53, 54, 1);
+  border-radius: 12px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+ 
+.smarthome-vector10 {
+  top: 32px;
+  left: 95px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+ 
+.smarthome-text120 {
+  top: 105px;
+  left: 37px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text121 {
+  top: 142px;
+  left: 14px;
+  color: rgba(189, 181, 181, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group607 {
+  top: 1px;
+  left: 606px;
+  width: 240px;
+  height: 230px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 1;
+  background-color: rgba(53, 53, 54, 1);
+  border-radius: 12px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+ 
+.smarthome-vector11 {
+  top: 21px;
+  left: 90px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+}
+ 
+.smarthome-text127 {
+  top: 151px;
+  left: 23px;
+  color: rgba(189, 181, 181, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text133 {
+  top: 92px;
+  left: 58px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group608 {
+  top: 1px;
+  left: 909px;
+  width: 240px;
+  height: 230px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 1;
+  background-color: rgba(53, 53, 54, 1);
+  border-radius: 12px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+ 
+.smarthome-vector12 {
+  top: 7px;
+  left: 95px;
+  width: 50px;
+  height: 74px;
+  position: absolute;
+}
+ 
+.smarthome-text137 {
+  top: 104px;
+  left: 50px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text138 {
+  top: 151px;
+  left: 28px;
+  color: rgba(189, 181, 181, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group606 {
+  top: 0px;
+  left: 303px;
+  width: 240px;
+  height: 230px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(53, 53, 54, 1);
+  border-radius: 12px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+ 
+.smarthome-vector13 {
+  top: 32px;
+  left: 95px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+ 
+.smarthome-text144 {
+  top: 105px;
+  left: 39px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text145 {
+  top: 151px;
+  left: 4px;
+  color: rgba(189, 181, 181, 1);
+  width: 231px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-working {
+  top: 1122px;
+  left: 0px;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(245, 245, 245, 1);
+}
+ 
+.smarthome-text151 {
+  top: 44px;
+  left: 613px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group617 {
+  top: 138px;
+  left: 171px;
+  width: 1066px;
+  height: 186px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+
+.arrow1 {
+  margin: 0 12px;
+  font-size: 15px;
+  color: #555;
+  align-self: center;
+  left:200px;
+  position: absolute;
+}
+
+.arrow2 {
+  margin: 0 12px;
+  font-size: 15px;
+  color: #555;
+  align-self: center;
+  left:650px;
+  position:absolute;
+}
+
+.smarthome-text152 {
+  top: 59px;
+  left: 931px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text153 {
+  top: 59px;
+  left: 489px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text154 {
+  top: 59px;
+  left: 50px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group601 {
+  top: 0px;
+  left: 58px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-ellipse7 {
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+ 
+.smarthome-group1 {
+  top: 11px;
+  left: 5px;
+  width: 40px;
+  height: 27.500486373901367px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-vector14 {
+  top: 1.2496486902236938px;
+  left: 6.25px;
+  width: 27px;
+  height: 25px;
+  opacity: 0.20;
+  position: absolute;
+}
+ 
+.smarthome-vector15 {
+  top: 0px;
+  left: 0px;
+  width: 40px;
+  height: 28px;
+  position: absolute;
+}
+ 
+.smarthome-group600 {
+  top: 0px;
+  left: 504px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-ellipse8 {
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+ 
+.smarthome-vector16 {
+  top: 9px;
+  left: 8px;
+  width: 33px;
+  height: 31px;
+  position: absolute;
+}
+ 
+.smarthome-group604 {
+  top: 0px;
+  left: 950px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-ellipse6 {
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+ 
+.smarthome-flowbitebellactivealtoutline {
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}
+ 
+.smarthome-arrow1 {
+  top: 71px;
+  left: 216px;
+  width: 179px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.smarthome-arrow3 {
+  top: 71px;
+  left: 660px;
+  width: 179px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.smarthome-text155 {
+  top: 98px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text163 {
+  top: 98px;
+  left: 452px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text171 {
+  top: 98px;
+  left: 883px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-app {
+  top: 1622px;
+  left: 0px;
+  width: 100%;
+  height: 648px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.smarthome-group613 {
+  top: 91px;
+  left: 124px;
+  width: 465px;
+  height: 466px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-text177 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text178 {
+  font-weight: 400;
+}
+ 
+.smarthome-group611 {
+  top: 117px;
+  left: 0px;
+  width: 470px;
+  height: 150px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-text181 {
+  left: 26px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text182 {
+  top: 42px;
+  left: 26px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text183 {
+  top: 84px;
+  left: 26px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text184 {
+  top: 126px;
+  left: 26px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-ellipse101 {
+  top: 8px;
+  left: 0px;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse11 {
+  top: 92px;
+  left: 0px;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse12 {
+  top: 134px;
+  left: 0px;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse102 {
+  top: 50px;
+  left: 0px;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+}
+ 
+ .smarthome-frame112 {
+  top: 312px;
+  left: 0px;
+  width: 234px;
+  height: 66px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+ 
+.smarthome-group6121 {
+  top: 0px;
+  left: 0px;
+  width: 234px;
+  height: 66px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(54, 55, 55, 1);
+  border-radius: 10px;
+}
+ 
+.smarthome-text185 {
+  top: 19px;
+  left: 76px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-vector17 {
+  top: 23px;
+  left: 45px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.smarthome-frame15 {
+  top: 400px;
+  left: 0px;
+  width: 234px;
+  height: 66px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.smarthome-group6122 {
+  top: 0px;
+  left: 0px;
+  width: 234px;
+  height: 66px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(54, 55, 55, 0);
+}
+ 
+.smarthome-text186 {
+  top: 19px;
+  left: 76px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-vector18 {
+  top: 23px;
+  left: 45px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.smarthome-group616 {
+  top: 28px;
+  left: 806px;
+  width: 538px;
+  height: 592px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-iphone1412 {
+  top: 102px;
+  left: 0px;
+  width: 244px;
+  height: 490px;
+  display: flex;
+  position: absolute;
+  box-shadow: 0px 4px 4px 0px rgba(8, 20, 49, 0.5) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.smarthome-group6141 {
+  top: 0px;
+  left: 0px;
+  width: 244px;
+  height: 490px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-blue2 {
+  top: 0px;
+  left: 0px;
+  width: 244px;
+  height: 490px;
+  position: absolute;
+}
+ 
+.smarthome-change-this2 {
+  top: 31.642066955566406px;
+  left: 12.890565872192383px;
+  width: 219px;
+  height: 448px;
+  position: absolute;
+}
+ 
+.smarthome-iphone1413 {
+  top: 0px;
+  left: 289px;
+  width: 249px;
+  height: 510px;
+  display: flex;
+  position: absolute;
+  box-shadow: 0px 4px 4px 0px rgba(8, 20, 49, 0.5) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.smarthome-line3 {
+  top: 496px;
+  left: 94px;
+  width: 63px;
+  height: 1px;
+  position: absolute;
+}
+.smarthome-group615 {
+  top: 0px;
+  left: 0px;
+  width: 249px;
+  height: 510px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-group6142 {
+  top: 0px;
+  left: 0px;
+  width: 249px;
+  height: 510px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-blue3 {
+  top: 0px;
+  left: 0px;
+  width: 249px;
+  height: 510px;
+  position: absolute;
+}
+ 
+.smarthome-rectangle69 {
+  top: 11px;
+  left: 12px;
+  width: 225px;
+  height: 487px;
+  position: absolute;
+  border-radius: 28px;
+}
+ 
+.smarthome-system {
+  top: 11px;
+  left: 12px;
+  width: 235px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.smarthome-text187 {
+  top: 6px;
+  left: 6px;
+  color: var(--dl-color-default-white);
+  width: 54px;
+  height: auto;
+  position: absolute;
+  font-size: 15px;
+  font-style: Semibold;
+  text-align: center;
+  font-family: SF Pro Text;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-battery {
+  top: 12.333343505859375px;
+  left: 196.33331298828125px;
+  width: 24.32803726196289px;
+  height: 11.333333015441895px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-border {
+  top: 0px;
+  left: 0px;
+  width: 22px;
+  height: 11px;
+  opacity: 0.35;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2.6666667461395264px;
+}
+ 
+.smarthome-cap {
+  top: 3.666666030883789px;
+  left: 23px;
+  width: 1px;
+  height: 4px;
+  opacity: 0.40;
+  position: absolute;
+}
+ 
+.smarthome-capacity {
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 7px;
+  position: absolute;
+  border-radius: 1.3333333730697632px;
+}
+ 
+.smarthome-wifi {
+  top: 12.330758094787598px;
+  left: 176px;
+  width: 15px;
+  height: 11px;
+  position: absolute;
+}
+ 
+.smarthome-cellular-connection {
+  top: 12.666656494140625px;
+  left: 154px;
+  width: 17px;
+  height: 11px;
+  position: absolute;
+}
+ 
+.smarthome-button-standart1 {
+  top: 441px;
+  left: 38px;
+  width: 170px;
+  height: 29px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.smarthome-rectangle1601 {
+  top: 0px;
+  left: 0px;
+  width: 170px;
+  height: 29px;
+  position: absolute;
+  border-radius: 8px;
+}
+ 
+.smarthome-text188 {
+  top: 3px;
+  left: -78px;
+  color: rgba(253, 253, 253, 1);
+  width: 326px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Manrope;
+  font-weight: 700;
+  line-height: 22px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-frame3 {
+  gap: 16px;
+  top: 403px;
+  left: 35px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.smarthome-button-standart2 {
+  width: 190px;
+  height: 29px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.smarthome-rectangle1602 {
+  top: 0px;
+  left: 0px;
+  width: 170px;
+  height: 29px;
+  position: absolute;
+  border-radius: 8px;
+}
+ 
+.smarthome-text189 {
+  top: 3px;
+  left: -68px;
+  color: var(--dl-color-default-additionaltextcolor);
+  width: 309px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Manrope;
+  font-weight: 700;
+  line-height: 22px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text190 {
+  top: 303px;
+  left: 35px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Manrope;
+  font-weight: 700;
+  line-height: 22px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text191 {
+  top: 325px;
+  left: 43px;
+  color: var(--dl-color-default-primarytextcolor);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Manrope;
+  font-weight: 400;
+  line-height: 16.5px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-whychooseus {
+  top: 2322px;
+  left: 0px;
+  width: 100%;
+  height: 438px;
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  background-color: rgba(245, 245, 245, 1);
+}
+ 
+.smarthome-text195 {
+  top: 44px;
+  left: 635px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group622 {
+  top: 154px;
+  left: 150px;
+  width: 1100px;
+  height: 240px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-group621 {
+  top: 0px;
+  left: 900px;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(54, 55, 55, 1);
+  border-radius: 15px;
+}
+ 
+.smarthome-text196 {
+  top: 96px;
+  left: 62px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+} 
+
+.smarthome-text197 {
+  top: 138px;
+  left: 18px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-vector19 {
+  top: 32.72108840942383px;
+  left: 106px;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+}
+ 
+.smarthome-group620 {
+  top: 0px;
+  left: 470px;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(54, 55, 55, 1);
+  border-radius: 15px;
+}
+ 
+.smarthome-text203 {
+  top: 96px;
+  left: 63px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text204 {
+  top: 138px;
+  left: 26px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-vector20 {
+  top: 40.66666793823242px;
+  left: 105px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+}
+ 
+.smarthome-group618 {
+  top: 0px;
+  left: 50px;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(54, 55, 55, 1);
+  border-radius: 15px;
+}
+ 
+.smarthome-text210 {
+  top: 96px;
+  left: 85px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text211 {
+  top: 134px;
+  left: 28px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-galasecure {
+  top: 42px;
+  left: 100px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.smarthome-group2 {
+  top: 2.499929428100586px;
+  left: 5.0023345947265625px;
+  width: 29.995328903198242px;
+  height: 34.99455261230469px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-vector21 {
+  top: 17.49727439880371px;
+  left: 14.997663497924805px;
+  width: 15px;
+  height: 17px;
+  position: absolute;
+}
+ 
+.smarthome-vector22 {
+  top: -5.9604644775390625e-8px;
+  left: 14.997663497924805px;
+  width: 15px;
+  height: 17px;
+  position: absolute;
+}
+ 
+.smarthome-vector24 {
+  top: 17.49727439880371px;
+  left: 1.1920928955078125e-7px;
+  width: 15px;
+  height: 17px;
+  position: absolute;
+}
+ 
+.smarthome-vector25 {
+  top: 1.1920928955078125e-7px;
+  left: 0px;
+  width: 15px;
+  height: 17px;
+  position: absolute;
+}
+ 
+.smarthome-vector26 {
+  top: 7.498832702636719px;
+  left: 7.498832702636719px;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+}
+ 
+.smarthome-makeurhomesmarter {
+  top: 2760px;
+  left: 0px;
+  width: 1400px;
+  height: 382px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.smarthome-text219 {
+  top: 64px;
+  left: 600px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text223 {
+  top: 156px;
+  left: 625px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group623 {
+  top: 245px;
+  left: 473px;
+  width: 267px;
+  height: 61px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(54, 55, 55, 1);
+  border-radius: 20px;
+}
+ 
+.smarthome-text227 {
+  top: 19px;
+  left: 37px;
+  color: rgba(255, 255, 255, 1);
+  width: 193px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-rectangle167 {
+  top: 245px;
+  left: 795px;
+  width: 168px;
+  height: 61px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(54, 55, 55, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+}
+ 
+.smarthome-text228 {
+  top: 264px;
+  left: 820px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-footer {
+  top: 3142px;
+  left: 0px;
+  width: 100%;
+  height: 349px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(54, 55, 55, 1);
+}
+ 
+.smarthome-text229 {
+  top: 40px;
+  left: 168px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text230 {
+  top: 135px;
+  left: 62px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text234 {
+  top: 98px;
+  left: 62px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-mditwitter {
+  top: 321px;
+  left: 72px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+ 
+.smarthome-vector27 {
+  top: 324px;
+  left: 110px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.smarthome-vector28 {
+  top: 324px;
+  left: 148px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.smarthome-frame6241 {
+  gap: 8px;
+  top: 223px;
+  left: 62px;
+  width: 113px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.smarthome-text235 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 24px;
+  align-self: stretch;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-vector29 {
+  width: 20px;
+  height: 16px;
+}
+ 
+.smarthome-vector30 {
+  width: 21px;
+  height: 21px;
+}
+ 
+.smarthome-text236 {
+  top: 98px;
+  left: 572px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-frame6242 {
+  gap: 4px;
+  top: 134px;
+  left: 572px;
+  width: 107px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.smarthome-text237 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text238 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text239 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text240 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text241 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text242 {
+  top: 98px;
+  left: 836px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-frame6243 {
+  gap: 4px;
+  top: 137px;
+  left: 836px;
+  width: 168px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.smarthome-text243 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text244 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text245 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text246 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 18px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text247 {
+  top: 98px;
+  left: 1080px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-text248 {
+  top: 134px;
+  left: 1080px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group624 {
+  top: 252px;
+  left: 1080px;
+  width: 154px;
+  height: 28px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px
+}
+ 
+.smarthome-text252 {
+  top: 3px;
+  left: 34px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group625 {
+  top: 186px;
+  left: 1080px;
+  width: 249px;
+  height: 39px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
+ 
+.smarthome-text253 {
+  top: 9px;
+  left: 18px;
+  color: rgba(141, 141, 141, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-line4 {
+  top: 320px;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  height: 1px;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  background-color: white;
+  border: none; 
+
+}
+ 
+.smarthome-text254 {
+  top: 325px;
+  left: 1157px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.smarthome-group7642 {
+  top: 27px;
+  left: 35px;
+  width: 121px;
+  height: 62px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-logog2 {
+  top: 0px;
+  left: 0px;
+  width: 121px;
+  height: 62px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-line412 {
+  top: 18.019996643066406px;
+  left: 1.8993968963623047px;
+  width: 38px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.smarthome-line472 {
+  top: 18px;
+  left: 119px;
+  width: 37px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.smarthome-line422 {
+  position: absolute;
+  width: 2px;;
+  height: 1.5px;
+  background: #fff;
+  top: 17px;
+  left: 2px;
+  transform-origin: left center;
+  transform: rotate(-25deg) scaleX(16);
+}
+ 
+.smarthome-line482 {
+  position: absolute;
+  width: 6px;
+  height: 1.5px;
+  background: #fff;
+  top: 47px;
+  left: 110px;
+  transform-origin: right center;
+  transform: rotate(-23deg) scaleX(6);
+}
+ 
+.smarthome-line452 {
+  position: absolute;
+  width: 10px;
+  height: 1.5px;
+  background: #fff;
+  top: 60px;
+  left: 37px;
+  transform-origin: left center;
+  transform: rotate(-0.4deg) scaleX(4.8);
+}
+ 
+.smarthome-line462 {
+  position: absolute;
+  width: 7px;
+  height: 1.5px;
+  background: #fff;
+  top: 1px;
+  left: 35px;
+  transform-origin: left center;
+  transform: rotate(0deg) scaleX(7);
+}
+ 
+.smarthome-line432 {
+  position: absolute;
+  width: 6.3px;
+  height: 1.5px;
+  background: #fff;
+  top: 43px;
+  left: 0px;
+  transform-origin: left center;
+  transform: rotate(23deg) scaleX(6.3);
+}
+ 
+.smarthome-line582 {
+  position: absolute;
+  width: 15px;
+  height: 1.5px;
+  background: #fff;
+  top: 43px;
+  left: 0.9px;
+  transform-origin: left center;
+  transform: rotate(-27deg) scaleX(6.3);
+}
+ 
+.smarthome-line522 {
+  position: absolute;
+  width: 15.9px;
+  height: 1.5px;
+  background: #fff;
+  top: 0px;
+  left: 36px;
+  transform-origin: left center;
+  transform: rotate(29deg) scaleX(6);
+}
+ 
+.smarthome-line532 {
+  position: absolute;
+  width: 5.8px;
+  height: 1.5px;
+  background: #fff;
+  top: 17.9px;
+  left: 114px;
+  transform-origin: right center;
+  transform: rotate(27deg) scaleX(7);
+}
+ 
+.smarthome-line492 {
+  position: absolute;
+  width: 8.5px;
+  height: 1.5px;
+  background: #fff;
+  top: 60px;
+  left: 37px;
+  transform-origin: left center;
+  transform: rotate(-129deg) scaleX(6.6);
+}
+ 
+.smarthome-line572 {
+  position: absolute;
+  width: 8.4px;
+  height: 1.5px;
+  background: #fff;
+  top: 59px;
+  left: 85px;
+  transform-origin: left center;
+  transform: rotate(-51deg) scaleX(6.2);
+}
+ 
+.smarthome-line502 {
+  position: absolute;
+  width: 8.2px;
+  height: 1.5px;
+  background: #fff;
+  top: 27px;
+  left: 27px;
+  transform-origin: left center;
+  transform: rotate(30deg) scaleX(8);
+}
+ 
+.smarthome-line562 {
+  position: absolute;
+  width: 8.3px;
+  height: 1.5px;
+  background: #fff;
+  top: 49px;
+  left: 113px;
+  transform-origin: right center;
+  transform: rotate(52deg) scaleX(7.2);
+}
+ 
+.smarthome-line442 {
+  position: absolute;
+  width: 8.3px;
+  height: 1.5px;
+  background: #fff;
+  top: 60px;
+  left: 36px;
+  transform-origin: left center;
+  transform: rotate(-37deg) scaleX(6.9);
+}
+ 
+.smarthome-line542 {
+  position: absolute;
+  width: 6.6px;
+  height: 1.5px;
+  background: #fff;
+  top: 16px;
+  left: 112px;
+  transform-origin: right center;
+  transform: rotate(-15deg) scaleX(6.3);
+}
+ 
+.smarthome-line512 {
+  position: absolute;
+  width: 8px;
+  height: 1.5px;
+  background: #fff;
+  top: 44px;
+  left: 3.5px;
+  transform-origin: left center;
+  transform: rotate(-52deg) scaleX(6.9);
+}
+ 
+.smarthome-line552 {
+  position: absolute;
+  width: 6.7px;
+  height: 1.5px;
+  background: #fff;
+  top: 17px;
+  left: 4px;
+  transform-origin: left center;
+  transform: rotate(25deg) scaleX(5);
+}
+ 
+.smarthome-ellipse262 {
+  top: 16px;
+  left: 0px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse232 {
+  top: 0px;
+  left: 35px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse222 {
+  top: 45px;
+  left: 118px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse212 {
+  top: 17px;
+  left: 117px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse202 {
+  top: 44px;
+  left: 1px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse242 {
+  top: 0px;
+  left: 83px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse252 {
+  top: 59px;
+  left: 36px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse192 {
+  top: 59px;
+  left: 82px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.smarthome-group7492 {
+  top: 23.734298706054688px;
+  left: 27.999996185302734px;
+  width: 74.56748962402344px;
+  height: 13.677409172058105px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.smarthome-vector232 {
+  top: -0.00007604146958328784px;
+  left: 1.25286865234375px;
+  width: 73px;
+  height: 14px;
+  position: absolute;
+}
+ 
+.smarthome-ellipse272 {
+  top: 8.265625px;
+  left: 0px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.smarthome-text255 {
+  top: 20px;
+  left: 38px;
+  color: rgba(255, 255, 255, 1);
+  width: 46px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Kalam;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
