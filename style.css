@@ -2155,3 +2155,44 @@ body.navbar-visible #hero {
   font-stretch: normal;
   text-decoration: none;
 }
+
+
+.retail-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.retail-card .product-card-inner {
+  position: relative;
+  z-index: 2; /* text always above image */
+  color: white; /* text visible on dark bg */
+}
+
+.retail-card::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* full cover */
+  background: url("/codencious/images/Doorbell.png") center/cover no-repeat;
+  z-index: 1;
+  opacity: 0.8; /* adjust for text visibility */
+}
+
+.retail-card1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.retail-card .product-card-inner {
+  position: relative;
+  z-index: 2; /* text always above image */
+  color: white; /* text visible on dark bg */
+}
+
+.retail-card1::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* full cover */
+  background: url("/codencious/images/ray.png") center/cover no-repeat;
+  z-index: 1;
+  opacity: 0.8; /* adjust for text visibility */
+}
