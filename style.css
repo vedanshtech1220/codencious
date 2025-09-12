@@ -1650,3 +1650,161 @@ body.navbar-visible #hero {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+/* ===================== Projects Cards: DigiValet-like layout & hover spread ===================== */
+.projects-seq {
+  /* Dimensions and motion tuned to closely match the reference */
+  --card-w: 420px;
+  --card-h: 560px;
+  --card-gap: 24px;
+  --spread-step: 26; /* px shift per neighbor on hover */
+  --hover-scale: 1.03;
+  --radius: 22px;
+  --shadow: 0 24px 60px rgba(0,0,0,0.25);
+  --transition: 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projects-seq .cards-track { grid-auto-columns: var(--card-w); gap: var(--card-gap); }
+
+/* Override product-card styling within Projects only */
+.projects-seq .product-card {
+  height: var(--card-h);
+  border-radius: var(--radius);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: var(--card-bg, #eef2ff);
+  color: #0f172a;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  /* Combine spread offset and scale via CSS vars */
+  --offset: 0;
+  --scale: 1;
+  transform: translate3d(calc(var(--offset, 0) * 1px), 0, 0) scale(var(--scale));
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+}
+
+.projects-seq .product-card.is-hovered { box-shadow: 0 30px 80px rgba(0,0,0,0.28); z-index: 2; }
+
+.projects-seq .product-card-inner { min-height: 100%; padding: 2.25rem; }
+.projects-seq .pc-title { font-size: 2.25rem; color: var(--title-color, #1e3a8a); }
+.projects-seq .pc-desc { color: #334155; opacity: 0.95; font-size: 1.125rem; }
+
+/* Decorative bottom patterns to emulate reference visuals */
+.projects-seq .product-card::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 46%;
+  background: var(--pattern);
+  opacity: .45;
+  pointer-events: none;
+}
+
+/* Pastel themes per card (keeps section background intact) */
+.projects-seq .product-card:nth-child(1){
+  --card-bg: #eaf0ff; /* soft blue */
+  --title-color: #1e40af;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='arcs' width='48' height='48' patternUnits='userSpaceOnUse'><circle cx='0' cy='48' r='24' fill='none' stroke='%23b6c6ff' stroke-width='1'/><circle cx='0' cy='48' r='48' fill='none' stroke='%23b6c6ff' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23arcs)'/></svg>");
+}
+.projects-seq .product-card:nth-child(2){
+  --card-bg: #e6fffb; /* mint */
+  --title-color: #0f766e;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='waves' width='24' height='16' patternUnits='userSpaceOnUse'><path d='M0 8 Q6 0 12 8 T24 8' fill='none' stroke='%2396f0de' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23waves)'/></svg>");
+}
+.projects-seq .product-card:nth-child(3){
+  --card-bg: #fff6ec; /* peach */
+  --title-color: #a16207;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='waves2' width='24' height='16' patternUnits='userSpaceOnUse'><path d='M0 8 Q6 0 12 8 T24 8' fill='none' stroke='%23ffd2ad' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23waves2)'/></svg>");
+}
+.projects-seq .product-card:nth-child(4){
+  --card-bg: #efe9ff; /* lavender */
+  --title-color: #7c3aed;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='dots' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='8' cy='8' r='2' fill='%238ea0ff' /></pattern></defs><rect width='100%' height='100%' fill='url(%23dots)'/></svg>");
+}
+.projects-seq .product-card:nth-child(5){
+  --card-bg: #eaf4ff;
+  --title-color: #1d4ed8;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='waves3' width='24' height='16' patternUnits='userSpaceOnUse'><path d='M0 8 Q6 0 12 8 T24 8' fill='none' stroke='%23b7d3ff' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23waves3)'/></svg>");
+}
+.projects-seq .product-card:nth-child(6){
+  --card-bg: #ecfff5;
+  --title-color: #047857;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='dots2' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='8' cy='8' r='2' fill='%2306c194' /></pattern></defs><rect width='100%' height='100%' fill='url(%23dots2)'/></svg>");
+}
+
+/* Mobile/tablet responsive sizing and motion */
+@media (max-width: 768px) {
+  .projects-seq { --card-w: 86vw; --card-h: 460px; --spread-step: 16; }
+  .projects-seq .pc-title { font-size: 1.9rem; }
+  .projects-seq .product-card-inner { padding: 1.75rem; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-seq { --card-w: 360px; --card-h: 520px; --spread-step: 20; }
+}
+
+/* Scroll-triggered scale effects */
+.scale-on-scroll {
+    transform: scale(0.8);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-on-scroll.is-visible {
+    transform: scale(1);
+}
+
+/* Text reveal with masking */
+.text-reveal {
+    overflow: hidden;
+    position: relative;
+}
+
+.text-reveal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #000, transparent);
+    transform: translateX(-100%);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+.text-reveal.is-visible::before {
+    transform: translateX(100%);
+}
+
+/* Floating elements animation */
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Scroll progress indicator for sections */
+.section-progress-line {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.section-progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #
