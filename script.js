@@ -804,6 +804,24 @@ initNavbarScrollEffect();
     const track = document.getElementById('productsTrack');
     const canvas = document.getElementById('productsBg');
     if(!seq || !track || !canvas) return;
+    
+    initHorizontalScroll(seq, track, canvas);
+})();
+
+// Vertical to horizontal scroll for Projects section
+// Projects sequence: vertical scroll drives horizontal translation
+(function initProjectsSequence(){
+    const seq = document.getElementById('projectsSeq');
+    const track = document.getElementById('projectsTrack');
+    const canvas = document.getElementById('projectsCanvasBg');
+    if(!seq || !track || !canvas) return;
+    
+    initHorizontalScroll(seq, track, canvas);
+})();
+
+// Shared function for horizontal scrolling implementation
+function initHorizontalScroll(seq, track, canvas){
+    if(!seq || !track || !canvas) return;
 
     // Detect if device is touch-enabled
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -885,6 +903,8 @@ initNavbarScrollEffect();
     // Minimal Three.js background
     let renderer, scene, camera, geometry, material, mesh, raf;
     function setupThree(){
+        if (!pin || !canvas) return;
+        
         const width = pin.clientWidth; const height = pin.clientHeight;
         if(!renderer){
             renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
@@ -906,7 +926,7 @@ initNavbarScrollEffect();
     }
 
     function renderBg(progress){
-        if(!renderer) return;
+        if(!renderer || !mesh || !scene || !camera) return;
         mesh.rotation.x = progress * Math.PI * 1.2;
         mesh.rotation.y = progress * Math.PI * 1.6;
         renderer.render(scene, camera);
@@ -922,7 +942,7 @@ initNavbarScrollEffect();
     }
 
     ensureThree(()=>{ setupThree(); update(); });
-})();
+}
 
 // Initialize particles after DOM is ready
 if (document.readyState === 'loading') {

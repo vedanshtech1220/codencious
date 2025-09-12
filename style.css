@@ -1215,8 +1215,8 @@ body.navbar-visible #hero {
 }
 
 /* Products horizontal scroll section */
-.products-seq { margin-top: 4rem; }
-.products-pin {
+.products-seq, .projects-seq { margin-top: 4rem; }
+.products-pin, .projects-pin {
     position: sticky;
     top: 0;
     height: 100vh; /* pin full screen while scrolling */
@@ -1224,9 +1224,9 @@ body.navbar-visible #hero {
     align-items: center;
 }
 
-/* Products section styling */
-.products-seq { margin-top: 4rem; }
-.products-pin {
+/* Products and Projects section styling */
+.products-seq, .projects-seq { margin-top: 4rem; }
+.products-pin, .projects-pin {
     position: sticky;
     top: 0;
     height: 100vh; /* pin full screen while scrolling */
@@ -1234,7 +1234,7 @@ body.navbar-visible #hero {
     align-items: center;
 }
 
-#productsBg {
+#productsBg, #projectsBg {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -1242,7 +1242,7 @@ body.navbar-visible #hero {
     z-index: 0;
 }
 
-.products-seq .cards-track {
+.products-seq .cards-track, .projects-seq .cards-track {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: minmax(260px, 380px);
@@ -1262,9 +1262,9 @@ body.navbar-visible #hero {
 
 
 /* Ensure the track spans at least total width so transform can reveal all cards */
-.products-seq .cards-track > * { min-width: 0; }
+.products-seq .cards-track > *, .projects-seq .cards-track > * { min-width: 0; }
 
-.products-seq .cards-track::-webkit-scrollbar { height: 0; }
+.products-seq .cards-track::-webkit-scrollbar, .projects-seq .cards-track::-webkit-scrollbar { height: 0; }
 
 .product-card {
     position: relative;
@@ -1316,13 +1316,13 @@ body.navbar-visible #hero {
 
 /* Removed hover effect for overlay */
 
-/* Scroll hijack: vertical wheel translates to horizontal inside products */
+/* Scroll hijack: vertical wheel translates to horizontal inside products and projects */
 /* no-op var kept if needed */
-.products-seq { --wheel-lock: 0; }
+.products-seq, .projects-seq { --wheel-lock: 0; }
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
-    .products-seq .cards-track {
+    .products-seq .cards-track, .projects-seq .cards-track {
         grid-auto-columns: 85%;
         gap: 1rem;
         padding-bottom: 1.25rem;
@@ -1333,7 +1333,7 @@ body.navbar-visible #hero {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .products-seq .cards-track { grid-auto-columns: minmax(320px, 420px); }
+    .products-seq .cards-track, .projects-seq .cards-track { grid-auto-columns: minmax(320px, 420px); }
 }
 
 /* Individual service box: bigger width and height */
