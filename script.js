@@ -797,6 +797,133 @@ initMobileMenu();
 initNavbarSmoothScroll();
 initNavbarScrollEffect();
 
+// Vertical to horizontal scroll for Products section
+// Products sequence: vertical scroll drives horizontal translation
+(function initProductsSequence(){
+    const seq = document.getElementById('productsSeq');
+    const track = document.getElementById('productsTrack');
+    const canvas = document.getElementById('productsBg');
+    if(!seq || !track || !canvas) return;
+
+    // Detect if device is touch-enabled
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    // Compute total horizontal width and the vertical scroll area required
+    function computeSequenceHeights(){
+        
+        const cards = track.children.length;
+        const cardWidth = track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width : 320;
+        const style = getComputedStyle(track);
+        // Prefer columnGap which is in px; fallback to gap
+        const gapStr = style.columnGap && style.columnGap !== 'normal' ? style.columnGap : (style.gap || '16px');
+        const gap = parseFloat(gapStr) || 16; // px
+        const totalWidth = cards * cardWidth + (cards - 1) * gap;
+        const viewport = window.innerWidth;
+        // Increase extra width to ensure all cards are visible
+        const viewportFactor = isTouchDevice ? 0.7 : 0.8;
+        const extra = Math.max(0, Math.ceil(totalWidth - viewport * viewportFactor));
+        // Height: horizontal distance + an extra viewport to ensure last card fully appears before release
+        const heightFactor = isTouchDevice ? 0.6 : 0.5;
+        seq.style.height = `calc(100vh + ${extra + window.innerHeight * heightFactor}px)`;
+        return {extra};
+    }
+    let extraWidth = computeSequenceHeights().extra;
+
+    // Sticky pin container
+    const pin = seq.querySelector('.products-pin');
+
+    // Map vertical scroll progress within the section to horizontal translateX
+    function update(){
+        const rect = seq.getBoundingClientRect();
+        const start = rect.top;
+        const end = rect.height - window.innerHeight; // when pin releases; rect.bottom - vh can be inaccurate after transforms
+        const progress = Math.min(1, Math.max(0, (0 - start) / (end - 0)));
+        const translateX = -extraWidth * progress;
+        track.style.transform = `translate3d(${translateX}px,0,0)`;
+        renderBg(progress);
+    }
+
+    // Touch scroll handling
+    if (isTouchDevice) {
+        // Add smooth scrolling for touch devices
+        track.style.scrollBehavior = 'smooth';
+        track.style.webkitOverflowScrolling = 'touch';
+        
+        // Add touch-specific snap points for better experience
+        track.style.scrollSnapType = 'x mandatory';
+        Array.from(track.children).forEach(card => {
+            card.style.scrollSnapAlign = 'center';
+        });
+    }
+
+    window.addEventListener('resize', () => {
+        extraWidth = computeSequenceHeights().extra;
+        update();
+        if (typeof THREE !== 'undefined') {
+            setupThree();
+        }
+    }, {passive:true});
+
+    window.addEventListener('scroll', update, {passive:true});
+    
+    // Initial call to setup
+    if (typeof THREE !== 'undefined') {
+        setupThree();
+    } else {
+        // Load THREE.js if needed
+        ensureThree(() => setupThree());
+    }
+
+    // Keyboard accessibility
+    track.setAttribute('tabindex','0');
+    track.addEventListener('keydown', (e)=>{
+        const step = 120;
+        if (e.key === 'ArrowRight') { window.scrollBy({top: step, behavior:'smooth'}); }
+        if (e.key === 'ArrowLeft')  { window.scrollBy({top: -step, behavior:'smooth'}); }
+    });
+
+    // Minimal Three.js background
+    let renderer, scene, camera, geometry, material, mesh, raf;
+    function setupThree(){
+        const width = pin.clientWidth; const height = pin.clientHeight;
+        if(!renderer){
+            renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
+        }
+        renderer.setSize(width, height, false);
+        if(!scene){
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(45, width/height, 0.1, 100);
+            camera.position.z = 6;
+            geometry = new THREE.IcosahedronGeometry(2.2, 1);
+            material = new THREE.MeshStandardMaterial({ color: 0x4ecdc4, metalness: 0.1, roughness: 0.8, wireframe: true, opacity: 0.25, transparent: true });
+            mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+            const light = new THREE.PointLight(0x45b7d1, 1.2); light.position.set(4,4,6); scene.add(light);
+            const light2 = new THREE.PointLight(0xffffff, 0.3); light2.position.set(-4,-2,-4); scene.add(light2);
+        } else {
+            camera.aspect = width/height; camera.updateProjectionMatrix();
+        }
+    }
+
+    function renderBg(progress){
+        if(!renderer) return;
+        mesh.rotation.x = progress * Math.PI * 1.2;
+        mesh.rotation.y = progress * Math.PI * 1.6;
+        renderer.render(scene, camera);
+    }
+
+    // Lazy load three.js via CDN if not present
+    function ensureThree(callback){
+        if (window.THREE) { callback(); return; }
+        const s = document.createElement('script');
+        s.src = 'https://unpkg.com/three@0.160.0/build/three.min.js';
+        s.onload = callback;
+        document.head.appendChild(s);
+    }
+
+    ensureThree(()=>{ setupThree(); update(); });
+})();
+
 // Initialize particles after DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
