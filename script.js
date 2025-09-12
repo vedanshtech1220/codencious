@@ -18,15 +18,16 @@ animatedElements.forEach(el => {
 });
 
 // Enhanced parallax scrolling
+// Remove parallax scrolling function
 function updateParallax() {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.parallax-bg');
-    
-    parallaxElements.forEach(element => {
-        const speed = element.dataset.speed || 0.5;
-        const yPos = -(scrolled * speed);
-        element.style.transform = `translateY(${yPos}px)`;
-    });
+    // Disabled parallax effect
+    return;
+}
+
+// Remove scroll snap enhancement
+function handleScrollSnap() {
+    // Disabled scroll snap
+    return;
 }
 
 // Smooth scroll with momentum
@@ -168,7 +169,6 @@ function getResponsiveThrottleDelay() {
 window.addEventListener('scroll', throttle(() => {
     updateProgressBar();
     updateSectionIndicators();
-    updateParallax();
 }, getResponsiveThrottleDelay()));
 
 // Logo Particle Effect - Particles form the exact logo shape
@@ -993,3 +993,58 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// Hover spread interaction for Projects cards (DigiValet-like)
+function initProjectsHoverSpread(){
+    const seq = document.getElementById('projectsSeq');
+    const track = document.getElementById('projectsTrack');
+    if(!seq || !track) return;
+
+    const cards = Array.from(track.querySelectorAll('.product-card'));
+    if(cards.length === 0) return;
+
+    const cs = getComputedStyle(seq);
+    const step = parseFloat(cs.getPropertyValue('--spread-step')) || 24; // px per neighbor
+    const hoverScale = parseFloat(cs.getPropertyValue('--hover-scale')) || 1.03;
+
+    function applyOffsets(activeIdx){
+        cards.forEach((card, idx) => {
+            const diff = idx - activeIdx;
+            card.style.setProperty('--offset', String(diff * step));
+            card.style.setProperty('--scale', idx === activeIdx ? String(hoverScale) : '1');
+            if(idx === activeIdx) card.classList.add('is-hovered');
+            else card.classList.remove('is-hovered');
+        });
+    }
+
+    function reset(){
+        cards.forEach((card) => {
+            card.style.setProperty('--offset', '0');
+            card.style.setProperty('--scale', '1');
+            card.classList.remove('is-hovered');
+        });
+    }
+
+    // Mouse and keyboard focus support
+    cards.forEach((card, idx) => {
+        card.addEventListener('mouseenter', () => applyOffsets(idx));
+        card.addEventListener('focusin', () => applyOffsets(idx));
+    });
+
+    track.addEventListener('mouseleave', reset);
+    track.addEventListener('focusout', () => {
+        // If focus left the entire track, reset
+        if(!track.contains(document.activeElement)) reset();
+    });
+
+    // Touch support: tap to activate, tap outside to reset
+    cards.forEach((card, idx) => {
+        card.addEventListener('touchstart', () => applyOffsets(idx), { passive: true });
+    });
+    document.addEventListener('touchstart', (e) => {
+        if(!track.contains(e.target)) reset();
+    }, { passive: true });
+}
+
+// Initialize the hover spread once DOM is ready (script is at end of body)
+initProjectsHoverSpread();

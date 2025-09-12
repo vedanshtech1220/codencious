@@ -1,6 +1,5 @@
 html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    scroll-behavior: auto;
 }
 
 body {
@@ -77,13 +76,12 @@ body {
 
 /* Parallax Effect */
 .parallax-section {
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    min-height: 100vh; /* Make sure it always fills the viewport */
-    scroll-snap-align: start; /* optional: makes scrolling snap cleanly */
+    min-height: 100vh;
 }
 
 .parallax-overlay {
@@ -559,8 +557,6 @@ body {
 
 /* Enhanced Scroll Effects */
 .scroll-snap-section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
 /* Smooth scroll momentum */
@@ -582,7 +578,7 @@ body {
     height: 140%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     will-change: transform;
 }
 
@@ -1228,16 +1224,6 @@ body.navbar-visible #hero {
     align-items: center;
 }
 
-/* Products and Projects section styling */
-.products-seq, .projects-seq { margin-top: 4rem; }
-.products-pin, .projects-pin {
-    position: sticky;
-    top: 0;
-    height: 100vh; /* pin full screen while scrolling */
-    display: grid;
-    align-items: center;
-}
-
 #productsBg, #projectsBg {
     position: absolute;
     inset: 0;
@@ -1263,6 +1249,12 @@ body.navbar-visible #hero {
     scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.products-seq .cards-track::-webkit-scrollbar, 
+.projects-seq .cards-track::-webkit-scrollbar {
+    display: none;
+}
+
 
 
 /* Ensure the track spans at least total width so transform can reveal all cards */
@@ -1278,24 +1270,26 @@ body.navbar-visible #hero {
     background: rgba(255,255,255,0.03); /* harmonize with products bg */
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     overflow: hidden;
-    /* Removed transition for hover effect */
 }
 
-/* Removed hover effect */
-
 .product-card-inner {
-    min-height: 420px;
-    padding: 2rem;
+    min-height: 380px;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 1rem;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 
+/* Removed hover effects for original state */
+
 .pc-title {
-    font-size: 2rem; /* keep heading vibe without oversizing */
+    font-size: 2rem;
     color: #e6f7f5;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pc-desc {
@@ -1303,6 +1297,7 @@ body.navbar-visible #hero {
     color: #a9bcbc;
     font-size: 1.125rem;
     line-height: 1.5;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pc-overlay {
@@ -1311,14 +1306,16 @@ body.navbar-visible #hero {
     background: radial-gradient(1200px 400px at 50% 85%, rgba(78,205,196,0.08), transparent 60%),
                 radial-gradient(800px 300px at 50% 100%, rgba(69,183,209,0.08), transparent 60%);
     opacity: 0;
-    /* Removed transition for hover effect */
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: flex-end;
-    padding: 2rem;
+    padding: 2.5rem;
     color: #e8ffff;
 }
 
-/* Removed hover effect for overlay */
+.product-card:hover .pc-overlay {
+    opacity: 1;
+}
 
 /* Scroll hijack: vertical wheel translates to horizontal inside products and projects */
 /* no-op var kept if needed */
