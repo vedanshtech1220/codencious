@@ -1,0 +1,3633 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo-wrapper{
+  position:absolute;
+  top: 5px;
+  left: 16px;
+  display:flex;
+  align-items: center;
+}
+.logo-img{
+  height: 60px;
+  width: auto;
+}
+body,html{
+  width: 100%;
+  min-height: 100vh;
+  background:#fff;
+  color: #1a1a1a;
+}
+.ai-physiotherapists-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+#ai-physiotherapist-hello{
+  width: 100%;
+}
+
+ 
+.ai-physiotherapists-ai-physiotherapists {
+  width: 100%;
+  height: 3343px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+  margin-right: 0;
+  margin: 0;
+  padding-right: 0;
+  padding: 0;
+}
+ 
+.ai-physiotherapists-herosection1 {
+  top: 0px;
+  left: 0px;
+  width: 1400px;
+  height: 595px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+ 
+.ai-physiotherapists-herosection2 {
+  top: 0px;
+  left: 0px;
+  width: 1400px;
+  height: 62px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(242, 237, 237, 0);
+}
+ 
+
+ 
+.ai-physiotherapists-group599 {
+  top: 7px;
+  left: 1229px;
+  width: 123px;
+  height: 36px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(3, 26, 48, 1);
+  border-radius: 15px;
+}
+ 
+.ai-physiotherapists-text100 {
+  top: 6px;
+  left: 31px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text101 {
+  top: 8px;
+  left: 156px;
+  color: rgba(8, 10, 13);
+  height: auto;
+  position: absolute;
+  font-size: 35px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group7641 {
+  top: 5px;
+  left: 16px;
+  width: 99px;
+  height: 52.14501953125px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-logog1 {
+  top: 0px;
+  left: 0px;
+  width: 99px;
+  height: 52.14501953125px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-line411 {
+  
+  top: 1px;
+  transform-origin:left;
+  
+  right: 35px;
+  bottom: 2000px;
+  width: 100px;
+  height: 16px;
+  position:relative;
+}
+ 
+.ai-physiotherapists-line471 {
+  top: 15px;
+  transform-origin: right;
+  width: 200px;
+  height: 18px;
+  width: 31px;
+  
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line421 {
+  top: 38.94658203125px;
+  left: 1.1652272939682007px;
+  width: 32px;
+  height: 14px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line481 {
+  top: 39.14404296875px;
+  transform-origin: right;
+  left: 65px;
+  width: 33px;
+  height: 14px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line451 {
+  top: 51.42724609375px;
+  left: 30.303756713867188px;
+  width: 39px;
+  height: 1.1px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line461 {
+  top: 1px;
+  left: 9.915502548217773px;
+  width: 79px;
+  height: 2px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line431 {
+  top: 2.24658203125px;
+  transform-origin: top;
+  bottom: 990px;
+  transform-origin: left;
+  right: 69px;
+  width: 29px;
+  height: px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line581 {
+  top: 25.24658203125px;
+  left: 1.1652272939682007px;
+  width: 30px;
+  height: 16px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line521 {
+  top: 20.71337890625px;
+  left: 69.1551284790039px;
+  
+  width: 28px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line531 {
+  top: 13.138671875px;
+  left: 68.36341857910156px;
+  width: 30px;
+  height: 15px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line491 {
+  top: 15.462890625px;
+ right: 59px;
+  transform-origin: left;
+  width: 47px;
+  height: 37px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line571 {
+  top: 1px;
+  right: 206px;
+  left: 53.284790039px;
+  width: 59px;
+  height: 18px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line501 {
+  top: 30px;
+  left: 26.6850586px;
+  width: 47px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line561 {
+  top: 1.908203125px;
+  left: 11.51669311523438px;
+  width: 81px;
+  height: 23px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line441 {
+  top: 16.42724609375px;
+  left: 69.15559387207031px;
+  width: 29px;
+  height: 33px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line541 {
+  top: 1.908203125px;
+  left: 59.90540313720703px;
+  width: 46px;
+  height: 37px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line511 {
+  top: 21.71337890625px;
+  left: 29.303756713867188px;
+  width: 43px;
+  height: 30px;
+  position: absolute;
+}
+ .ai-physiotherapists-line589{
+  top: 1px;
+  left: 24.303756713867188px;
+  width: 45px;
+  height: 30px;
+  position: absolute;
+ }
+.ai-physiotherapists-line551 {
+  top: 50.42724609375px;
+  left: 26.303756713867188px;
+  width: 46px;
+  height: 2px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse261 {
+  top: 14.456779479980469px;
+  left: 0px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.ai-physiotherapists-ellipse231 {
+  top: 1px;
+  left: 28.636245727539062px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.ai-physiotherapists-ellipse221 {
+  top: 37.84716796875px;
+  left: 95.54535675048828px;
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.ai-physiotherapists-ellipse211 {
+  top: 15.2978515625px;
+  left: 94.72730255126953px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.ai-physiotherapists-ellipse201 {
+  top: 37.00634765625px;
+  left: 2.8180597424507141px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.ai-physiotherapists-ellipse241 {
+  top: 1px;
+  left: 67.90911102294922px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.ai-physiotherapists-ellipse251 {
+  top: 48.6220703125px;
+  left: 29.45476722717285px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.ai-physiotherapists-ellipse191 {
+  top: 47.6220703125px;
+  left: 70.09105682373047px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.ai-physiotherapists-group7491 {
+  top: 19.9619140625px;
+  left: 22.908903121948242px;
+  width: 61.01002883911133px;
+  height: 11.50336742401123px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-vector231 {
+  top: 0px;
+  left: 1.0255571603775024px;
+  width: 60px;
+  height: 12px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse271 {
+  top: 6.95166015625px;
+  left: 0.00017030778690241277px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text102 {
+  top: 16.82080078125px;
+  left: 31.09088706970215px;
+  color: rgba(0, 0, 0, 1);
+  width: 38px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Kalam;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group845 {
+  top: 12px;
+  left: 718px;
+  width: 422px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-text103 {
+  left: 249px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text104 {
+  left: 369px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  width: 200px;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text105 {
+left: 115px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text106 {
+ color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text107 {
+  top: 137px;
+  left: 70px;
+  color: rgba(3, 25, 47, 1);
+  width: 765px;
+  height: auto;
+  position: absolute;
+  font-size: 44px;
+  box-shadow: 15px;
+   text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.3);
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Manrope;
+  font-weight: 800;
+  line-height: 55px;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text108 {
+  top: 302px;
+  left: 65px;
+  color: rgb(31, 32, 33);
+  width: 711px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-group766 {
+  top: 479px;
+  left: 70px;
+  width: 228px;
+  height: 47px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+
+}
+ 
+.ai-physiotherapists-rectangle224 {
+  top: 0px;
+  left: 0px;
+  width: 228px;
+  height: 47px;
+  position: absolute;
+  border-radius: 10px;
+}
+ 
+.ai-physiotherapists-text115 {
+  top: 10px;
+  left: 20px;
+  color: rgba(255, 255, 255, 1);
+  width: 188px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group772 {
+  top: 73px;
+  left: 974px;
+  width: 245px;
+  height: 495px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-group767 {
+  top: 11px;
+  left: 13px;
+  width: 219px;
+  height: 474px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-iphone141 {
+  top: 0px;
+  left: 0px;
+  width: 219px;
+  height: 474px;
+  display: flex;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(239, 239, 239, 1) 0%, rgba(244, 244, 244, 1) 100%);
+  box-shadow: 0px 4px 4px 0px rgba(8, 20, 49, 0.5) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 28px;
+}
+ 
+.ai-physiotherapists-group771 {
+  top: 32px;
+  left: 13px;
+  width: 219px;
+  height: 453px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-group768 {
+  top: 0px;
+  left: 0px;
+  width: 219px;
+  height: 453px;
+  display: flex;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(244, 244, 244, 1) 0%, rgba(239, 238, 238, 1) 100%);
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-image27 {
+  top: 29.70501136779785px;
+  left: 0px;
+  width: 219px;
+  height: 423px;
+  position: absolute;
+  border-radius: 20px 30px 30px;
+}
+ 
+.ai-physiotherapists-text116 {
+  top: 30px;
+  left: 35px;
+  color: rgba(0, 0, 0, 1);
+  width: 150px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group770 {
+   top: 227px;
+  left: 8px;
+  width: 62px;
+  height: 38px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: white;
+  border-radius: 8px;
+
+}
+ .ai-physiotherapists-text999{
+  font-weight: 800;
+  font-size: 18px;
+ font-family: 'Courier New', Courier, monospace;
+}
+
+.ai-physiotherapists-text117 {
+  top: 3px;
+  left: 3px;
+  color: rgba(0, 0, 0, 1);
+  width: 56px;
+  height: auto;
+  position: absolute;
+  font-size: 10px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text118 {
+  font-weight: 500;
+}
+ 
+.ai-physiotherapists-ellipse29 {
+  top: 19px;
+  left: 41px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+ 
+.ai-physiotherapists-ellipse30 {
+  top: 153.166015625px;
+  left: 18.739013671875px;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse33 {
+  top: 245.99365234375px;
+  left: 173.87109375px;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse34 {
+  top: 284.05322265625px;
+  left: 104.296875px;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse35 {
+  top: 362.95654296875px;
+  left: 141.904052734375px;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse32 {
+  top: 162.44873046875px;
+  left: 137.203125px;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse31 {
+  top: 162.44873046875px;
+  left: 80.792236328125px;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line59 {
+  top: 157.8076171875px;
+  left: 23.440185546875px;
+  width: 73px;
+  height: 13px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line60 {
+  top: 167.09033203125px;
+  left: 80.194091796875px;
+  width: 63px;
+  height: 3px;
+  position: absolute;
+
+}
+.ai-physiotherapists-line22{
+  width: 100px;
+  height: 200px;
+  left: 20px;
+}
+.ai-physiotherapists-line23{
+    border-radius: 5px;
+  letter-spacing: 22px;
+    top: 100px;
+  left: 710px;
+  color: rgb(210, 203, 203);
+  height: auto;
+  width: 4px;
+  position: absolute;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 200;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  border-radius: 22px;
+}
+.ai-physiotherapists-line24{
+   border-radius: 5px;
+  letter-spacing: 22px;
+    top: 320px;
+
+right: 2700px;
+  color: rgb(210, 203, 203);
+  height: auto;
+  width: 2px;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.ai-physiotherapists-line22{
+
+  border-radius: 2px;
+  letter-spacing: 22px;
+    top: 2px;
+  left: 1px;
+  color: rgb(238, 231, 231);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  border-radius: 22px;
+}
+
+
+ 
+.ai-physiotherapists-line61 {
+ top:170.63525390625px;
+  left: 121.572021484375px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+
+}
+ 
+.ai-physiotherapists-line62 {
+    top: 250.63525390625px;
+  left: 110.572021484375px;
+  width: 70px;
+  height: 40px;
+  position:absolute;
+
+}
+ 
+.ai-physiotherapists-line63 {
+ top: 287.59814453125px;
+  left: 85.605224609375px;
+  width: 87px;
+  height: 80px;
+  position: absolute;
+
+}
+ 
+.ai-physiotherapists-blue {
+  top: 0px;
+  left: 0px;
+  width: 245px;
+  height: 495px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-frame684 {
+  top: 3033px;
+  left: 1px;
+  width: 1400px;
+  height: 310px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(239, 234, 225, 1);
+}
+ 
+.ai-physiotherapists-rectangle211 {
+  top: 0px;
+  left: 0px;
+  width: 1400px;
+  height: 310px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text121 {
+  top: 34px;
+  left: 165px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 28px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text122 {
+  top: 99px;
+  left: 30px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-frame6241 {
+  gap: 8px;
+  top: 200px;
+  left: 30px;
+  width: 113px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.ai-physiotherapists-text126 {
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  font-size: 22px;
+  align-self: stretch;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-vector10 {
+  width: 17px;
+  height: 15px;
+}
+ 
+.ai-physiotherapists-vector11 {
+  width: 17px;
+  height: 17px;
+}
+ 
+.ai-physiotherapists-mditwitter {
+  top: 283px;
+  left: 47px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-vector12 {
+  top: 283px;
+  left: 77px;
+  width: 20px;
+  height: 18px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-vector13 {
+  top: 283px;
+  left: 109px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text127 {
+  top: 78px;
+  left: 515px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-frame625 {
+  gap: 4px;
+  top: 123px;
+  left: 515px;
+  width: 107px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color:rgba(228, 230, 237, 0);
+
+}
+ 
+.ai-physiotherapists-text128 {
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text129 {
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text130 {
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text131 {
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text132 {
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-frame6242 {
+  gap: 4px;
+  top: 123px;
+  left: 805px;
+  width: 168px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: rgba(219, 208, 208, 0);
+}
+ 
+.ai-physiotherapists-text133 {
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text134 {
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text135 {
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text136 {
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text137 {
+  top: 78px;
+  left: 805px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text138 {
+  top: 63px;
+  left: 1088px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text139 {
+  top: 99px;
+  left: 1088px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group624 {
+  top: 221px;
+  left: 1088px;
+  width: 156px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 253, 253, 0);
+}
+ 
+.ai-physiotherapists-text143 {
+  top: 3.5358142852783203px;
+  left: 34.44140625px;
+  color: rgba(3, 26, 48, 1);
+  width: 86px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Light;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group625 {
+  top: 151px;
+  left: 1088px;
+  width: 250px;
+  height: 36.923095703125px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.ai-physiotherapists-text144 {
+  top: 9px;
+  left: 18px;
+  color: rgba(185, 183, 183, 1);
+  width: 191px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-line4 {
+  top: 271px;
+  left: 50px;
+  right: 50px;
+  width: 90%;
+  height: 3px;
+  position: absolute;
+
+}
+ 
+.ai-physiotherapists-group7642 {
+  top: 20px;
+  left: 22px;
+  width: 121px;
+  height: 62px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-logog2 {
+  top: 0px;
+  left: 0px;
+  width: 121px;
+  height: 62px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-line412 {
+  top: 1.019996643066406px;
+  transform-origin: left;
+  right: 53px;
+  width: 100px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line472 {
+  top: 1.59px;
+  transform-origin: right;
+  width: 205px;
+  height: 18px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line422 {
+  top: 43.664161682128906px;
+  left: 1.4245476722717285px;
+  width: 36px;
+  height: 19px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line482 {
+  top: 44.5419921875px;
+  transform-origin: right;
+  left: 85px;
+  width: 36px;
+  height: 17px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line452 {
+  top: 52px;
+  left: 38.038238525390625px;
+  width: 45px;
+  height: 18px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line462 {
+  top: 0.9px;
+  left: 36.56338882446289px;
+  width: 46px;
+  height: 2px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line432 {
+  top: 1.6px;
+  transform-origin: top;
+  left: 0px;
+  width: 40px;
+  height: 45px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line582 {
+  top: 29.664161682128906px;
+  left: 1px;
+  width: 39px;
+  height: 17px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line522 {
+  top: 25.573148727416992px;
+  left: 73.52316284179688px;
+  width: 59px;
+  height: 22px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line532 {
+  top: 16px;
+  left: 90px;
+  width: 30px;
+  height: 15px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line492 {
+  top: 18px;
+  transform-origin: left;
+  right: 78px;
+  width: 47px;
+  height: 42px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line572 {
+  top: 31.146297454833984px;
+  left: 30.52316284179688px;
+  width: 59px;
+  height: 29px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line502 {
+  top: 16.573148727416992px;
+  left: 1.088539123535156px;
+  width: 47px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line562 {
+  top: 1px;
+  left: 20.1871566772461px;
+  width: 86px;
+  height: 28px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line442 {
+  top: 19.146484375px;
+  left: 69.523193359375px;
+  width: 65px;
+  height: 43px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line542 {
+  top: 2.26156234741211px;
+  left: 69.66200256347656px;
+  width: 66px;
+  height: 43px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line512 {
+  top: 26.573148727416992px;
+  left: 18.038238525390625px;
+  width: 90px;
+  height: 35px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line552 {
+  top: 1.146297454833984px;
+  left: 34.038238525390625px;
+  width: 50px;
+  height: 30;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse262 {
+  top: 17px;
+  left: 1px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse232 {
+  top: 1px;
+  left: 35px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse222 {
+  top: 44.7px;
+  left: 118px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse212 {
+  top: 18px;
+  left: 117px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse202 {
+  top: 44px;
+  left: 2.7px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse242 {
+  top: 1px;
+  left: 82px;
+  width: 3.8px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse252 {
+  top: 58px;
+  left: 36.7px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse192 {
+  top: 58px;
+  left: 82px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-group7492 {
+  top: 23.734298706054688px;
+  left: 27.999996185302734px;
+  width: 74.56748962402344px;
+  height: 13.677409172058105px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-vector232 {
+  top: -0.00007604146958328784px;
+  left: 1.25286865234375px;
+  width: 73px;
+  height: 14px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-ellipse272 {
+  top: 8.265625px;
+  left: 0px;
+  width: 2px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text145 {
+  top: 20px;
+  left: 38px;
+  color: rgba(3, 26, 48, 1);
+  width: 46px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Kalam;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-impact {
+  top: 1567px;
+  left: 0px;
+  width: 1400px;
+  height: 478px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.ai-physiotherapists-text146 {
+  top: 40px;
+  left: 388px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: Bold;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  font-family: Manrope;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group784 {
+  top: 128px;
+  left: 161px;
+  width: 352px;
+  height: 133px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.ai-physiotherapists-rectangle2321 {
+  top: 0px;
+  left: 0px;
+  width: 352px;
+  height: 133px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 18px;
+}
+ 
+.ai-physiotherapists-group781 {
+  top: 32px;
+  left: 31px;
+  width: 70px;
+  height: 70.01300048828125px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-vector14 {
+  top: 16.75223731994629px;
+  left: 0px;
+  width: 70px;
+  height: 53px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-vector15 {
+  top: 0px;
+  left: 27.649812698364258px;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-vector16 {
+  top: 3.601306676864624px;
+  left: 14.835667610168457px;
+  width: 29px;
+  height: 30px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text147 {
+  top: 8px;
+  left: 120px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text148 {
+  top: 41px;
+  left: 120px;
+  color: rgba(3, 26, 48, 1);
+  width: 182px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text149 {
+  top: 70px;
+  left: 120px;
+  color: rgba(75, 85, 99, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group785 {
+  top: 128px;
+  left: 886px;
+  width: 352px;
+  height: 133px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.ai-physiotherapists-rectangle2322 {
+ top: 0px;
+  left: 0px;
+  right: 1200px;
+  width: 352px;
+  height: 133px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 18px;
+
+}
+ 
+.ai-physiotherapists-vector17 {
+  top: 32px;
+  left: 25px;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text155 {
+  top: 6px;
+  left: 113px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text156 {
+  top: 40px;
+  left: 113px;
+  color: rgba(3, 26, 48, 1);
+  width: 196px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text157 {
+  top: 67px;
+  left: 113px;
+  color: rgba(75, 85, 99, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group790 {
+  top: 310px;
+  left: 783px;
+  width: 352px;
+  height: 133px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.ai-physiotherapists-group789 {
+  top: 0px;
+  left: 0px;
+  width: 352px;
+  height: 133px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 0.6666666865348816);
+}
+ 
+.ai-physiotherapists-group782 {
+   top: 7.999664306640625px;
+  left: 35px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+
+}
+ 
+.ai-physiotherapists-vector18 {
+   top: 25px;
+  left: 20px;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+
+}
+ 
+.ai-physiotherapists-text163 {
+  top: 15px;
+  left: 150px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text164 {
+top: 45px;
+  left: 150px;
+  color: rgba(3, 26, 48, 1);
+  width: 200px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text165 {
+ top: 72px;
+  left: 150px;
+  color: rgba(75, 85, 99, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group788 {
+  top: 310px;
+  left: 264px;
+  width: 352px;
+  height: 133px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.ai-physiotherapists-rectangle2323 {
+  top: 0px;
+  left: 0px;
+  width: 352px;
+  height: 133px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(3, 26, 48, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 18px;
+}
+ 
+.ai-physiotherapists-group783 {
+  top: 23px;
+  left: 31px;
+  width: 65px;
+  height: 80.03169250488281px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-vector19 {
+  top: 0px;
+  left: 0px;
+  width: 65px;
+  height: 80px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text171 {
+  top: 3px;
+  left: 120px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text172 {
+  top: 35px;
+  left: 120px;
+  color: rgba(3, 26, 48, 1);
+  width: 217px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text173 {
+  top: 66px;
+  left: 119px;
+  color: rgba(75, 85, 99, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-line691 {
+  top: 2064px;
+  left: 0px;
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-built {
+  top: 2630px;
+  left: 0px;
+  width: 1400px;
+  height: 403px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(251, 252, 255, 1);
+}
+ 
+.ai-physiotherapists-text179 {
+  top: 49px;
+  left: 629px;
+  color: rgba(65, 64, 64, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text180 {
+  top: 119px;
+  left: 469px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: Semi Bold;
+  text-align: left;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text181 {
+  top: 179px;
+  left: 174px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group798 {
+  top: 266px;
+  left: 439px;
+  width: 222.627197265625px;
+  height: 55px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(3, 26, 48, 1);
+  border-radius: 13px;
+
+}
+ 
+.ai-physiotherapists-text182 {
+  top: 13px;
+  left: 36px;
+  color: rgba(255, 255, 255, 1);
+  width: 200px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-group799 {
+  top: 266px;
+  left: 753px;
+  width: 222.811767578125px;
+  height: 55px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color:white;
+  border-radius: 13px b;
+  border: 1px solid #000;   
+  border-radius: 13px;
+;
+}
+ 
+.ai-physiotherapists-text183 {
+  top: 13px;
+  left: 30px;
+  color: rgba(0, 0, 0, 1);
+  width: 148px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-line692 {
+  top: 389px;
+  left: 0px;
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-challenges {
+  top: 606px;
+  left: 0px;
+  width: 1400px;
+  height: 508px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.ai-physiotherapists-text184 {
+  top: 30px;
+  left: 563px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  font-style: Bold;
+  text-align: left;
+  font-family: Manrope;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group780 {
+  top: 118px;
+  left: 156px;
+  width: 234px;
+  height: 291px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.ai-physiotherapists-rectangle228 {
+  top: 0px;
+  left: 0px;
+  width: 234px;
+  height: 291px;
+  position: absolute;
+  border-radius: 20px;
+}
+ 
+.ai-physiotherapists-text185 {
+  top: 122px;
+  left: 52px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group773 {
+  top: 19px;
+  left: 68px;
+  width: 97px;
+  height: 97px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-vector20 {
+  top: 0px;
+  left: 0px;
+  width: 97px;
+  height: 97px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-vector21 {
+  top: 36.951171875px;
+  left: 9.245361328125px;
+  width: 79px;
+  height: 37px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text189 {
+  top: 190px;
+  left: 23px;
+  color: rgba(75, 85, 99, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group779 {
+  top: 118px;
+  left: 583px;
+  width: 234px;
+  height: 291px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.ai-physiotherapists-rectangle229 {
+  top: 0px;
+  left: 0px;
+  width: 234px;
+  height: 291px;
+  position: absolute;
+  border-radius: 20px;
+}
+ 
+.ai-physiotherapists-text199 {
+  top: 122px;
+  left: 34px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group774 {
+  top: 19px;
+  left: 93px;
+  width: 48.5px;
+  height: 97px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-vector22 {
+  top: 0px;
+  left: 0px;
+  width: 48px;
+  height: 97px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text203 {
+  top: 190px;
+  left: 25px;
+  color: rgba(75, 85, 99, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group778 {
+  top: 118px;
+  left: 1010px;
+  width: 234px;
+  height: 291px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.ai-physiotherapists-rectangle227 {
+  top: 0px;
+  left: 0px;
+  width: 234px;
+  height: 291px;
+  position: absolute;
+  border-radius: 20px;
+}
+ 
+.ai-physiotherapists-text213 {
+  top: 122px;
+  left: 25px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-group777 {
+  top: 19px;
+  left: 73px;
+  width: 87.860107421875px;
+  height: 97.15178680419922px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-group776 {
+  top: 0px;
+  left: 0px;
+  width: 87.860107421875px;
+  height: 47.663795471191406px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-vector24 {
+  top: 0px;
+  left: 0px;
+  width: 88px;
+  height: 48px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line64 {
+  top: 45.90185546875px;
+  left: 18.344497680664062px;
+  width: 34px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line65 {
+  top: 45.90185546875px;
+  left: 14.482385635375977px;
+  width: 60px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line66 {
+  top: 45.12109375px;
+  left: 72.38726043701172px;
+  width: 11px;
+  height: 3px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line67 {
+  top: 46.9208984375px;
+  left: 15.731860160827637px;
+  width: 13px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-group775 {
+  top: 27px;
+  left: 4.9999799728393555px;
+  width: 79.0740966796875px;
+  height: 70.15178680419922px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-group1 {
+  top: 0px;
+  left: 0px;
+  width: 79.0740966796875px;
+  height: 70.15178680419922px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-vector25 {
+  top: 0px;
+  left: 0px;
+  width: 79px;
+  height: 70px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-vector26 {
+  top: 28.4287109375px;
+  left: 28.79241180419922px;
+  width: 22px;
+  height: 14px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text217 {
+  top: 190px;
+  left: 29px;
+  color: rgba(75, 85, 99, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text227 {
+  top: 453px;
+  left: 294px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-line70 {
+  top: 498px;
+  left: 0px;
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-line71 {
+  top: 14px;
+  left: 0px;
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-solution {
+  top: 1114px;
+  left: 0px;
+  width: 1400px;
+  height: 453px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.ai-physiotherapists-text228 {
+  top: 19px;
+  left: 583px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  font-size: 32px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Manrope;
+  font-weight: 1000;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text229 {
+  top: 120px;
+  left: 62px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 34px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text233 {
+  top: 245px;
+  left: 62px;
+  color: rgba(75, 85, 99, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-line68 {
+  top: 95px;
+  left: 700px;
+  width: 320px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-vector27 {
+  top: 209px;
+  left: 859px;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-vector28 {
+  top: 315px;
+  left: 869px;
+  width: 45px;
+  height: 58px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-group2 {
+  top: 92px;
+  left: 863px;
+  width: 55px;
+  height: 66px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text243 {
+  top: 92px;
+  left: 949px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text244 {
+  top: 316px;
+  left: 949px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text245 {
+  top: 204px;
+  left: 948px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text246 {
+  top: 125px;
+  left: 948px;
+  color: rgba(80, 80, 80, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text252 {
+  top: 347px;
+  left: 948px;
+  color: rgba(80, 80, 80, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text258 {
+  top: 237px;
+  left: 949px;
+  color: rgba(80, 80, 80, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-line693 {
+  top: 441px;
+  left: 1px;
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-review {
+  top: 2064px;
+  left: 1px;
+  width: 1400px;
+  height: 566px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.ai-physiotherapists-text264 {
+   top: 21px;
+  left: 536px;
+  color: rgba(3, 26, 48, 1);
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  box-shadow: ;
+  font-style: Bold;
+  text-align: left;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: Manrope;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text265 {
+  top: 90px;
+  left: 574px;
+  color: rgba(122, 122, 122, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-frame686 {
+  top: 169px;
+  left: 44px;
+  width: 1650px;
+  height: 340px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.ai-physiotherapists-frame685 {
+  top: 0px;
+  left: 0px;
+  width: 3910px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.ai-physiotherapists-r21 {
+  top: 0px;
+  left: 660px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 251, 241, 1);
+}
+ 
+.ai-physiotherapists-group7921 {
+  top: 37px;
+  left: 65px;
+  width: 150.00010681152344px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-star10 {
+  top: 0px;
+  left: 0px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star11 {
+  top: 0px;
+  left: 32.14285659790039px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star12 {
+  top: 0px;
+  left: 64.28571319580078px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star13 {
+  top: 0px;
+  left: 96.42857360839844px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star14 {
+  top: 0px;
+  left: 128.57142639160156px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text266 {
+  top: 84px;
+  left: 14px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text282 {
+ top: 285px;
+  left: 10px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20.5px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  width: 2000px;
+
+}
+ 
+.ai-physiotherapists-text283 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r11 {
+  top: 0px;
+  left: 330px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(233, 229, 255, 1);
+}
+ 
+.ai-physiotherapists-group7911 {
+  top: 37px;
+  left: 65px;
+  width: 150.00010681152344px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-star15 {
+  top: 0px;
+  left: 0px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star16 {
+  top: 1.8189894035458565e-12px;
+  left: 32.14285659790039px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star17 {
+  top: 1.8189894035458565e-12px;
+  left: 64.28571319580078px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star18 {
+  top: 1.8189894035458565e-12px;
+  left: 96.42857360839844px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star19 {
+  top: 1.8189894035458565e-12px;
+  left: 128.57142639160156px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text286 {
+  top: 84px;
+  left: 10px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text300 {
+  top: 285px;
+  left: 10px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20.5px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  width: 2000px;
+}
+
+
+ 
+.ai-physiotherapists-text301 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r61 {
+  top: 0px;
+  left: 990px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(231, 238, 255, 1);
+}
+ 
+.ai-physiotherapists-group7951 {
+  top: 37px;
+  left: 62px;
+  width: 149.99986267089844px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-star20 {
+  top: 0px;
+  left: 0px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star21 {
+  top: 0px;
+  left: 32.142578125px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star22 {
+  top: 0px;
+  left: 64.28570556640625px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star23 {
+  top: 0px;
+  left: 96.4285888671875px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star24 {
+  top: 0px;
+  left: 128.5714111328125px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text304 {
+   top: 84px;
+  left: 13px;
+  color: rgb(140, 125, 125);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+ 
+.ai-physiotherapists-text318 {
+  top: 285px;
+  left: 10px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20.5px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  width: 2000px;
+
+}
+ 
+.ai-physiotherapists-text319 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r51 {
+  top: 0px;
+  left: 1650px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 251, 241, 1);
+}
+ 
+.ai-physiotherapists-group7961 {
+  top: 37px;
+  left: 62px;
+  width: 149.99986267089844px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-text322 {
+  top: 84px;
+  left: 12px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text334 {
+  top: 273px;
+  left: 21px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text335 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r41 {
+  top: 0px;
+  left: 1320px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(233, 229, 255, 1);
+}
+ 
+.ai-physiotherapists-group7941 {
+  top: 37px;
+  left: 62px;
+  width: 150.00010681152344px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-text338 {
+  top: 84px;
+  left: 10px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text350 {
+  top: 273px;
+  left: 23px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text351 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r31 {
+  top: 0px;
+  left: 0px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(231, 238, 255, 1);
+}
+ 
+.ai-physiotherapists-group7931 {
+  top: 37px;
+  left: 66px;
+  width: 150.00010681152344px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-star25 {
+  top: 0px;
+  left: 0px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star26 {
+  top: 9.094947017729282e-13px;
+  left: 32.14285659790039px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star27 {
+  top: 9.094947017729282e-13px;
+  left: 64.28571319580078px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star28 {
+  top: 9.094947017729282e-13px;
+  left: 96.42857360839844px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-star29 {
+  top: 9.094947017729282e-13px;
+  left: 128.57142639160156px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+}
+ 
+.ai-physiotherapists-text354 {
+  top: 84px;
+  left: 8px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text366 {
+  top: 285px;
+  left: 10px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20.5px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  width: 100%;
+
+}
+ 
+.ai-physiotherapists-text367 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r22 {
+  top: 0px;
+  left: 2640px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 251, 241, 1);
+}
+ 
+.ai-physiotherapists-group7922 {
+  top: 37px;
+  left: 65px;
+  width: 149.99986267089844px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-text370 {
+  top: 84px;
+  left: 14px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text386 {
+  top: 273px;
+  left: 10px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text387 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r12 {
+  top: 0px;
+  left: 2310px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(233, 229, 255, 1);
+}
+ 
+.ai-physiotherapists-group7912 {
+  top: 37px;
+  left: 65px;
+  width: 150.00010681152344px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-text390 {
+  top: 84px;
+  left: 10px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text404 {
+  top: 268px;
+  left: 20px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text405 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r62 {
+  top: 0px;
+  left: 2970px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(231, 238, 255, 1);
+}
+ 
+.ai-physiotherapists-group7952 {
+  top: 37px;
+  left: 62px;
+  width: 149.99986267089844px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-text408 {
+  top: 84px;
+  left: 13px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text422 {
+  top: 273px;
+  left: 19px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text423 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r52 {
+  top: 0px;
+  left: 3630px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 251, 241, 1);
+}
+ 
+.ai-physiotherapists-group7962 {
+  top: 37px;
+  left: 62px;
+  width: 149.99986267089844px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-text426 {
+  top: 84px;
+  left: 12px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text438 {
+  top: 273px;
+  left: 21px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text439 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r42 {
+  top: 0px;
+  left: 3300px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(233, 229, 255, 1);
+}
+ 
+.ai-physiotherapists-group7942 {
+  top: 37px;
+  left: 62px;
+  width: 149.99986267089844px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-text442 {
+  top: 84px;
+  left: 10px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text454 {
+  top: 273px;
+  left: 23px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text455 {
+  font-weight: 700;
+}
+ 
+.ai-physiotherapists-r32 {
+  top: 0px;
+  left: 1980px;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(231, 238, 255, 1);
+}
+ 
+.ai-physiotherapists-group7932 {
+  top: 37px;
+  left: 66px;
+  width: 150.00010681152344px;
+  height: 21.428571701049805px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.ai-physiotherapists-text458 {
+  top: 84px;
+  left: 8px;
+  color: rgba(61, 59, 59, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text470 {
+  top: 273px;
+  left: 12px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.ai-physiotherapists-text471 {
+  font-weight: 700;
+}
