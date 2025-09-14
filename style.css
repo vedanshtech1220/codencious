@@ -2188,6 +2188,24 @@ body.navbar-visible #hero {
   color: white; /* text visible on dark bg */
 }
 
+.retail-card2 .product-card-inner {
+  position: relative;
+  z-index: 2; /* text always above image */
+  color: white; /* text visible on dark bg */
+}
+
+.retail-card1 .product-card-inner {
+  position: relative;
+  z-index: 2; /* text always above image */
+  color: white; /* text visible on dark bg */
+}
+
+.retail-card3 .product-card-inner {
+  position: relative;
+  z-index: 2; /* text always above image */
+  color: white; /* text visible on dark bg */
+}
+
 .retail-card1::before {
   content: "";
   position: absolute;
@@ -2195,4 +2213,114 @@ body.navbar-visible #hero {
   background: url("/codencious/images/ray.png") center/cover no-repeat;
   z-index: 1;
   opacity: 0.8; /* adjust for text visibility */
+}
+
+.retail-card2::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* full cover */
+  background: url("/codencious/images/health.png") center/cover no-repeat;
+  z-index: 1;
+  opacity: 1; /* adjust for text visibility */
+}
+
+.retail-card3::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* full cover */
+  background: url("/codencious/images/manufacturig.png") center/cover no-repeat;
+  z-index: 1;
+  opacity: 1; /* adjust for text visibility */
+}
+
+.retail-card4::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* full cover */
+  background: url("/codencious/images/finance.png") center/cover no-repeat;
+  z-index: 1;
+  opacity: 1; /* adjust for text visibility */
+}
+
+.product-card-container {
+            display: flex; /* Use flexbox for horizontal layout */
+            overflow-x: auto; /* Enable horizontal scrolling */
+            gap: 1.5rem; /* 24px */
+            margin-top: 4rem; /* 64px */
+            padding-bottom: 1.5rem; /* Add space for the scrollbar */
+            scroll-snap-type: x mandatory; /* Snap-scrolling effect */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .product-card-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .product-card {
+            background-color: #111827; /* A dark gray, slightly lighter than black */
+            border: 1px solid #374151; /* Subtle gray border */
+            border-radius: 0.75rem; /* 12px, for rounded corners */
+            min-height: 280px; /* Gives the blank cards some height */
+            transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            flex: 0 0 300px; /* Do not grow or shrink, with a base width of 300px */
+            scroll-snap-align: start; /* Align cards to the start on snap */
+        }
+
+        .product-card:hover {
+            /* Lifts the card and brightens the border on hover for a nice interactive feel */
+            transform: translateY(-5px);
+            border-color: #4f46e5; /* Indigo color on hover */
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2), 0 4px 6px -4px rgba(79, 70, 229, 0.2);
+        }
+
+        /* Assuming these classes from your original code snippet have definitions elsewhere */
+        /* For demonstration, I'll add some basic styles */
+        .sub-heading {
+            font-size: 2.25rem; /* 36px */
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .divider {
+            height: 4px;
+            width: 80px;
+            background-color: #4f46e5;
+            border-radius: 2px;
+        }
+
+        .fade-in {
+            /* Placeholder for potential fade-in animation */
+            opacity: 1;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .divider {
+  height: 4px;
+  background-color: #5c5cff; /* your purple/blue color */
+  margin: 8px auto 0;
+  border-radius: 4px;
+
+  /* Animation */
+  animation: highlight 2s ease-in-out infinite;
+  transform-origin: center;
+
+  transform: translateX(23px);
+}
+
+@keyframes highlight {
+  0% {
+    width: 5%;
+  }
+  50% {
+    width: 22%;
+  }
+  100% {
+    width: 5%;
+  }
 }
