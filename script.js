@@ -18,15 +18,16 @@ animatedElements.forEach(el => {
 });
 
 // Enhanced parallax scrolling
+// Remove parallax scrolling function
 function updateParallax() {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.parallax-bg');
-    
-    parallaxElements.forEach(element => {
-        const speed = element.dataset.speed || 0.5;
-        const yPos = -(scrolled * speed);
-        element.style.transform = `translateY(${yPos}px)`;
-    });
+    // Disabled parallax effect
+    return;
+}
+
+// Remove scroll snap enhancement
+function handleScrollSnap() {
+    // Disabled scroll snap
+    return;
 }
 
 // Smooth scroll with momentum
@@ -168,7 +169,6 @@ function getResponsiveThrottleDelay() {
 window.addEventListener('scroll', throttle(() => {
     updateProgressBar();
     updateSectionIndicators();
-    updateParallax();
 }, getResponsiveThrottleDelay()));
 
 // Logo Particle Effect - Particles form the exact logo shape
@@ -797,6 +797,153 @@ initMobileMenu();
 initNavbarSmoothScroll();
 initNavbarScrollEffect();
 
+// Vertical to horizontal scroll for Products section
+// Products sequence: vertical scroll drives horizontal translation
+(function initProductsSequence(){
+    const seq = document.getElementById('productsSeq');
+    const track = document.getElementById('productsTrack');
+    const canvas = document.getElementById('productsBg');
+    if(!seq || !track || !canvas) return;
+    
+    initHorizontalScroll(seq, track, canvas);
+})();
+
+// Vertical to horizontal scroll for Projects section
+// Projects sequence: vertical scroll drives horizontal translation
+(function initProjectsSequence(){
+    const seq = document.getElementById('projectsSeq');
+    const track = document.getElementById('projectsTrack');
+    const canvas = document.getElementById('projectsCanvasBg');
+    if(!seq || !track || !canvas) return;
+    
+    initHorizontalScroll(seq, track, canvas);
+})();
+
+// Shared function for horizontal scrolling implementation
+function initHorizontalScroll(seq, track, canvas){
+    if(!seq || !track || !canvas) return;
+
+    // Detect if device is touch-enabled
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    // Compute total horizontal width and the vertical scroll area required
+    function computeSequenceHeights(){
+        
+        const cards = track.children.length;
+        const cardWidth = track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width : 320;
+        const style = getComputedStyle(track);
+        // Prefer columnGap which is in px; fallback to gap
+        const gapStr = style.columnGap && style.columnGap !== 'normal' ? style.columnGap : (style.gap || '16px');
+        const gap = parseFloat(gapStr) || 16; // px
+        const totalWidth = cards * cardWidth + (cards - 1) * gap;
+        const viewport = window.innerWidth;
+        // Increase extra width to ensure all cards are visible
+        const viewportFactor = isTouchDevice ? 0.7 : 0.8;
+        const extra = Math.max(0, Math.ceil(totalWidth - viewport * viewportFactor));
+        // Height: horizontal distance + an extra viewport to ensure last card fully appears before release
+        const heightFactor = isTouchDevice ? 0.6 : 0.5;
+        seq.style.height = `calc(100vh + ${extra + window.innerHeight * heightFactor}px)`;
+        return {extra};
+    }
+    let extraWidth = computeSequenceHeights().extra;
+
+    // Sticky pin container
+    const pin = seq.querySelector('.products-pin');
+
+    // Map vertical scroll progress within the section to horizontal translateX
+    function update(){
+        const rect = seq.getBoundingClientRect();
+        const start = rect.top;
+        const end = rect.height - window.innerHeight; // when pin releases; rect.bottom - vh can be inaccurate after transforms
+        const progress = Math.min(1, Math.max(0, (0 - start) / (end - 0)));
+        const translateX = -extraWidth * progress;
+        track.style.transform = `translate3d(${translateX}px,0,0)`;
+        renderBg(progress);
+    }
+
+    // Touch scroll handling
+    if (isTouchDevice) {
+        // Add smooth scrolling for touch devices
+        track.style.scrollBehavior = 'smooth';
+        track.style.webkitOverflowScrolling = 'touch';
+        
+        // Add touch-specific snap points for better experience
+        track.style.scrollSnapType = 'x mandatory';
+        Array.from(track.children).forEach(card => {
+            card.style.scrollSnapAlign = 'center';
+        });
+    }
+
+    window.addEventListener('resize', () => {
+        extraWidth = computeSequenceHeights().extra;
+        update();
+        if (typeof THREE !== 'undefined') {
+            setupThree();
+        }
+    }, {passive:true});
+
+    window.addEventListener('scroll', update, {passive:true});
+    
+    // Initial call to setup
+    if (typeof THREE !== 'undefined') {
+        setupThree();
+    } else {
+        // Load THREE.js if needed
+        ensureThree(() => setupThree());
+    }
+
+    // Keyboard accessibility
+    track.setAttribute('tabindex','0');
+    track.addEventListener('keydown', (e)=>{
+        const step = 120;
+        if (e.key === 'ArrowRight') { window.scrollBy({top: step, behavior:'smooth'}); }
+        if (e.key === 'ArrowLeft')  { window.scrollBy({top: -step, behavior:'smooth'}); }
+    });
+
+    // Minimal Three.js background
+    let renderer, scene, camera, geometry, material, mesh, raf;
+    function setupThree(){
+        if (!pin || !canvas) return;
+        
+        const width = pin.clientWidth; const height = pin.clientHeight;
+        if(!renderer){
+            renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
+        }
+        renderer.setSize(width, height, false);
+        if(!scene){
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(45, width/height, 0.1, 100);
+            camera.position.z = 6;
+            geometry = new THREE.IcosahedronGeometry(2.2, 1);
+            material = new THREE.MeshStandardMaterial({ color: 0x4ecdc4, metalness: 0.1, roughness: 0.8, wireframe: true, opacity: 0.25, transparent: true });
+            mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+            const light = new THREE.PointLight(0x45b7d1, 1.2); light.position.set(4,4,6); scene.add(light);
+            const light2 = new THREE.PointLight(0xffffff, 0.3); light2.position.set(-4,-2,-4); scene.add(light2);
+        } else {
+            camera.aspect = width/height; camera.updateProjectionMatrix();
+        }
+    }
+
+    function renderBg(progress){
+        if(!renderer || !mesh || !scene || !camera) return;
+        mesh.rotation.x = progress * Math.PI * 1.2;
+        mesh.rotation.y = progress * Math.PI * 1.6;
+        renderer.render(scene, camera);
+    }
+
+    // Lazy load three.js via CDN if not present
+    function ensureThree(callback){
+        if (window.THREE) { callback(); return; }
+        const s = document.createElement('script');
+        s.src = 'https://unpkg.com/three@0.160.0/build/three.min.js';
+        s.onload = callback;
+        document.head.appendChild(s);
+    }
+
+    ensureThree(()=>{ setupThree(); update(); });
+}
+
 // Initialize particles after DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
@@ -846,3 +993,58 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// Hover spread interaction for Projects cards (DigiValet-like)
+function initProjectsHoverSpread(){
+    const seq = document.getElementById('projectsSeq');
+    const track = document.getElementById('projectsTrack');
+    if(!seq || !track) return;
+
+    const cards = Array.from(track.querySelectorAll('.product-card'));
+    if(cards.length === 0) return;
+
+    const cs = getComputedStyle(seq);
+    const step = parseFloat(cs.getPropertyValue('--spread-step')) || 24; // px per neighbor
+    const hoverScale = parseFloat(cs.getPropertyValue('--hover-scale')) || 1.03;
+
+    function applyOffsets(activeIdx){
+        cards.forEach((card, idx) => {
+            const diff = idx - activeIdx;
+            card.style.setProperty('--offset', String(diff * step));
+            card.style.setProperty('--scale', idx === activeIdx ? String(hoverScale) : '1');
+            if(idx === activeIdx) card.classList.add('is-hovered');
+            else card.classList.remove('is-hovered');
+        });
+    }
+
+    function reset(){
+        cards.forEach((card) => {
+            card.style.setProperty('--offset', '0');
+            card.style.setProperty('--scale', '1');
+            card.classList.remove('is-hovered');
+        });
+    }
+
+    // Mouse and keyboard focus support
+    cards.forEach((card, idx) => {
+        card.addEventListener('mouseenter', () => applyOffsets(idx));
+        card.addEventListener('focusin', () => applyOffsets(idx));
+    });
+
+    track.addEventListener('mouseleave', reset);
+    track.addEventListener('focusout', () => {
+        // If focus left the entire track, reset
+        if(!track.contains(document.activeElement)) reset();
+    });
+
+    // Touch support: tap to activate, tap outside to reset
+    cards.forEach((card, idx) => {
+        card.addEventListener('touchstart', () => applyOffsets(idx), { passive: true });
+    });
+    document.addEventListener('touchstart', (e) => {
+        if(!track.contains(e.target)) reset();
+    }, { passive: true });
+}
+
+// Initialize the hover spread once DOM is ready (script is at end of body)
+initProjectsHoverSpread();

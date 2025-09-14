@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>exported project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="storeinsight-container">
+        <div class="storeinsight-storeinsight">
+          <div class="storeinsight-hero">
+            <div class="storeinsight-group740">
+              <img
+                alt="image192672"
+                src="public/image192672-vhre-800h.png"
+                class="storeinsight-image19"
+              />
+              <img
+                alt="Rectangle2022672"
+                src="public/rectangle2022672-em2-800h.png"
+                class="storeinsight-rectangle2021"
+              />
+            </div>
+            <span class="storeinsight-text100">
+              <span>Unlocking In-Store Intelligence</span>
+              <br />
+              <span>with AI-Powered Pre-Sales Insights</span>
+            </span>
+            <span class="storeinsight-text104">
+              <span>Discover how Codenscious.ai and Eyenet Chile turned</span>
+              <br />
+              <span>shopping behavior into measurable growth.</span>
+            </span>
+            <div class="storeinsight-group742">
+              <img
+                alt="Rectangle204I267"
+                src="public/rectangle204i267-sp1d-200h.png"
+                class="storeinsight-rectangle204"
+              />
+              <span class="storeinsight-text108">Explore the Solution</span>
+            </div>
+            <img
+              alt="Frame2672"
+              src="public/frame2672-uh.svg"
+              class="storeinsight-frame"
+            />
+            <div class="storeinsight-group741">
+              <img
+                alt="Rectangle205I267"
+                src="public/rectangle205i267-48hk-200h.png"
+                class="storeinsight-rectangle205"
+              />
+              <span class="storeinsight-text109">Get in Touch</span>
+            </div>
+            <div class="storeinsight-frame11">
+              <img
+                alt="Rectangle302672"
+                src="public/rectangle302672-pstt-1400w.png"
+                class="storeinsight-rectangle30"
+              />
+              <div class="storeinsight-group599">
+                <span class="storeinsight-text110">Join Us</span>
+              </div>
+              <span class="storeinsight-text111">Codenscious ai.</span>
+              <div class="storeinsigFht-group7641">
+                  <img 
+                  src="logo.png"
+                  alt="logo-photo"
+                  class="logo-photo">
+                </div>
+              </div>
+              <div class="storeinsight-group845">
+                <span class="storeinsight-text113">Services</span>
+                <span class="storeinsight-text114">About Us</span>
+                <span class="storeinsight-text115">Products</span>
+                <span class="storeinsight-text116">Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="storeinsight-frame677">
+            <img
+              alt="IMAGE14a48a50648b4b66a774552698d1c0e722694"
+              src="public/image14a48a50648b4b66a774552698d1c0e722694-w5vw-700h.png"
+              class="storeinsight-image14a48a50648b4b66a774552698d1c0e72"
+            />
+            <img
+              alt="Rectangle2022694"
+              src="public/rectangle2022694-5fao-700h.png"
+              class="storeinsight-rectangle2022"
+            />
+            <span class="storeinsight-text117">
+              <span>The Blind Spot in Traditional</span>
+              <br />
+              <span>Sales Analytics</span>
+            </span>
+            <span class="storeinsight-text121">
+              <span>
+                Even with digital receipts and POS data, brands miss how
+                customers move,
+              </span>
+              <br />
+              <span>browse, and engage before purchase.</span>
+            </span>
+            <div class="storeinsight-group746">
+              <div class="storeinsight-group744">
+                <img
+                  alt="Rectangle208I269"
+                  src="public/rectangle208i269-k36-400h.png"
+                  class="storeinsight-rectangle208"
+                />
+                <img
+                  alt="manwalkingI269"
+                  src="public/manwalkingi269-679h-200h.png"
+                  class="storeinsight-manwalking"
+                />
+                <span class="storeinsight-text125">
+                  <span>Missed</span>
+                  <br />
+                  <span>Movement Data</span>
+                </span>
+                <span class="storeinsight-text129">
+                  <span>No visibility into how</span>
+                  <br />
+                  <span>customers explore</span>
+                  <br />
+                  <span>the store or interact</span>
+                  <br />
+                  <span>with products.</span>
+                </span>
+              </div>
+              <div class="storeinsight-group745">
+                <img
+                  alt="Rectangle209I269"
+                  src="public/rectangle209i269-3a0n-400h.png"
+                  class="storeinsight-rectangle209"
+                />
+                <img
+                  alt="analyticsI269"
+                  src="public/analyticsi269-nwwg-200h.png"
+                  class="storeinsight-analytics"
+                />
+                <span class="storeinsight-text137">
+                  <span>Incomplete</span>
+                  <br />
+                  <span>Customer Insight</span>
+                </span>
+                <span class="storeinsight-text141">
+                  <span>Without pre-sales data,</span>
+                  <br />
+                  <span>marketing and layout</span>
+                  <br />
+                  <span>strategies rely on</span>
+                  <br />
+                  <span>assumptions, not reality.</span>
+                </span>
+              </div>
+              <div class="storeinsight-group743">
+                <img
+                  alt="Rectangle207I269"
+                  src="public/rectangle207i269-iblb-400h.png"
+                  class="storeinsight-rectangle2071"
+                />
+                <img
+                  alt="billI269"
+                  src="public/billi269-3p1p-200h.png"
+                  class="storeinsight-bill"
+                />
+                <span class="storeinsight-text149">
+                  <span>Traditional</span>
+                  <br />
+                  <span>Analytics</span>
+                </span>
+                <span class="storeinsight-text153">
+                  <span>Sales receipts only</span>
+                  <br />
+                  <span>reflect completed</span>
+                  <br />
+                  <span>transactions — missing</span>
+                  <br />
+                  <span>pre-purchase behavior.</span>
+                </span>
+              </div>
+            </div>
+            <img
+              alt="Line122694"
+              src="public/line122694-d44o.svg"
+              class="storeinsight-line12"
+            />
+            <img
+              alt="Line132694"
+              src="public/line132694-sz2g.svg"
+              class="storeinsight-line13"
+            />
+          </div>
+          <div class="storeinsight-solution">
+            <div class="storeinsight-group757">
+              <div class="storeinsight-group7471">
+                <img
+                  alt="Line143382"
+                  src="public/line143382-gq7vj.svg"
+                  class="storeinsight-line141"
+                />
+                <img
+                  alt="Line153382"
+                  src="public/line153382-5o8w.svg"
+                  class="storeinsight-line151"
+                />
+                <img
+                  alt="Line273382"
+                  src="public/line273382-la4r.svg"
+                  class="storeinsight-line27"
+                />
+                <img
+                  alt="Line313382"
+                  src="public/line313382-q91m.svg"
+                  class="storeinsight-line31"
+                />
+                <img
+                  alt="Line283382"
+                  src="public/line283382-wd8s.svg"
+                  class="storeinsight-line28"
+                />
+                <img
+                  alt="Line293382"
+                  src="public/line293382-zyqz.svg"
+                  class="storeinsight-line29"
+                />
+                <img
+                  alt="Line303382"
+                  src="public/line303382-9ul.svg"
+                  class="storeinsight-line30"
+                />
+                <img
+                  alt="Line163382"
+                  src="public/line163382-hw3.svg"
+                  class="storeinsight-line161"
+                />
+                <img
+                  alt="Line203382"
+                  src="public/line203382-i4uh.svg"
+                  class="storeinsight-line201"
+                />
+                <img
+                  alt="Line173382"
+                  src="public/line173382-jxl.svg"
+                  class="storeinsight-line171"
+                />
+                <img
+                  alt="Line333382"
+                  src="public/line333382-tqj.svg"
+                  class="storeinsight-line33"
+                />
+                <img
+                  alt="Line343382"
+                  src="public/line343382-8b7.svg"
+                  class="storeinsight-line34"
+                />
+                <img
+                  alt="Line323382"
+                  src="public/line323382-w55f.svg"
+                  class="storeinsight-line32"
+                />
+                <img
+                  alt="Line193382"
+                  src="public/line193382-sus.svg"
+                  class="storeinsight-line191"
+                />
+                <img
+                  alt="Line183382"
+                  src="public/line183382-21o9.svg"
+                  class="storeinsight-line181"
+                />
+                <img
+                  alt="Line353382"
+                  src="public/line353382-dd5q.svg"
+                  class="storeinsight-line35"
+                />
+                <img
+                  alt="Line213382"
+                  src="public/line213382-xagc.svg"
+                  class="storeinsight-line211"
+                />
+                <img
+                  alt="Line403383"
+                  src="public/line403383-29a4.svg"
+                  class="storeinsight-line40"
+                />
+                <img
+                  alt="Line263383"
+                  src="public/line263383-f32n.svg"
+                  class="storeinsight-line261"
+                />
+                <img
+                  alt="Line223383"
+                  src="public/line223383-ig6j.svg"
+                  class="storeinsight-line221"
+                />
+                <img
+                  alt="Line393383"
+                  src="public/line393383-ape.svg"
+                  class="storeinsight-line39"
+                />
+                <img
+                  alt="Line233383"
+                  src="public/line233383-3h08.svg"
+                  class="storeinsight-line231"
+                />
+                <img
+                  alt="Line383383"
+                  src="public/line383383-8vxg.svg"
+                  class="storeinsight-line38"
+                />
+                <img
+                  alt="Line243383"
+                  src="public/line243383-vkf.svg"
+                  class="storeinsight-line241"
+                />
+                <img
+                  alt="Line373383"
+                  src="public/line373383-2sa7.svg"
+                  class="storeinsight-line37"
+                />
+                <img
+                  alt="Line253383"
+                  src="public/line253383-mr7.svg"
+                  class="storeinsight-line251"
+                />
+                <img
+                  alt="Line363383"
+                  src="public/line363383-o7be.svg"
+                  class="storeinsight-line36"
+                />
+              </div>
+              <img
+                alt="Rectangle2103383"
+                src="public/rectangle2103383-s4z-600h.png"
+                class="storeinsight-rectangle2101"
+              />
+            </div>
+            <span class="storeinsight-text161">
+              <span>AI That Sees What Sales</span>
+              <br />
+              <span>Reports Can’t</span>
+            </span>
+            <span class="storeinsight-text165">
+              <span>
+                Go beyond transactions. Our AI captures real-time customer
+                behavior to drive
+              </span>
+              <br />
+              <span>smarter sales — before they even check out.</span>
+            </span>
+            <div class="storeinsight-fleft">
+              <div class="storeinsight-group754">
+                <span class="storeinsight-text169">
+                  <span>Track Customer</span>
+                  <br />
+                  <span>Movement</span>
+                </span>
+                <span class="storeinsight-text173">
+                  <span>Visualize foot traffic through</span>
+                  <br />
+                  <span>AI-powered cameras</span>
+                </span>
+                <div class="storeinsight-group748">
+                  <img
+                    alt="Vector3383"
+                    src="public/vector3383-for.svg"
+                    class="storeinsight-vector1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="storeinsight-fcenter">
+              <div class="storeinsight-group755">
+                <img
+                  alt="Vector3383"
+                  src="public/vector3383-fssk.svg"
+                  class="storeinsight-vector2"
+                />
+                <span class="storeinsight-text177">
+                  <span>Measure Product</span>
+                  <br />
+                  <span>Engagement</span>
+                </span>
+                <span class="storeinsight-text181">
+                  <span>See how shoppers engage with</span>
+                  <br />
+                  <span>products before purchase</span>
+                </span>
+              </div>
+            </div>
+            <div class="storeinsight-group756">
+              <img
+                alt="Vector3383"
+                src="public/vector3383-h2su.svg"
+                class="storeinsight-vector3"
+              />
+              <span class="storeinsight-text185">
+                <span>Merge Pre and Post</span>
+                <br />
+                <span>- Sales Data</span>
+              </span>
+              <span class="storeinsight-text189">
+                <span>Link browsing to purchases for</span>
+                <br />
+                <span>full-funnel insights</span>
+              </span>
+            </div>
+          </div>
+          <div class="storeinsight-frame679">
+            <img
+              alt="Rectangle2103557"
+              src="public/rectangle2103557-fsxp-600h.png"
+              class="storeinsight-rectangle2102"
+            />
+            <div class="storeinsight-group7472">
+              <img src="grid.png"
+               alt="griddd"
+               class="grid-png">
+            </div>
+            <span class="storeinsight-text193">
+              How Eyenet Chile &amp; Codenscious.ai Turned AI into Tangible
+              results.
+            </span>
+            <div class="storeinsight-group7611">
+              <img
+                alt="Rectangle2073557"
+                src="public/rectangle2073557-vgf-300w.png"
+                class="storeinsight-rectangle2072"
+              />
+              <span class="storeinsight-text194">Step 1</span>
+              <span class="storeinsight-text195">
+                <span>Smarter</span>
+                <br />
+                <span>Strategy</span>
+              </span>
+              <span class="storeinsight-text199">
+                <span>Real-time heatmaps</span>
+                <br />
+                <span>revealed blind spots —</span>
+                <br />
+                <span>and optimized product</span>
+                <br />
+                <span>positioning.</span>
+              </span>
+              <div class="storeinsight-group7591">
+                <img
+                  alt="Ellipse28I355"
+                  src="public/ellipse28i355-iwds-200h.png"
+                  class="storeinsight-ellipse281"
+                />
+                <img
+                  alt="loupeI355"
+                  src="public/loupei355-ui2-200h.png"
+                  class="storeinsight-loupe"
+                />
+              </div>
+            </div>
+            <div class="storeinsight-group762">
+              <img
+                alt="Rectangle2073557"
+                src="public/rectangle2073557-wp5a-300w.png"
+                class="storeinsight-rectangle2073"
+              />
+              <span class="storeinsight-text207">Step 3</span>
+              <span class="storeinsight-text208">
+                <span>Revenue</span>
+                <br />
+                <span>Uplift</span>
+              </span>
+              <span class="storeinsight-text212">
+                <span>In-store sales grew</span>
+                <br />
+                <span>significantly after</span>
+                <br />
+                <span>AI-backed changes.</span>
+              </span>
+              <div class="storeinsight-group760">
+                <img
+                  alt="Ellipse28I355"
+                  src="public/ellipse28i355-2ntl-200w.png"
+                  class="storeinsight-ellipse282"
+                />
+                <img
+                  alt="growthI355"
+                  src="public/growthi355-lwm-200h.png"
+                  class="storeinsight-growth"
+                />
+              </div>
+            </div>
+            <div class="storeinsight-group7612">
+              <img
+                alt="Rectangle2073557"
+                src="public/rectangle2073557-3haj-300w.png"
+                class="storeinsight-rectangle2074"
+              />
+              <span class="storeinsight-text218">Step 2</span>
+              <span class="storeinsight-text219">
+                <span>Boosted</span>
+                <br />
+                <span>Engagement</span>
+              </span>
+              <span class="storeinsight-text223">
+                <span>Customers spent more</span>
+                <br />
+                <span>time browsing — and</span>
+                <br />
+                <span>converted faster.</span>
+              </span>
+              <div class="storeinsight-group7592">
+                <img
+                  alt="Ellipse28I355"
+                  src="public/ellipse28i355-3qf-200w.png"
+                  class="storeinsight-ellipse283"
+                />
+                <img
+                  alt="shuttleI355"
+                  src="public/shuttlei355-ww8-200w.png"
+                  class="storeinsight-shuttle"
+                />
+              </div>
+            </div>
+            <img
+              alt="Arrow93557"
+              src="public/arrow93557-w2mn.svg"
+              class="storeinsight-arrow9"
+            />
+            <img
+              alt="Arrow103557"
+              src="public/arrow103557-bpka.svg"
+              class="storeinsight-arrow10"
+            />
+            <span class="storeinsight-text229">
+              <span>From In-Store Insights to</span>
+              <br />
+              <span>Revenue Growth</span>
+            </span>
+          </div>
+          <div class="storeinsight-frame6841">
+            <img
+              alt="Rectangle2113556"
+              src="public/rectangle2113556-9ehu-500h.png"
+              class="storeinsight-rectangle2111"
+            />
+            <div class="storeinsight-group7473">
+              <img 
+              src="grid.png"
+              alt="griddd"
+              class="grid-png">
+              <span class="storeinsight-text5555">
+                <span>Bring AI to Your</span>
+                <br />
+                <span>Storefront</span>
+              </span>
+            </div>
+            <span class="storeinsight-text233">
+              Let’s talk about how Codenscious.ai can transform your retail
+              performance.
+            </span>
+            <div class="storeinsight-group763">
+              <span class="storeinsight-text234">Book a Demo</span>
+            </div>
+          </div>
+          <div class="storeinsight-frame6842">
+            <img
+              alt="Rectangle2113556"
+              src="public/rectangle2113556-tggs-400h.png"
+              class="storeinsight-rectangle2112"
+            />
+            <span class="storeinsight-text235">Codenscious.ai</span>
+            <span class="storeinsight-text236">
+              <span>"Crafting innovative digital experiences that</span>
+              <br />
+              <span>transform businesses."</span>
+            </span>
+            <div class="storeinsight-frame6241">
+              <span class="storeinsight-text240">Contact Us</span>
+              <img
+                alt="Vector3556"
+                src="public/vector3556-mcp.svg"
+                class="storeinsight-vector4"
+              />
+              <img
+                alt="Vector3556"
+                src="public/vector3556-8bju.svg"
+                class="storeinsight-vector5"
+              />
+            </div>
+            <img
+              alt="mditwitter3556"
+              src="public/mditwitter3556-ocla.svg"
+              class="storeinsight-mditwitter"
+            />
+            <img
+              alt="Vector3556"
+              src="public/vector3556-hyd.svg"
+              class="storeinsight-vector6"
+            />
+            <img
+              alt="Vector3556"
+              src="public/vector3556-1uph.svg"
+              class="storeinsight-vector7"
+            />
+            <span class="storeinsight-text241">Information</span>
+            <div class="storeinsight-frame625">
+              <span class="storeinsight-text242">About Us</span>
+              <span class="storeinsight-text243">Events</span>
+              <span class="storeinsight-text244">Testimonials</span>
+              <span class="storeinsight-text245">More Details</span>
+              <span class="storeinsight-text246">Blogs</span>
+            </div>
+            <div class="storeinsight-frame6242">
+              <span class="storeinsight-text247">Services</span>
+              <span class="storeinsight-text248">Support</span>
+              <span class="storeinsight-text249">Terms &amp; Conditions</span>
+              <span class="storeinsight-text250">Privacy Policy</span>
+            </div>
+            <span class="storeinsight-text251">Links</span>
+            <span class="storeinsight-text252">Subscribe</span>
+            <span class="storeinsight-text253">
+              <span>Subscribe to our newsletter</span>
+              <br />
+              <span>for upcoming news!!</span>
+            </span>
+            <div class="storeinsight-group624">
+              <span class="storeinsight-text257">Subscribe</span>
+            </div>
+            <div class="storeinsight-group625">
+              <span class="storeinsight-text258">Enter Your Email</span>
+            </div>
+            <img
+              alt="Line43557"
+              src="public/line43557-o8vd.svg"
+              class="storeinsight-line4"
+            />
+            <div class="storeinsight-group7642">
+              <img
+              src="logo2.png"
+              alt="logooo" 
+              class="logo-2">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

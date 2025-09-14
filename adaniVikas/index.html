@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>exported project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="final-adanipower-container">
+        <div class="final-adanipower-final-adanipower">
+          <div class="final-adanipower-frame6671">
+            <span class="final-adanipower-text100">
+              <span class="final-adanipower-text101">The</span>
+              <span class = "challenge">Challenge</span>
+            </span>
+            <span class="final-adanipower-text103">
+              <span>Adani Power aimed to improve boiler efficiency at</span>
+              <br />
+              <span>their Tiroda plant. Even small inefficiencies led to</span>
+              <br />
+              <span>
+                major energy loss, higher costs, and environmental harm.
+              </span>
+            </span>
+            <div class="final-adanipower-group725">
+              <img
+                src="public/ellipse13i208-xuec-200h.png"
+                alt="Ellipse13I208"
+                class="final-adanipower-ellipse13"
+              />
+              <img
+                src="public/flaski208-3x0f-200h.png"
+                alt="flaskI208"
+                class="final-adanipower-flask"
+              />
+            </div>
+            <div class="final-adanipower-group723">
+              <img
+                src="public/ellipse16i208-q4mp-200h.png"
+                alt="Ellipse16I208"
+                class="final-adanipower-ellipse16"
+              />
+              <img
+                src="public/linki208-7ceg-200h.png"
+                alt="linkI208"
+                class="final-adanipower-link"
+              />
+            </div>
+            <div class="final-adanipower-group724">
+              <img
+                src="public/ellipse14i208-ity1h-200h.png"
+                alt="Ellipse14I208"
+                class="final-adanipower-ellipse14"
+              />
+              <img
+                src="public/barcharti208-wogx-200h.png"
+                alt="barchartI208"
+                class="final-adanipower-barchart"
+              />
+            </div>
+            <img
+              src="public/line92082-kxy7.svg"
+              alt="Line92082"
+              class="final-adanipower-line9"
+            />
+            <img
+              src="public/line102082-k6s.svg"
+              alt="Line102082"
+              class="final-adanipower-line10"
+            />
+            <span class="final-adanipower-text109">
+              <span>Complex</span>
+              <br />
+              <span>Thermodynamics</span>
+            </span>
+            <span class="final-adanipower-text113">
+              <span>Legacy Controls</span>
+              <br />
+              <span>&amp; Variability</span>
+            </span>
+            <span class="final-adanipower-text117">
+              Energy &amp; Profit Loss
+            </span>
+            <span class="final-adanipower-text118">
+              Hard to simulate without AI
+            </span>
+            <span class="final-adanipower-text119">
+              Limited control over optimization
+            </span>
+            <span class="final-adanipower-text120">
+              Even tiny inefficiencies = big costs
+            </span>
+            <span class="final-adanipower-text121">
+              The Impact of Inefficiency
+            </span>
+            <img
+              src="public/line112082-ecif.svg"
+              alt="Line112082"
+              class="final-adanipower-line111"
+            />
+            <div class="final-adanipower-group7261">
+              <span class="final-adanipower-text122">Our Solution</span>
+            </div>
+          </div>
+          <div class="final-adanipower-herosection">
+            <div class="final-adanipower-group751">
+              <img
+                src="public/image253132-hxkq-700h.png"
+                alt="image253132"
+                class="final-adanipower-image25"
+              />
+            </div>
+            <div class="final-adanipower-frame10"></div>
+            <span class="final-adanipower-text123">
+              <span class="final-adanipower-text124">
+                Enhancing Efficiency at Scale
+              </span>
+              <br />
+              <span class="final-adanipower-text126">with</span>
+              <span class = "AI">AI &amp; Data Science</span>
+            </span>
+            <span class="final-adanipower-text128">
+              Adani Power × Codenscious Ai. at Tiroda Plant
+            </span>
+            <div class="final-adanipower-group7121">
+              <span class="final-adanipower-text129">#Energy</span>
+            </div>
+            <div class="final-adanipower-group709">
+              <span class="final-adanipower-text130">#DataScience</span>
+            </div>
+            <div class="final-adanipower-group7122">
+              <span class="final-adanipower-text131">#AI</span>
+            </div>
+            <span class="final-adanipower-text132">
+              <span>
+                Codenscious.ai collaborated with Adani Power to optimize boiler
+              </span>
+              <br />
+              <span>
+                operations using advanced AI models—boosting efficiency,
+              </span>
+              <br />
+              <span>
+                reducing emissions, and driving measurable cost savings.
+              </span>
+            </span>
+            <div class="final-adanipower-group715">
+              <span class="final-adanipower-text138">See the Results</span>
+            </div>
+            <div class="final-adanipower-group714">
+              <span class="final-adanipower-text139">Contact us</span>
+            </div>
+          </div>
+          <div class="final-adanipower-frame6672">
+            <span class="final-adanipower-text140">
+              <span class="final-adanipower-text141">Project</span>
+              <span class = "overview">Overview</span>
+            </span>
+            <span class="final-adanipower-text143">
+              <span>
+                Codencious.ai collaborated with Adani Power to enhance
+              </span>
+              <br />
+              <span>
+                boiler operations through advanced data science, resulting
+              </span>
+              <br />
+              <span>
+                in higher efficiency, reduced emissions, and better scalability.
+              </span>
+            </span>
+            <img
+              src="public/image152082-70j-500h.png"
+              alt="image152082"
+              class="final-adanipower-image15"
+            />
+            <img
+              src="public/thermometer2082-a9ar-200h.png"
+              alt="thermometer2082"
+              class="final-adanipower-thermometer"
+            />
+            <img
+              src="public/money2082-gapk-200h.png"
+              alt="money2082"
+              class="final-adanipower-money"
+            />
+            <span class="final-adanipower-text149">Efficiency Improved</span>
+            <span class="final-adanipower-text150">Cost Saved</span>
+            <span class="final-adanipower-text151">+0.3%</span>
+            <span class="final-adanipower-text152">$400k</span>
+            <img
+              src="public/line82082-wkpf.svg"
+              alt="Line82082"
+              class="final-adanipower-line8"
+            />
+            <div class="final-adanipower-group722">
+              <span class="final-adanipower-text153">Quick Facts</span>
+              <div class="final-adanipower-group719">
+                <span class="final-adanipower-text154">Adani Power</span>
+                <img
+                  src="public/client2082-douk-200w.png"
+                  alt="client2082"
+                  class="final-adanipower-client"
+                />
+                <span class="final-adanipower-text155">Client</span>
+              </div>
+              <div class="final-adanipower-group720">
+                <span class="final-adanipower-text156">AI + Data Science</span>
+                <img
+                  src="public/customerservice2082-22x-200h.png"
+                  alt="customerservice2082"
+                  class="final-adanipower-customerservice"
+                />
+                <span class="final-adanipower-text157">Service</span>
+              </div>
+              <div class="final-adanipower-group721">
+                <span class="final-adanipower-text158">Tiroda Plant</span>
+                <img
+                  src="public/location22082-8dopk-200h.png"
+                  alt="location22082"
+                  class="final-adanipower-location2"
+                />
+                <span class="final-adanipower-text159">Location</span>
+              </div>
+            </div>
+          </div>
+          <div class="final-adanipower-frame6661">
+            <img
+              src="public/rectangle1922082-clvi-1300w.png"
+              alt="Rectangle1922082"
+              class="final-adanipower-rectangle192"
+            />
+            <span class="final-adanipower-text160">
+              <span class="final-adanipower-text161">Our</span>
+              <span class="final-adanipower-text162"></span>
+              <span class="approach">Approach</span>
+            </span>
+            <span class="final-adanipower-text164">
+              <span>A step-by-step strategy</span>
+              <br />
+              <span>combining data, engineering,</span>
+              <br />
+              <span>and AI to improve boiler efficiency.</span>
+            </span>
+            <div class="final-adanipower-group728">
+              <img
+                src="public/rectangle193i208-dqdp-200w.png"
+                alt="Rectangle193I208"
+                class="final-adanipower-rectangle193"
+              />
+              <span class ="one">1</span>
+              <img
+                src="public/flask1i208-180m-200h.png"
+                alt="flask1I208"
+                class="final-adanipower-flask1"
+              />
+              <span class="final-adanipower-text170">Data Analysis</span>
+              <span class="final-adanipower-text171">
+                <span>Reviewed 1 year of</span>
+                <br />
+                <span>operational data</span>
+              </span>
+              <span class="final-adanipower-text175">
+                <span>Collected and cleaned</span>
+                <br />
+                <span>performance logs to</span>
+                <br />
+                <span>understand energy</span>
+                <br />
+                <span>patterns and inefficiencies.</span>
+              </span>
+            </div>
+            <div class="final-adanipower-group729">
+              <img
+                src="public/rectangle194i208-vfr6-200w.png"
+                alt="Rectangle194I208"
+                class="final-adanipower-rectangle194"
+              />
+              <span class ="second">2</span>
+              <img
+                src="public/analysisi208-iaw4-200h.png"
+                alt="analysisI208"
+                class="final-adanipower-analysis"
+              />
+              <span class="final-adanipower-text183">
+                <span>Chemical</span>
+                <br />
+                <span>Engineering</span>
+              </span>
+              <span class="final-adanipower-text187">
+                <span>Applied combustion</span>
+                <br />
+                <span>science</span>
+              </span>
+              <span class="final-adanipower-text191">
+                <span>Used thermodynamic models</span>
+                <br />
+                <span>to simulate and refine the</span>
+                <br />
+                <span>combustion process.</span>
+              </span>
+            </div>
+            <div class="final-adanipower-group727">
+              <img
+                src="public/rectangle195i208-qm0e-200h.png"
+                alt="Rectangle195I208"
+                class="final-adanipower-rectangle195"
+              />
+              <span class ="three">3</span>
+              <img
+                src="public/settingsi208-41d-200h.png"
+                alt="settingsI208"
+                class="final-adanipower-settings"
+              />
+              <span class="final-adanipower-text197">AI Modeling</span>
+              <span class="final-adanipower-text198">
+                Built an optimization engine
+              </span>
+              <span class="final-adanipower-text199">
+                <span>Trained machine learning models to recommend</span>
+                <br />
+                <span>real-time tuning parameters.</span>
+              </span>
+            </div>
+          </div>
+          <div class="final-adanipower-frame670">
+            <span class="final-adanipower-text203">
+              <span class="final-adanipower-text204">Smarter Control.</span>
+              <span class ="proven">Proven Results.</span>
+            </span>
+            <span class="final-adanipower-text206">
+              AI-powered tools give operators real-time insights and proactive
+              alerts—leading to measurable performance and cost gains.
+            </span>
+            <div class="final-adanipower-group736">
+              <img
+                src="public/thermometer112142-f1yuh-200h.png"
+                alt="thermometer112142"
+                class="final-adanipower-thermometer11"
+              />
+              <span class="final-adanipower-text207">Efficiency Alerts</span>
+              <span class="final-adanipower-text208">
+                <span>+0.03% operational</span>
+                <br />
+                <span>increase</span>
+              </span>
+            </div>
+            <div class="final-adanipower-group735">
+              <img
+                src="public/onlinetest2142-rcwj-200h.png"
+                alt="onlinetest2142"
+                class="final-adanipower-onlinetest"
+              />
+              <span class="final-adanipower-text212">Real-Time Data</span>
+              <span class="final-adanipower-text213">
+                <span>Instant access to key</span>
+                <br />
+                <span>performance metrics</span>
+              </span>
+              <span class="final-adanipower-text217">
+                <span>Instant access to key</span>
+                <br />
+                <span>performance metrics</span>
+              </span>
+              <span class="final-adanipower-text221">
+                <span>Instant access to key</span>
+                <br />
+                <span>performance metrics</span>
+              </span>
+              <span class="final-adanipower-text225">Real-Time Data</span>
+              <span class="final-adanipower-text226">Real-Time Data</span>
+            </div>
+            <div class="final-adanipower-group737">
+              <img
+                src="public/trend2143-2pqc-200h.png"
+                alt="trend2143"
+                class="final-adanipower-trend"
+              />
+              <span class="final-adanipower-text227">
+                <span>+0.3% overall</span>
+                <br />
+                <span>increase</span>
+              </span>
+              <span class="final-adanipower-text231">Efficiency Boost</span>
+            </div>
+            <div class="final-adanipower-group738">
+              <img
+                src="public/money12143-itw-200h.png"
+                alt="money12143"
+                class="final-adanipower-money1"
+              />
+              <span class="final-adanipower-text232">
+                <span>Improved operational</span>
+                <br />
+                <span>flow and reduced costs</span>
+              </span>
+              <span class="final-adanipower-text236">Annual Savings</span>
+            </div>
+          </div>
+          <div class="final-adanipower-header">
+            <div class="final-adanipower-group764">
+              <div class="final-adanipower-logog">
+                <img
+                  src="public/line416809-58ol.svg"
+                  alt="Line416809"
+                  class="final-adanipower-line41"
+                />
+                <img
+                  src="public/line476809-0n6q.svg"
+                  alt="Line476809"
+                  class="final-adanipower-line47"
+                />
+                <img
+                  src="public/line426809-ymff.svg"
+                  alt="Line426809"
+                  class="final-adanipower-line42"
+                />
+                <img
+                  src="public/line486809-5g9.svg"
+                  alt="Line486809"
+                  class="final-adanipower-line48"
+                />
+                <img
+                  src="public/line456809-v6k.svg"
+                  alt="Line456809"
+                  class="final-adanipower-line45"
+                />
+                <img
+                  src="public/line466809-ejp.svg"
+                  alt="Line466809"
+                  class="final-adanipower-line46"
+                />
+                <img
+                  src="public/line436809-0xx.svg"
+                  alt="Line436809"
+                  class="final-adanipower-line43"
+                />
+                <img
+                  src="public/line586809-pdwvi.svg"
+                  alt="Line586809"
+                  class="final-adanipower-line58"
+                />
+                <img
+                  src="public/line526809-gx0h.svg"
+                  alt="Line526809"
+                  class="final-adanipower-line52"
+                />
+                <img
+                  src="public/line536809-caqt.svg"
+                  alt="Line536809"
+                  class="final-adanipower-line53"
+                />
+                <img
+                  src="public/line496809-dba.svg"
+                  alt="Line496809"
+                  class="final-adanipower-line49"
+                />
+                <img
+                  src="public/line576809-fwcp.svg"
+                  alt="Line576809"
+                  class="final-adanipower-line57"
+                />
+                <img
+                  src="public/line506809-8gw.svg"
+                  alt="Line506809"
+                  class="final-adanipower-line50"
+                />
+                <img
+                  src="public/line566809-phen.svg"
+                  alt="Line566809"
+                  class="final-adanipower-line56"
+                />
+                <img
+                  src="public/line446809-xmsm.svg"
+                  alt="Line446809"
+                  class="final-adanipower-line44"
+                />
+                <img
+                  src="public/line546809-ajax.svg"
+                  alt="Line546809"
+                  class="final-adanipower-line54"
+                />
+                <img
+                  src="public/line516809-vpnd.svg"
+                  alt="Line516809"
+                  class="final-adanipower-line51"
+                />
+                <img
+                  src="public/line556809-fqrm.svg"
+                  alt="Line556809"
+                  class="final-adanipower-line55"
+                />
+                <img
+                  src="public/ellipse266809-3me-200h.png"
+                  alt="Ellipse266809"
+                  class="final-adanipower-ellipse26"
+                />
+                <img
+                  src="public/ellipse236809-m6o-200h.png"
+                  alt="Ellipse236809"
+                  class="final-adanipower-ellipse23"
+                />
+                <img
+                  src="public/ellipse226809-dehl-200w.png"
+                  alt="Ellipse226809"
+                  class="final-adanipower-ellipse22"
+                />
+                <img
+                  src="public/ellipse216809-ap7q-200h.png"
+                  alt="Ellipse216809"
+                  class="final-adanipower-ellipse21"
+                />
+                <img
+                  src="public/ellipse206809-a94b-200h.png"
+                  alt="Ellipse206809"
+                  class="final-adanipower-ellipse20"
+                />
+                <img
+                  src="public/ellipse246809-smpu-200h.png"
+                  alt="Ellipse246809"
+                  class="final-adanipower-ellipse24"
+                />
+                <img
+                  src="public/ellipse256809-9tl-200w.png"
+                  alt="Ellipse256809"
+                  class="final-adanipower-ellipse25"
+                />
+                <img
+                  src="public/ellipse196809-g5e-200w.png"
+                  alt="Ellipse196809"
+                  class="final-adanipower-ellipse19"
+                />
+                <div class="final-adanipower-group7491">
+                  <img
+                    src="public/vector236809-ni6n.svg"
+                    alt="Vector236809"
+                    class="final-adanipower-vector23"
+                  />
+                  <img
+                    src="public/ellipse276809-j0ys-200h.png"
+                    alt="Ellipse276809"
+                    class="final-adanipower-ellipse27"
+                  />
+                </div>
+              </div>
+              <span class="final-adanipower-text237">&lt; / &gt;</span>
+            </div>
+            <span class="final-adanipower-text238">Codenscious Ai.</span>
+            <div class="final-adanipower-group599">
+              <span class="final-adanipower-text239">Join Us</span>
+            </div>
+            <div class="final-adanipower-group844">
+              <span class="final-adanipower-text240">Services</span>
+              <span class="final-adanipower-text241">About Us</span>
+              <span class="final-adanipower-text242">Products</span>
+              <span class="final-adanipower-text243">Projects</span>
+            </div>
+          </div>
+          <div class="final-adanipower-frame6662">
+            <span class="final-adanipower-text244">
+              <span class="final-adanipower-text245">
+                Smarter Recommendations
+              </span>
+              <span></span>
+              <br />
+              <span class ="powered">Powered by Data and AI</span>
+            </span>
+            <img
+              src="public/line112142-9qqi.svg"
+              alt="Line112142"
+              class="final-adanipower-line112"
+            />
+            
+            <div class="final-adanipower-group753">
+              
+              <img
+                src="public/rectangle217i317-b7b-300h.png"
+                alt="Rectangle217I317"
+                class="final-adanipower-rectangle217"
+              />
+              <div class="medLine"></div>
+              <div class="final-adanipower-group747">
+                <span class="final-adanipower-text249">
+                  <span>Enhanced with</span>
+                  <br />
+                  <span>AI Modeling</span>
+                </span>
+                <img
+                  src="public/airoboti317-zgn-200w.png"
+                  alt="airobotI317"
+                  class="final-adanipower-airobot"
+                />
+              </div>
+              <div class="final-adanipower-group748">
+                <span class="final-adanipower-text253">
+                  Trained ML models for smarter decisions
+                </span>
+                <img
+                  src="public/ellipse17i317-h9ch-200w.png"
+                  alt="Ellipse17I317"
+                  class="final-adanipower-ellipse171"
+                />
+              </div>
+              <div class="final-adanipower-group7492">
+                <span class="final-adanipower-text254">
+                  Detected hidden trends in operational data
+                </span>
+                <img
+                  src="public/ellipse18i317-agrd-200w.png"
+                  alt="Ellipse18I317"
+                  class="final-adanipower-ellipse181"
+                />
+              </div>
+              <div class="final-adanipower-group750">
+                <span class="final-adanipower-text255">
+                  Delivered predictive insights for efficiency
+                </span>
+                <img
+                  src="public/ellipse18i317-ev8x-200h.png"
+                  alt="Ellipse18I317"
+                  class="final-adanipower-ellipse182"
+                />
+              </div>
+            </div>
+            <!-- <div class="medLine"></div> -->
+            <div class="final-adanipower-group752">
+              <img
+                src="public/rectangle196i317-8kxc-300h.png"
+                alt="Rectangle196I317"
+                class="final-adanipower-rectangle196"
+              />
+              <div class="final-adanipower-group730">
+                <span class="final-adanipower-text256">
+                  <span>Data-Backed</span>
+                  <br />
+                  <span>Performance Insights</span>
+                </span>
+                <img
+                  src="public/monitori317-iwzw-200w.png"
+                  alt="monitorI317"
+                  class="final-adanipower-monitor"
+                />
+              </div>
+              <div class="final-adanipower-group731">
+                <span class="final-adanipower-text260">
+                  Optimized chemical injection rates
+                </span>
+                <img
+                  src="public/ellipse17i317-fb8e-200w.png"
+                  alt="Ellipse17I317"
+                  class="final-adanipower-ellipse172"
+                />
+              </div>
+              <div class="final-adanipower-group732">
+                <span class="final-adanipower-text261">
+                  Improved process stability with data trends
+                </span>
+                <img
+                  src="public/ellipse18i317-wx6-200w.png"
+                  alt="Ellipse18I317"
+                  class="final-adanipower-ellipse183"
+                />
+              </div>
+              <div class="final-adanipower-group746">
+                <span class="final-adanipower-text262">
+                  Enhanced performance using AI-driven metrics
+                </span>
+                <img
+                  src="public/ellipse18i317-nnh-200w.png"
+                  alt="Ellipse18I317"
+                  class="final-adanipower-ellipse184"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="final-adanipower-frame668">
+            <div class="final-adanipower-group7262">
+              <span class="final-adanipower-text263">Get in Touch</span>
+            </div>
+            <span class="final-adanipower-text264">Let’s Build Your Next</span>
+            <span class="final-adanipower-text265">
+              <span>Ready to bring your vision to life? Contact us</span>
+              <br />
+              <span>today to discuss your dream and explore</span>
+              <br />
+              <span>how we can help you to make it reality.</span>
+            </span>
+          </div>
+          <div class="final-adanipower-footer">
+            <span class="final-adanipower-text271">Codenscious.ai</span>
+            <span class="final-adanipower-text272">
+              <span>"Crafting innovative digital experiences that</span>
+              <br />
+              <span>transform businesses."</span>
+            </span>
+            <div class="final-adanipower-frame6241">
+              <span class="final-adanipower-text276">Contact Us</span>
+              <img
+                src="public/vector2183-z6y8.svg"
+                alt="Vector2183"
+                class="final-adanipower-vector1"
+              />
+              <img
+                src="public/vector2183-j6ci.svg"
+                alt="Vector2183"
+                class="final-adanipower-vector2"
+              />
+            </div>
+            <img
+              src="public/mditwitter2183-3e7m.svg"
+              alt="mditwitter2183"
+              class="final-adanipower-mditwitter"
+            />
+            <img
+              src="public/vector2183-q389.svg"
+              alt="Vector2183"
+              class="final-adanipower-vector3"
+            />
+            <img
+              src="public/vector2183-l37.svg"
+              alt="Vector2183"
+              class="final-adanipower-vector4"
+            />
+            <span class="final-adanipower-text277">Information</span>
+            <div class="final-adanipower-frame625">
+              <span class="final-adanipower-text278">About Us</span>
+              <span class="final-adanipower-text279">Events</span>
+              <span class="final-adanipower-text280">Testimonials</span>
+              <span class="final-adanipower-text281">More Details</span>
+              <span class="final-adanipower-text282">Blogs</span>
+            </div>
+            <div class="final-adanipower-frame6242">
+              <span class="final-adanipower-text283">Services</span>
+              <span class="final-adanipower-text284">Support</span>
+              <span class="final-adanipower-text285">
+                Terms &amp; Conditions
+              </span>
+              <span class="final-adanipower-text286">Privacy Policy</span>
+            </div>
+            <span class="final-adanipower-text287">Links</span>
+            <span class="final-adanipower-text288">Subscribe</span>
+            <span class="final-adanipower-text289">
+              <span>Subscribe to our newsletter</span>
+              <br />
+              <span>for upcoming news!!</span>
+            </span>
+            <div class="final-adanipower-group624">
+              <span class="final-adanipower-text293">Subscribe</span>
+            </div>
+            <div class="final-adanipower-group625">
+              <span class="final-adanipower-text294">Enter Your Email</span>
+            </div>
+            <img
+              src="public/line42183-7e0p.svg"
+              alt="Line42183"
+              class="final-adanipower-line4"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

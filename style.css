@@ -1,6 +1,5 @@
 html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    scroll-behavior: auto;
 }
 
 body {
@@ -77,13 +76,12 @@ body {
 
 /* Parallax Effect */
 .parallax-section {
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    min-height: 100vh; /* Make sure it always fills the viewport */
-    scroll-snap-align: start; /* optional: makes scrolling snap cleanly */
+    min-height: 100vh;
 }
 
 .parallax-overlay {
@@ -240,7 +238,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
-    padding-left: 90px;
+    padding-left: 120px;
 }
 
 .logo-link:hover {
@@ -271,7 +269,7 @@ body {
 .btn-cta {
     display: inline-block;
     padding: 0.55rem 1.1rem;
-    border-radius: 9999px;
+    border-radius: 8px;
     background: linear-gradient(135deg, rgba(78,205,196,0.15), rgba(69,183,209,0.15));
     border: 1px solid rgba(78,205,196,0.55);
     color: #ffffff;
@@ -377,6 +375,11 @@ body {
     
     .navbar-toggle {
         display: flex;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1100;
     }
     
     .navbar-menu {
@@ -554,8 +557,6 @@ body {
 
 /* Enhanced Scroll Effects */
 .scroll-snap-section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
 /* Smooth scroll momentum */
@@ -577,7 +578,7 @@ body {
     height: 140%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     will-change: transform;
 }
 
@@ -1052,6 +1053,11 @@ body.navbar-visible #hero {
     
     .navbar-toggle {
         display: flex;
+        position: absolute;
+        right: 1.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1100;
     }
     
     .navbar-menu {
@@ -1208,6 +1214,129 @@ body.navbar-visible #hero {
   min-height: 450px;        /* adjust to fit content and avoid vertical scroll */
 }
 
+/* Products horizontal scroll section */
+.products-seq, .projects-seq { margin-top: 4rem; }
+.products-pin, .projects-pin {
+    position: sticky;
+    top: 0;
+    height: 100vh; /* pin full screen while scrolling */
+    display: grid;
+    align-items: center;
+}
+
+#productsBg, #projectsBg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.products-seq .cards-track, .projects-seq .cards-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(260px, 380px);
+    gap: 1.25rem; /* spacing between cards */
+    overflow-x: visible; /* changed from hidden to visible to show all cards */
+    overflow-y: hidden;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+    scroll-snap-type: x mandatory; /* still snap for keyboard */
+    -webkit-overflow-scrolling: touch; 
+    position: relative;
+    z-index: 1;
+    width: max-content; /* ensure all cards are displayed */
+    margin: 0 auto; /* center the track */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.products-seq .cards-track::-webkit-scrollbar, 
+.projects-seq .cards-track::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* Ensure the track spans at least total width so transform can reveal all cards */
+.products-seq .cards-track > *, .projects-seq .cards-track > * { min-width: 0; }
+
+.products-seq .cards-track::-webkit-scrollbar, .projects-seq .cards-track::-webkit-scrollbar { height: 0; }
+
+.product-card {
+    position: relative;
+    scroll-snap-align: start;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.08); /* subtle border to match bg */
+    background: rgba(255,255,255,0.03); /* harmonize with products bg */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    overflow: hidden;
+}
+
+.product-card-inner {
+    min-height: 380px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+/* Removed hover effects for original state */
+
+.pc-title {
+    font-size: 2rem;
+    color: #e6f7f5;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pc-desc {
+    margin-top: 0.75rem;
+    color: #a9bcbc;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pc-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(1200px 400px at 50% 85%, rgba(78,205,196,0.08), transparent 60%),
+                radial-gradient(800px 300px at 50% 100%, rgba(69,183,209,0.08), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: flex-end;
+    padding: 2.5rem;
+    color: #e8ffff;
+}
+
+.product-card:hover .pc-overlay {
+    opacity: 1;
+}
+
+/* Scroll hijack: vertical wheel translates to horizontal inside products and projects */
+/* no-op var kept if needed */
+.products-seq, .projects-seq { --wheel-lock: 0; }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .products-seq .cards-track, .projects-seq .cards-track {
+        grid-auto-columns: 85%;
+        gap: 1rem;
+        padding-bottom: 1.25rem;
+    }
+    .product-card-inner { min-height: 360px; padding: 1.5rem; }
+    .pc-title { font-size: 1.5rem; }
+    .pc-desc { font-size: 1rem; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .products-seq .cards-track, .projects-seq .cards-track { grid-auto-columns: minmax(320px, 420px); }
+}
+
 /* Individual service box: bigger width and height */
 /* Services Row */
 .services-row {
@@ -1240,8 +1369,13 @@ body.navbar-visible #hero {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+<<<<<<< HEAD
   padding: 3rem 2rem 2rem 2rem; /* ensures heading visible */
   border-radius: 12px;
+=======
+  padding: 1rem;
+  border-radius: 12px;      /* rounded corners */
+>>>>>>> main
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-sizing: border-box;
   cursor: pointer;
@@ -1548,4 +1682,553 @@ margin-top: 1rem;  /* extra space from top */
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+/* ===================== Projects Cards: DigiValet-like layout & hover spread ===================== */
+.projects-seq {
+  /* Dimensions and motion tuned to closely match the reference */
+  --card-w: 420px;
+  --card-h: 560px;
+  --card-gap: 24px;
+  --spread-step: 26; /* px shift per neighbor on hover */
+  --hover-scale: 1.03;
+  --radius: 22px;
+  --shadow: 0 24px 60px rgba(0,0,0,0.25);
+  --transition: 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projects-seq .cards-track { grid-auto-columns: var(--card-w); gap: var(--card-gap); }
+
+/* Override product-card styling within Projects only */
+.projects-seq .product-card {
+  height: var(--card-h);
+  border-radius: var(--radius);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: var(--card-bg, #eef2ff);
+  color: #0f172a;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  /* Combine spread offset and scale via CSS vars */
+  --offset: 0;
+  --scale: 1;
+  transform: translate3d(calc(var(--offset, 0) * 1px), 0, 0) scale(var(--scale));
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+}
+
+.projects-seq .product-card.is-hovered { box-shadow: 0 30px 80px rgba(0,0,0,0.28); z-index: 2; }
+
+.projects-seq .product-card-inner { min-height: 100%; padding: 2.25rem; }
+.projects-seq .pc-title { font-size: 2.25rem; color: var(--title-color, #1e3a8a); }
+.projects-seq .pc-desc { color: #334155; opacity: 0.95; font-size: 1.125rem; }
+
+/* Decorative bottom patterns to emulate reference visuals */
+.projects-seq .product-card::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 46%;
+  background: var(--pattern);
+  opacity: .45;
+  pointer-events: none;
+}
+
+/* Pastel themes per card (keeps section background intact) */
+.projects-seq .product-card:nth-child(1){
+  --card-bg: #eaf0ff; /* soft blue */
+  --title-color: #1e40af;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='arcs' width='48' height='48' patternUnits='userSpaceOnUse'><circle cx='0' cy='48' r='24' fill='none' stroke='%23b6c6ff' stroke-width='1'/><circle cx='0' cy='48' r='48' fill='none' stroke='%23b6c6ff' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23arcs)'/></svg>");
+}
+.projects-seq .product-card:nth-child(2){
+  --card-bg: #e6fffb; /* mint */
+  --title-color: #0f766e;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='waves' width='24' height='16' patternUnits='userSpaceOnUse'><path d='M0 8 Q6 0 12 8 T24 8' fill='none' stroke='%2396f0de' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23waves)'/></svg>");
+}
+.projects-seq .product-card:nth-child(3){
+  --card-bg: #fff6ec; /* peach */
+  --title-color: #a16207;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='waves2' width='24' height='16' patternUnits='userSpaceOnUse'><path d='M0 8 Q6 0 12 8 T24 8' fill='none' stroke='%23ffd2ad' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23waves2)'/></svg>");
+}
+.projects-seq .product-card:nth-child(4){
+  --card-bg: #efe9ff; /* lavender */
+  --title-color: #7c3aed;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='dots' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='8' cy='8' r='2' fill='%238ea0ff' /></pattern></defs><rect width='100%' height='100%' fill='url(%23dots)'/></svg>");
+}
+.projects-seq .product-card:nth-child(5){
+  --card-bg: #eaf4ff;
+  --title-color: #1d4ed8;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='waves3' width='24' height='16' patternUnits='userSpaceOnUse'><path d='M0 8 Q6 0 12 8 T24 8' fill='none' stroke='%23b7d3ff' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23waves3)'/></svg>");
+}
+.projects-seq .product-card:nth-child(6){
+  --card-bg: #ecfff5;
+  --title-color: #047857;
+  --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='dots2' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='8' cy='8' r='2' fill='%2306c194' /></pattern></defs><rect width='100%' height='100%' fill='url(%23dots2)'/></svg>");
+}
+
+/* Mobile/tablet responsive sizing and motion */
+@media (max-width: 768px) {
+  .projects-seq { --card-w: 86vw; --card-h: 460px; --spread-step: 16; }
+  .projects-seq .pc-title { font-size: 1.9rem; }
+  .projects-seq .product-card-inner { padding: 1.75rem; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-seq { --card-w: 360px; --card-h: 520px; --spread-step: 20; }
+}
+
+/* Scroll-triggered scale effects */
+.scale-on-scroll {
+    transform: scale(0.8);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-on-scroll.is-visible {
+    transform: scale(1);
+}
+
+/* Text reveal with masking */
+.text-reveal {
+    overflow: hidden;
+    position: relative;
+}
+
+.text-reveal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #000, transparent);
+    transform: translateX(-100%);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+.text-reveal.is-visible::before {
+    transform: translateX(100%);
+}
+
+/* Floating elements animation */
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Scroll progress indicator for sections */
+.section-progress-line {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.section-progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg);
+}
+
+.finalservice-group7641 {
+  top: 10px;
+  left: auto;
+  width: 99px;
+  height: 52.14501953125px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.finalservice-logog1 {
+  top: 0px;
+  left: 0px;
+  width: 99px;
+  height: 52.14501953125px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finalservice-line411 {
+  top: 7px;
+  left: .039441108703613px;
+  width: 31px;
+  height: 1px;
+  opacity: 1;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 1);
+  transform: rotate(334deg);
+}
+ 
+.finalservice-line471 {
+  top: 8.138671875px;
+  left: 67.36341857910156px;
+  width: 31px;
+  height: 1px;
+  opacity: 1;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 1);
+  transform: rotate(208deg);
+}
+ 
+.finalservice-line421 {
+  top: 43.84658203125px;
+  left: 0.0652272939682007px;
+  width: 32px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(205deg);
+}
+ 
+.finalservice-line481 {
+  top: 44.94404296875px;
+  left: 66.9792709350586px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(336deg);
+}
+ 
+.finalservice-line451 {
+  top: 50.42724609375px;
+  left: 30.303756713867188px;
+  width: 39px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(180deg);
+}
+ 
+.finalservice-line461 {
+  top: 1.35302734375px;
+  left: 29.915502548217773px;
+  width: 39px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(180deg);
+}
+ 
+.finalservice-line431 {
+  top: 20.04658203125px;
+  left:-8px;
+  width: 47px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(307.5deg);
+}
+ 
+.finalservice-line581 {
+  top: 31.74658203125px;
+  left: 0.5px;
+  width: 32px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(336deg);
+}
+ 
+.finalservice-line521 {
+  top: 13.1337890625px;
+  left: 27.1551284790039px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(210.5deg);
+}
+ 
+.finalservice-line531 {
+  top: 20.138671875px;
+  left: 68.36341857910156px;
+  width: 30px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(156deg);
+}
+ 
+.finalservice-line491 {
+  top: 31.462890625px;
+  left: -7.2728271484375px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(52deg);
+}
+ 
+.finalservice-line571 {
+  top: 37.42724609375px;
+  left: 25.1551284790039px;
+  width: 47px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(33deg);
+}
+ 
+.finalservice-line501 {
+  top: 19.1337890625px;
+  left: .526784896850586px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(22deg);
+}
+ 
+.finalservice-line561 {
+  top: 31.08203125px;
+  left: 67.51669311523438px;
+  width: 31px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(26deg);
+}
+ 
+.finalservice-line441 {
+  top: 32.72724609375px;
+  left: 59.5559387207031px;
+  width: 45px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(129deg);
+}
+ 
+.finalservice-line541 {
+  top: 19.308203125px;
+  left: 58.90540313720703px;
+  width: 48px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(51deg);
+}
+ 
+.finalservice-line511 {
+  top: 12.9337890625px;
+  left: 27.303756713867188px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(149deg);
+}
+ 
+.finalservice-line551 {
+  top: 37.42724609375px;
+  left: 27.303756713867188px;
+  width: 46px;
+  height: 1px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(149deg);
+}
+ 
+.finalservice-ellipse261 {
+  top: 13.456779479980469px;
+  left: 0px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+}
+ 
+.finalservice-ellipse231 {
+  top: 0px;
+  left: 28.636245727539062px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+}
+ 
+.finalservice-ellipse221 {
+  top: 37.24716796875px;
+  left: 96.14535675048828px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+}
+ 
+.finalservice-ellipse211 {
+  top: 14.078515625px;
+  left: 94.72730255126953px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+}
+ 
+.finalservice-ellipse201 {
+  top: 37.00634765625px;
+  left: 1.180597424507141px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+}
+ 
+.finalservice-ellipse241 {
+  top: 0px;
+  left: 67.90911102294922px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+}
+ 
+.finalservice-ellipse251 {
+  top: 49.6220703125px;
+  left: 28.65476722717285px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+}
+ 
+.finalservice-ellipse191 {
+  top: 49.6220703125px;
+  left: 67.09105682373047px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+}
+ 
+.finalservice-group7491 {
+  top: 19.9619140625px;
+  left: 22.909147262573242px;
+  width: 61.01002883911133px;
+  height: 11.50336742401123px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+ 
+.finalservice-vector231 {
+  top: 0px;
+  left: 1.0253130197525024px;
+  width: 60px;
+  height: 12px;
+  position: absolute;
+}
+ 
+.finalservice-ellipse271 {
+  top: 7.066015625px;
+  left: .50007383283809758723px;
+  width: 2.9px;
+  height: 3px;
+  position: absolute;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  border-style: solid;
+}
+ 
+.finalservice-text100 {
+  top: 16.82080078125px;
+  left: 33.09088706970215px;
+  color: rgba(255, 255, 255, 1);
+  width: 38px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Kalam;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+
+.retail-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.retail-card .product-card-inner {
+  position: relative;
+  z-index: 2; /* text always above image */
+  color: white; /* text visible on dark bg */
+}
+
+.retail-card::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* full cover */
+  background: url("/codencious/images/Doorbell.png") center/cover no-repeat;
+  z-index: 1;
+  opacity: 0.8; /* adjust for text visibility */
+}
+
+.retail-card1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.retail-card .product-card-inner {
+  position: relative;
+  z-index: 2; /* text always above image */
+  color: white; /* text visible on dark bg */
+}
+
+.retail-card1::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* full cover */
+  background: url("/codencious/images/ray.png") center/cover no-repeat;
+  z-index: 1;
+  opacity: 0.8; /* adjust for text visibility */
 }

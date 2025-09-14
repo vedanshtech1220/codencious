@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.header {
+  background: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #6366f1;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.join-btn {
+  padding: 6px 12px;
+  background: #6366f1;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  background: #fff;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.hero .sub-text {
+  margin: 20px 0;
+  max-width: 600px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary {
+  background: #6366f1;
+  color: #fff;
+}
+
+.secondary {
+  background: #e0e7ff;
+  color: #333;
+}
+
+.challenge, .solution {
+  padding: 60px 40px;
+  background: #f3f4f6;
+}
+
+.challenge h2, .solution h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.challenge-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+  align-items: flex-start;
+}
+
+.challenge-content img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.challenge-content ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.challenge-content .note {
+  margin-top: 15px;
+  font-style: italic;
+  color: #555;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-box {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.feature-box h4 {
+  margin-bottom: 10px;
+  color: #4f46e5;
+}
