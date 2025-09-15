@@ -5,30 +5,16 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            // Optional: unobserve after animation to improve performance
-            // observer.unobserve(entry.target);
         }
     });
 }, { 
-    threshold: 0.1 // Trigger when 10% of the element is visible
+    threshold: 0.1 
 });
 
 animatedElements.forEach(el => { 
     observer.observe(el); 
 });
 
-// Enhanced parallax scrolling
-// Remove parallax scrolling function
-function updateParallax() {
-    // Disabled parallax effect
-    return;
-}
-
-// Remove scroll snap enhancement
-function handleScrollSnap() {
-    // Disabled scroll snap
-    return;
-}
 
 // Smooth scroll with momentum
 function smoothScrollTo(target, duration = 1000) {
@@ -63,7 +49,6 @@ const progressBar = document.getElementById('progressBar');
 const sectionProgress = document.getElementById('sectionProgress');
 const progressDots = document.querySelectorAll('.progress-dot');
 
-// Function to update progress bar
 function updateProgressBar() {
     const scrollTop = window.pageYOffset;
     const docHeight = document.body.scrollHeight - window.innerHeight;
@@ -72,7 +57,6 @@ function updateProgressBar() {
     progressBar.style.width = scrollPercent + '%';
 }
 
-// Function to update section indicators
 function updateSectionIndicators() {
     const sections = document.querySelectorAll('section[id]');
     const scrollPos = window.pageYOffset + window.innerHeight / 2;
@@ -83,10 +67,8 @@ function updateSectionIndicators() {
         const sectionId = section.getAttribute('id');
         
         if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-            // Remove active class from all dots
             progressDots.forEach(dot => dot.classList.remove('active'));
             
-            // Add active class to current section dot
             const activeDot = document.querySelector(`[data-section="${sectionId}"]`);
             if (activeDot) {
                 activeDot.classList.add('active');
@@ -95,7 +77,6 @@ function updateSectionIndicators() {
     });
 }
 
-// Function to handle dot clicks for smooth scrolling
 function handleDotClick() {
     progressDots.forEach(dot => {
         dot.addEventListener('click', () => {
@@ -109,7 +90,6 @@ function handleDotClick() {
     });
 }
 
-// Scroll snap enhancement
 function handleScrollSnap() {
     let isScrolling = false;
     
@@ -124,7 +104,6 @@ function handleScrollSnap() {
     }, { passive: true });
 }
 
-// Mouse wheel smooth scrolling
 function handleWheelSmooth() {
     let isScrolling = false;
     
@@ -146,7 +125,6 @@ function handleWheelSmooth() {
     }, { passive: false });
 }
 
-// Throttle function for better performance - responsive throttling
 function throttle(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -159,50 +137,42 @@ function throttle(func, wait) {
     };
 }
 
-// Responsive throttling based on device
 function getResponsiveThrottleDelay() {
     const isMobile = window.innerWidth <= 768;
-    return isMobile ? 16 : 10; // 60fps on mobile, higher on desktop
+    return isMobile ? 16 : 10; 
 }
 
-// Event listeners with responsive throttling
 window.addEventListener('scroll', throttle(() => {
     updateProgressBar();
     updateSectionIndicators();
 }, getResponsiveThrottleDelay()));
 
-// Logo Particle Effect - Particles form the exact logo shape
 function createLogoParticles() {
     const logoContainer = document.getElementById('logoContainer');
     if (!logoContainer) return;
     
     logoContainer.innerHTML = '';
     
-    // Generate logo particle positions based on the geometric structure
     const logoParticles = generateLogoParticlePositions();
     
     logoParticles.forEach((particleData, index) => {
         const particle = document.createElement('div');
         particle.className = `logo-particle ${particleData.type}`;
         
-        // Set target position
         particle.style.setProperty('--target-x', particleData.x + 'px');
         particle.style.setProperty('--target-y', particleData.y + 'px');
         
-        // Set scattered position
         const scatterX = (Math.random() - 0.5) * 600;
         const scatterY = (Math.random() - 0.5) * 400;
         particle.style.setProperty('--scatter-x', scatterX + 'px');
         particle.style.setProperty('--scatter-y', scatterY + 'px');
         
-        // Start in scattered position
         particle.style.left = scatterX + 'px';
         particle.style.top = scatterY + 'px';
         particle.classList.add('scattered');
         
         logoContainer.appendChild(particle);
         
-        // Animate formation with delay
         setTimeout(() => {
             particle.classList.remove('scattered');
             particle.classList.add('forming');
@@ -212,25 +182,22 @@ function createLogoParticles() {
     });
 }
 
-// Generate exact logo particle positions based on the actual logo design
 function generateLogoParticlePositions() {
     const particles = [];
     
-    // Outer hexagonal/octagonal structure - wider middle, narrower ends
     const outerVertices = [
-        {x: 60, y: 60},   // Top-left
-        {x: 140, y: 40},  // Top-center-left  
-        {x: 260, y: 40},  // Top-center-right
-        {x: 340, y: 60},  // Top-right
-        {x: 360, y: 100}, // Right-center
-        {x: 340, y: 140}, // Bottom-right
-        {x: 260, y: 160}, // Bottom-center-right
-        {x: 140, y: 160}, // Bottom-center-left
-        {x: 60, y: 140},  // Bottom-left
-        {x: 40, y: 100}   // Left-center
+        {x: 60, y: 60},   
+        {x: 140, y: 40},  
+        {x: 260, y: 40},  
+        {x: 340, y: 60},  
+        {x: 360, y: 100}, 
+        {x: 340, y: 140}, 
+        {x: 260, y: 160}, 
+        {x: 140, y: 160}, 
+        {x: 60, y: 140},  
+        {x: 40, y: 100}   
     ];
     
-    // Add outer structure nodes
     outerVertices.forEach(vertex => {
         particles.push({
             x: vertex.x,
@@ -239,7 +206,6 @@ function generateLogoParticlePositions() {
         });
     });
     
-    // Add outer perimeter lines
     const outerLines = [
         [0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 7], [7, 8], [8, 9], [9, 0]
     ];
@@ -251,27 +217,25 @@ function generateLogoParticlePositions() {
         particles.push(...lineParticles.map(p => ({...p, type: 'line'})));
     });
     
-    // Internal network - complex intersecting lines
     const internalLines = [
-        // Main diagonal lines
         {start: {x: 60, y: 60}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 340, y: 60}},
         {start: {x: 60, y: 140}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 340, y: 140}},
         
-        // Horizontal and vertical lines
+        
         {start: {x: 40, y: 100}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 360, y: 100}},
         {start: {x: 200, y: 40}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 200, y: 160}},
         
-        // Additional network lines
+    
         {start: {x: 140, y: 40}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 260, y: 40}},
         {start: {x: 140, y: 160}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 260, y: 160}},
         
-        // Cross-connecting lines
+        
         {start: {x: 60, y: 100}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 340, y: 100}},
         {start: {x: 200, y: 60}, end: {x: 200, y: 100}},
@@ -283,20 +247,18 @@ function generateLogoParticlePositions() {
         particles.push(...lineParticles.map(p => ({...p, type: 'line'})));
     });
     
-    // Central organic shape - the calligraphic/heartbeat element
     const centralShape = generateAccurateCentralShape();
     particles.push(...centralShape.map(p => ({...p, type: 'central'})));
     
-    // Add key intersection nodes
     particles.push(
-        {x: 200, y: 100, type: 'node'}, // Main center
-        {x: 200, y: 100, type: 'node'}  // Duplicate for emphasis
+        {x: 200, y: 100, type: 'node'}, 
+        {x: 200, y: 100, type: 'node'}  
     );
     
     return particles;
 }
 
-// Generate particles along a line
+
 function generateLineParticles(start, end, count) {
     const particles = [];
     for (let i = 0; i <= count; i++) {
