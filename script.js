@@ -250,28 +250,19 @@ function generateLogoParticlePositions() {
         const lineParticles = generateLineParticles(startVertex, endVertex, 25);
         particles.push(...lineParticles.map(p => ({...p, type: 'line'})));
     });
-    
-    // Internal network - complex intersecting lines
-    const internalLines = [
-        // Main diagonal lines
+        const internalLines = [
         {start: {x: 60, y: 60}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 340, y: 60}},
         {start: {x: 60, y: 140}, end: {x: 200, y: 100}},
-        {start: {x: 200, y: 100}, end: {x: 340, y: 140}},
-        
-        // Horizontal and vertical lines
+        {start: {x: 200, y: 100}, end: {x: 340, y: 140}},        
         {start: {x: 40, y: 100}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 360, y: 100}},
         {start: {x: 200, y: 40}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 200, y: 160}},
-        
-        // Additional network lines
         {start: {x: 140, y: 40}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 260, y: 40}},
         {start: {x: 140, y: 160}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 260, y: 160}},
-        
-        // Cross-connecting lines
         {start: {x: 60, y: 100}, end: {x: 200, y: 100}},
         {start: {x: 200, y: 100}, end: {x: 340, y: 100}},
         {start: {x: 200, y: 60}, end: {x: 200, y: 100}},
@@ -283,20 +274,17 @@ function generateLogoParticlePositions() {
         particles.push(...lineParticles.map(p => ({...p, type: 'line'})));
     });
     
-    // Central organic shape - the calligraphic/heartbeat element
     const centralShape = generateAccurateCentralShape();
     particles.push(...centralShape.map(p => ({...p, type: 'central'})));
     
-    // Add key intersection nodes
     particles.push(
-        {x: 200, y: 100, type: 'node'}, // Main center
-        {x: 200, y: 100, type: 'node'}  // Duplicate for emphasis
+        {x: 200, y: 100, type: 'node'}, 
+        {x: 200, y: 100, type: 'node'}  
     );
     
     return particles;
 }
 
-// Generate particles along a line
 function generateLineParticles(start, end, count) {
     const particles = [];
     for (let i = 0; i <= count; i++) {
@@ -308,42 +296,31 @@ function generateLineParticles(start, end, count) {
     return particles;
 }
 
-// Generate accurate central organic shape particles
 function generateAccurateCentralShape() {
     const particles = [];
     const centerX = 200;
     const centerY = 100;
     
-    // Create the calligraphic/heartbeat shape based on the actual logo
     for (let i = 0; i < 120; i++) {
         const t = i / 120;
-        const x = centerX - 90 + t * 180; // Span from left to right
+        const x = centerX - 90 + t * 180; 
         let y = centerY;
         
-        // Create the specific calligraphic pattern from the logo
         if (t < 0.15) {
-            // Left side - thin, subtle line
             y += Math.sin(t * 30) * 3;
         } else if (t < 0.25) {
-            // Start building up
             y += Math.sin(t * 20) * 5 + (t - 0.15) * 15;
         } else if (t < 0.35) {
-            // Steep rise to peak
             y += 8 + (t - 0.25) * 35 + Math.sin(t * 15) * 8;
         } else if (t < 0.45) {
-            // Central peak - the main calligraphic flourish
             y += 18 + Math.sin(t * 12) * 12 + Math.cos(t * 8) * 6;
         } else if (t < 0.55) {
-            // Sharp descent from peak
             y += 18 - (t - 0.45) * 45 + Math.sin(t * 18) * 6;
         } else if (t < 0.7) {
-            // Mid-section with smaller waves
             y += Math.sin(t * 20) * 8 + Math.sin(t * 35) * 4;
         } else if (t < 0.85) {
-            // Right side - jagged ECG-like pattern
             y += Math.sin(t * 30) * 6 + Math.sin(t * 60) * 3 + Math.sin(t * 90) * 2;
         } else {
-            // Final section - fading out
             y += Math.sin(t * 40) * 4 * (1 - (t - 0.85) / 0.15);
         }
         
@@ -353,12 +330,10 @@ function generateAccurateCentralShape() {
     return particles;
 }
 
-// Function to calculate particle positions for each letter
 function getLetterParticlePositions(letter, particleIndex, totalParticles) {
-    const letterWidth = 60; // Approximate letter width
-    const letterHeight = 80; // Approximate letter height
+    const letterWidth = 60; 
+    const letterHeight = 80; 
     
-    // Define letter shapes with particle positions
     const letterShapes = {
         'C': [
             {x: 10, y: 10}, {x: 20, y: 5}, {x: 30, y: 5}, {x: 40, y: 10},
@@ -425,7 +400,6 @@ function getLetterParticlePositions(letter, particleIndex, totalParticles) {
     };
 }
 
-// Mouse trail effect for particle text
 function createMouseTrail() {
     const particleContainer = document.querySelector('.particle-container');
     if (!particleContainer) return;
@@ -438,7 +412,6 @@ function createMouseTrail() {
         
         particleContainer.appendChild(trail);
         
-        // Remove trail after animation
         setTimeout(() => {
             if (trail.parentNode) {
                 trail.parentNode.removeChild(trail);
@@ -447,7 +420,6 @@ function createMouseTrail() {
     });
 }
 
-// Hover effect to scatter and reform logo particles
 function addLogoHoverEffect() {
     const logoContainer = document.getElementById('logoContainer');
     if (!logoContainer) return;
@@ -458,7 +430,6 @@ function addLogoHoverEffect() {
             particle.classList.remove('forming');
             particle.classList.add('scattered');
             
-            // Random scatter positions
             const scatterX = (Math.random() - 0.5) * 600;
             const scatterY = (Math.random() - 0.5) * 400;
             particle.style.setProperty('--scatter-x', scatterX + 'px');
@@ -481,7 +452,6 @@ function addLogoHoverEffect() {
     });
 }
 
-// Enhanced particle animation on scroll
 function animateParticlesOnScroll() {
     const particleText = document.getElementById('particleText');
     if (!particleText) return;
@@ -502,13 +472,10 @@ function animateParticlesOnScroll() {
     observer.observe(particleText);
 }
 
-// Initialize all scroll effects
 handleDotClick();
-updateSectionIndicators(); // Set initial active section
+updateSectionIndicators(); 
 handleScrollSnap();
-// handleWheelSmooth(); // Uncomment for wheel-based section navigation
 
-// Roaming Particles with Smiley Face Formation
 function initRoamingParticles() {
     const particleField = document.getElementById('particleField');
     const heroSection = document.getElementById('hero');
@@ -520,17 +487,16 @@ function initRoamingParticles() {
     
     console.log('Initializing roaming particles...');
     
-    // Create particles - responsive count based on screen size
     const isMobile = window.innerWidth <= 768;
     const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
     
     let particleCount;
     if (isMobile) {
-        particleCount = 60; // Increased for mobile
+        particleCount = 60; 
     } else if (isTablet) {
-        particleCount = 90; // Increased for tablets
+        particleCount = 90; 
     } else {
-        particleCount = 120; // Significantly increased for desktop
+        particleCount = 120; 
     }
     
     const particles = [];
@@ -539,7 +505,6 @@ function initRoamingParticles() {
         const particle = document.createElement('div');
         particle.className = 'roaming-particle roaming';
         
-        // Random starting position within hero section
         const rect = heroSection.getBoundingClientRect();
         const x = Math.random() * rect.width;
         const y = Math.random() * rect.height;
@@ -548,7 +513,6 @@ function initRoamingParticles() {
         particle.style.top = y + 'px';
         particle.style.position = 'absolute';
         
-        // Random animation delay
         particle.style.animationDelay = Math.random() * 8 + 's';
         
         particleField.appendChild(particle);
@@ -560,7 +524,6 @@ function initRoamingParticles() {
     let smileyContainer = null;
     let isFormingSmiley = false;
     
-    // Mouse move handler
     function handlePointerMove(e) {
         if (isFormingSmiley) return;
         
@@ -573,9 +536,8 @@ function initRoamingParticles() {
         const mouseX = clientX - rect.left;
         const mouseY = clientY - rect.top;
         
-        // Find particles near mouse cursor - responsive radius
         const isMobile = window.innerWidth <= 768;
-        const detectionRadius = isMobile ? 80 : 100; // Smaller radius on mobile
+        const detectionRadius = isMobile ? 80 : 100; 
         
         const nearbyParticles = particles.filter(particle => {
             const particleRect = particle.getBoundingClientRect();
@@ -594,11 +556,9 @@ function initRoamingParticles() {
         }
     }
     
-    // Add event listeners for both mouse and touch
     heroSection.addEventListener('mousemove', handlePointerMove);
     heroSection.addEventListener('touchmove', handlePointerMove, { passive: true });
     
-    // Mouse/touch leave handler
     function handlePointerLeave() {
         if (smileyContainer) {
             smileyContainer.remove();
@@ -615,27 +575,24 @@ function initRoamingParticles() {
         
         isFormingSmiley = true;
         
-        // Create smiley container
         smileyContainer = document.createElement('div');
         smileyContainer.className = 'smiley-container';
         smileyContainer.style.left = (centerX - 40) + 'px';
         smileyContainer.style.top = (centerY - 40) + 'px';
         
-        // Smiley face positions
         const smileyPositions = [
-            {x: 20, y: 10}, // Left eye
-            {x: 60, y: 10}, // Right eye
-            {x: 15, y: 30}, // Nose
-            {x: 20, y: 45}, // Mouth start
-            {x: 30, y: 50}, // Mouth middle
-            {x: 60, y: 45}, // Mouth end
-            {x: 35, y: 25}, // Left cheek
-            {x: 45, y: 25}, // Right cheek
-            {x: 40, y: 15}, // Forehead
-            {x: 40, y: 15}  // Forehead duplicate
+            {x: 20, y: 10}, 
+            {x: 60, y: 10}, 
+            {x: 15, y: 30}, 
+            {x: 20, y: 45}, 
+            {x: 30, y: 50}, 
+            {x: 60, y: 45}, 
+            {x: 35, y: 25}, 
+            {x: 45, y: 25}, 
+            {x: 40, y: 15}, 
+            {x: 40, y: 15}  
         ];
         
-        // Move selected particles to smiley positions
         selectedParticles.forEach((particle, index) => {
             if (index < smileyPositions.length) {
                 particle.classList.remove('roaming');
@@ -654,16 +611,13 @@ function initRoamingParticles() {
         
         particleField.appendChild(smileyContainer);
         
-        // Auto-dismiss after 2 seconds
         setTimeout(() => {
             if (smileyContainer) {
-                // Return particles to roaming
                 selectedParticles.forEach(particle => {
                     particle.classList.remove('forming-smiley');
                     particle.classList.add('roaming');
                     particle.style.transform = '';
                     
-                    // Random new position
                     const newX = Math.random() * window.innerWidth;
                     const newY = Math.random() * window.innerHeight;
                     particle.style.left = newX + 'px';
@@ -680,7 +634,6 @@ function initRoamingParticles() {
     }
 }
 
-// Mobile Navigation Menu
 function initMobileMenu() {
     const navbarToggle = document.getElementById('navbar-toggle');
     const navbarMenu = document.getElementById('navbar-menu');
@@ -688,12 +641,10 @@ function initMobileMenu() {
     
     if (!navbarToggle || !navbarMenu) return;
     
-    // Toggle mobile menu
     navbarToggle.addEventListener('click', () => {
         navbarToggle.classList.toggle('active');
         navbarMenu.classList.toggle('active');
         
-        // Prevent body scroll when menu is open
         if (navbarMenu.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
         } else {
@@ -701,7 +652,6 @@ function initMobileMenu() {
         }
     });
     
-    // Close menu when clicking on a link
     navbarLinks.forEach(link => {
         link.addEventListener('click', () => {
             navbarToggle.classList.remove('active');
@@ -710,7 +660,6 @@ function initMobileMenu() {
         });
     });
     
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
             navbarToggle.classList.remove('active');
@@ -719,7 +668,6 @@ function initMobileMenu() {
         }
     });
     
-    // Close menu on escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navbarMenu.classList.contains('active')) {
             navbarToggle.classList.remove('active');
@@ -729,7 +677,6 @@ function initMobileMenu() {
     });
 }
 
-// Smooth scrolling for navbar links
 function initNavbarSmoothScroll() {
     const navbarLinks = document.querySelectorAll('.navbar-link');
     
@@ -740,7 +687,6 @@ function initNavbarSmoothScroll() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                // Check if navbar is visible to determine offset
                 const navbar = document.getElementById('navbar');
                 const navbarHeight = navbar.classList.contains('visible') ? 80 : 0;
                 const offsetTop = targetElement.offsetTop - navbarHeight;
@@ -754,7 +700,6 @@ function initNavbarSmoothScroll() {
     });
 }
 
-// Navbar scroll effect
 function initNavbarScrollEffect() {
     const navbar = document.getElementById('navbar');
     const hero = document.getElementById('hero');
@@ -767,20 +712,17 @@ function initNavbarScrollEffect() {
         const scrollPercent = (scrollTop / documentHeight) * 100;
         const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
         
-        // Show navbar when scrolling down to 5%
         if (scrollPercent >= 5 && !isNavbarVisible) {
             navbar.classList.add('visible');
             document.body.classList.add('navbar-visible');
             isNavbarVisible = true;
         }
         
-        // Keep navbar visible once it appears
         if (isNavbarVisible) {
             navbar.classList.add('visible');
             document.body.classList.add('navbar-visible');
         }
         
-        // Add/remove scrolled class only after the hero section ends
         if (scrollTop >= heroBottom - 1) {
             navbar.classList.add('scrolled');
         } else {
@@ -791,14 +733,11 @@ function initNavbarScrollEffect() {
     });
 }
 
-// Initialize effects
 createMouseTrail();
 initMobileMenu();
 initNavbarSmoothScroll();
 initNavbarScrollEffect();
 
-// Vertical to horizontal scroll for Products section
-// Products sequence: vertical scroll drives horizontal translation
 (function initProductsSequence(){
     const seq = document.getElementById('productsSeq');
     const track = document.getElementById('productsTrack');
@@ -808,8 +747,6 @@ initNavbarScrollEffect();
     initHorizontalScroll(seq, track, canvas);
 })();
 
-// Vertical to horizontal scroll for Projects section
-// Projects sequence: vertical scroll drives horizontal translation
 (function initProjectsSequence(){
     const seq = document.getElementById('projectsSeq');
     const track = document.getElementById('projectsTrack');
@@ -819,55 +756,44 @@ initNavbarScrollEffect();
     initHorizontalScroll(seq, track, canvas);
 })();
 
-// Shared function for horizontal scrolling implementation
 function initHorizontalScroll(seq, track, canvas){
     if(!seq || !track || !canvas) return;
 
-    // Detect if device is touch-enabled
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     
-    // Compute total horizontal width and the vertical scroll area required
     function computeSequenceHeights(){
         
         const cards = track.children.length;
         const cardWidth = track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width : 320;
         const style = getComputedStyle(track);
-        // Prefer columnGap which is in px; fallback to gap
         const gapStr = style.columnGap && style.columnGap !== 'normal' ? style.columnGap : (style.gap || '16px');
-        const gap = parseFloat(gapStr) || 16; // px
+        const gap = parseFloat(gapStr) || 16; 
         const totalWidth = cards * cardWidth + (cards - 1) * gap;
         const viewport = window.innerWidth;
-        // Increase extra width to ensure all cards are visible
         const viewportFactor = isTouchDevice ? 0.7 : 0.8;
         const extra = Math.max(0, Math.ceil(totalWidth - viewport * viewportFactor));
-        // Height: horizontal distance + an extra viewport to ensure last card fully appears before release
         const heightFactor = isTouchDevice ? 0.6 : 0.5;
         seq.style.height = `calc(100vh + ${extra + window.innerHeight * heightFactor}px)`;
         return {extra};
     }
     let extraWidth = computeSequenceHeights().extra;
 
-    // Sticky pin container
     const pin = seq.querySelector('.products-pin');
 
-    // Map vertical scroll progress within the section to horizontal translateX
     function update(){
         const rect = seq.getBoundingClientRect();
         const start = rect.top;
-        const end = rect.height - window.innerHeight; // when pin releases; rect.bottom - vh can be inaccurate after transforms
+        const end = rect.height - window.innerHeight; 
         const progress = Math.min(1, Math.max(0, (0 - start) / (end - 0)));
         const translateX = -extraWidth * progress;
         track.style.transform = `translate3d(${translateX}px,0,0)`;
         renderBg(progress);
     }
 
-    // Touch scroll handling
     if (isTouchDevice) {
-        // Add smooth scrolling for touch devices
         track.style.scrollBehavior = 'smooth';
         track.style.webkitOverflowScrolling = 'touch';
         
-        // Add touch-specific snap points for better experience
         track.style.scrollSnapType = 'x mandatory';
         Array.from(track.children).forEach(card => {
             card.style.scrollSnapAlign = 'center';
@@ -884,15 +810,12 @@ function initHorizontalScroll(seq, track, canvas){
 
     window.addEventListener('scroll', update, {passive:true});
     
-    // Initial call to setup
     if (typeof THREE !== 'undefined') {
         setupThree();
     } else {
-        // Load THREE.js if needed
         ensureThree(() => setupThree());
     }
 
-    // Keyboard accessibility
     track.setAttribute('tabindex','0');
     track.addEventListener('keydown', (e)=>{
         const step = 120;
@@ -900,7 +823,6 @@ function initHorizontalScroll(seq, track, canvas){
         if (e.key === 'ArrowLeft')  { window.scrollBy({top: -step, behavior:'smooth'}); }
     });
 
-    // Minimal Three.js background
     let renderer, scene, camera, geometry, material, mesh, raf;
     function setupThree(){
         if (!pin || !canvas) return;
@@ -932,7 +854,6 @@ function initHorizontalScroll(seq, track, canvas){
         renderer.render(scene, camera);
     }
 
-    // Lazy load three.js via CDN if not present
     function ensureThree(callback){
         if (window.THREE) { callback(); return; }
         const s = document.createElement('script');
@@ -944,7 +865,6 @@ function initHorizontalScroll(seq, track, canvas){
     ensureThree(()=>{ setupThree(); update(); });
 }
 
-// Initialize particles after DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
@@ -952,18 +872,15 @@ if (document.readyState === 'loading') {
         }, 100);
     });
 } else {
-    // DOM is already ready
     setTimeout(() => {
         initRoamingParticles();
     }, 100);
 }
 
-// Handle window resize for responsive particles
 let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-        // Reinitialize particles with new screen size
         const particleField = document.getElementById('particleField');
         if (particleField) {
             particleField.innerHTML = '';
@@ -972,7 +889,6 @@ window.addEventListener('resize', () => {
     }, 250);
 });
 
-// Add keyboard navigation
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         e.preventDefault();
@@ -994,7 +910,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Hover spread interaction for Projects cards (DigiValet-like)
 function initProjectsHoverSpread(){
     const seq = document.getElementById('projectsSeq');
     const track = document.getElementById('projectsTrack');
@@ -1004,7 +919,7 @@ function initProjectsHoverSpread(){
     if(cards.length === 0) return;
 
     const cs = getComputedStyle(seq);
-    const step = parseFloat(cs.getPropertyValue('--spread-step')) || 24; // px per neighbor
+    const step = parseFloat(cs.getPropertyValue('--spread-step')) || 24; 
     const hoverScale = parseFloat(cs.getPropertyValue('--hover-scale')) || 1.03;
 
     function applyOffsets(activeIdx){
@@ -1025,7 +940,6 @@ function initProjectsHoverSpread(){
         });
     }
 
-    // Mouse and keyboard focus support
     cards.forEach((card, idx) => {
         card.addEventListener('mouseenter', () => applyOffsets(idx));
         card.addEventListener('focusin', () => applyOffsets(idx));
@@ -1033,11 +947,9 @@ function initProjectsHoverSpread(){
 
     track.addEventListener('mouseleave', reset);
     track.addEventListener('focusout', () => {
-        // If focus left the entire track, reset
         if(!track.contains(document.activeElement)) reset();
     });
 
-    // Touch support: tap to activate, tap outside to reset
     cards.forEach((card, idx) => {
         card.addEventListener('touchstart', () => applyOffsets(idx), { passive: true });
     });
@@ -1046,5 +958,4 @@ function initProjectsHoverSpread(){
     }, { passive: true });
 }
 
-// Initialize the hover spread once DOM is ready (script is at end of body)
 initProjectsHoverSpread();
