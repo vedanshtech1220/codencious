@@ -1369,13 +1369,8 @@ body.navbar-visible #hero {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-<<<<<<< HEAD
-  padding: 3rem 2rem 2rem 2rem; /* ensures heading visible */
-  border-radius: 12px;
-=======
   padding: 1rem;
   border-radius: 12px;      /* rounded corners */
->>>>>>> main
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-sizing: border-box;
   cursor: pointer;
