@@ -34,40 +34,63 @@
 .finalxray-text100 {
   top: 147px;
   left: 48px;
-  color: rgba(56, 56, 65, 1);
-  height: auto;
+  color: #383841;
   position: absolute;
   font-size: 46px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Manrope;
   font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+  font-family: Manrope;
+  text-align: left;
   text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
- 
+
 .finalxray-text101 {
   top: 230px;
   left: 48px;
-  color: rgba(76, 77, 88, 1);
-  height: auto;
+  color: #4c4d58;
   position: absolute;
   font-size: 40px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Manrope;
   font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+  font-family: Manrope;
+  text-align: left;
 }
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .finalxray-text100 {
+    font-size: 32px;
+    top: 100px;
+    left: 20px;
+  }
+  .finalxray-text101 {
+    font-size: 26px;
+    top: 160px;
+    left: 20px;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .finalxray-text100 {
+    font-size: 22px;
+    top: 80px;
+    left: 10px;
+    text-align: center;
+    width: 90%;   /* keep inside screen */
+  }
+  .finalxray-text101 {
+    font-size: 12px;
+    top: 120px;
+    left: 10px;
+    text-align: center;
+    width: 90%;
+  }
+}
+
  
 .finalxray-text105 {
   top: 364px;
   left: 48px;
-  color: rgba(64, 79, 80, 1);
+  color: #404f50;
   height: auto;
   position: absolute;
   font-size: 24px;
@@ -112,13 +135,13 @@
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: 15px;
-  background-color: rgba(240, 237, 224, 1);
+  background-color: #f6e79b;
 }
  
 .finalxray-text111 {
   top: 7px;
   left: 34px;
-  color: rgba(24, 24, 27, 1);
+  color: #18181b;
   height: auto;
   position: absolute;
   font-size: 18px;
