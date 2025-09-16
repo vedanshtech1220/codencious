@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+  <title>Exported Project</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate.css -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/animate.css@4.1.1/animate.css"
+  />
+
+  <!-- Google Fonts (de-duplicated) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"/>
+  <link rel="stylesheet" href="./stylefinal.css" />
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+     <!-- Navigation Bar -->
+<nav class="bg-[#05132b] shadow-lg relative z-10"> <!-- dark navy background -->
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <div class="flex justify-between items-center h-16">
+      
+      <div class="logo">
+       <img src="public/logoimage.png"/>
+      </div>
+      <div class="flex-shrink-0 text-4xl font-bold text-white ml-[50px]">
+        Codencious Ai.
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center font-bold text-white space-x-8 ml-auto">
+        <a href="#projects" class="text-white hover:text-yellow-400 font-medium">Projects</a>
+        <a href="#products" class="text-white hover:text-yellow-400 font-medium">Products</a>
+        <a href="#services" class="text-white hover:text-yellow-400 font-medium">Services</a>
+        <a href="#about" class="text-white hover:text-yellow-400 font-medium">About Us</a>
+
+        <!-- Join Us Button -->
+        <a href="#join" 
+           class="px-6 py-2 rounded-full bg-white text-black font-semibold hover:bg-yellow-400 hover:text-black transition">
+          Join Us
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-btn" class="text-white focus:outline-none">
+          <!-- Hamburger Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="menu" class="hidden md:hidden px-4 pt-2 pb-3 space-y-2 bg-[#05132b]">
+    <a href="#projects" class="block text-white hover:text-yellow-400 font-medium">Projects</a>
+    <a href="#products" class="block text-white hover:text-yellow-400 font-medium">Products</a>
+    <a href="#services" class="block text-white hover:text-yellow-400 font-medium">Services</a>
+    <a href="#about" class="block text-white hover:text-yellow-400 font-medium">About Us</a>
+    <a href="#join" class="block px-4 py-2 rounded-lg bg-white text-black font-semibold hover:bg-yellow-400 transition">
+      Join Us
+    </a>
+  </div>
+</nav>
+
+ <main>
+       <section class="bg-gradient-to-r from-[#0a1d3f] to-[#020c1b] relative bg-cover bg-bottom bg-no-repeat text-white min-h-[500px]" 
+           style="background-image: url('public/image253132-hxkq-700h.png');">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-[#05132b]/80"></div>
+
+    <!-- Content -->
+<div class="relative w-full pl-8 pr-4 py-20 lg:py-12 text-left">
+      
+      <!-- Heading -->
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-snug">
+        Enhancing Efficiency at Scale <br class="hidden sm:block" />
+        with <span class="text-blue-400">AI & Data Science</span>
+      </h1>
+
+      <!-- Subheading -->
+      <p class="mt-4 text-lg sm:text-xl font-medium text-gray-200">
+        Adani Power × Codencious Ai. at Tiroda Plant
+      </p>
+
+      <!-- Tags -->
+      <div class="mt-6 flex flex-wrap gap-3">
+        <span class="px-4 py-2 bg-blue-900 text-blue-200 rounded-lg text-sm font-semibold">#AI</span>
+        <span class="px-4 py-2 bg-blue-900 text-blue-200 rounded-lg text-sm font-semibold">#DataScience</span>
+        <span class="px-4 py-2 bg-blue-900 text-blue-200 rounded-lg text-sm font-semibold">#Energy</span>
+      </div>
+
+      <!-- Description -->
+      <p class="mt-6 max-w-3xl text-base sm:text-lg text-gray-300">
+        Codenscious.ai collaborated with Adani Power to optimize boiler operations 
+        using advanced AI models—boosting efficiency, reducing emissions, 
+        and driving measurable cost savings.
+      </p>
+
+      <!-- Buttons -->
+      <div class="mt-8 flex flex-wrap gap-4 lg:py-20">
+        <a href="#results" class="px-6 py-3 bg-white text-black font-semibold rounded-lg shadow hover:bg-gray-200 transition">
+          See the Results
+        </a>
+        <a href="#contact" class="px-6 py-3 bg-white text-black font-semibold rounded-lg shadow hover:bg-gray-200 transition">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section> 
+
+  <section class="bg-gradient-to-r from-[#0a1d3f] to-[#020c1b] text-white py-16 min-h-[550px]">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+    <!-- Left Content -->
+    <div class="lg:-ml-20">
+      <!-- Heading -->
+      <h2 class="text-3xl sm:text-6xl font-extrabold">
+        Project <span class="text-blue-400">Overview</span>
+      </h2>
+
+      <!-- Description -->
+      <p class="mt-4 text-gray-300 text-base sm:text-2xl leading-relaxed">
+        Codencious.ai collaborated with Adani Power to enhance boiler operations 
+        through advanced data science, resulting in higher efficiency, reduced emissions, 
+        and better scalability.
+      </p>
+
+      <!-- Stats -->
+      <div class="mt-16 grid grid-cols-2 gap-10">
+        <!-- Efficiency Improved -->
+        <div>
+          <div class="flex items-center space-x-3">
+            <img src="public/thermometer112142-f1yuh-200h.png" alt="Efficiency Icon" class="w-12 h-12">
+            <span class="text-2xl font-semibold">Efficiency Improved</span>
+          </div>
+          <p class="mt-2 text-4xl font-bold text-blue-400">+0.3%</p>
+        </div>
+
+        <!-- Cost Saved -->
+        <div class="mt-[20px]">
+          <div class="flex items-center space-x-3">
+            <img src="public/money2082-gapk-200h.png" alt="Cost Saved Icon" class="w-12 h-12">
+            <span class="text-2xl font-semibold">Cost Saved</span>
+          </div>
+          <p class="mt-7 ml-5 text-4xl font-bold text-blue-400">$400k</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Content -->
+    <div class="relative flex justify-center">
+      <!-- Boiler Illustration -->
+      <img src="public/image152082-70j-500h.png" alt="Boiler Illustration" class="h-[520px]  lg:w-[850px]">
+
+      <!-- Quick Facts Card -->
+      <div class="absolute bottom-4 right-4 bg-black bg-opacity-90 p-6 rounded-2xl shadow-lg w-64">
+        <h3 class="text-lg font-bold mb-4">Quick Facts</h3>
+        <ul class="space-y-3 text-sm text-gray-200">
+          <li class="flex items-center space-x-3">
+            <img src="public/client2082-douk-200w.png" alt="Client Icon" class="w-6 h-6">
+            <span><span class="font-semibold">Client:</span> Adani Power</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <img src="public/location22082-8dopk-200h.png" alt="Location Icon" class="w-6 h-6">
+            <span><span class="font-semibold">Location:</span> Tiroda Plant</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <img src="public/customerservice2082-22x-200h.png" alt="Service Icon" class="w-6 h-6">
+            <span><span class="font-semibold">Service:</span> AI + Data Science</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gradient-to-t from-[#020c1b] to-[#03183a] text-white py-20 px-6 lg:px-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    
+    <!-- Left Content -->
+    <div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold lg:-mt-20  ">
+        The <span class="text-blue-400">Challenge</span>
+      </h2>
+      <p class="mt-4 text-lg text-blue-300 font-medium">The Impact of Inefficiency</p>
+      <p class="mt-4 text-gray-300 text-base sm:text-lg leading-relaxed">
+        Adani Power aimed to improve boiler efficiency at their Tiroda plant. 
+        Even small inefficiencies led to major energy loss, higher costs, 
+        and environmental harm.
+      </p>
+      <div class="mt-8">
+        <a href="#solution" class="px-6 py-3 bg-white text-black font-semibold rounded-lg shadow hover:bg-gray-200 transition">
+          Our Solution
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Content -->
+    <div class="space-y-20 lg:ml-[200px]">
+      <!-- Card 1 -->
+      <div class="flex items-start space-x-5">
+        <img src="public/flask1i208-180m-200h.png" alt="Thermodynamics Icon" class="w-14 h-14 ">
+        <div>
+          <h3 class="text-xl font-bold">Complex Thermodynamics</h3>
+          <p class="text-blue-300 text-sm sm:text-base">Hard to simulate without AI</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex items-start space-x-5">
+        <img src="public/linki208-7ceg-200h.png" alt="Legacy Icon" class="w-14 h-14">
+        <div>
+          <h3 class="text-xl font-bold">Legacy Controls & Variability</h3>
+          <p class="text-blue-300 text-sm sm:text-base">Limited control over optimization</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex items-start space-x-5">
+        <img src="public/trend2143-2pqc-200h.png" alt="Energy Loss Icon" class="w-14 h-14">
+        <div>
+          <h3 class="text-xl font-bold">Energy & Profit Loss</h3>
+          <p class="text-blue-300 text-sm sm:text-base">Even tiny inefficiencies = big costs</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-gradient-to-r from-[#0a1d3f] to-[#020c1b]  text-white py-20 px-6 lg:px-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border border-gray-700 rounded-xl p-8">
+
+    <!-- Left Content -->
+    <div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold lg:-mt-40">
+        Our <span class="text-blue-400">Approach</span>
+      </h2>
+      <p class="mt-20 text-lg sm:text-xl text-gray-300 leading-relaxed">
+        A step-by-step strategy combining data, engineering, 
+        and AI to improve boiler efficiency.
+      </p>
+    </div>
+    <!-- Right Content -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Card 1 -->
+<div 
+  class="relative border border-blue-500 rounded-xl p-6 text-center text-white hover:bg-blue-900/30 transition lg:-ml-5 overflow-hidden"
+  style="background-image: url('public/rectangle217i317-b7b-300h.png'); background-size: cover; background-position: center;">
+  
+  <!-- Overlay for better text visibility -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+  <!-- Content wrapper relative to overlay -->
+  <div class="relative">
+    <span class="block text-blue-400 font-bold text-lg mb-3 lg:-ml-1"></span>
+    <img src="public/flask1i208-180m-200h.png" alt="Data Analysis" class="mx-auto w-12 h-12 mb-4">
+    <h3 class="text-lg font-bold text-blue-400">Data Analysis</h3>
+    <p class="mt-2 text-sm text-gray-300">
+      Reviewed 1 year of operational data.<br>
+      Collected and cleaned performance logs to understand energy patterns and inefficiencies.
+    </p>
+  </div>
+</div>
+
+     <!-- Card 2 -->
+<div 
+  class="relative border border-blue-500 rounded-xl p-6 text-center text-white hover:bg-blue-900/30 transition lg:-ml-5 overflow-hidden"
+  style="background-image: url('public/rectangle217i317-b7b-300h.png'); background-size: cover; background-position: center;">
+  
+  <!-- Overlay for better text visibility -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+  <!-- Content wrapper relative to overlay -->
+  <div class="relative">
+    <span class="block text-blue-400 font-bold text-lg mb-3"></span>
+    <img src="public/analysisi208-iaw4-200h.png" alt="Chemical Engineering" class="mx-auto w-12 h-12 mb-4">
+    <h3 class="text-lg font-bold text-blue-400">Chemical Engineering</h3>
+    <p class="mt-2 text-sm text-gray-300">
+      Applied combustion science.<br>
+      Used thermodynamic models to simulate and refine the combustion process.
+    </p>
+  </div>
+</div>
+
+      <!-- Card 3 -->
+<div 
+  class="relative sm:col-span-2 border border-blue-500 rounded-xl p-6 text-center text-white hover:bg-blue-900/30 transition overflow-hidden"
+  style="background-image: url('public/rectangle217i317-b7b-300h.png'); background-size: cover; background-position: center;">
+
+  <!-- Overlay for better text visibility -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <!-- Content wrapper relative to overlay -->
+  <div class="relative">
+    <span class="block text-blue-400 font-bold text-lg mb-3"></span>
+    <img src="public/settingsi208-41d-200h.png" alt="AI Modeling" class="mx-auto w-12 h-12 mb-4">
+    <h3 class="text-lg font-bold text-blue-400">AI Modeling</h3>
+    <p class="mt-2 text-sm text-gray-300">
+      Built an optimization engine.<br>
+      Trained machine learning models to recommend real-time tuning parameters.
+    </p>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+<section class="bg-gradient-to-r from-[#020c1b] to-[#03183a] text-white py-20 px-6 lg:px-16">
+  <div class="max-w-7xl mx-auto text-center">
+    <!-- Heading -->
+    <h2 class="text-2xl sm:text-4xl font-bold">
+      Smarter Recommendations <br>
+      <span class="text-blue-400">Powered by Data and AI</span>
+    </h2>
+  </div>
+
+
+  <!-- Cards with divider -->
+<div class="mt-24 max-w-5xl mx-auto">
+  <!-- Flex wrapper on large screens -->
+  <div class="flex flex-col lg:flex-row items-stretch gap-8">
+    
+    <!-- Card 1 -->
+<div 
+  class="flex-1 relative text-white border border-blue-500 rounded-2xl p-8 lg:-ml-4 shadow-lg overflow-hidden"
+  style="background-image: url('public/rectangle217i317-b7b-300h.png'); background-size: cover; background-position: center;">
+  
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+  <!-- Content wrapper -->
+  <div class="relative flex items-center space-x-3 mb-4">
+    <img src="public/monitori317-iwzw-200w.png" alt="Performance Insights" class="w-10 h-10">
+    <h3 class="text-lg font-semibold">Data-Backed<br>Performance Insights</h3>
+  </div>
+  <ul class="relative text-gray-300 text-sm space-y-2 list-disc list-inside">
+    <li>Optimized chemical injection rates</li>
+    <li>Improved process stability with data trends</li>
+    <li>Enhanced performance using AI-driven metrics</li>
+  </ul>
+</div>
+
+
+    <!-- Blue divider (only on large screens) -->
+    <div class="hidden lg:flex items-stretch  lg:ml-32 ">
+      <div class="w-0.5 bg-blue-500 my-4"></div>
+    </div>
+
+    <!-- Card 2 -->
+<div 
+  class="flex-1 relative text-white border border-blue-500 rounded-2xl p-8 shadow-lg lg:ml-44 overflow-hidden"
+  style="background-image: url('public/rectangle217i317-b7b-300h.png'); background-size: cover; background-position: center;">
+  
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+  <!-- Content wrapper -->
+  <div class="relative flex items-center space-x-3 mb-4">
+    <img src="public/airoboti317-zgn-200w.png" alt="AI Modeling" class="w-10 h-10">
+    <h3 class="text-lg font-semibold">Enhanced with<br>AI Modeling</h3>
+  </div>
+  <ul class="relative text-gray-300 text-sm space-y-2 list-disc list-inside">
+    <li>Trained ML models for smarter decisions</li>
+    <li>Detected hidden trends in operational data</li>
+    <li>Delivered predictive insights for efficiency</li>
+  </ul>
+</div>
+
+
+  </div>
+</div>
+
+</section>
+<section class="bg-gradient-to-r from-[#0a1d3f] to-[#020c1b] text-white py-20 px-6 lg:px-16">
+  <div class="max-w-6xl mx-auto text-center">
+    <!-- Heading -->
+    <h2 class="text-2xl sm:text-4xl font-bold">
+      Smarter Control. <span class="text-blue-400">Proven Results.</span>
+    </h2>
+    <p class="mt-4 text-gray-300 text-base max-w-3xl mx-auto">
+      AI-powered tools give operators real-time insights and proactive alerts—
+      leading to measurable performance and cost gains.
+    </p>
+  </div>
+
+  <!-- 4 Cards -->
+  <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    
+   <!-- Card 1 -->
+<div
+  class="w-[350px] h-[150px] rounded-2xl p-6 shadow-lg border border-blue-500 relative overflow-hidden text-white"
+  style="background-image: url('public/rectangle217i317-b7b-300h.png'); background-size: cover; background-position: center;">
+  
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+  <div class="relative flex items-center space-x-3 mb-4">
+    <img src="public/onlinetest2142-rcwj-200h.png" alt="Real-Time Data" class="w-20 h-20">
+    <h3 class="text-lg font-bold">Real-Time Data</h3>
+  </div>
+  <p class="relative text-gray-300 text-sm">
+    Instant access to key performance metrics
+  </p>
+</div>
+
+<!-- Card 2 -->
+<div
+  class="w-[350px] h-[150px] rounded-2xl p-6 shadow-lg border border-blue-500 relative overflow-hidden text-white"
+  style="background-image: url('public/rectangle217i317-b7b-300h.png'); background-size: cover; background-position: center;">
+  
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+  <div class="relative flex items-center space-x-3 mb-4">
+    <img src="public/thermometer112142-f1yuh-200h.png" alt="Efficiency Alerts" class="w-20 h-20">
+    <h3 class="text-lg font-bold">Efficiency Alerts</h3>
+  </div>
+  <p class="relative text-gray-300 text-sm">
+    +0.03% operational increase
+  </p>
+</div>
+
+<!-- Card 3 -->
+<div
+  class="w-[350px] h-[150px] rounded-2xl p-6 shadow-lg border border-blue-500 relative overflow-hidden text-white"
+  style="background-image: url('public/rectangle217i317-b7b-300h.png'); background-size: cover; background-position: center;">
+  
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+  <div class="relative flex items-center space-x-3 mb-4">
+    <img src="public/trend2143-2pqc-200h.png" alt="Efficiency Boost" class="w-20 h-20">
+    <h3 class="text-lg font-bold">Efficiency Boost</h3>
+  </div>
+  <p class="relative text-gray-300 text-sm">
+    +0.3% overall increase
+  </p>
+</div>
+
+<!-- Card 4 -->
+<div
+  class="w-[350px] h-[150px] rounded-2xl p-6 shadow-lg border border-blue-500 relative overflow-hidden text-white"
+  style="background-image: url('public/rectangle217i317-b7b-300h.png'); background-size: cover; background-position: center;">
+  
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+  <div class="relative flex items-center space-x-3 mb-4">
+    <img src="public/money12143-itw-200h.png" alt="Annual Savings" class="w-20 h-20">
+    <h3 class="text-lg font-bold">Annual Savings</h3>
+  </div>
+  <p class="relative text-gray-300 text-sm">
+    Improved operational flow and reduced costs
+  </p>
+</div>
+
+</section>
+<section class="bg-gradient-to-r from-[#020c1b] to-[#03183a] py-20 px-6 text-center text-white">
+  <div class="max-w-3xl mx-auto">
+    <!-- Heading -->
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+      Let’s Build Your Next
+    </h2>
+
+    <!-- Subheading -->
+    <p class="text-gray-300 text-lg mb-8">
+      Ready to bring your vision to life? Contact us today to discuss your dream and explore
+      how we can help you to make it reality.
+    </p>
+
+    <!-- Button -->
+    <a href="#contact"
+       class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-100 transition">
+      Get in Touch
+    </a>
+  </div>
+</section>
+<footer class="bg-[#020c1b] text-gray-300 py-12 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    
+    <!-- Company Info -->
+    <div>
+      <h2 class="text-xl font-bold text-blue-500 mb-2">Codenscious.ai</h2>
+      <p class="mb-6">
+        "Crafting innovative digital experiences that transform businesses."
+      </p>
+
+      <h3 class="font-semibold mb-3">Contact Us</h3>
+      <div class="flex items-center gap-2 mb-2">
+         <a href="#"><img src="public/vector2183-z6y8.svg" alt="LinkedIn" class="w-6 h-6 hover:opacity-80 transition" /></a>
+      </div>
+      <div class="flex items-center gap-2 mb-6">
+        <a href="#"><img src="public/vector2183-j6ci.svg" alt="Twitter" class="w-6 h-6 hover:opacity-80 transition" /></a>
+        
+      </div>
+    </div>
+
+    <!-- Information -->
+    <div>
+      <h3 class="text-lg font-semibold text-blue-500 mb-4">Information</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:text-white">About Us</a></li>
+        <li><a href="#" class="hover:text-white">Events</a></li>
+        <li><a href="#" class="hover:text-white">Testimonials</a></li>
+        <li><a href="#" class="hover:text-white">More Details</a></li>
+        <li><a href="#" class="hover:text-white">Blogs</a></li>
+      </ul>
+    </div>
+
+    <!-- Links -->
+    <div>
+      <h3 class="text-lg font-semibold text-blue-500 mb-4">Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:text-white">Services</a></li>
+        <li><a href="#" class="hover:text-white">Support</a></li>
+        <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Subscribe -->
+    <div>
+      <h3 class="text-lg font-semibold text-blue-500 mb-4">Subscribe</h3>
+      <p class="mb-4">Subscribe to our newsletter for upcoming news!!</p>
+      
+      <!-- Input -->
+      <input type="email" placeholder="Enter Your Email"
+             class="px-4 py-2 rounded-lg text-black w-full mb-3" />
+      
+      <!-- Button below input -->
+      <button class="w-left px-6 py-2 border border-gray-400 rounded-lg hover:bg-white hover:text-black transition">
+        Subscribe
+      </button>
+    </div>
+  </div>
+
+  <!-- Bottom Line -->
+<div class="w-[1280px] border-t border-gray-600 mx-auto my-6"></div>    <!-- Social Icons -->
+    <div class="flex gap-4 lg:ml-24">
+      <a href="#"><img src="public/vector2183-j6ci.svg" alt="Twitter" class="w-6 h-6 hover:opacity-80 transition" /></a>
+      <a href="#"><img src="public/vector2183-l37.svg" alt="Facebook" class="w-6 h-6 hover:opacity-80 transition" /></a>
+      <a href="#"><img src="public/vector2183-q389.svg" alt="Instagram" class="w-6 h-6 hover:opacity-80 transition" /></a>
+      <a href="#"><img src="public/vector2183-z6y8.svg" alt="LinkedIn" class="w-6 h-6 hover:opacity-80 transition" /></a>
+</footer>
+
+ </main>
+</body>
+</html>
