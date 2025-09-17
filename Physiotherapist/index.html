@@ -1,1469 +1,467 @@
 <!DOCTYPE html>
-<html lang="english">
-  <head>
-    <title>exported project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codenscious AI - Physiotherapist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-white text-gray-900">
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-10 py-4 shadow-sm">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="public/Screenshot 2025-09-16 183030.png" 
+           alt="Logo" class="h-15 w-20">
+      <h1 class="text-4xl font-semibold">Codenscious ai.</h1>
+    </div>
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-theme-neutral-dark);
-        background: var(--dl-color-theme-neutral-light);
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <a href="#" class="text-xl hover:text-blue-500">Projects</a>
+      <a href="#" class="text-xl hover:text-blue-500">Products</a>
+      <a href="#" class="text-xl hover:text-blue-500">Services</a>
+      <a href="#" class="text-xl hover:text-blue-500">About Us</a>
+    </div>
 
-        fill: var(--dl-color-theme-neutral-dark);
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-  </head>
-  <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./index.css" rel="stylesheet" />
+    <!-- Join Us Button -->
+    <button class="hidden md:block bg-gray-900 text-white px-6 py-2 rounded-full font-semibold text-xl hover:bg-gray-700">
+      Join Us
+    </button>
 
-      <div class="ai-physiotherapists-container">
-        <div class="ai-physiotherapists-ai-physiotherapists">
-          <div class="ai-physiotherapists-herosection1">
-            <div class="ai-physiotherapists-herosection2">
-              <img
-                src="public/rectangle304142-ejm-1400w.png"
-                alt="Rectangle304142"
-                class="ai-physiotherapists-rectangle30"
-              />
-              <div class="ai-physiotherapists-group599">
-                <span class="ai-physiotherapists-text100">Join Us</span>
-              </div>
-              <span class="ai-physiotherapists-text101">Codenscious ai.</span>
-              <div class="ai-physiotherapists-group7641">
-                <div class="ai-physiotherapists-logog1">
-                  <img
-                    src="public/line414142-doca.svg"
-                    alt="Line414142"
-                    class="ai-physiotherapists-line411"
-                  />
-                  <img
-                    src="public/line474142-17q7.svg"
-                    alt="Line474142"
-                    class="ai-physiotherapists-line471"
-                  />
-                  <img
-                    src="public/line424142-p8ik.svg"
-                    alt="Line424142"
-                    class="ai-physiotherapists-line421"
-                  />
-                  <img
-                    src="public/line484142-nai.svg"
-                    alt="Line484142"
-                    class="ai-physiotherapists-line481"
-                  />
-                  <img
-                    src="public/line454142-i4wm.svg"
-                    alt="Line454142"
-                    class="ai-physiotherapists-line451"
-                  />
-                  <img
-                    src="public/line464142-fxtgm.svg"
-                    alt="Line464142"
-                    class="ai-physiotherapists-line461"
-                  />
-                  <img
-                    src="public/line434142-obvr.svg"
-                    alt="Line434142"
-                    class="ai-physiotherapists-line431"
-                  />
-                  <img
-                    src="public/line584142-g74m.svg"
-                    alt="Line584142"
-                    class="ai-physiotherapists-line581"
-                  />
-                  <img
-                    src="public/line524142-vsip.svg"
-                    alt="Line524142"
-                    class="ai-physiotherapists-line521"
-                  />
-                  <img
-                    src="public/line534142-xemo.svg"
-                    alt="Line534142"
-                    class="ai-physiotherapists-line531"
-                  />
-                  <img
-                    src="public/line494142-7zdp.svg"
-                    alt="Line494142"
-                    class="ai-physiotherapists-line491"
-                  />
-                  <img
-                    src="public/line574142-2pbxl.svg"
-                    alt="Line574142"
-                    class="ai-physiotherapists-line571"
-                  />
-                  <img
-                    src="public/line504142-cimt.svg"
-                    alt="Line504142"
-                    class="ai-physiotherapists-line501"
-                  />
-                  <img
-                    src="public/line564142-6x1q.svg"
-                    alt="Line564142"
-                    class="ai-physiotherapists-line561"
-                  />
-                  <img
-                    src="public/line444142-tkbp.svg"
-                    alt="Line444142"
-                    class="ai-physiotherapists-line441"
-                  />
-                  <img
-                    src="public/line544142-j02n.svg"
-                    alt="Line544142"
-                    class="ai-physiotherapists-line541"
-                  />
-                  <img
-                    src="public/line514142-usth.svg"
-                    alt="Line514142"
-                    class="ai-physiotherapists-line511"
-                  />
-                  <img
-                    src="public/line514142-usth.svg"
-                    alt="Line514142"
-                    class="ai-physiotherapists-line589"
-                  />
-                  <img
-                    src="public/line464142-fxtgm.svg"
-                    alt="Line554142"
-                    class="ai-physiotherapists-line551"
-                  />
-                  <img
-                    src="public/ellipse264142-pxe-200h.png"
-                    alt="Ellipse264142"
-                    class="ai-physiotherapists-ellipse261"
-                  />
-                  <img
-                    src="public/ellipse234142-kqx-200h.png"
-                    alt="Ellipse234142"
-                    class="ai-physiotherapists-ellipse231"
-                  />
-                  <img
-                    src="public/ellipse224142-t7w-200w.png"
-                    alt="Ellipse224142"
-                    class="ai-physiotherapists-ellipse221"
-                  />
-                  <img
-                    src="public/ellipse214142-1r5h-200h.png"
-                    alt="Ellipse214142"
-                    class="ai-physiotherapists-ellipse211"
-                  />
-                  <img
-                    src="public/ellipse204142-95sb-200h.png"
-                    alt="Ellipse204142"
-                    class="ai-physiotherapists-ellipse201"
-                  />
-                  <img
-                    src="public/ellipse244142-mk6h-200h.png"
-                    alt="Ellipse244142"
-                    class="ai-physiotherapists-ellipse241"
-                  />
-                  <img
-                    src="public/ellipse254142-4wyfi-200w.png"
-                    alt="Ellipse254142"
-                    class="ai-physiotherapists-ellipse251"
-                  />
-                  <img
-                    src="public/ellipse194142-a9bs-200w.png"
-                    alt="Ellipse194142"
-                    class="ai-physiotherapists-ellipse191"
-                  />
-                  <div class="ai-physiotherapists-group7491">
-                    <img
-                      src="public/vector234142-pair.svg"
-                      alt="Vector234142"
-                      class="ai-physiotherapists-vector231"
-                    />
-                    <img
-                      src="public/ellipse274142-102p-200h.png"
-                      alt="Ellipse274142"
-                      class="ai-physiotherapists-ellipse271"
-                    />
-                  </div>
-                </div>
-                <span class="ai-physiotherapists-text102">&lt; / &gt;</span>
-              </div>
-              <div class="ai-physiotherapists-group845">
-                <span class="ai-physiotherapists-text103">Services</span>
-                <span class="ai-physiotherapists-text104">About Us</span>
-                <span class="ai-physiotherapists-text105">Products</span>
-                <span class="ai-physiotherapists-text106">Projects</span>
-              </div>
-            </div>
-            <span class="ai-physiotherapists-text107">
-              Helping Physiotherapists Diagnose Better—With AI On Your Phone
-            </span>
-            <span class="ai-physiotherapists-text108">
-              <span>
-                During the pandemic, Z Solutions Canada faced a challenge;
-                enable physiotherapists to monitor recovery without seeing
-                patients in person.
-              </span>
-              <br />
-              <br />
-              <span>Codenscious.ai built an AI-powered tool that analyzes</span>
-              <br />
-              <span>movement—entirely on-device.</span>
-            </span>
-            <div class="ai-physiotherapists-group766">
-              <img
-                src="public/rectangle224i414-k95h-200h.png"
-                alt="Rectangle224I414"
-                class="ai-physiotherapists-rectangle224"
-              />
-              <span class="ai-physiotherapists-text115">
-                Explore the Project
-              </span>
-            </div>
-            <div class="ai-physiotherapists-group772">
-              <div class="ai-physiotherapists-group767">
-                <div class="ai-physiotherapists-iphone141"></div>
-              </div>
-              <div class="ai-physiotherapists-group771">
-                <div class="ai-physiotherapists-group768">
-                  <img
-                    src="public/image274142-x0a-300w.png"
-                    alt="image274142"
-                    class="ai-physiotherapists-image27"
-                  />
-                </div>
-                <span class="ai-physiotherapists-text116">
-                  Real-Time Analysis
-                </span>
-                <div class="ai-physiotherapists-group770">
-                  <span class="ai-physiotherapists-text117">
-                    <span class="ai-physiotherapists-text118">Knee angle</span>
-                    <br />
-                    <span>64</span>
-                  </span>
-                  <img
-                    src="public/ellipse294142-7svo9-200h.png"
-                    alt="Ellipse294142"
-                    class="ai-physiotherapists-ellipse29"
-                  />
-                </div>
-                <img
-                  src="public/ellipse304142-94h6-200h.png"
-                  alt="Ellipse304142"
-                  class="ai-physiotherapists-ellipse30"
-                />
-                <img
-                  src="public/ellipse334142-ojp-200h.png"
-                  alt="Ellipse334142"
-                  class="ai-physiotherapists-ellipse33"
-                />
-                <img
-                  src="public/ellipse344142-tedt-200h.png"
-                  alt="Ellipse344142"
-                  class="ai-physiotherapists-ellipse34"
-                />
-                <img
-                  src="public/ellipse354142-ysop-200h.png"
-                  alt="Ellipse354142"
-                  class="ai-physiotherapists-ellipse35"
-                />
-                <img
-                  src="public/ellipse324142-k54q-200h.png"
-                  alt="Ellipse324142"
-                  class="ai-physiotherapists-ellipse32"
-                />
-                <img
-                  src="public/ellipse314142-t592-200h.png"
-                  alt="Ellipse314142"
-                  class="ai-physiotherapists-ellipse31"
-                />
-                <img
-                  src="public/line594142-fcy.svg"
-                  alt="Line594142"
-                  class="ai-physiotherapists-line59"
-                />
-                <img
-                  src="public/line604142-rig.svg"
-                  alt="Line604142"
-                  class="ai-physiotherapists-line60"
-                />
-                <img
-                  src="public/line614142-twq9.svg"
-                  alt="Line614142"
-                  class="ai-physiotherapists-line61"
-                />
-                <img
-                  src="public/line624142-8wb.svg"
-                  alt="Line624142"
-                  class="ai-physiotherapists-line62"
-                />
-                <img
-                  src="public/line634142-uf9u.svg"
-                  alt="Line634142"
-                  class="ai-physiotherapists-line63"
-                />
-              </div>
-              <img
-                src="public/blue4142-tp4-300w.png"
-                alt="Blue4142"
-                class="ai-physiotherapists-blue"
-              />
-            </div>
-          </div>
-          <div class="ai-physiotherapists-frame684">
-            <img
-              src="public/rectangle2114142-uehg-400h.png"
-              alt="Rectangle2114142"
-              class="ai-physiotherapists-rectangle211"
-            />
-            <span class="ai-physiotherapists-text121">Codenscious.ai</span>
-            <span class="ai-physiotherapists-text122">
-              <span>"Crafting innovative digital experiences that</span>
-              <br />
-              <span>transform businesses."</span>
-            </span>
-            <div class="ai-physiotherapists-frame6241">
-              <span class="ai-physiotherapists-text126">Contact Us</span>
-              <img
-                src="public/vector4142-veed.svg"
-                alt="Vector4142"
-                class="ai-physiotherapists-vector10"
-              />
-              <img
-                src="public/vector4142-prrb.svg"
-                alt="Vector4142"
-                class="ai-physiotherapists-vector11"
-              />
-            </div>
-            <img
-              src="public/mditwitter4142-zjro.svg"
-              alt="mditwitter4142"
-              class="ai-physiotherapists-mditwitter"
-            />
-            <img
-              src="public/vector4142-lehy.svg"
-              alt="Vector4142"
-              class="ai-physiotherapists-vector12"
-            />
-            <img
-              src="public/vector4142-m4q.svg"
-              alt="Vector4142"
-              class="ai-physiotherapists-vector13"
-            />
-            <span class="ai-physiotherapists-text127">Information</span>
-            <div class="ai-physiotherapists-frame625">
-              <span class="ai-physiotherapists-text128">About Us</span>
-              <span class="ai-physiotherapists-text129">Events</span>
-              <span class="ai-physiotherapists-text130">Testimonials</span>
-              <span class="ai-physiotherapists-text131">More Details</span>
-              <span class="ai-physiotherapists-text132">Blogs</span>
-            </div>
-            <div class="ai-physiotherapists-frame6242">
-              <span class="ai-physiotherapists-text133">Services</span>
-              <span class="ai-physiotherapists-text134">Support</span>
-              <span class="ai-physiotherapists-text135">
-                Terms &amp; Conditions
-              </span>
-              <span class="ai-physiotherapists-text136">Privacy Policy</span>
-            </div>
-            <span class="ai-physiotherapists-text137">Links</span>
-            <span class="ai-physiotherapists-text138">Subscribe</span>
-            <span class="ai-physiotherapists-text139">
-              <span>Subscribe to our newsletter</span>
-              <br />
-              <span>for upcoming news!!</span>
-            </span>
-            <div class="ai-physiotherapists-group624">
-              <span class="ai-physiotherapists-text143">Subscribe</span>
-            </div>
-            <div class="ai-physiotherapists-group625">
-              <span class="ai-physiotherapists-text144">Enter Your Email</span>
-            </div>
-            <img
-              src="public/line44142-829o.svg"
-              alt="Line44142"
-              class="ai-physiotherapists-line4"
-            />
-            <div class="ai-physiotherapists-group7642">
-              <div class="ai-physiotherapists-logog2">
-                <img
-                  src="public/line414142-0d3p.svg"
-                  alt="Line414142"
-                  class="ai-physiotherapists-line412"
-                />
-                <img
-                  src="public/line474142-80dg.svg"
-                  alt="Line474142"
-                  class="ai-physiotherapists-line472"
-                />
-                <img
-                  src="public/line424142-ccz.svg"
-                  alt="Line424142"
-                  class="ai-physiotherapists-line422"
-                />
-                <img
-                  src="public/line484142-f4ac.svg"
-                  alt="Line484142"
-                  class="ai-physiotherapists-line482"
-                />
-                <img
-                  src="public/line454142-hatx.svg"
-                  alt="Line454142"
-                  class="ai-physiotherapists-line452"
-                />
-                <img
-                  src="public/line464142-py8g.svg"
-                  alt="Line464142"
-                  class="ai-physiotherapists-line462"
-                />
-                <img
-                  src="public/line434142-nks.svg"
-                  alt="Line434142"
-                  class="ai-physiotherapists-line432"
-                />
-                <img
-                  src="public/line584142-gs1.svg"
-                  alt="Line584142"
-                  class="ai-physiotherapists-line582"
-                />
-                <img
-                  src="public/line524142-cw9.svg"
-                  alt="Line524142"
-                  class="ai-physiotherapists-line522"
-                />
-                <img
-                  src="public/line534142-0bk.svg"
-                  alt="Line534142"
-                  class="ai-physiotherapists-line532"
-                />
-                <img
-                  src="public/line494142-gle.svg"
-                  alt="Line494142"
-                  class="ai-physiotherapists-line492"
-                />
-                <img
-                  src="public/line574142-dca.svg"
-                  alt="Line574142"
-                  class="ai-physiotherapists-line572"
-                />
-                <img
-                  src="public/line504142-svvr.svg"
-                  alt="Line504142"
-                  class="ai-physiotherapists-line502"
-                />
-                <img
-                  src="public/line564142-1qz8.svg"
-                  alt="Line564142"
-                  class="ai-physiotherapists-line562"
-                />
-                <img
-                  src="public/line444142-aifr.svg"
-                  alt="Line444142"
-                  class="ai-physiotherapists-line442"
-                />
-                <img
-                  src="public/line544142-oa2dl.svg"
-                  alt="Line544142"
-                  class="ai-physiotherapists-line542"
-                />
-                <img
-                  src="public/line514142-eyuk.svg"
-                  alt="Line514142"
-                  class="ai-physiotherapists-line512"
-                />
-                <img
-                  src="public/line554142-0jxg.svg"
-                  alt="Line554142"
-                  class="ai-physiotherapists-line552"
-                />
-                <img
-                  src="public/ellipse264142-5tc-200h.png"
-                  alt="Ellipse264142"
-                  class="ai-physiotherapists-ellipse262"
-                />
-                <img
-                  src="public/ellipse234142-rmy-200h.png"
-                  alt="Ellipse234142"
-                  class="ai-physiotherapists-ellipse232"
-                />
-                <img
-                  src="public/ellipse224142-fpg5-200h.png"
-                  alt="Ellipse224142"
-                  class="ai-physiotherapists-ellipse222"
-                />
-                <img
-                  src="public/ellipse214142-tnpl-200h.png"
-                  alt="Ellipse214142"
-                  class="ai-physiotherapists-ellipse212"
-                />
-                <img
-                  src="public/ellipse204142-03zo-200h.png"
-                  alt="Ellipse204142"
-                  class="ai-physiotherapists-ellipse202"
-                />
-                <img
-                  src="public/ellipse244142-5f34-200h.png"
-                  alt="Ellipse244142"
-                  class="ai-physiotherapists-ellipse242"
-                />
-                <img
-                  src="public/ellipse254142-zz1q-200h.png"
-                  alt="Ellipse254142"
-                  class="ai-physiotherapists-ellipse252"
-                />
-                <img
-                  src="public/ellipse194142-ois-200h.png"
-                  alt="Ellipse194142"
-                  class="ai-physiotherapists-ellipse192"
-                />
-                <div class="ai-physiotherapists-group7492">
-                  <img
-                    src="public/vector234142-qxb.svg"
-                    alt="Vector234142"
-                    class="ai-physiotherapists-vector232"
-                  />
-                  <img
-                    src="public/ellipse274142-floq-200h.png"
-                    alt="Ellipse274142"
-                    class="ai-physiotherapists-ellipse272"
-                  />
-                </div>
-              </div>
-              <span class="ai-physiotherapists-text145">&lt; / &gt;</span>
-            </div>
-          </div>
-          <div class="ai-physiotherapists-impact">
-            <img src="line714142-i71r.svg" alt="" height="9px">
-            <span class="ai-physiotherapists-text146">
-              QUANTIFIABLE RESULTS THAT MATTER
-            </span>
-            <div class="ai-physiotherapists-group784">
-              <img
-                src="public/rectangle232i414-zq88-200h.png"
-                alt="Rectangle232I414"
-                class="ai-physiotherapists-rectangle2321"
-              />
-              <div class="ai-physiotherapists-group781">
-                <img
-                  src="public/vectori414-4kzr.svg"
-                  alt="VectorI414"
-                  class="ai-physiotherapists-vector14"
-                />
-                <img
-                  src="public/vectori414-gm9i.svg"
-                  alt="VectorI414"
-                  class="ai-physiotherapists-vector15"
-                />
-                <img
-                  src="public/vectori414-bss9.svg"
-                  alt="VectorI414"
-                  class="ai-physiotherapists-vector16"
-                />
-              </div>
-              <span class="ai-physiotherapists-text147">$500K</span>
-              <span class="ai-physiotherapists-text148">Saved Annually</span>
-              <span class="ai-physiotherapists-text149">
-                <span>Saved in cloud and infrastructure</span>
-                <br />
-                <span>costs by moving AI fully</span>
-                <br />
-                <span>on-device.</span>
-              </span>
-            </div>
-            <div class="ai-physiotherapists-group785">
-              <img
-                src="public/rectangle232i414-n8do-200h.png"
-                alt="Rectangle232I414"
-                class="ai-physiotherapists-rectangle2322"
-              />
-              <img
-                src="public/vectori414-5h3e.svg"
-                alt="VectorI414"
-                class="ai-physiotherapists-vector17"
-              />
-              <span class="ai-physiotherapists-text155">40%</span>
-              <span class="ai-physiotherapists-text156">
-                Reduction in Visits
-              </span>
-              <span class="ai-physiotherapists-text157">
-                <span>Fewer in-person appointments</span>
-                <br />
-                <span>needed—thanks to accurate</span>
-                <br />
-                <span>remote assessments.</span>
-              </span>
-            </div>
-            <div class="ai-physiotherapists-group790">
-              <div class="ai-physiotherapists-group789">
-                <div class="ai-physiotherapists-group782">
-                  <div class="ai-physiotherapists-group23">
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="md:hidden text-gray-900 focus:outline-none" title="Open menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" 
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
 
-                  </div>
+  <!-- Mobile Menu -->
+  <div id="menu" class="hidden md:hidden bg-gray-100 px-6 py-4 space-y-4">
+    <a href="#" class="block text-gray-700 hover:text-black">Projects</a>
+    <a href="#" class="block text-gray-700 hover:text-black">Products</a>
+    <a href="#" class="block text-gray-700 hover:text-black">Services</a>
+    <a href="#" class="block text-gray-700 hover:text-black">About Us</a>
+    <button class="w-full bg-gray-900 text-white px-5 py-2 rounded-full font-semibold hover:bg-gray-700">
+      Join Us
+    </button>
+  </div>
 
-                   <img
-                src="public/rectangle232i414-z6ev-200h.png"
-                alt="Rectangle232I414"
-                class="ai-physiotherapists-rectangle2323"
-              />
-                  <img
-                    src="public/vectori414-3zra.svg"
-                    alt="VectorI414"
-                    class="ai-physiotherapists-vector18"
-                  />
-                </div>
-                <span class="ai-physiotherapists-text163">90%</span>
-                <span class="ai-physiotherapists-text164">
-                  Patient Satisfaction
-                </span>
-                <span class="ai-physiotherapists-text165">
-                  <span>Patients found remote care</span>
-                  <br />
-                  <span>more flexible, convenient,</span>
-                  <br />
-                  <span>and trustworthy.</span>
-                </span>
-              </div>
-            </div>
-            <div class="ai-physiotherapists-group788">
-              <img
-                src="public/rectangle232i414-z6ev-200h.png"
-                alt="Rectangle232I414"
-                class="ai-physiotherapists-rectangle2323"
-              />
-              <div class="ai-physiotherapists-group783">
-                <img
-                  src="public/vectori414-itjl.svg"
-                  alt="VectorI414"
-                  class="ai-physiotherapists-vector19"
-                />
-              </div>
-              <span class="ai-physiotherapists-text171">3x</span>
-              <span class="ai-physiotherapists-text172">
-                Faster Assessments
-              </span>
-              <span class="ai-physiotherapists-text173">
-                <span>AI-based evaluations are 3× faster</span>
-                <br />
-                <span>than manual assessments—no</span>
-                <br />
-                <span>compromise on accuracy.</span>
-              </span>
-            </div>
-          </div>
-          <img
-            src="public/line694142-eflo.svg"
-            alt="Line694142"
-            class="ai-physiotherapists-line691"
-          />
-          <div class="ai-physiotherapists-built">
-            <span class="ai-physiotherapists-text179">LET’S BUILD</span>
-            <div class="ai-physiotherapists-line24">
-              <img src="line714142-i71r.svg" alt="" height="130px" width="3000px">
+ <!-- ================= HERO SECTION ================= -->
+<section id="hero" class="min-h-screen flex flex-col lg:flex-row justify-between px-6 lg:px-20 py-16 bg-white">
+  <!-- Left Side Content -->
+  <div class="max-w-xl text-center lg:text-left">
+    <h1 class="text-3xl lg:text-5xl font-extrabold leading-snug mb-6">
+      Helping Physiotherapists Diagnose Better—With AI On Your Phone
+    </h1>
+    <p class="text-gray-600 mb-6 font-semibold">
+      During the pandemic, Z Solutions Canada faced a challenge; enable physiotherapists 
+      to monitor recovery without seeing patients in person. Codenscious.ai built an AI-powered tool that analyzes movement—entirely on-device.
+    </p>
 
-            </div>
-            <span class="ai-physiotherapists-text180">
-              Ready to Build AI That Heals ?
-            </span>
-            <span class="ai-physiotherapists-text181">
-              Let’s explore how Codenscious.ai can bring AI-driven innovation to
-              your healthcare workflow.
-            </span>
-            <div class="ai-physiotherapists-group798">
-              <span class="ai-physiotherapists-text182">Book a demo</span>
-            </div>
-            <div class="ai-physiotherapists-group799">
-              <span class="ai-physiotherapists-text183">Get in Touch</span>
-            </div>
+    <a href="#" class="bg-gray-900 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-800">
+      Explore the Project
+    </a>
+  </div>
 
-            <img
-              src="public/line694142-zyk9.svg"
-              alt="Line694142"
-              class="ai-physiotherapists-line692"
-            />
-            <img src="line714142-i71r.svg" alt="" height="9px">
-          </div>
-          
-          <div class="ai-physiotherapists-challenges">
-            <img src="line714142-i71r.svg" alt="" height="9px">
-            <span class="ai-physiotherapists-text184">THE CHALLENGE</span>
-            <div class="ai-physiotherapists-group780">
-              <img
-                src="public/rectangle228i414-j2f7-300w.png"
-                alt="Rectangle228I414"
-                class="ai-physiotherapists-rectangle228"
-              />
-              <span class="ai-physiotherapists-text185">
-                <span>Limited Access</span>
-                <br />
-                <span>to Clinics</span>
-              </span>
-              <div class="ai-physiotherapists-group773">
-                <img
-                  src="public/vectori414-d9o.svg"
-                  alt="VectorI414"
-                  class="ai-physiotherapists-vector20"
-                />
-                <img
-                  src="public/vectori414-hfn7.svg"
-                  alt="VectorI414"
-                  class="ai-physiotherapists-vector21"
-                />
-              </div>
-              <span class="ai-physiotherapists-text189">
-                <span>With clinics closed during</span>
-                <br />
-                <span>COVID-19,patients missed</span>
-                <br />
-                <span>critical physiotherapy</span>
-                <br />
-                <span>sessions— stalling recovery</span>
-                <br />
-                <span>and progress.</span>
-              </span>
-            </div>
-            <div class="ai-physiotherapists-group779">
-              <img
-                src="public/rectangle229i414-nvmf-300w.png"
-                alt="Rectangle229I414"
-                class="ai-physiotherapists-rectangle229"
-              />
-              <span class="ai-physiotherapists-text199">
-                <span>No Visibility Into</span>
-                <br />
-                <span>Patient Movement</span>
-              </span>
-              <div class="ai-physiotherapists-group774">
-                <img
-                  src="public/vectori414-ukoj.svg"
-                  alt="VectorI414"
-                  class="ai-physiotherapists-vector22"
-                />
-              </div>
-              <span class="ai-physiotherapists-text203">
-                <span>Without in-person visits,</span>
-                <br />
-                <span>doctors had no way to see</span>
-                <br />
-                <span>if patients were doing</span>
-                <br />
-                <span>their exercises correctly</span>
-                <br />
-                <span>or consistently.</span>
-              </span>
-            </div>
-            <div class="ai-physiotherapists-group778">
-              <img
-                src="public/rectangle227i414-febq-300w.png"
-                alt="Rectangle227I414"
-                class="ai-physiotherapists-rectangle227"
-              />
-              <span class="ai-physiotherapists-text213">
-                <span>Privacy Barriers</span>
-                <br />
-                <span>With Cloud Solutions</span>
-              </span>
-              <div class="ai-physiotherapists-group777">
-                <div class="ai-physiotherapists-group776">
-                  <img
-                    src="public/vectori414-zndr.svg"
-                    alt="VectorI414"
-                    class="ai-physiotherapists-vector24"
-                  />
-                  <img
-                    src="public/line64i414-ute9.svg"
-                    alt="Line64I414"
-                    class="ai-physiotherapists-line64"
-                  />
-                  <img
-                    src="public/line65i414-drrm.svg"
-                    alt="Line65I414"
-                    class="ai-physiotherapists-line65"
-                  />
-                  <img
-                    src="public/line66i414-bzw.svg"
-                    alt="Line66I414"
-                    class="ai-physiotherapists-line66"
-                  />
-                  <img
-                    src="public/line67i414-9ik.svg"
-                    alt="Line67I414"
-                    class="ai-physiotherapists-line67"
-                  />
-                </div>
-                <div class="ai-physiotherapists-group775">
-                  <div class="ai-physiotherapists-group1">
-                    <img
-                      src="public/vectori414-hqq.svg"
-                      alt="VectorI414"
-                      class="ai-physiotherapists-vector25"
-                    />
-                    <img
-                      src="public/vectori414-c9z.svg"
-                      alt="VectorI414"
-                      class="ai-physiotherapists-vector26"
-                    />
-                  </div>
-                </div>
-              </div>
-              <span class="ai-physiotherapists-text217">
-                <span>Sharing video data via cloud</span>
-                <br />
-                <span>tools raised serious privacy</span>
-                <br />
-                <span>concerns—posing risks to</span>
-                <br />
-                <span>patient confidentiality</span>
-                <br />
-                <span>and compliance.</span>
-              </span>
-            </div>
-            <span class="ai-physiotherapists-text227">
-              Codenscious.ai addressed these challenges head-on—with a private,
-              efficient, and remote-first AI solution.
-            </span>
-            <img
-              src="public/line704142-or14.svg"
-              alt="Line704142"
-              class="ai-physiotherapists-line70"
-            />
-            <img
-              src="public/line714142-i71r.svg"
-              alt="Line714142"
-              class="ai-physiotherapists-line71"
-            />
-          </div>
-          <div class="ai-physiotherapists-solution">
-            <img src="line714142-i71r.svg" alt="" height="9px">
-            <span class="ai-physiotherapists-text228">OUR SOLUTION</span>
-            <span class="ai-physiotherapists-text229">
-              <span>A Smarter, Safer Way to</span>
-              <br />
-              <span>Support Recovery— Powered by AI</span>
-            </span>
-            <span class="ai-physiotherapists-text233">
-              <span>Codenscious.ai developed a real-time movement</span>
-              <br />
-              <span>analysis system that runs entirely on your phone</span>
-              <br />
-              <span>—no cloud needed, no compromises on privacy.</span>
-              <br />
-              <span>Just smart, seamless support for physiotherapists</span>
-              <br />
-              <span>and their patients, right when it’s needed most.</span>
-            </span>
-            <div class="ai-physiotherapists-line23">
-             <img src="gray line3.jpg" alt="">
-            </div>
-            <img
-              src="public/line684142-zts.svg"
-              alt="Line684142"
-              class="ai-physiotherapists-line68"
-            />
-            <img
-              src="public/vector4142-mt2.svg"
-              alt="Vector4142"
-              class="ai-physiotherapists-vector27"
-            />
-            <img
-              src="public/vector4142-rke3.svg"
-              alt="Vector4142"
-              class="ai-physiotherapists-vector28"
-            />
-            <img
-              src="public/group4142-1ish.svg"
-              alt="Group4142"
-              class="ai-physiotherapists-group2"
-            />
-            <span class="ai-physiotherapists-text243">
-              Real-Time Exercise Analysis
-            </span>
-            <span class="ai-physiotherapists-text244">
-              On-Device &amp; Privacy-First
-            </span>
-            <span class="ai-physiotherapists-text245">
-              Automated Progress Reports
-            </span>
-            <span class="ai-physiotherapists-text246">
-              <span>AI tracks posture and movement in real-time,</span>
-              <br />
-              <span>helping patients follow exercises correctly</span>
-              <br />
-              <span>—every rep, every frame.</span>
-            </span>
-            <span class="ai-physiotherapists-text252">
-              <span>All analysis happens right on the phone—</span>
-              <br />
-              <span>no cloud, no data sharing, no privacy</span>
-              <br />
-              <span>concerns.</span>
-            </span>
-            <span class="ai-physiotherapists-text258">
-              <span>Doctors get instant, structured reports on</span>
-              <br />
-              <span>range, form, and consistency—no need for</span>
-              <br />
-              <span>manual review.</span>
-            </span>
-            <img
-              src="public/line694142-2sdk.svg"
-              alt="Line694142"
-              class="ai-physiotherapists-line693"
-            />
-          </div>
-          <div class="ai-physiotherapists-review">
-            <img src="line714142-i71r.svg" alt="" height="9px">
-            <span class="ai-physiotherapists-text264">PATIENT EXPERIENCE</span>
-            <span class="ai-physiotherapists-text265">
-              How we make a difference
-            </span>
-            <div class="ai-physiotherapists-frame686">
-              <div class="ai-physiotherapists-frame685">
-                <div class="ai-physiotherapists-r21">
-                  <div class="ai-physiotherapists-group7921">
-                    <img
-                      src="public/star4142-n8v8.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star10"
-                    />
-                    <img
-                      src="public/star4142-7qzt.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star11"
-                    />
-                    <img
-                      src="public/star4142-tv5d.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star12"
-                    />
-                    <img
-                      src="public/star4142-1pgf.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star13"
-                    />
-                    <img
-                      src="public/star4142-gt.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star14"
-                    />
-                  </div>
-                  <span class="ai-physiotherapists-text266">
-                    <span>I always ignored my posture</span>
-                    <br />
-                    <span>until the pain got worse.</span>
-                    <br />
-                    <span>This AI app helped me</span>
-                    <br />
-                    <span>correct my exercises</span>
-                    <br />
-                    <span>without needing weekly</span>
-                    <br />
-                    <span>appointments. It was like</span>
-                    <br />
-                    <span>having a physiotherapist</span>
-                    <br />
-                    <span>in my pocket.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text282">
-                    <span class="ai-physiotherapists-text283">Ravi M.</span>
-                    <br />
-                    <span>Office Worker with Back Pain</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r11">
-                  <div class="ai-physiotherapists-group7911">
-                    <img
-                      src="public/star4142-t9hi.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star15"
-                    />
-                    <img
-                      src="public/star4142-aihh.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star16"
-                    />
-                    <img
-                      src="public/star4142-slqt.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star17"
-                    />
-                    <img
-                      src="public/star4142-54lh.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star18"
-                    />
-                    <img
-                      src="public/star4142-msux.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star19"
-                    />
-                  </div>
-                  <span class="ai-physiotherapists-text286">
-                    <span>After COVID, even a clinic</span>
-                    <br />
-                    <span>visit felt risky. This app</span>
-                    <br />
-                    <span>became my lifeline. It</span>
-                    <br />
-                    <span>watched my movements</span>
-                    <br />
-                    <span>like a coach and gave me</span>
-                    <br />
-                    <span>confidence I was doing</span>
-                    <br />
-                    <span>things right — all from home.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text300">
-                    <span class="ai-physiotherapists-text301">Ananya R.</span>
-                    <br />
-                    <span>Post-COVID Recovery</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r61">
-                  <div class="ai-physiotherapists-group7951">
-                    <img
-                      src="public/star4142-n0k9.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star20"
-                    />
-                    <img
-                      src="public/star4142-yt9a.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star21"
-                    />
-                    <img
-                      src="public/star4142-e2kr.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star22"
-                    />
-                    <img
-                      src="public/star4142-kig.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star23"
-                    />
-                    <img
-                      src="public/star4142-aoh7.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star24"
-                    />
-                  </div>
-                  <span class="ai-physiotherapists-text304">
-                    <span>Living with chronic pain</span>
-                    <br />
-                    <span>means every small</span>
-                    <br />
-                    <span>improvement matters. With</span>
-                    <br />
-                    <span>this app, I don’t have to rely</span>
-                    <br />
-                    <span>on guesswork. I feel heard,</span>
-                    <br />
-                    <span>seen, and supported</span>
-                    <br />
-                    <span>— finally.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text318">
-                    <span class="ai-physiotherapists-text319">Meena P.</span>
-                    <br />
-                    <span>Chronic Pain Management</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r51">
-                  <div class="ai-physiotherapists-group7961"></div>
-                  <span class="ai-physiotherapists-text322">
-                    <span>I had ACL surgery and</span>
-                    <br />
-                    <span>couldn’t afford regular clinic</span>
-                    <br />
-                    <span>visits. The AI helped track</span>
-                    <br />
-                    <span>my progress and gave me</span>
-                    <br />
-                    <span>detailed reports that my</span>
-                    <br />
-                    <span>doctor could use right away.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text334">
-                    <span class="ai-physiotherapists-text335">Aliya B.</span>
-                    <br />
-                    <span>ACL Surgery Recovery</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r41">
-                  <div class="ai-physiotherapists-group7941"></div>
-                  <span class="ai-physiotherapists-text338">
-                    <span>I was nervous about using</span>
-                    <br />
-                    <span>tech at my age, but it was</span>
-                    <br />
-                    <span>so easy. It showed me when</span>
-                    <br />
-                    <span>I moved wrong and guided</span>
-                    <br />
-                    <span>me gently. I feel more</span>
-                    <br />
-                    <span>independent now.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text350">
-                    <span class="ai-physiotherapists-text351">Suresh K.</span>
-                    <br />
-                    <span>Senior Citizen</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r31">
-                  <div class="ai-physiotherapists-group7931">
-                    <img
-                      src="public/star4142-r68c.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star25"
-                    />
-                    <img
-                      src="public/star4142-dc5.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star26"
-                    />
-                    <img
-                      src="public/star4142-pvxb.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star27"
-                    />
-                    <img
-                      src="public/star4142-r218.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star28"
-                    />
-                    <img
-                      src="public/star4142-g6y9.svg"
-                      alt="Star4142"
-                      class="ai-physiotherapists-star29"
-                    />
-                  </div>
-                  <span class="ai-physiotherapists-text354">
-                    <span>As a mom, I barely have time</span>
-                    <br />
-                    <span>to rest. This solution let me</span>
-                    <br />
-                    <span>do therapy while watching</span>
-                    <br />
-                    <span>my kids — no travel, no</span>
-                    <br />
-                    <span>stress, and full support</span>
-                    <br />
-                    <span>with instant feedback.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text366">
-                    <span class="ai-physiotherapists-text367">Neha S.</span>
-                    <br />
-                    <span>Busy Mom with Knee Rehab</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r22">
-                  <div class="ai-physiotherapists-group7922"></div>
-                  <span class="ai-physiotherapists-text370">
-                    <span>I always ignored my posture</span>
-                    <br />
-                    <span>until the pain got worse.</span>
-                    <br />
-                    <span>This AI app helped me</span>
-                    <br />
-                    <span>correct my exercises</span>
-                    <br />
-                    <span>without needing weekly</span>
-                    <br />
-                    <span>appointments. It was like</span>
-                    <br />
-                    <span>having a physiotherapist</span>
-                    <br />
-                    <span>in my pocket.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text386">
-                    <span class="ai-physiotherapists-text387">Ravi M.</span>
-                    <br />
-                    <span>Office Worker with Back Pain</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r12">
-                  <div class="ai-physiotherapists-group7912"></div>
-                  <span class="ai-physiotherapists-text390">
-                    <span>After COVID, even a clinic</span>
-                    <br />
-                    <span>visit felt risky. This app</span>
-                    <br />
-                    <span>became my lifeline. It</span>
-                    <br />
-                    <span>watched my movements</span>
-                    <br />
-                    <span>like a coach and gave me</span>
-                    <br />
-                    <span>confidence I was doing</span>
-                    <br />
-                    <span>things right — all from home.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text404">
-                    <span class="ai-physiotherapists-text405">Ananya R.</span>
-                    <br />
-                    <span>Post-COVID Recovery</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r62">
-                  <div class="ai-physiotherapists-group7952"></div>
-                  <span class="ai-physiotherapists-text408">
-                    <span>Living with chronic pain</span>
-                    <br />
-                    <span>means every small</span>
-                    <br />
-                    <span>improvement matters. With</span>
-                    <br />
-                    <span>this app, I don’t have to rely</span>
-                    <br />
-                    <span>on guesswork. I feel heard,</span>
-                    <br />
-                    <span>seen, and supported</span>
-                    <br />
-                    <span>— finally.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text422">
-                    <span class="ai-physiotherapists-text423">Meena P.</span>
-                    <br />
-                    <span>Chronic Pain Management</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r52">
-                  <div class="ai-physiotherapists-group7962"></div>
-                  <span class="ai-physiotherapists-text426">
-                    <span>I had ACL surgery and</span>
-                    <br />
-                    <span>couldn’t afford regular clinic</span>
-                    <br />
-                    <span>visits. The AI helped track</span>
-                    <br />
-                    <span>my progress and gave me</span>
-                    <br />
-                    <span>detailed reports that my</span>
-                    <br />
-                    <span>doctor could use right away.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text438">
-                    <span class="ai-physiotherapists-text439">Aliya B.</span>
-                    <br />
-                    <span>ACL Surgery Recovery</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r42">
-                  <div class="ai-physiotherapists-group7942"></div>
-                  <span class="ai-physiotherapists-text442">
-                    <span>I was nervous about using</span>
-                    <br />
-                    <span>tech at my age, but it was</span>
-                    <br />
-                    <span>so easy. It showed me when</span>
-                    <br />
-                    <span>I moved wrong and guided</span>
-                    <br />
-                    <span>me gently. I feel more</span>
-                    <br />
-                    <span>independent now.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text454">
-                    <span class="ai-physiotherapists-text455">Suresh K.</span>
-                    <br />
-                    <span>Senior Citizen</span>
-                  </span>
-                </div>
-                <div class="ai-physiotherapists-r32">
-                  <div class="ai-physiotherapists-group7932"></div>
-                  <span class="ai-physiotherapists-text458">
-                    <span>As a mom, I barely have time</span>
-                    <br />
-                    <span>to rest. This solution let me</span>
-                    <br />
-                    <span>do therapy while watching</span>
-                    <br />
-                    <span>my kids — no travel, no</span>
-                    <br />
-                    <span>stress, and full support</span>
-                    <br />
-                    <span>with instant feedback.</span>
-                  </span>
-                  <span class="ai-physiotherapists-text470">
-                    <span class="ai-physiotherapists-text471">Neha S.</span>
-                    <br />
-                    <span>Busy Mom with Knee Rehab</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+<!-- Right Image -->
+<div class="mt-10 md:mt-0 md:w-1/2 flex justify-center">
+  <div class="relative w-[250px] md:w-[300px]">
+    
+    <!-- Phone Frame -->
+    <img src="public/blue4142-tp4-300w.png" alt="Phone Frame" class="w-full relative z-10">
+
+    <!-- Woman Image inside phone -->
+    <img src="public/image274142-x0a-300w.png" alt="Woman Exercise"
+         class="absolute top-[12%] left-[8%] w-[84%] h-[76%] object-cover rounded-lg z-0">
+
+             <!-- Overlay Content -->
+    <div class="absolute top-[15%] left-1/2 transform -translate-x-1/2 text-black font-semibold text-sm md:text-base z-30">
+      Real-Time Analysis
+    </div>
+
+    <!-- Knee Angle Label -->
+    <div class="absolute top-[55%] left-[10%] px-2 py-1 rounded-md text-xs font-semibold text-black-700 z-30">
+      Knee angle<br>64 °
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- ================= CHALLENGE SECTION ================= -->
+<section id="challenge" class="py-20 px-6 lg:px-20 bg-white border-t border-gray-200">
+  <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 tracking-wide">
+    THE CHALLENGE
+  </h2>
+
+  <!-- Cards Container -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+    
+    <!-- Card 1 -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 flex flex-col items-center hover:shadow-lg transition">
+      <img src="public/Screenshot 2025-09-16 160221.png" alt="Clinic Icon" class="w-16 h-16 mb-4">
+      <h3 class="text-lg font-semibold mb-2">Limited Access to Clinics</h3>
+      <p class="text-gray-600 text-sm">
+        With clinics closed during COVID-19, patients missed critical physiotherapy 
+        sessions—stalling recovery and progress.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 flex flex-col items-center hover:shadow-lg transition">
+      <img src="public/Screenshot 2025-09-16 153015.png" alt="Movement Icon" class="w-15 h-20 mb-4">
+      <h3 class="text-lg font-semibold mb-2">No Visibility Into Patient Movement</h3>
+      <p class="text-gray-600 text-sm">
+        Without in-person visits, doctors had no way to see if patients were doing 
+        their exercises correctly or consistently.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 flex flex-col items-center hover:shadow-lg transition">
+      <img src="public/Screenshot 2025-09-16 153041.png" alt="Privacy Icon" class="w-16 h-16 mb-4">
+      <h3 class="text-lg font-semibold mb-2">Privacy Barriers With Cloud Solutions</h3>
+      <p class="text-gray-600 text-sm">
+        Sharing video data via cloud tools raised serious privacy concerns—posing 
+        risks to patient confidentiality and compliance.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer Text -->
+  <p class="mt-12 text-center text-gray-700 text-sm md:text-base max-w-3xl mx-auto">
+    Codenscious.ai addressed these challenges head-on—with a private, efficient, 
+    and remote-first AI solution.
+  </p>
+</section>
+
+<!-- ================= SOLUTION SECTION ================= -->
+ <hr class="my-12 border-t border-black-750" />
+<section id="solution" class="py-20 px-6 lg:px-20 bg-white">
+  <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 tracking-wide">
+    OUR SOLUTION
+  </h2>
+
+  <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-center gap-12">
+    <div class="max-w-xl text-center lg:text-left">
+      <h3 class="text-3xl lg:text-4xl font-bold leading-snug mb-6">
+        A Smarter, Safer Way to<br class="hidden md:inline"> Support Recovery—Powered by AI
+      </h3>
+      <p class="text-gray-600">
+        Codenscious.ai developed a real-time movement analysis system that runs entirely on your phone—no cloud needed, no compromises on privacy. Just smart, seamless support for physiotherapists and their patients, right when it's needed most.
+      </p>
+    </div>
+
+    <div class="space-y-8 max-w-md">
+      <div class="flex items-start space-x-4">
+        <img src="public/group4142-1ish.svg" alt="Group Icon" title="Group Icon" class="h-12 w-12 text-blue-900 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l-3 3H3m15 10v-5l-3 3M6 6v12M18 6v12" />
+        </svg>
+        <div>
+          <h4 class="text-lg font-semibold">Real-Time Exercise Analysis</h4>
+          <p class="text-gray-600 text-sm">AI tracks posture and movement in real-time, helping patients follow exercises correctly—every rep, every frame.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start space-x-4">
+        <img src="public/vector4142-mt2.svg" alt="Vector Icon" title="Vector Icon" class="h-12 w-12 text-blue-900 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m2-2h4a2 2 0 012 2v10a2 2 0 01-2 2h-4a2 2 0 01-2-2V7a2 2 0 012-2z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 17h.01M9 11h.01M9 14h.01" />
+        </svg>
+        <div>
+          <h4 class="text-lg font-semibold">Automated Progress Reports</h4>
+          <p class="text-gray-600 text-sm">Doctors get instant, structured reports on range, form, and consistency—no need for manual review.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start space-x-4">
+        <img src="public/vector4142-rke3.svg" alt="Privacy Icon" title="Privacy Icon" class="h-12 w-12 text-blue-900 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2.25c0 .75.5 1.5 1.25 1.5H18c.75 0 1.5-.75 1.5-1.5V13.5c0-.75-.75-1.5-1.5-1.5h-5.25c-.75 0-1.25.75-1.25 1.5V15z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 15a4.5 4.5 0 00-4.5 4.5v1.5a1.5 1.5 0 001.5 1.5H18m-7.5-6a3.75 3.75 0 01-3.75 3.75h-1.5a1.5 1.5 0 01-1.5-1.5v-1.5a3.75 3.75 0 013.75-3.75h1.5A1.5 1.5 0 019 9h4.5a3.75 3.75 0 013.75 3.75V15" />
+        </svg>
+        <div>
+          <h4 class="text-lg font-semibold">On-Device & Privacy-First</h4>
+          <p class="text-gray-600 text-sm">All analysis happens right on the phone—no cloud, no data sharing, no privacy concerns.</p>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</section>
+
+<hr class="my-12 border-t border-gray-200" />
+
+<section id="results" class="py-20 px-6 lg:px-20 bg-white">
+  <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 tracking-wide">
+    QUANTIFIABLE RESULTS THAT MATTER
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10 max-w-5xl mx-auto">
+
+    <div class="bg-white rounded-xl p-5 flex items-start space-x-4 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <img src="public/image.png" alt="Piggy Bank Icon" title="Piggy Bank Icon" class="w-15 h-15 flex-shrink-0">
+      <div>
+        <h3 class="text-3xl lg:text-4xl font-bold text-blue-900 mb-2">$500K</h3>
+        <p class="text-lg font-semibold mb-1">Saved Annually</p>
+        <p class="text-gray-600 text-sm">Saved in cloud and infrastructure costs by moving AI fully on-device.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl p-6 flex items-start space-x-4 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <img src="public/vectori414-5h3e.svg" alt="Hospital Icon" title="Hospital Icon" class="w-12 h-12 flex-shrink-0">
+      <div>
+        <h3 class="text-3xl lg:text-4xl font-bold text-blue-900 mb-2">40%</h3>
+        <p class="text-lg font-semibold mb-1">Reduction in Visits</p>
+        <p class="text-gray-600 text-sm">Fewer in-person appointments needed—thanks to accurate remote assessments.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl p-6 flex items-start space-x-4 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <img src="public/vectori414-itjl.svg" alt="Stopwatch Icon" title="Stopwatch Icon" class="w-12 h-15 flex-shrink-0">
+      <div>
+        <h3 class="text-3xl lg:text-4xl font-bold text-blue-900 mb-2">3x</h3>
+        <p class="text-lg font-semibold mb-1">Faster Assessments</p>
+        <p class="text-gray-600 text-sm">AI-based evaluations are 3x faster than manual assessments—no compromise on accuracy.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl p-6 flex items-start space-x-4 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <img src="public/vectori414-3zra.svg" alt="Smiley Face Icon" title="Smiley Face Icon" class="w-12 h-12 flex-shrink-0">
+      <div>
+        <h3 class="text-3xl lg:text-4xl font-bold text-blue-900 mb-2">90%</h3>
+        <p class="text-lg font-semibold mb-1">Patient Satisfaction</p>
+        <p class="text-gray-600 text-sm">Patients found remote care more flexible, convenient, and trustworthy.</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ================= REVIEW SECTION ================= -->
+<hr class="my-12 border-t border-gray-200" />
+
+<section id="patient-experience" class="py-20 px-6 lg:px-20 bg-gray-50">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl lg:text-4xl font-bold tracking-wide text-gray-900">
+      PATIENT EXPERIENCE
+    </h2>
+    <p class="text-gray-600 mt-2">How we make a difference</p>
+  </div>
+
+  <div class="flex flex-col md:flex-row md:flex-nowrap overflow-x-auto gap-8 lg:gap-12 pb-6">
+
+    <div class="flex-shrink-0 w-full md:w-[280px] lg:w-[320px] p-6 rounded-xl border border-gray-200 shadow-sm bg-cyan hover:shadow-lg transition-shadow duration-300">
+      <div class="flex items-center mb-4 space-x-1">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-g6y9.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+      </div>
+      <p class="text-black-700 text-sm font-semibold leading-relaxed mb-4">
+        As a mom, I barely have time to rest. This solution let me do therapy while watching my kids — no travel, no stress, and full support with instant feedback.
+      </p>
+      <div class="text-blue-900">
+        <p class="font-semibold">Neha S.</p>
+        <p class="text-black-500 ">Busy Mom with Knee Rehab</p>
+      </div>
+    </div>
+
+    <div class="flex-shrink-0 w-full md:w-[280px] lg:w-[320px] p-6 rounded-xl border border-gray-200 shadow-sm bg-white hover:shadow-lg transition-shadow duration-300">
+      <div class="flex items-center mb-4 space-x-1">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-gt.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+      </div>
+      <p class="text-black-700 text-sm font-semibold leading-relaxed mb-4">
+        After COVID, even a clinic visit felt risky. This app became my lifeline. It watched my movements like a coach and gave me confidence I was doing things right — all from home.
+      </p>
+      <div class="text-blue-900">
+        <p class="font-semibold">Ananya R.</p>
+        <p class="text-black-500 ">Post-COVID Recovery</p>
+      </div>
+    </div>
+
+    <div class="flex-shrink-0 w-full md:w-[280px] lg:w-[320px] p-6 rounded-xl border border-gray-200 shadow-sm bg-cyan hover:shadow-lg transition-shadow duration-300">
+      <div class="flex items-center mb-4 space-x-1">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-g6y9.svg" alt="Star" class="h-5 w-5 text-gray-400">
+      </div>
+      <p class="text-black-700 text-sm font-semibold leading-relaxed mb-4">
+        I always ignored my posture until the pain got worse. This AI app helped me correct my exercises without needing weekly appointments. It was like having a physiotherapist in my pocket.
+      </p>
+      <div class="text-blue-900">
+        <p class="font-semibold">Ravi M.</p>
+        <p class="text-black-500">Office Worker with Back Pain</p>
+      </div>
+    </div>
+
+    <div class="flex-shrink-0 w-full md:w-[280px] lg:w-[320px] p-6 rounded-xl border border-gray-200 shadow-sm bg-white hover:shadow-lg transition-shadow duration-300">
+      <div class="flex items-center mb-4 space-x-1">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-g6y9.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+      </div>
+      <p class="text-black-700 text-sm font-semibold leading-relaxed mb-4">
+        Living with chronic pain means every small improvement matters. With this app, I don’t have to rely on guesswork. I feel heard, seen, and supported — finally.
+      </p>
+      <div class="text-blue-900">
+        <p class="font-semibold">Meena P.</p>
+        <p class="text-black-500">Chronic Pain Management</p>
+      </div>
+    </div>
+
+    <div class="flex-shrink-0 w-full md:w-[280px] lg:w-[320px] p-6 rounded-xl border border-gray-200 shadow-sm bg-cyan hover:shadow-lg transition-shadow duration-300">
+      <div class="flex items-center mb-4 space-x-1">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+      </div>
+      <p class="text-black-700 text-sm font-semibold leading-relaxed mb-4">
+        I had ACL surgery and couldn't afford regular clinic visits. The AI helped track my progress and gave me detailed reports that my doctor could use right away.
+      </p>
+      <div class="text-blue-900">
+        <p class="font-semibold">Aliya B.</p>
+        <p class="text-black-500">ACL Surgery Recovery</p>
+      </div>
+    </div>
+
+    <div class="flex-shrink-0 w-full md:w-[280px] lg:w-[320px] p-6 rounded-xl border border-gray-200 shadow-sm bg-white hover:shadow-lg transition-shadow duration-300">
+      <div class="flex items-center mb-4 space-x-1">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-1pgf.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+        <img src="public/star4142-gt.svg" alt="Star" class="h-5 w-5 text-yellow-400">
+      </div>
+      <p class="text-black-700 text-sm font-semibold leading-relaxed mb-4">
+        I was nervous about using tech at my age, but it was so easy. It showed me when I moved wrong and guided me gently. I feel more independent now.
+      </p>
+      <div class="text-blue-900">
+        <p class="font-semibold">Suresh K.</p>
+        <p class="text-black-500">Senior Citizen</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER SECTION ================= -->
+<hr class="my-12 border-t border-gray-200" />
+
+<section id="cta" class="bg-white py-20 px-6 lg:px-20 text-center">
+  <p class="text-gray-600 mb-2 font-semibold">LET'S BUILD</p>
+  <h2 class="text-3xl lg:text-4xl font-bold mb-6">Ready to Build AI That Heals ?</h2>
+  <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+    Let's explore how Codenscious.ai can bring AI-driven innovation to your healthcare workflow.
+  </p>
+
+  <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+    <button class="w-full sm:w-auto bg-blue-900 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-800 transition">
+      Book a demo
+    </button>
+    <button class="w-full sm:w-auto bg-transparent border border-gray-900 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+      Get in Touch
+    </button>
+  </div>
+</section>
+
+<footer id="footer" class="bg-gray-900 text-gray-400 py-16 px-6 lg:px-20">
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div class="col-span-full lg:col-span-1 text-center lg:text-left mb-8 lg:mb-0">
+      <div class="flex items-center justify-center lg:justify-start space-x-2 mb-4"> 
+        <img src="public/Screenshot 2025-09-16 203156.png" alt="Codenscious AI Logo" class="h-15 w-20"> 
+        <h3 class="text-2xl font-bold text-white">Codenscious.ai</h3>
+      </div>
+      <p class="text-sm font-semibold">
+        "Crafting innovative digital experiences that transform businesses."
+      </p>
+    </div>
+
+    <div class="text-center lg:text-left">
+      <h4 class="font-semibold text-white text-xl mb-4">Information</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+        <li><a href="#" class="hover:text-white transition">Events</a></li>
+        <li><a href="#" class="hover:text-white transition">Testimonials</a></li>
+        <li><a href="#" class="hover:text-white transition">More Details</a></li>
+        <li><a href="#" class="hover:text-white transition">Blogs</a></li>
+      </ul>
+    </div>
+
+    <div class="text-center lg:text-left">
+      <h4 class="font-semibold text-white text-xl mb-4">Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white transition">Services</a></li>
+        <li><a href="#" class="hover:text-white transition">Support</a></li>
+        <li><a href="#" class="hover:text-white transition">Terms & Conditions</a></li>
+        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="text-center lg:text-left">
+      <h4 class="font-semibold text-white text-xl mb-4">Subscribe</h4>
+      <p class="text-sm mb-4">
+        Subscribe to our newsletter for upcoming news!!
+      </p>
+      <form class="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center space-y-2 sm:space-y-0 lg:space-y-2 xl:space-y-0 sm:space-x-2 lg:space-x-0 xl:space-x-2">
+        <input type="email" placeholder="Enter Your Email" class="w-full px-4 py-2 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button type="submit" class="w-full sm:w-auto bg-blue-900 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-800 transition">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <hr class="border-t border-gray-700 my-12" />
+  <div class="flex flex-col lg:flex-row items-center justify-between text-gray-500">
+    <div class="flex space-x-4 mb-4 lg:mb-0">
+        <p>Contact Us : </p> 
+      <a href="#" aria-label="Email" class="hover:text-white transition"> 
+        <img src="public/email-8-svgrepo-com.svg" alt="Email Icon" title="Email Icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> 
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13h9a2 2 0 002-2V5a2 2 0 00-2-2H3a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
+      </a>
+      <a href="#" aria-label="Phone" class="hover:text-white transition"> 
+        <img src="public/dialer-svgrepo-com.svg" alt="Phone Icon" title="Phone Icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> 
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.125l-2.618 1.688a2 2 0 00-.77 2.802l.77.77a2 2 0 002.802-.77l1.687-2.618a1 1 0 011.125-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+        </svg>
+      </a>
+      <a href="#" aria-label="Twitter" class="hover:text-white transition"> 
+        <img src="public/twitter-svgrepo-com (1).svg" alt="Twitter Icon" title="Twitter Icon" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"> 
+          <path d="M22.46 6.37a4.92 4.92 0 01-1.35.37 2.45 2.45 0 002.13-1.22 4.93 4.93 0 01-1.46.55 2.45 2.45 0 00-4.17 2.24A6.98 6.98 0 015.68 5.75a2.45 2.45 0 00.76 3.28 2.45 2.45 0 01-1.1-.3v.03a2.45 2.45 0 001.97 2.4A2.45 2.45 0 017 12.63c.68 0 1.35-.07 1.99-.21a2.45 2.45 0 002.28 1.7 4.9 4.9 0 01-3.03 1.05c-.2 0-.41-.01-.6-.05a6.98 6.98 0 007.5 7.97c2.16-1.7 3.99-4.22 4.67-7.25-.01-.3-.02-.6-.02-.9a4.86 4.86 0 001.19-1.24 3.49 3.49 0 01-1.48.4c.59-.36 1.05-.88 1.27-1.45z"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="Instagram" class="hover:text-white transition"> 
+        <img src="public/instagram-svgrepo-com.svg" alt="Instagram Icon" title="Instagram Icon" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"> 
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.2 2.6c-.66 0-1.2.54-1.2 1.2s.54 1.2 1.2 1.2 1.2-.54 1.2-1.2-.54-1.2-1.2-1.2zm-.11 3.51c-2.31 0-4.2 1.89-4.2 4.2s1.89 4.2 4.2 4.2 4.2-1.89 4.2-4.2-1.89-4.2-4.2-4.2zm-2.1 4.2c0 1.16.94 2.1 2.1 2.1s2.1-.94 2.1-2.1-.94-2.1-2.1-2.1-2.1.94-2.1 2.1z"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="Facebook" class="hover:text-white transition"> 
+        <img src="public/facebook-svgrepo-com.svg" alt="Facebook Icon" title="Facebook Icon" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" title="Facebook Icon"> 
+          <path d="M22.67 11.37a.64.64 0 01-.19-.48v-2.14a.64.64 0 01.19-.48c.18-.18.4-.29.66-.29.26 0 .49.11.66.29a.65.65 0 01.19.48v2.14a.64.64 0 01-.19.48c-.17.18-.4.29-.66.29-.26 0-.49-.11-.66-.29zM19.78 6.45a.65.65 0 01-.19-.48v-2.14a.64.64 0 01.19-.48c.18-.18.4-.29.66-.29.26 0 .49.11.66.29a.65.65 0 01.19.48v2.14a.64.64 0 01-.19.48c-.17.18-.4.29-.66.29-.26 0-.49-.11-.66-.29zM16.89 4.77a.64.64 0 01-.19-.48V2.15a.64.64 0 01.19-.48c.18-.18.4-.29.66-.29.26 0 .49.11.66.29a.65.65 0 01.19.48v2.14a.64.64 0 01-.19.48c-.17.18-.4.29-.66.29-.26 0-.49-.11-.66-.29zM14 4.77a.64.64 0 01-.19-.48V2.15a.64.64 0 01.19-.48c.18-.18.4-.29.66-.29.26 0 .49.11.66.29a.65.65 0 01.19.48v2.14a.64.64 0 01-.19.48c-.17.18-.4.29-.66.29-.26 0-.49-.11-.66-.29zM11.11 6.45a.65.65 0 01-.19-.48v-2.14a.64.64 0 01.19-.48c.18-.18.4-.29.66-.29.26 0 .49.11.66.29a.65.65 0 01.19.48v2.14a.64.64 0 01-.19.48c-.17.18-.4.29-.66.29-.26 0-.49-.11-.66-.29zM8.22 8.13a.64.64 0 01-.19-.48v-2.14a.64.64 0 01.19-.48c.18-.18.4-.29.66-.29.26 0 .49.11.66.29a.65.65 0 01.19.48v2.14a.64.64 0 01-.19.48c-.17.18-.4.29-.66.29-.26 0-.49-.11-.66-.29zM5.33 9.81a.65.65 0 01-.19-.48v-2.14a.64.64 0 01.19-.48c.18-.18.4-.29.66-.29.26 0 .49.11.66.29a.65.65 0 01.19.48v2.14a.64.64 0 01-.19.48c-.17.18-.4.29-.66.29-.26 0-.49-.11-.66-.29zM2.44 11.49a.64.64 0 01-.19-.48v-2.14a.64.64 0 01.19-.48c.18-.18.4-.29.66-.29.26 0 .49.11.66.29a.65.65 0 01.19.48v2.14a.64.64 0 01-.19.48c-.17.18-.4.29-.66.29-.26 0-.49-.11-.66-.29z"/>
+        </svg>
+      </a>
+    </div>
+    <div class="text-sm text-center lg:text-right">
+      © 2025 Codenscious.ai. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
 </html>
