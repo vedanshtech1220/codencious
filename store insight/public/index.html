@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codenscious.ai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans antialiased bg-gray-50 text-gray-900">
+
+  <!-- ===== Navbar ===== -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center space-x-2">
+        <img src="logo.jpeg" alt="logo" class="w-10 h-10">
+        <span class="text-xl font-semibold">Codenscious.ai</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-8 text-gray-800 font-medium">
+        <a href="#" class="hover:text-black">Projects</a>
+        <a href="#" class="hover:text-black">Products</a>
+        <a href="#" class="hover:text-black">Services</a>
+        <a href="#" class="hover:text-black">About Us</a>
+        <a href="#" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800">Join Us</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-800 focus:outline-none">☰</button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow px-6 py-4 space-y-4">
+      <a href="#" class="block">Projects</a>
+      <a href="#" class="block">Products</a>
+      <a href="#" class="block">Services</a>
+      <a href="#" class="block">About Us</a>
+      <a href="#" class="block bg-black text-white px-4 py-2 rounded-lg font-semibold text-center">Join Us</a>
+    </div>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="relative h-screen flex items-center justify-center text-center md:text-left pt-20">
+    <div class="absolute inset-0 bg-[url('image192672-vhre-800h.png')] bg-cover bg-center opacity-100"></div>
+    <div class="absolute inset-0 bg-white/40"></div>
+    <div class="relative max-w-4xl mx-auto px-6 z-10">
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+        Unlocking In-Store Intelligence <br class="hidden md:block">
+        with AI-Powered Pre-Sales Insights
+      </h1>
+      <p class="mt-4 text-lg md:text-xl text-gray-800">
+        Discover how Codenscious.ai and Eyenet Chile turned shopping behavior into measurable growth.
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-4">
+        <a href="#" class="px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow hover:bg-black">
+          Explore the Solution
+        </a>
+        <a href="#" class="px-6 py-3 border border-gray-800 bg-white text-gray-900 font-semibold rounded-lg shadow hover:bg-gray-100">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sales Analytics Section ===== -->
+  <section class="relative py-16 px-6 md:px-12 lg:px-20">
+    <div class="absolute inset-0 bg-[url('image14a48a50648b4b66a774552698d1c0e722694-w5vw-700h.png')] bg-cover bg-center opacity-100"></div>
+    <div class="absolute inset-0 bg-white/40"></div>
+    <div class="relative max-w-6xl mx-auto text-center z-10">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+        The Blind Spot in Traditional Sales Analytics
+      </h2>
+      <p class="mt-4 text-gray-700 text-base md:text-lg max-w-3xl mx-auto">
+        Even with digital receipts and POS data, brands miss how customers move, browse, and engage before purchase.
+      </p>
+      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+          <div class="text-5xl mb-4">🧾</div>
+          <h3 class="text-xl font-semibold text-gray-900">Traditional Analytics</h3>
+          <p class="mt-3 text-gray-600">
+            Sales receipts only reflect completed transactions — missing pre-purchase behavior.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+          <div class="text-5xl mb-4">📊</div>
+          <h3 class="text-xl font-semibold text-gray-900">Incomplete Customer Insight</h3>
+          <p class="mt-3 text-gray-600">
+            Without pre-sales data, marketing and layout strategies rely on assumptions, not reality.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+          <div class="text-5xl mb-4">🚶</div>
+          <h3 class="text-xl font-semibold text-gray-900">Missed Movement Data</h3>
+          <p class="mt-3 text-gray-600">
+            No visibility into how customers explore the store or interact with products.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI Features Section ===== -->
+  <section class="relative py-16 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-gray-100 to-gray-200">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+        AI That Sees What Sales Reports Can’t
+      </h2>
+      <p class="mt-4 text-gray-700 text-base md:text-lg max-w-3xl mx-auto">
+        Go beyond transactions. Our AI captures real-time customer behavior to drive smarter sales — before they even check out.
+      </p>
+      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+          <div class="text-5xl mb-4">📹</div>
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900">Track Customer Movement</h3>
+          <p class="mt-3 text-gray-600">Visualize foot traffic through AI-powered cameras.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+          <div class="text-5xl mb-4">🧲</div>
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900">Measure Product Engagement</h3>
+          <p class="mt-3 text-gray-600">See how shoppers engage with products before purchase.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+          <div class="text-5xl mb-4">🔗</div>
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900">Merge Pre and Post-Sales Data</h3>
+          <p class="mt-3 text-gray-600">Link browsing to purchases for full-funnel insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Results Section ===== -->
+  <section class="relative py-16 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-gray-200 to-gray-300">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-base md:text-lg font-medium text-gray-800">
+        How Eyenet Chile & Codenscious.ai Turned AI into Tangible Results
+      </h2>
+      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+          <p class="text-sm text-gray-600 font-medium mb-2">Step 1</p>
+          <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-4">
+            <span class="text-3xl">🔍</span>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900">Smarter Strategy</h3>
+          <p class="mt-3 text-gray-600">
+            Real-time heatmaps revealed blind spots — and optimized product positioning.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+          <p class="text-sm text-gray-600 font-medium mb-2">Step 2</p>
+          <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-4">
+            <span class="text-3xl">🚀</span>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900">Boosted Engagement</h3>
+          <p class="mt-3 text-gray-600">
+            Customers spent more time browsing — and converted faster.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+          <p class="text-sm text-gray-600 font-medium mb-2">Step 3</p>
+          <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-4">
+            <span class="text-3xl">📈</span>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900">Revenue Uplift</h3>
+          <p class="mt-3 text-gray-600">
+            In-store sales grew significantly after AI-backed changes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA & Footer ===== -->
+  <section class="bg-gradient-to-b from-gray-300 to-gray-700 text-center py-20 px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+      Bring AI to Your <span class="text-gray-700">Storefront</span>
+    </h2>
+    <p class="mt-4 text-gray-800 text-base md:text-lg max-w-2xl mx-auto">
+      Let’s talk about how Codenscious.ai can transform your retail performance.
+    </p>
+    <div class="mt-8">
+      <a href="#" class="inline-block bg-white text-black font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-200 transition">
+        Book a Demo
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-300 pt-12 pb-6 px-6 md:px-16">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div>
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
+            <span class="text-white font-bold">&lt;/&gt;</span>
+          </div>
+                  <img src="logo2.png" alt="logo" class="w-10 h-10">
+
+          <h3 class="text-lg font-semibold text-white">Codenscious.ai</h3>
+        </div>
+        <p class="mt-4 text-sm">
+          Crafting innovative digital experiences that transform businesses.
+        </p>
+        <div class="mt-6">
+          <h4 class="text-white font-semibold">Contact Us</h4>
+          <div class="flex space-x-4 mt-3">
+            <a href="#" class="text-xl hover:text-white">✉️</a>
+            <a href="#" class="text-xl hover:text-white">📞</a>
+          </div>
+        </div>
+        <div class="flex space-x-4 mt-6">
+          <a href="#" class="hover:text-white">🐦</a>
+          <a href="#" class="hover:text-white">📘</a>
+          <a href="#" class="hover:text-white">📸</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Information</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white">About Us</a></li>
+          <li><a href="#" class="hover:text-white">Events</a></li>
+          <li><a href="#" class="hover:text-white">Testimonials</a></li>
+          <li><a href="#" class="hover:text-white">More Details</a></li>
+          <li><a href="#" class="hover:text-white">Blogs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white">Services</a></li>
+          <li><a href="#" class="hover:text-white">Support</a></li>
+          <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Subscribe</h4>
+        <p class="text-sm mb-4">Subscribe to our newsletter for upcoming news!</p>
+        <input type="email" placeholder="Enter Your Email"
+          class="w-full p-3 rounded-lg text-black mb-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <button class="w-full border border-white text-white py-2 rounded-lg hover:bg-white hover:text-black transition">
+          Subscribe
+        </button>
+      </div>
+    </div>
+    <div class="text-center text-sm text-gray-500 mt-12 border-t border-gray-700 pt-6">
+      © 2025 Codenscious.ai. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- ===== Mobile Menu Script ===== -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
