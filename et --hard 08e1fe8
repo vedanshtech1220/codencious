@@ -1,0 +1,20 @@
+[33m82326bb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: pull origin main: Fast-forward
+[33m8ef9eef[m HEAD@{1}: pull origin main: Fast-forward
+[33m08e1fe8[m HEAD@{2}: checkout: moving from replaced_store to main
+[33mb52a329[m[33m ([m[1;31morigin/replaced_store[m[33m, [m[1;32mreplaced_store[m[33m)[m HEAD@{3}: commit: replaced store insight
+[33m08e1fe8[m HEAD@{4}: checkout: moving from main to replaced_store
+[33m08e1fe8[m HEAD@{5}: pull origin main: Fast-forward
+[33m72bce5b[m HEAD@{6}: pull origin main: Fast-forward
+[33m48a5364[m HEAD@{7}: checkout: moving from Image_issue to main
+[33mfbaae8c[m[33m ([m[1;31morigin/Image_issue[m[33m, [m[1;32mImage_issue[m[33m)[m HEAD@{8}: commit: Solve the image render issue
+[33me7653c3[m[33m ([m[1;32mSwap[m[33m)[m HEAD@{9}: checkout: moving from Swap to Image_issue
+[33me7653c3[m[33m ([m[1;32mSwap[m[33m)[m HEAD@{10}: pull origin main: Fast-forward
+[33m5a386b9[m[33m ([m[1;31morigin/Swap[m[33m, [m[1;32mOur_products[m[33m)[m HEAD@{11}: checkout: moving from Our_products to Swap
+[33m5a386b9[m[33m ([m[1;31morigin/Swap[m[33m, [m[1;32mOur_products[m[33m)[m HEAD@{12}: commit: Swap Cards
+[33m4db1058[m HEAD@{13}: pull origin main: Fast-forward
+[33m6b2e350[m HEAD@{14}: commit: Added products logo and description
+[33m76865fc[m[33m ([m[1;31morigin/footer_logo[m[33m, [m[1;32mfooter_logo[m[33m)[m HEAD@{15}: checkout: moving from footer_logo to Our_products
+[33m76865fc[m[33m ([m[1;31morigin/footer_logo[m[33m, [m[1;32mfooter_logo[m[33m)[m HEAD@{16}: commit: replaced footer logo
+[33m48a5364[m HEAD@{17}: checkout: moving from main to footer_logo
+[33m48a5364[m HEAD@{18}: pull origin main: Fast-forward
+[33me001447[m HEAD@{19}: clone: from https://github.com/vedanshtech1220/codencious.git
