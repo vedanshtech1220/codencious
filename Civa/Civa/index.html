@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civa - Smarter Data, Smarter Decisions</title> 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom gradient for hero section */
+    .hero-gradient {
+      background: linear-gradient(90deg, #0c1424, #1a2740);
+    }
+    /* Custom gradients for stat boxes */
+    .stat-gradient-blue {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+    }
+    .stat-gradient-purple {
+      background: linear-gradient(135deg, #5f72ff, #9b23ea);
+    }
+    .stat-gradient-pink {
+      background: linear-gradient(135deg, #ff4d79, #b400fb);
+    }
+    .stat-gradient-green {
+      background: linear-gradient(135deg, #00e676, #00c853);
+    }
+    /* Hamburger menu animation */
+    #hamburger-menu.active .line-1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    #hamburger-menu.active .line-2 {
+      opacity: 0;
+    }
+    #hamburger-menu.active .line-3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+    .hamburger-line {
+      transition: all 0.3s ease-in-out;
+    }
+    .bg-\[\#0c0c0c\] {
+        background-color: #0c0c0c;
+    }
+    
+    @media (max-width: 767px) {
+      .mobile-col {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+      }
+      .mobile-col .md\:text-left {
+          text-align: center;
+      }
+      .mobile-col .md\:items-start {
+          align-items: center;
+      }
+      .mobile-col .md\:flex-row {
+          flex-direction: column;
+      }
+      .mobile-col .md\:space-x-12 {
+          justify-content: center;
+      }
+      .mobile-col .md\:mb-0 {
+          margin-bottom: 1.5rem;
+      }
+  }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+
+<nav class="flex justify-between items-center p-2 md:p-4 lg:p-6 bg-gray-50 border-b border-gray-200">
+    <div class="hidden md:flex flex-grow justify-between items-center">
+        <div>
+            <img src="assets/3d21b564d5b092ec14eee63ff155ead3f327024e (1).png" alt="CIVA" class="max-w-[120px] h-auto">
+        </div>
+        
+        <div class="flex gap-4 lg:gap-8 text-sm md:text-base lg:text-lg font-semibold">
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Features</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Product</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Pricing</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+        </div>
+        
+        <div class="flex items-center gap-7">
+            <a href="#" class="text-gray-700 hover:text-gray-900 font-medium">Sign In</a>
+            <a href="#" class="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-4 py-2 rounded-md font-bold hover:from-blue-500 hover:to-blue-700 transition-colors">Get Started</a>
+        </div>
+    </div>
+    
+    <div class="md:hidden flex justify-between items-center w-full">
+        <div>
+            <img src="assets/3d21b564d5b092ec14eee63ff155ead3f327024e (1).png" alt="CIVA" class="max-w-[120px] h-auto">
+        </div>
+        
+        <button id="hamburger-menu" class="flex flex-col align-items-center justify-around h-6 w-8 relative z-50">
+            <span class="hamburger-line line-1 block h-0.5 w-full bg-gray-700 rounded-lg"></span>
+            <span class="hamburger-line line-2 block h-0.5 w-full bg-gray-700 rounded-lg"></span>
+            <span class="hamburger-line line-3 block h-0.5 w-full bg-gray-700 rounded-lg"></span>
+        </button>
+    </div>
+</nav>
+
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out transform -translate-x-full md:hidden">
+    <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl font-bold">
+      <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Features</a>
+      <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Product</a>
+      <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Pricing</a>
+      <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+      <a href="#" class="text-gray-700 hover:text-gray-900">Sign In</a>
+      <a href="#" class="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-3 rounded-md">Get Started</a>
+    </div>
+  </div>
+
+  <header class="hero-gradient flex flex-col md:flex-row items-center justify-between px-6 py-12 md:py-20 text-white">
+    
+    <div class="w-full md:w-1/2 p-4 md:p-8">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+        Smarter Data,<br>
+        <span class="text-blue-400">Smarter Decisions</span>
+      </h1>
+      <p class="text-sm md:text-base lg:text-lg leading-relaxed mb-6 max-w-lg">
+        Transform your business with Civa's intelligent analytics and automation platform. 
+        Make faster, data-driven decisions with real-time insights and streamlined workflows.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#" class="bg-blue-500 text-white px-6 py-3 rounded-md font-bold text-center hover:bg-blue-600 transition-colors">Start Free Trial</a>
+        <a href="#" class="bg-gray-800 text-white px-6 py-3 rounded-md font-bold text-center hover:bg-gray-700 transition-colors">Watch Demo</a>
+      </div>
+    </div>
+    
+    <div class="w-full md:w-1/2 p-4 md:p-8 mt-8 md:mt-0 text-center">
+      <img src="assets/cc39a5f3607c489d225f64f6fd70550cf6515a83.jpg" alt="Analytics Dashboard" class="max-w-full h-auto rounded-xl shadow-lg md:shadow-2xl">
+    </div>
+  </header>
+
+  <section class="py-12 md:py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+      Powerful Features for Modern Business
+    </h2>
+    <p class="text-base md:text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+      Unlock the full potential of your data with our comprehensive suite of analytics 
+      and automation tools.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-6 px-4">
+      <div class="flex-1 min-w-[280px] max-w-[340px] bg-blue-50 rounded-xl p-6 text-left shadow-sm hover:shadow-lg transition-shadow">
+        <div class="text-3xl mb-4"><img src="assets/Background (2).png"></div>
+        <h3 class="text-xl font-bold mb-2 text-gray-900">Advanced Analytics</h3>
+        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+          Transform raw data into actionable insights with our powerful analytics engine. 
+          Real-time processing and intelligent algorithms deliver the clarity you need.
+        </p>
+        <a href="#" class="text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">Learn More &rarr;</a>
+      </div>
+
+      <div class="flex-1 min-w-[280px] max-w-[340px] bg-blue-50 rounded-xl p-6 text-left shadow-sm hover:shadow-lg transition-shadow">
+        <div class="text-3xl mb-4"><img src="assets/Background (1).png"></div>
+        <h3 class="text-xl font-bold mb-2 text-gray-900">Automation Tools</h3>
+        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+          Reduce manual work and eliminate errors with smart process automation. 
+          Streamline workflows and focus on what matters most to your business.
+        </p>
+        <a href="#" class="text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">Learn More &rarr;</a>
+      </div>
+
+      <div class="flex-1 min-w-[280px] max-w-[340px] bg-blue-50 rounded-xl p-6 text-left shadow-sm hover:shadow-lg transition-shadow">
+        <div class="text-2xl mb-4"><img src="assets/Background.png"></div>
+        <h3 class="text-xl font-bold mb-2 text-gray-900">Intuitive Dashboards</h3>
+        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+          Monitor and manage key metrics with our clear, visual interface. 
+          Customizable dashboards that adapt to your specific business needs.
+        </p>
+        <a href="#" class="text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">Learn More &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-20 bg-gray-50">
+    <div class="text-center max-w-4xl mx-auto mb-12 px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">See Civa in Action</h2>
+      <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+        Experience the power of intelligent analytics through our intuitive interface and comprehensive dashboards.
+      </p>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto px-4">
+      
+      <div class="w-full md:w-1/2 p-4 md:pr-12">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Real-Time Analytics Dashboard</h3>
+        <p class="text-base text-gray-600 leading-relaxed mb-6">
+          Monitor your business metrics in real-time with our comprehensive dashboard. Track KPIs, identify trends, and make informed decisions with live data visualization.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-center">
+            <span class="text-green-500 text-lg mr-2"><img src="assets/Background (3).png"></span>
+            <span class="text-gray-600">Live data synchronization</span>
+          </li>
+          <li class="flex items-center">
+            <span class="text-green-500 text-lg mr-2"><img src="assets/Background (3).png"></span>
+            <span class="text-gray-600">Customizable widgets and layouts</span>
+          </li>
+          <li class="flex items-center">
+            <span class="text-green-500 text-lg mr-2"><img src="assets/Background (3).png"></span>
+            <span class="text-gray-600">Advanced filtering and drill-down</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w-full md:w-1/2 p-4 mt-8 md:mt-0">
+        <img src="assets/b1626b0b33f63f739f9097b5c41ce2ad957cd56a.jpg" alt="Analytics Dashboard" class="w-full rounded-xl shadow-lg md:shadow-2xl">
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-20 bg-gray-50 text-center">
+    <div class="max-w-4xl mx-auto mb-12 px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Transform Your Business Operations</h2>
+      <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+        Discover how Civa improves efficiency and empowers better decision-making across your organization.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6 px-4">
+      
+      <div class="flex-1 basis-48 max-w-[220px]">
+        <div class="text-2xl font-bold text-white stat-gradient-blue p-4 rounded-xl mb-4">
+          85%
+        </div>
+        <div class="font-bold text-gray-900 mb-2">Faster Decisions</div>
+        <div class="text-sm text-gray-600">
+          Reduce decision-making time with real-time insights and automated reporting.
+        </div>
+      </div>
+
+      <div class="flex-1 basis-48 max-w-[220px]">
+        <div class="text-2xl font-bold text-white stat-gradient-purple p-4 rounded-xl mb-4">
+          60%
+        </div>
+        <div class="font-bold text-gray-900 mb-2">Cost Reduction</div>
+        <div class="text-sm text-gray-600">
+          Lower operational costs through intelligent automation and process optimization.
+        </div>
+      </div>
+
+      <div class="flex-1 basis-48 max-w-[220px]">
+        <div class="text-2xl font-bold text-white stat-gradient-pink p-4 rounded-xl mb-4">
+          99%
+        </div>
+        <div class="font-bold text-gray-900 mb-2">Accuracy Rate</div>
+        <div class="text-sm text-gray-600">
+          Eliminate human errors with automated data processing and validation.
+        </div>
+      </div>
+
+      <div class="flex-1 basis-48 max-w-[220px]">
+        <div class="text-2xl font-bold text-white stat-gradient-green p-4 rounded-xl mb-4">
+          24/7
+        </div>
+        <div class="font-bold text-gray-900 mb-2">Monitoring</div>
+        <div class="text-sm text-gray-600">
+          Continuous monitoring and alerting to keep your business running smoothly.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-12 md:py-20 bg-gray-50 text-center">
+    <div class="max-w-4xl mx-auto mb-12 px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Trusted by Industry Leaders</h2>
+      <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+        See how organizations across industries are transforming their operations with Civa.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6 px-4">
+      
+      <div class="flex-1 basis-72 max-w-sm bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow text-left">
+        <div class="flex items-center mb-4">
+          <img src="assets/dc12a1b786615901f2ae100795494d4841d1c1dc.jpg" alt="Michael Chen" class="w-10 h-10 rounded-full mr-3">
+          <div>
+            <div class="font-bold text-gray-900">Michael Chen</div>
+            <div class="text-sm text-gray-600">CTO, TechFlow Solutions</div>
+          </div>
+        </div>
+        <div class="text-base font-semibold text-gray-800 mb-4">
+          "Civa transformed our data analytics capabilities. We're now making decisions 3x faster with complete confidence in our insights."
+        </div>
+        <div class="text-yellow-400 text-xl">★★★★★</div>
+      </div>
+
+      <div class="flex-1 basis-72 max-w-sm bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow text-left">
+        <div class="flex items-center mb-4">
+          <img src="assets/Gemini_Generated_Image_4ep9dz4ep9dz4ep9.png" alt="Sarah Rodriguez" class="w-10 h-10 rounded-full mr-3">
+          <div>
+            <div class="font-bold text-gray-900">Sarah Rodriguez</div>
+            <div class="text-sm text-gray-600">Operations Director, LogiCorp</div>
+          </div>
+        </div>
+        <div class="text-base font-semibold text-gray-800 mb-4">
+          "The automation features have revolutionized our workflow. We’ve reduced manual processing time by 70% while improving accuracy."
+        </div>
+        <div class="text-yellow-400 text-xl">★★★★★</div>
+      </div>
+
+      <div class="flex-1 basis-72 max-w-sm bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow text-left">
+        <div class="flex items-center mb-4">
+          <img src="assets/4de4fafcc68555e89769761cec8ddfd1022b2218.jpg" alt="David Park" class="w-10 h-10 rounded-full mr-3">
+          <div>
+            <div class="font-bold text-gray-900">David Park</div>
+            <div class="text-sm text-gray-600">Finance Manager, UrbanTech</div>
+          </div>
+        </div>
+        <div class="text-base font-semibold text-gray-800 mb-4">
+          "Civa's intuitive dashboards give us real-time visibility into our financial metrics. It's like having a crystal ball for our business."
+        </div>
+        <div class="text-yellow-400 text-xl">★★★★★</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#0c0c0c] text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Subscribe to our newsletter</h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center max-w-2xl mx-auto">
+                <div class="relative w-full sm:w-3/4 mb-4 sm:mb-0 sm:mr-4">
+                    <input type="email" placeholder="Enter your email address" class="w-full bg-gray-200 text-gray-800 py-4 pl-12 pr-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 placeholder-gray-500">
+                    <img src="assets/email-8-svgrepo-com.svg" alt="Email Icon" class="h-6 w-6 absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-500">
+                </div>
+                <button class="w-full sm:w-auto bg-black text-white py-4 px-8 rounded-lg font-bold hover:bg-gray-800 transition-colors">
+                    Get Started
+                </button>
+            </div>
+        </div>
+
+        <hr class="border-gray-800 my-16">
+
+        <div class="flex flex-col md:flex-row md:justify-between align-items-center md:items-center mobile-col">
+            <div class="flex flex-col mb-8 md:mb-0 md:flex-row md:items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="assets/746debff1511f56d0f61bc5a4c9636294efbd738.png" alt="Codenscious Logo" class="h-20 w-25">
+                    <div class="flex flex-col">
+                        <h2 class="text-2xl font-semibold">Codenscious</h2>
+                        <p class="text-sl">The Code Conscious</p>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-0 md:ml-24">
+                    <p class="max-w-xs">IT Park, 28, Indore - Dhar Rd, Sinhasa, Indore, Madhya Pradesh 452009</p>
+                    <div class="flex flex-col space-y-4 md:flex-row md:space-x-16 md:space-y-0 mt-8">
+                        <div>
+                            <p class="font-bold">Phone Number</p>
+                            <p class="whitespace-nowrap">1-800-201-1019</p>
+                        </div>
+                        <div>
+                            <p class="font-bold">Email</p>
+                            <p>support@codenscious.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:space-x-12 mt-8 md:mt-0 mobile-col">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold underline mb-2">QUICK LINKS</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">About us</a></li>
+                        <li><a href="#" class="hover:underline text-sm">FAQ</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Contact us</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Blog</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold underline mb-2">SOCIAL</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">Facebook</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Instagram</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Twitter</a></li>
+                        <li><a href="#" class="hover:underline text-sm">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold underline mb-2">LEGAL</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">Terms of service</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+            <p>&copy; 2025 Codenscious. All rights reserved.</p>
+        </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('-translate-x-full');
+      mobileMenu.classList.toggle('translate-x-0');
+    });
+  </script>
+
+</body>
+</html>
