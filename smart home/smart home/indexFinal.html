@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styleFinal.css"> <!-- extra custom css if needed -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+
+
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        
+        <!-- Logo -->
+        <div class="flex items-left font-bold text-xl mr-[20px]">
+          <img src="logo.png" alt="Logo" class="h-16 w-35 mr-2 ">
+          <span class="font-bold text-2xl mr-[20px] mt-4 tracking-wide "  style="text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">Codenscious.ai</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-9">
+          <a href="#" class="hover:text-blue-500">Careers</a>
+          <a href="#" class="hover:text-blue-500">Projects</a>
+          <a href="#" class="hover:text-blue-500">Products</a>
+          <a href="#" class="hover:text-blue-500">Services</a>
+          <a href="#" class="hover:text-blue-500">About Us</a>
+          <a href="#" class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 ">Join Us</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="focus:outline-none">
+            <!-- Hamburger Icon -->
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="menu" class="hidden md:hidden px-4 pb-3 space-y-2">
+      <a href="#" class="block hover:text-blue-500">Careers</a>
+      <a href="#" class="block hover:text-blue-500">Projects</a>
+      <a href="#" class="block hover:text-blue-500">Products</a>
+      <a href="#" class="block hover:text-blue-500">Services</a>
+      <a href="#" class="block hover:text-blue-500">About Us</a>
+      <a href="#" class="block bg-black text-white px-4 py-2 rounded-lg text-center">Join Us</a>
+    </div>
+  </nav>
+
+
+  <section class="bg-white ">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 flex flex-col-reverse lg:flex-row items-center gap-12">
+
+    <!-- Left Content -->
+    <div class="flex-3 text-center lg:text-left mb-28">
+      <h1 class="text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
+        Meet Your Home's <br> New Guardian.
+      </h1>
+      <p class="mt-10 text-black-500 text-2xl   ">
+        Transform your home into a secure, Intelligent <br>heaven with AI-Powered Surveillance and instant <br>mobile control.
+      </p>
+
+      <!-- Buttons -->
+      <div class="mt-11 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+        <!-- iOS Button -->
+        <a href="#"
+          class="flex items-center justify-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+         
+           <img
+                src="public/materialsymbolsdownload7221-x8e.svg"
+                alt="materialsymbolsdownload7221"
+                class="w-10 h-10" viewBox="0 0 24 24"
+              />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 12h16M4 6h16M4 18h16"></path>
+          </svg>
+          <div class="font-bold text-2xl"> Download on IOS</div>
+        </a>
+
+        <!-- Android Button -->
+        <a href="#"
+          class="flex items-center justify-center gap-2 border border-black px-6 py-3 rounded-lg font-semibold text-black hover:bg-gray-100 transition">
+           <img
+                src="public/materialsymbolsdownload7229-pbgd.svg"
+                alt="materialsymbolsdownload7229"
+                class="w-10 h-10" viewBox="0 0 24 24"
+              />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 12h16M4 6h16M4 18h16"></path>
+      </svg>
+           <div class="font-bold text-2xl">Download on Android</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="flex-1 flex justify-center lg:justify-end">
+      <img src="phone.png" alt="App Screenshot" class="w-82 md:w-106 lg:w-[500px] mb-30 mr-25">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Key Features Section -->
+<section id="features" class="py-1 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-10">Key Features</h2>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      
+      <!-- Card 1 -->
+      <div class="bg-gray-800 text-white rounded-xl shadow-lg p-6 text-center hover:scale-105 transition transform duration-300">
+        <div class="text-5xl mb-4">
+          <img
+                src="vector1919-mz0r.svg"
+                alt="materialsymbolsdownload7229"
+                class="w-10 h-10 ml-20 absolute top-7 left-[40px] w-[50px] h-[50px] " viewBox="0 0 24 24"
+              />
+        </div>
+        <h3 class="text-xl font-semibold mt-20">Face Recognition</h3>
+        <p class="text-gray-300 text-sm mt-2">
+          Your home recognizes <br>who belongs—and alerts <br> you when someone doesn’t.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gray-800 text-white rounded-xl shadow-lg p-6 text-center hover:scale-105 transition transform duration-300">
+        <div class="text-5xl mb-4">
+           <img
+                src="vector2019-gkll.svg"
+                alt="materialsymbolsdownload7229"
+                class="w-10 h-10 ml-20 absolute top-7 left-[40px] w-[50px] h-[50px] " viewBox="0 0 24 24"
+              />
+        </div>
+        <h3 class="text-xl font-semibold mt-20">Edge Surveillance</h3>
+        <p class="text-gray-300 text-sm mt-2">
+          AI cameras process motion <br> locally, delivering instant <br> decisions with minimal lag.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gray-800 text-white rounded-xl shadow-lg p-6 text-center hover:scale-105 transition transform duration-300">
+        <div class="text-5xl mb-4">
+          <img src="vector2119-uf3a.svg" alt=""
+          class="w-10 h-10 ml-20 absolute top-7 left-[40px] w-[50px] h-[50px] " viewBox="0 0 24 24">
+        </div>
+        <h3 class="text-xl font-semibold mt-20">Privacy-First <br> Architecture</h3>
+        <p class="text-gray-300 text-sm mt-2">
+          Fully encrypted pipelines <br> ensure your data stays <br> private and protected.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-gray-800 text-white rounded-xl shadow-lg p-6 text-center hover:scale-105 transition transform duration-300">
+        <div class="text-5xl mb-4">
+         <img src="vector2219-7wx.svg" alt=""
+          class="w-10 h-10 ml-20 absolute top-7 left-[40px] w-[50px] h-[50px] " viewBox="0 0 24 24">
+        </div>
+        <h3 class="text-xl font-semibold mt-20">Mobile Control</h3>
+        <p class="text-gray-300 text-sm mt-2">
+          Live video, access logs, <br> and intruder alerts— <br> all in your pocket.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- How it Works -->
+<section id="how-it-works " class="py-16 bg-gray-100 ">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-12">How it Works</h2>
+
+    <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+
+      <!-- Step 1 -->
+      <div class="flex-1">
+        <div class="flex flex-col items-center">
+          <div class="bg-gray-200 p-4 rounded-full mb-4">
+            <img src="vector3222-1k2.svg" alt="" 
+            class="text-4xl text-gray-700">
+          </div>
+          <h3 class="font-bold text-lg ">Detect</h3>
+          <p class=" mt-2 h-auto text-[20px] font-normal text-center font-[] leading-normal no-underline">
+            Edge cameras <br> sense movement <br> and capture frames <br> instantly.
+          </p>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="hidden md:block text-gray-500">
+        <span class="arrow1  top-[50px] left-[200px] mx-[12px] text-[17px] text-[#555] self-center">─────────────➤</span> 
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex-1">
+        <div class="flex flex-col items-center">
+          <div class="bg-gray-200 p-4 rounded-full mb-4">
+            <img src="vector3233-smu.svg" alt=""
+            class=" text-4xl text-gray-700">
+          </div>
+          <h3 class="font-bold text-lg">Analyze</h3>
+          <p class="mt-2 h-auto text-[20px] font-normal text-center font-[] leading-normal no-underline">
+            AI compares <br> faces with <br> your secure, <br> private database.
+          </p>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="hidden md:block text-gray-500">
+        <span class="arrow2  top-[50px] left-[200px] mx-[12px] text-[17px] text-[#555] self-center">─────────────➤</span> 
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex-1">
+        <div class="flex flex-col items-center">
+          <div class="bg-gray-200 p-4 rounded-full mb-4">
+            <img src="flowbitebellactivealtoutline1923-b8bi.svg" alt=""
+            class="text-4xl text-gray-700">
+          </div>
+          <h3 class="font-bold text-lg">Respond</h3>
+          <p class="mt-2 h-auto text-[20px] font-normal text-center font-[] leading-normal no-underline">
+            Unknown faces <br> generate immediate <br> alerts and snapshots.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Your Home In Your Pocket Section -->
+<section class="bg-white py-2">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-12">
+
+    <!-- Text Content -->
+    <div class="flex-1 text-center lg:text-left">
+      <h2 class="text-4xl font-bold mb-4    text-black h-auto text-[40px] font-normal text-left leading-normal no-underline font-[Inria_Sans]">
+        Your Home.<br>
+        <span class="text-black font-bold">In <span class="font-bold">Your Pocket.</span></span>
+      </h2>
+
+      <ul class="text-gray-700 text-lg space-y-3 mb-9 list-disc list-inside text-[40px] ">
+        <li>Live video streaming from your smart cameras</li>
+        <li>Full access history and event timeline</li>
+        <li>Manual override for doors and alarms</li>
+        <li>Control and manage devices from one place</li>
+      </ul>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-col gap-5 justify-center lg:justify-start   top-[312px] left-0 w-[234px] h-[66px] flex ">
+        <!-- Play Store Button -->
+        <a href="#" class="flex items-center justify-center gap-2 bg-black text-white px-3 py-3 rounded-lg font-semibold hover:bg-gray-800 transition  text-2xl font-bold ">
+          <i class="ri-download-line text-2xl"></i>
+          Play Store
+        </a>
+        
+
+        <!-- App Store Button -->
+        <a href="#" class="flex items-center justify-center gap-2 border border-black text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-2xl font-bold">
+          <i class="ri-download-line text-2xl"></i>
+          App Store
+        </a>
+      </div>
+    </div>
+
+    <!-- Images -->
+    <div class="flex-1 flex justify- gap-1 ">
+      <img src="smart-light.png" alt="Smart Light UI" class=" mt-20  w-32 sm:w-40 md:w-48 lg:w-52 xl:w-60 mt-14">
+      <img src="control-home.png" alt="Control Home UI" class=" mb-20 w-32 sm:w-30 md:w-48 lg:w-52 xl:w-80">
+    </div>
+  </div>
+</section>
+
+</section> <!-- End of How it Works -->
+<!-- Yahan naya section paste karo -->
+<section class="bg-white py-16"> ... </section>
+
+
+
+
+<!-- Why Choose Us Section -->
+<section class="bg-gray-100 py-12">
+  <div class="max-w-6xl mx-auto px-6 text-center ">
+    <!-- Heading -->
+    <h2 class="text-3xl font-bold mb-10">Why Choose Us</h2>
+
+    <!-- Responsive Flexbox -->
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-6">
+      
+      <!-- Card 1: Secure (Left) -->
+      <div class="bg-gray-800 text-white rounded-lg p-5 h-[220px] shadow-md hover:scale-105 transition-transform duration-300  sm:w-60 mt-10">
+        <div class="text-3xl mb-2">
+          <i class="ri-shield-check-line text-4xl"></i>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Secure</h3>
+        <p class="text-gray-300 text-sm">
+          Designed with <br> privacy in mind —end <br> -to-end encryption <br> and full control.
+        </p>
+      </div>
+
+      <!-- Card 2: Convenient (Center) -->
+      <div class="bg-gray-800 text-white rounded-lg p-5 h-[220px] shadow-md hover:scale-105 transition-transform duration-300 w-full sm:w-60 mt-10">
+        <div class="text-3xl mb-2">
+          <i class="ri-flashlight-line text-4xl"></i>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Convenient</h3>
+        <p class="text-gray-300 text-sm">
+          One mobile app to <br> monitor, control, and <br> automate everything.
+        </p>
+      </div>
+
+      <!-- Card 3: Expandable (Right) -->
+      <div class="bg-gray-800 text-white rounded-lg p-5 h-[220px] shadow-md hover:scale-105 transition-transform duration-300 w-full sm:w-60 mt-10">
+        <div class="text-3xl mb-2">
+          <i class="ri-add-line text-4xl"></i>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Expandable</h3>
+        <p class="text-gray-300 text-sm">
+          Add new devices, users <br> , or automation <br> routines effortlessly.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+</section> <!-- Previous Section end -->
+<!-- Paste new "Why Choose Us" section here -->
+<section class="bg-gray-100 py-16">...</section>
+
+
+
+<!-- Call to Action Section -->
+<section class="bg-white py-16">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-3xl font-bold mb-4">
+      Ready to Make <br>
+      Your Home Smarter?
+    </h2>
+
+    <!-- Subheading -->
+    <p class="text-gray-600 text-lg mb-8 text-2xl font-semibold">
+      One App. Total Control. <br class="hidden sm:inline" />
+      Real peace of mind.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row gap-14 justify-center">
+      <!-- Download App -->
+      <a href="#" class="bg-gray-800 text-white px-12 py-4 rounded-2xl font-bold hover:bg-black transition">
+        Download the App
+      </a>
+
+      <!-- Book Demo -->
+      <a href="#" class="border border-gray-800 text-gray-900 px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition">
+        Book Demo
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+
+</section> <!-- end of previous section -->
+<!-- Paste CTA section here -->
+<section class="bg-white py-16"> ... </section>
+
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white pt-10">
+  <div class="max-w-7xl mx-auto px-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
+
+    <!-- Logo + About -->
+    <div>
+      <div class="flex items-center mb-4">
+        <img src="logo.png" alt="Logo" class="w-10 h-10 mr-2">
+        <span class="text-2xl font-semibold ">Codenscious ai.</span>
+      </div>
+      <h3 class="font-semibold mb-2 text-2xl ">About Us</h3>
+      <p class="text-gray-300 text-md">"Crafting innovative digital experiences that transform businesses."</p>
+      
+      <!-- Contact Icons -->
+      <div class="mt-4 space-y-2">
+        <div class="text-2xl font-semibold"> Contact Us </div>
+        <div class="flex items-center gap-2">
+          
+        
+          <i class="ri-mail-line text-2xl"></i>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="ri-phone-line text-2xl"></i> 
+        </div>
+      </div>
+
+      
+      <!-- Social Icons -->
+      <div class="flex mt-4 space-x-4 text-lg">
+        <a href="#"><i class="ri-twitter-fill hover:text-blue-400 text-2xl"></i></a>
+        <a href="#"><i class="ri-facebook-circle-fill hover:text-blue-600 text-2xl"></i></a>
+        <a href="#"><i class="ri-instagram-fill hover:text-pink-400 text-2xl"></i></a>
+      </div>
+    </div>
+
+    <!-- Information -->
+    <div>
+      <h3 class="font-semibold mb-2 mt-14 text-2xl ">Information</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline font-semibold">About Us</a></li>
+        <li><a href="#" class="hover:underline font-semibold">Events</a></li>
+        <li><a href="#" class="hover:underline font-semibold">Testimonials</a></li>
+        <li><a href="#" class="hover:underline font-semibold">More Details</a></li>
+        <li><a href="#" class="hover:underline font-semibold">Blogs</a></li>
+      </ul>
+    </div>
+
+    <!-- Links -->
+    <div>
+      <h3 class="font-semibold mb-2 mt-14 text-2xl">Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline font-semibold">Services</a></li>
+        <li><a href="#" class="hover:underline font-semibold">Support</a></li>
+        <li><a href="#" class="hover:underline font-semibold">Terms & Conditions</a></li>
+        <li><a href="#" class="hover:underline font-semibold">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Subscribe -->
+    <div>
+      <h3 class="font-semibold mb-2 mt-14 text-2xl">Subscribe</h3>
+      <p class="text-gray-200 font-semibold text-sm mb-5 ">Subscribe to our newsletter <br> for upcoming news!!</p>
+      <form class="flex flex-col sm:flex-row gap-3">
+        <input type="email" placeholder="Enter Your Email" class="px-10 py-3 rounded-md text-black w-full sm:w-auto flex-1" required>
+        
+      </form>
+      <button type="submit" class="bg-black px-12 py-2 rounded-full mt-6 hover:bg-gray-900 font-semibold">Subscribe</button>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="border-t border-gray-400   text-center py-4 text-gray-400 text-sm">
+    
+  </div>
+  <div class="text-right mr-16 text-center">©Company Copyright</div>
+</footer>
+
+
+  <script src="scriptFinal.js"></script>
+</body>
+</html>

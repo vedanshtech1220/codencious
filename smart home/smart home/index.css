@@ -1,3 +1,143 @@
+
+  /* General Layout Adjustments */
+  .smarthome-smarthome {
+    overflow-x: hidden;
+  }
+
+  /* Hero Section */
+  .smarthome-hero {
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--dl-layout-space-twounits);
+  }
+
+  .smarthome-frame10 {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .smarthome-logog1 {
+    display: none; /* Hide complex logo for smaller screens */
+  }
+
+  .smarthome-text100 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .smarthome-text111 {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 var(--dl-layout-space-unit);
+  }
+
+  .smarthome-frame111,
+  .smarthome-frame12 {
+    width: 80%;
+    margin-bottom: var(--dl-layout-space-unit);
+  }
+
+  .smarthome-iphone1411 {
+    width: 80%;
+    margin-top: var(--dl-layout-space-twounits);
+  }
+  
+  /* Features Section */
+  .smarthome-group609 {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--dl-layout-space-twounits);
+    width: 100%;
+  }
+
+  .smarthome-group605,
+  .smarthome-group607,
+  .smarthome-group608,
+  .smarthome-group606 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Working Section */
+  .smarthome-group617 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow1,
+  .arrow2 {
+    display:; /* Hide the arrows on smaller screens */
+  }
+
+
+  .smarthome-text155,
+  .smarthome-text163,
+  .smarthome-text171 {
+    text-align: center
+    width: 100%;
+  }
+  
+  /* App Section */
+  .smarthome-app {
+    flex-direction: column;
+    padding: var(--dl-layout-space-twounits);
+    align-items: center;
+  }
+
+  .smarthome-group613 {
+    text-align: center;
+  }
+
+  .smarthome-group611 {
+    align-items: center;
+  }
+  
+  /* Why Choose Us Section */
+  .smarthome-group622 {
+    flex-direction: column;
+    gap: var(--dl-layout-space-twounits);
+    width: 100%;
+  }
+  
+  /* Footer */
+  .smarthome-footer {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--dl-layout-space-twounits);
+  }
+
+  .smarthome-text230,
+  .smarthome-text234,
+  .smarthome-text236,
+  .smarthome-text242,
+  .smarthome-text247 {
+    margin-top: var(--dl-layout-space-twounits);
+  }
+
+  .smarthome-group7642,
+  .smarthome-frame6241,
+  .smarthome-frame6242,
+  .smarthome-frame6243,
+  .smarthome-group624,
+  .smarthome-group625 {
+    width: 100%;
+    margin-top: var(--dl-layout-space-unit);
+  }
+
+  .smarthome-group625, .smarthome-group624 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .smarthome-text253, .smarthome-text252 {
+      text-align: center;
+  }
+}
 .smarthome-container {
   width: 100%;
   display: flex;
@@ -128,7 +268,7 @@
   top: 15.15576171875px;
   left: 1.5539441108703613px;
   width: 31px;
-  height: 1px;
+  height: 0px;
   position: absolute;
   transform-origin: left center;
   transform: rotate(0deg) scaleX(17);
@@ -147,19 +287,19 @@
   width: 1.2px;;
   height: 1.5px;
   background: black;
-  top: 15px;
-  left: 2px;
+  top: 13.5px;
+  left: 1.5px;
   transform-origin: left center;
   transform: rotate(-25deg) scaleX(19);
 }
  
 .smarthome-line481 {
   position: absolute;
-  width: 7px;
+  width: 6.2px;
   height: 1.5px;
   background: black;
-  top: 40px;
-  left: 90px;
+  top: 39.3px;
+  left: 89px;
   transform-origin: right center;
   transform: rotate(-19deg) scaleX(4.5);
 }
@@ -194,7 +334,7 @@
   height: 1.5px;
   background: black;
   top: 37px;
-  left: -1px;
+  left: 1px;
   transform-origin: left center;
   transform: rotate(20deg) scaleX(5);
   
@@ -214,11 +354,11 @@
  
 .smarthome-line521 {
   position: absolute;
-  width: 13px;
+  width: 12.5px;
   height: 1.5px;
   background: black;
   top: 1px;
-  left: 30px;
+  left: 29px;
   transform-origin: left center;
   transform: rotate(30deg) scaleX(6);
     
@@ -226,11 +366,11 @@
  
 .smarthome-line531 {
   position: absolute;
-  width: 5.8px;
+  width: 5.1px;
   height: 1.5px;
   background: black;
-  top: 17px;
-  left: 92px;
+  top: 16px;
+  left: 90.8px;
   transform-origin: right center;
   transform: rotate(30deg) scaleX(6);
     
@@ -238,11 +378,11 @@
  
 .smarthome-line491 {
   position: absolute;
-  width: 7px;
+  width: 6.8px;
   height: 1.5px;
   background: black;
-  top: 50px;
-  left: 31px;
+  top: 49.5px;
+  left: 31.6px;
   transform-origin: left center;
   transform: rotate(-129deg) scaleX(6.6);
   
@@ -250,22 +390,22 @@
  
 .smarthome-line571 {
   position: absolute;
-  width: 7px;
+  width: 6px;
   height: 1.5px;
   background: black;
-  top: 51px;
-  left: 70px;
+  top: 48px;
+  left: 69px;
   transform-origin: left center;
   transform: rotate(-52deg) scaleX(6.4);
 }
  
 .smarthome-line501 {
   position: absolute;
-  width: 7.6px;
+  width: 7px;
   height: 1.5px;
   background: black;
-  top: 23px;
-  left: 22px;
+  top: 24px;
+  left: 26px;
   transform-origin: left center;
   transform: rotate(30deg) scaleX(7);
    
@@ -273,10 +413,10 @@
  
 .smarthome-line561 {
   position: absolute;
-  width: 7px;
+  width: 6.7px;
   height: 1.5px;
   background: black;
-  top: 39px;
+  top: 39.5px;
   left: 90px;
   transform-origin: right center;
   transform: rotate(55deg) scaleX(7);
@@ -285,22 +425,22 @@
  
 .smarthome-line441 {
   position: absolute;
-  width: 7px;
+  width: 6.5px;
   height: 1.5px;
   background: black;
-  top: 52px;
-  left: 30px;
+  top: 48px;
+  left: 33px;
   transform-origin: left center;
   transform: rotate(-37deg) scaleX(6.8);
 }
  
 .smarthome-line541 {
   position: absolute;
-  width: 5.6px;
+  width: 5px;
   height: 1.5px;
   background: black;
-  top: 17px;
-  left: 92px;
+  top: 14px;
+  left: 91px;
   transform-origin: right center;
   transform: rotate(-15deg) scaleX(6);
    
@@ -308,11 +448,11 @@
  
 .smarthome-line511 {
   position: absolute;
-  width: 6.8px;
+  width: 6.7px;
   height: 1.5px;
   background: black;
-  top: 40px;
-  left: 0px;
+  top: 36px;
+  left: 2px;
   transform-origin: left center;
   transform: rotate(-53deg) scaleX(6.8);
  
@@ -320,102 +460,110 @@
  
 .smarthome-line551 {
   position: absolute;
-  width: 5px;
+  width: 5.2px;
   height: 1.5px;
   background: black;
-  top: 15px;
-  left: 5px;
+  top: 13px;
+  left: 2px;
   transform-origin: left center;
   transform: rotate(25deg) scaleX(5);
     
 }
  
 .smarthome-ellipse261 {
-  top: 13.456779479980469px;
-  left: 0px;
+  top: 12.456779479980469px;
+  left: 1px;
   width: 2px;
-  height: 3px;
+  height: 2px;
   position: absolute;
   border-color: rgba(0, 0, 0, 1);
   border-style: solid;
   border-width: 1px;
+  border-radius: 2px;
 }
  
 .smarthome-ellipse231 {
-  top: 0px;
-  left: 28.636245727539062px;
+  top: 0.4px;
+  left: 28.536245727539062px;
   width: 2px;
-  height: 3px;
+  height: 2px;
   position: absolute;
   border-color: rgba(0, 0, 0, 1);
   border-style: solid;
   border-width: 1px;
+  border-radius: 2px;
 }
  
 .smarthome-ellipse221 {
-  top: 37.84716796875px;
-  left: 96.54535675048828px;
+  top: 37.8px;
+  left: 94.64535675048828px;
   width: 2px;
-  height: 3px;
+  height: 2px;
   position: absolute;
   border-color: rgba(0, 0, 0, 1);
   border-style: solid;
   border-width: 1px;
+  border-radius: 2px;
 }
  
 .smarthome-ellipse211 {
-  top: 14.2978515625px;
-  left: 95.72730255126953px;
+  top: 15.2978515625px;
+  left: 93.72730255126953px;
   width: 2px;
-  height: 3px;
+  height: 1px;
   position: absolute;
   border-color: rgba(0, 0, 0, 1);
   border-style: solid;
   border-width: 1px;
+  border-radius: 2px;
 }
  
 .smarthome-ellipse201 {
-  top: 37.00634765625px;
-  left: 0.8180597424507141px;
+  top: 36.00634765625px;
+  left: -0.1180597424507141px;
   width: 2px;
-  height: 3px;
+  height: 2px;
   position: absolute;
   border-color: rgba(0, 0, 0, 1);
   border-style: solid;
   border-width: 1px;
+  border-radius: 2px;
 }
  
 .smarthome-ellipse241 {
-  top: 0px;
-  left: 67.90911102294922px;
+  top: 0.4px;
+  left: 67.40911102294922px;
   width: 2px;
-  height: 3px;
+  height: 2px;
   position: absolute;
   border-color: rgba(0, 0, 0, 1);
   border-style: solid;
   border-width: 1px;
+  border-radius: 2px;
 }
  
 .smarthome-ellipse251 {
-  top: 49.6220703125px;
-  left: 29.45476722717285px;
+  top: 48.8px;
+  left: 30.95476722717285px;
   width: 2px;
-  height: 3px;
+  height: 2px;
   position: absolute;
   border-color: rgba(0, 0, 0, 1);
   border-style: solid;
   border-width: 1px;
+  border-radius: 2px;
 }
  
 .smarthome-ellipse191 {
-  top: 49.6220703125px;
-  left: 67.09105682373047px;
+  top: 48.6220703125px;
+  left: 68.09105682373047px;
   width: 2px;
-  height: 3px;
+  height: 2px;
   position: absolute;
   border-color: rgba(0, 0, 0, 1);
   border-style: solid;
   border-width: 1px;
+  border-radius: 2px;
 }
  
 .smarthome-group7491 {
@@ -477,6 +625,7 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
  
 .smarthome-group845 {
@@ -538,6 +687,21 @@
  
 .smarthome-text110 {
   left:60px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inria Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.smarthome-text112 {
+   left:-60px;
   color: rgba(0, 0, 0, 1);
   height: auto;
   position: absolute;
@@ -964,7 +1128,7 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
-}
+}x
  
 .smarthome-text145 {
   top: 151px;
@@ -1025,8 +1189,9 @@
 
 
 .arrow1 {
+  top: 50px;
   margin: 0 12px;
-  font-size: 15px;
+  font-size:20px;
   color: #555;
   align-self: center;
   left:200px;
@@ -1034,8 +1199,9 @@
 }
 
 .arrow2 {
+  top: 50px;
   margin: 0 12px;
-  font-size: 15px;
+  font-size: 20px;
   color: #555;
   align-self: center;
   left:650px;
@@ -1319,7 +1485,7 @@
   font-weight: 400;
   line-height: normal;
   font-stretch: normal;
-  text-decoration: none;
+  
 }
  
 .smarthome-text182 {
@@ -2205,8 +2371,8 @@
 }
  
 .smarthome-text230 {
-  top: 135px;
-  left: 62px;
+  top: 120px;
+  left: 59px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -2221,7 +2387,7 @@
 }
  
 .smarthome-text234 {
-  top: 98px;
+  top: 85px;
   left: 62px;
   color: rgba(255, 255, 255, 1);
   height: auto;
@@ -2262,7 +2428,7 @@
  
 .smarthome-frame6241 {
   gap: 8px;
-  top: 223px;
+  top: 210px;
   left: 62px;
   width: 113px;
   display: flex;
@@ -2297,7 +2463,7 @@
 }
  
 .smarthome-text236 {
-  top: 98px;
+  top: 70px;
   left: 572px;
   color: rgba(255, 255, 255, 1);
   height: auto;
@@ -2395,7 +2561,7 @@
 }
  
 .smarthome-text242 {
-  top: 98px;
+  top: 70px;
   left: 836px;
   color: rgba(255, 255, 255, 1);
   height: auto;
@@ -2479,7 +2645,7 @@
 }
  
 .smarthome-text247 {
-  top: 98px;
+  top: 70px;
   left: 1080px;
   color: rgba(255, 255, 255, 1);
   height: auto;
@@ -2495,7 +2661,7 @@
 }
  
 .smarthome-text248 {
-  top: 134px;
+  top: 144px;
   left: 1080px;
   color: rgba(255, 255, 255, 1);
   height: auto;
@@ -2569,13 +2735,13 @@
 }
  
 .smarthome-line4 {
-  top: 320px;
+  top: 288px;
   left: 50%;
   right: 50%;
-  width: 100vw;
+  width: 90vw;
   height: 1px;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  margin-left: -45vw;
+  margin-right: -45vw;
   position: relative;
   background-color: white;
   border: none; 
@@ -2652,7 +2818,7 @@
   width: 6px;
   height: 1.5px;
   background: #fff;
-  top: 47px;
+  top: 46px;
   left: 110px;
   transform-origin: right center;
   transform: rotate(-23deg) scaleX(6);
@@ -2660,33 +2826,33 @@
  
 .smarthome-line452 {
   position: absolute;
-  width: 10px;
+  width: 9.4px;
   height: 1.5px;
   background: #fff;
   top: 60px;
-  left: 37px;
+  left: 38px;
   transform-origin: left center;
   transform: rotate(-0.4deg) scaleX(4.8);
 }
  
 .smarthome-line462 {
   position: absolute;
-  width: 7px;
+  width: 6px;
   height: 1.5px;
   background: #fff;
-  top: 1px;
-  left: 35px;
+  top: 0.5px;
+  left: 38px;
   transform-origin: left center;
   transform: rotate(0deg) scaleX(7);
 }
  
 .smarthome-line432 {
   position: absolute;
-  width: 6.3px;
+  width: 6px;
   height: 1.5px;
   background: #fff;
-  top: 43px;
-  left: 0px;
+  top: 44px;
+  left: 1px;
   transform-origin: left center;
   transform: rotate(23deg) scaleX(6.3);
 }
@@ -2696,8 +2862,8 @@
   width: 15px;
   height: 1.5px;
   background: #fff;
-  top: 43px;
-  left: 0.9px;
+  top: 44px;
+  left: 2px;
   transform-origin: left center;
   transform: rotate(-27deg) scaleX(6.3);
 }
@@ -2718,19 +2884,19 @@
   width: 5.8px;
   height: 1.5px;
   background: #fff;
-  top: 17.9px;
-  left: 114px;
+  top: 18.9px;
+  left: 115px;
   transform-origin: right center;
   transform: rotate(27deg) scaleX(7);
 }
  
 .smarthome-line492 {
   position: absolute;
-  width: 8.5px;
+  width: 8.4px;
   height: 1.5px;
   background: #fff;
-  top: 60px;
-  left: 37px;
+  top: 61px;
+  left: 38px;
   transform-origin: left center;
   transform: rotate(-129deg) scaleX(6.6);
 }
@@ -2740,19 +2906,19 @@
   width: 8.4px;
   height: 1.5px;
   background: #fff;
-  top: 59px;
-  left: 85px;
+  top: 60px;
+  left: 84px;
   transform-origin: left center;
   transform: rotate(-51deg) scaleX(6.2);
 }
  
 .smarthome-line502 {
   position: absolute;
-  width: 8.2px;
+  width: 7.6px;
   height: 1.5px;
   background: #fff;
-  top: 27px;
-  left: 27px;
+  top: 28px;
+  left: 28px;
   transform-origin: left center;
   transform: rotate(30deg) scaleX(8);
 }
@@ -2762,8 +2928,8 @@
   width: 8.3px;
   height: 1.5px;
   background: #fff;
-  top: 49px;
-  left: 113px;
+  top: 47px;
+  left: 112px;
   transform-origin: right center;
   transform: rotate(52deg) scaleX(7.2);
 }
@@ -2773,19 +2939,19 @@
   width: 8.3px;
   height: 1.5px;
   background: #fff;
-  top: 60px;
-  left: 36px;
+  top: 59px;
+  left: 38px;
   transform-origin: left center;
   transform: rotate(-37deg) scaleX(6.9);
 }
  
 .smarthome-line542 {
   position: absolute;
-  width: 6.6px;
+  width: 5.5px;
   height: 1.5px;
   background: #fff;
-  top: 16px;
-  left: 112px;
+  top: 16.8px;
+  left: 111px;
   transform-origin: right center;
   transform: rotate(-15deg) scaleX(6.3);
 }
@@ -2796,44 +2962,53 @@
   height: 1.5px;
   background: #fff;
   top: 44px;
-  left: 3.5px;
+  left: 2.5px;
   transform-origin: left center;
   transform: rotate(-52deg) scaleX(6.9);
 }
  
 .smarthome-line552 {
   position: absolute;
-  width: 6.7px;
+  width: 5.5px;
   height: 1.5px;
   background: #fff;
-  top: 17px;
-  left: 4px;
+  top: 16.4px;
+  left: 3px;
   transform-origin: left center;
   transform: rotate(25deg) scaleX(5);
 }
  
 .smarthome-ellipse262 {
-  top: 16px;
-  left: 0px;
+  top: 16.3px;
+  left: 0.9px;
   width: 3px;
   height: 3px;
   position: absolute;
+  border-width: 1px;
+  border-radius: 2px;
+  color: white;
 }
  
 .smarthome-ellipse232 {
-  top: 0px;
+  top: 0.1px;
   left: 35px;
   width: 3px;
   height: 3px;
   position: absolute;
+  border-width: 1px;
+  border-radius: 2px;
+  color: white;
 }
  
 .smarthome-ellipse222 {
   top: 45px;
-  left: 118px;
+  left: 117px;
   width: 3px;
   height: 3px;
   position: absolute;
+  border-width: 1px;
+  border-radius: 2px;
+  color: white;
 }
  
 .smarthome-ellipse212 {
@@ -2842,38 +3017,53 @@
   width: 3px;
   height: 3px;
   position: absolute;
+  border-width: 1px;
+  border-radius: 2px;
+  color: white;
 }
  
 .smarthome-ellipse202 {
-  top: 44px;
-  left: 1px;
+  top: 43px;
+  left: 0.5px;
   width: 3px;
   height: 3px;
   position: absolute;
+  border-width: 1px;
+  border-radius: 2px;
+  color: white;
 }
  
 .smarthome-ellipse242 {
-  top: 0px;
-  left: 83px;
-  width: 3px;
-  height: 3px;
+  top: 0.4px;
+  left: 82px;
+  width: 4px;
+  height:2px;
   position: absolute;
+  border-width: 1px;
+  border-radius: 2px;
+  color: white;
 }
  
 .smarthome-ellipse252 {
-  top: 59px;
+  top: 59.4px;
   left: 36px;
   width: 3px;
   height: 3px;
   position: absolute;
+  border-width: 1px;
+  border-radius: 2px;
+  color: white;
 }
  
 .smarthome-ellipse192 {
-  top: 59px;
-  left: 82px;
+  top: 58.7px;
+  left: 83px;
   width: 3px;
   height: 3px;
   position: absolute;
+  border-width: 1px;
+  border-radius: 2px;
+  color: white;
 }
  
 .smarthome-group7492 {
