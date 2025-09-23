@@ -2441,3 +2441,21 @@ body {
         width: 5%;
     }
 }
+@media (max-width: 668px) {
+  .max-w-2xl {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+
+  .sub-heading,
+  .section-heading,
+  .divider {
+    text-align: left !important;
+    margin-left: 0 !important;   /* stick to very left */
+    padding-left: 0 !important;  /* remove any internal padding */
+  }
+}
+
