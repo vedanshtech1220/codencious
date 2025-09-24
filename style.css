@@ -2538,7 +2538,7 @@ body {
     }
 }
 
-/* Default: Desktop & Laptop view (current look preserved) */
+/* 🌐 Mobile-First Base Styles (Default: Mobile & Tablet) */
 .retail-card,
 .retail-card1,
 .retail-card2,
@@ -2547,8 +2547,11 @@ body {
 .retail-card5 {
     position: relative;
     overflow: hidden;
-    min-width: 320px; /* ensure consistency */
+    min-width: 320px;
     height: auto;
+    width: 100%;              /* full responsive width */
+    max-width: 100%;
+    border-radius: 14px;      /* smooth corners */
 }
 
 .retail-card .product-card-inner,
@@ -2562,98 +2565,96 @@ body {
     color: white;
 }
 
-/* Mobile & Tablet Responsive (below 1024px) */
-@media (max-width: 1024px) {
-    .cards-track {
-        display: flex;
-        flex-direction: column;  /* vertical stacking */
-        gap: 1.5rem;
-        padding: 0;
-    }
-
-    .retail-card,
-    .retail-card1,
-    .retail-card2,
-    .retail-card3,
-    .retail-card4,
-    .retail-card5 {
-        width: 100%;            /* full width */
-        max-width: 100%;        /* prevent horizontal overflow */
-        height: auto;           /* auto adjust height */
-        border-radius: 14px;    /* keep corners smooth */
-    }
-
-    .retail-card::before,
-    .retail-card1::before,
-    .retail-card2::before,
-    .retail-card3::before,
-    .retail-card4::before,
-    .retail-card5::before {
-        background-size: cover;   /* responsive bg */
-        background-position: center;
-    }
-}
-
-/* Default (Desktop/Laptop) - current look same rahega */
+/* Mobile/Tablet Layout: vertical stacking, no animation */
 .products-seq .cards-track,
 .projects-seq .cards-track {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(260px, 380px);
-    gap: 1.25rem;
-    overflow-x: visible;
-    overflow-y: hidden;
-    padding: 1rem 0.5rem 2rem 0.5rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    position: relative;
-    z-index: 1;
-    width: max-content;
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
-    scrollbar-width: none;
-}
+    gap: 1.25rem;
+    padding: 1rem 1rem 2rem 1rem;
 
-.products-seq .cards-track::-webkit-scrollbar,
-.projects-seq .cards-track::-webkit-scrollbar {
-    display: none;
+    /* disable horizontal scrolling + animation */
+    overflow: visible;
+    scroll-snap-type: none;
 }
 
 .products-seq .cards-track>*,
 .projects-seq .cards-track>* {
-    min-width: 0;
+    width: 100%;
+    max-width: 360px;  /* keep card size consistent */
+    height: auto;
 }
 
-
-/* 📱 Mobile & Tablet Responsive */
-@media (max-width: 1024px) {
-    .products-seq .cards-track,
-    .projects-seq .cards-track {
-        display: flex;
-        flex-direction: column;   /* vertical stack */
-        align-items: center;      /* center cards */
-        width: 100%;              /* full responsive width */
-        max-width: 100%;
-        margin: 0 auto;
-        gap: 1.25rem;
-        padding: 1rem 1rem 2rem 1rem;
-        
-      
-    }
-
-    .products-seq .cards-track>*,
-    .projects-seq .cards-track>* {
-        width: 100%;
-        max-width: 360px;   /* standard card size */
-        height: auto;
-    }
-}
-
-/* 📱 Small mobiles ke liye aur compact */
+/* 📱 Small Mobiles (below 600px): compact */
 @media (max-width: 600px) {
     .products-seq .cards-track>*,
     .projects-seq .cards-track>* {
-        max-width: 90%;  
+        max-width: 90%;
     }
 }
+
+/* 💻 Tablet & Desktop (above 1024px): horizontal cards layout */
+@media (min-width: 1025px) {
+    .products-seq .cards-track,
+    .projects-seq .cards-track {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(260px, 380px);
+        gap: 1.25rem;
+        padding: 1rem 0.5rem 2rem 0.5rem;
+
+        overflow-x: visible;  /* horizontal grid */
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        z-index: 1;
+        width: max-content;
+        margin: 0 auto;
+
+        scrollbar-width: none; /* hide scrollbar */
+    }
+
+    .products-seq .cards-track::-webkit-scrollbar,
+    .projects-seq .cards-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    .products-seq .cards-track>*,
+    .projects-seq .cards-track>* {
+        min-width: 0;
+    }
+}
+/* 🌐 Mobile-First (Default: Mobile & Tablet) */
+.projects-seq {
+    --card-w: 420px;   /* same width as desktop */
+    --card-h: 560px;   /* same height as desktop */
+    --card-gap: 24px;  /* same gap */
+    --spread-step: 0;  /* ❌ no spread animation */
+    --hover-scale: 1;  /* ❌ no hover zoom */
+    --radius: 22px;    /* keep same smooth corners */
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.25); /* same shadow */
+    --transition: none; /* ❌ no transition on mobile/tablet */
+}
+
+/* 💻 Tablet/Desktop (above 1025px) */
+@media (min-width: 1025px) {
+    .projects-seq {
+        --card-w: 420px;
+        --card-h: 560px;
+        --card-gap: 24px;
+        --spread-step: 26; /* enable spread */
+        --hover-scale: 1.03; /* enable hover zoom */
+        --radius: 22px;
+        --shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+        --transition: 420ms cubic-bezier(0.22, 1, 0.36, 1); /* enable smooth animation */
+    }
+}
+
+
 
 
