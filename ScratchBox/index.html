@@ -1,337 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScratchBox Hero Section</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScratchBox Hero Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media (max-width: 768px) {
+      #navbar-links {
+        display: none;
+      }
+      #navbar-links.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+        border-top: 1px solid #333;
+      }
+    }
+  </style>
 </head>
-<body style="margin:0; font-family:Arial, sans-serif; background-color:#000; color:#fff;">
+<body class="bg-black text-white font-sans">
 
-  <!-- Navbar -->
-<div style="display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background-color:#000; position:sticky; top:0; z-index:1000; border-bottom:1px solid #333;">
-  <div style="font-weight:bold; font-size:18px; color:#fff;">ScratchBox</div>
-  <div style="display:flex; gap:40px; align-items:center;">
-    <a href="#"
-       style="text-decoration:none; color:#aaa; font-size:14px;"
-       onmouseover="this.style.color='#fff'"
-       onmouseout="this.style.color='#aaa'">Features</a>
+  <nav class="flex justify-between items-center py-5 px-4 md:px-8 sticky top-0 z-40 border-b border-gray-700 bg-black">
+  <div class="font-bold text-2xl text-white">ScratchBox</div>
+  <div id="navbar-links" class="hidden md:flex md:gap-5 items-center">
+    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Features</a>
+    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Courses</a>
+    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Pricing</a>
+    <button class="py-2 px-4 bg-blue-600 border-none rounded-md text-white font-bold cursor-pointer hover:bg-blue-800 transition-colors">Sign In</button>
+  </div>
+  <div class="md:hidden">
+    <button id="hamburger-menu" class="text-gray-400 hover:text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+    </button>
+  </div>
+</nav>
 
-    <a href="#"
-       style="text-decoration:none; color:#aaa; font-size:14px;"
-       onmouseover="this.style.color='#fff'"
-       onmouseout="this.style.color='#aaa'">Courses</a>
+    <div class="text-center py-20 px-4 md:px-0 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-extrabold mb-5 text-white md:text-5xl">
+      Learn to Code <span class="text-purple-500">Interactively</span>
+    </h1>
+    <p class="text-gray-400 text-base max-w-xl mx-auto mb-8">
+      Master programming through hands-on practice with real-time feedback, interactive lessons, and personalized learning paths.
+    </p>
+    <button class="py-3 px-7 bg-gray-900 border border-gray-700 rounded-md text-white text-base cursor-pointer hover:bg-gray-800 hover:border-gray-500 transition-colors">
+      Watch Demo
+    </button>
+  </div>
 
-    <a href="#"
-       style="text-decoration:none; color:#aaa; font-size:14px;"
-       onmouseover="this.style.color='#fff'"
-       onmouseout="this.style.color='#aaa'">Pricing</a>
+    <div class="flex justify-center px-5">
+    <img src="./assets/image1.jpg" 
+         alt="Code editor screenshot" 
+         class="w-full max-w-5xl rounded-xl border border-gray-800 shadow-2xl">
+  </div>
 
-    <button style="padding:8px 16px; background-color:#2563eb; border:none; border-radius:4px; color:#fff; font-weight:bold; cursor:pointer;"
-            onmouseover="this.style.backgroundColor='#1e40af'"
-            onmouseout="this.style.backgroundColor='#2563eb'">Sign In</button>
-  </div>
+  <div class="bg-gray-900 py-20 px-4 md:px-0 text-center">
+
+    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+    Why Choose ScratchBox?
+  </h2>
+  <p class="text-gray-400 text-base max-w-2xl mx-auto mb-12">
+    Experience the future of coding education with our innovative platform designed for modern learners.
+  </p>
+
+    <div class="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto">
+
+        <div class="bg-black border border-gray-800 rounded-xl p-8 flex-1 min-w-[300px] max-w-sm text-left">
+      <div class="w-10 h-10 rounded-lg bg-blue-700 flex items-center justify-center mb-5">
+        <span class="text-white text-lg">&lt;/&gt;</span>
+      </div>
+      <h3 class="text-white text-lg font-bold mb-3">Interactive Coding Lessons</h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Learn by doing with our hands-on coding environment. Write real code, see instant results, and get immediate feedback.
+      </p>
+    </div>
+
+        <div class="bg-black border border-gray-800 rounded-xl p-8 flex-1 min-w-[300px] max-w-sm text-left">
+      <div class="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center mb-5">
+        <span class="text-white text-lg">⚡</span>
+      </div>
+      <h3 class="text-white text-lg font-bold mb-3">Real-time Practice</h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Practice coding in a live environment with instant compilation and execution. Debug and iterate in real-time.
+      </p>
+    </div>
+
+        <div class="bg-black border border-gray-800 rounded-xl p-8 flex-1 min-w-[300px] max-w-sm text-left">
+      <div class="w-10 h-10 rounded-lg bg-green-500 flex items-center justify-center mb-5">
+        <span class="text-white text-lg">📊</span>
+      </div>
+      <h3 class="text-white text-lg font-bold mb-3">Progress Tracking</h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Monitor your learning journey with detailed analytics, skill assessments, and personalized recommendations.
+      </p>
+    </div>
+
+  </div>
 </div>
 
-  <!-- Hero Section -->
-  <div style="text-align:center; padding:80px 20px; max-width:900px; margin:0 auto;">
-    <h1 style="font-size:40px; font-weight:900; margin-bottom:20px; color:#fff;">
-      Learn to Code <span style="color:#8b5cf6;">Interactively</span>
-    </h1>
-    <p style="font-size:16px; color:#ccc; max-width:600px; margin:0 auto 30px;">
-      Master programming through hands-on practice with real-time feedback, interactive lessons, and personalized learning paths.
-    </p>
-    <button style="padding:12px 28px; background-color:#111; border:1px solid #333; border-radius:6px; color:#fff; font-size:16px; cursor:pointer;"
-        onmouseover="this.style.backgroundColor='#222'; this.style.borderColor='#555'"
-        onmouseout="this.style.backgroundColor='#111'; this.style.borderColor='#333'"">
-      Watch Demo
-    </button>
-  </div>
+<div class="bg-gray-950 py-20 px-4 md:px-0 text-center">
 
-  <!-- Hero Image -->
-  <div style="display:flex; justify-content:center; padding:20px;">
-    <img src="./assets/image1.jpg" 
-         alt="Code editor screenshot" 
-         style="width:90%; max-width:1000px; border-radius:12px; border:1px solid #222; box-shadow:0 4px 30px rgba(0,0,0,0.6);">
-  </div>
+    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+    Popular Courses
+  </h2>
+  <p class="text-gray-400 text-base max-w-2xl mx-auto mb-12">
+    Start your coding journey with our carefully crafted courses designed for all skill levels.
+  </p>
 
-  <!-- Why Choose ScratchBox Section -->
-<div style="background-color:#0f172a; padding:80px 20px; text-align:center;">
+    <div class="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto">
 
-  <!-- Section Heading -->
-  <h2 style="font-size:32px; font-weight:800; color:#fff; margin-bottom:16px;">
-    Why Choose ScratchBox?
-  </h2>
-  <p style="font-size:16px; color:#94a3b8; max-width:700px; margin:0 auto 50px;">
-    Experience the future of coding education with our innovative platform designed for modern learners.
-  </p>
+        <div class="bg-gray-800 rounded-xl overflow-hidden flex-1 min-w-[300px] max-w-sm text-left shadow-xl">
+      <img src="assets/image6.jpg" alt="Python code" class="w-full h-48 object-cover">
+      <div class="p-5 relative">
+        <div class="flex justify-between items-center mb-3">
+          <span class="bg-blue-600 text-white text-xs font-semibold py-1 px-3 rounded-full">Beginner</span>
+          <span class="text-gray-400 text-xs">12 weeks</span>
+        </div>
+        <h3 class="text-white text-lg font-bold mb-2">Python Fundamentals</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">
+          Master Python programming from basics to advanced concepts with hands-on projects and real-world applications.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-blue-500 text-lg font-bold">$49</span>
+          <button class="py-2 px-4 bg-blue-600 border-none rounded-md text-white text-sm cursor-pointer hover:bg-blue-800 transition-colors">
+          Enroll Now
+          </button>
+        </div>
+      </div>
+    </div>
 
-  <!-- Feature Cards -->
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; max-width:1200px; margin:0 auto;">
+        <div class="bg-gray-800 rounded-xl overflow-hidden flex-1 min-w-[300px] max-w-sm text-left shadow-xl">
+      <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" alt="JavaScript code" class="w-full h-48 object-cover">
+      <div class="p-5 relative">
+        <div class="flex justify-between items-center mb-3">
+          <span class="bg-yellow-500 text-white text-xs font-semibold py-1 px-3 rounded-full">Intermediate</span>
+          <span class="text-gray-400 text-xs">16 weeks</span>
+        </div>
+        <h3 class="text-white text-lg font-bold mb-2">JavaScript Mastery</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">
+          Build dynamic web applications with modern JavaScript, ES6+, and popular frameworks like React.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-blue-500 text-lg font-bold">$79</span>
+          <button class="py-2 px-4 bg-blue-600 border-none rounded-md text-white text-sm cursor-pointer hover:bg-blue-800 transition-colors">
+          Enroll Now
+          </button>
+        </div>
+      </div>
+    </div>
 
-    <!-- Card 1 -->
-    <div style="background-color:#000; border:1px solid #1e293b; border-radius:12px; padding:30px; flex:1 1 300px; max-width:350px; text-align:left;">
-      <div style="width:40px; height:40px; border-radius:8px; background-color:#1d4ed8; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
-        <span style="color:#fff; font-size:18px;">&lt;/&gt;</span>
-      </div>
-      <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:12px;">Interactive Coding Lessons</h3>
-      <p style="color:#94a3b8; font-size:14px; line-height:1.6;">
-        Learn by doing with our hands-on coding environment. Write real code, see instant results, and get immediate feedback.
-      </p>
-    </div>
+        <div class="bg-gray-800 rounded-xl overflow-hidden flex-1 min-w-[300px] max-w-sm text-left shadow-xl">
+      <img src="assets/image2.jpg" alt="AI servers" class="w-full h-48 object-cover">
+      <div class="p-3 relative">
+        <div class="flex justify-between items-center mb-3">
+          <span class="bg-red-600 text-white text-xs font-semibold py-1 px-3 rounded-full">Advanced</span>
+          <span class="text-gray-400 text-xs">20 weeks</span>
+        </div>
+        <h3 class="text-white text-lg font-bold mb-2">Data Science & AI</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">
+          Dive into machine learning, data analysis, and AI with Python, pandas, and popular ML libraries.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-blue-500 text-lg font-bold">$129</span>
+          <button class="py-2 px-4 bg-blue-600 border-none rounded-md text-white text-sm cursor-pointer hover:bg-blue-800 transition-colors">
+          Enroll Now
+          </button>
+        </div>
+      </div>
+    </div>
 
-    <!-- Card 2 -->
-    <div style="background-color:#000; border:1px solid #1e293b; border-radius:12px; padding:30px; flex:1 1 300px; max-width:350px; text-align:left;">
-      <div style="width:40px; height:40px; border-radius:8px; background-color:#8b5cf6; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
-        <span style="color:#fff; font-size:18px;">⚡</span>
-      </div>
-      <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:12px;">Real-time Practice</h3>
-      <p style="color:#94a3b8; font-size:14px; line-height:1.6;">
-        Practice coding in a live environment with instant compilation and execution. Debug and iterate in real-time.
-      </p>
-    </div>
-
-    <!-- Card 3 -->
-    <div style="background-color:#000; border:1px solid #1e293b; border-radius:12px; padding:30px; flex:1 1 300px; max-width:350px; text-align:left;">
-      <div style="width:40px; height:40px; border-radius:8px; background-color:#10b981; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
-        <span style="color:#fff; font-size:18px;">📊</span>
-      </div>
-      <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:12px;">Progress Tracking</h3>
-      <p style="color:#94a3b8; font-size:14px; line-height:1.6;">
-        Monitor your learning journey with detailed analytics, skill assessments, and personalized recommendations.
-      </p>
-    </div>
-
-  </div>
-</div>
-
-<!-- Popular Courses Section -->
-<div style="background-color:#0b0b0b; padding:80px 20px; text-align:center;">
-
-  <!-- Section Heading -->
-  <h2 style="font-size:32px; font-weight:800; color:#fff; margin-bottom:16px;">
-    Popular Courses
-  </h2>
-  <p style="font-size:16px; color:#94a3b8; max-width:700px; margin:0 auto 50px;">
-    Start your coding journey with our carefully crafted courses designed for all skill levels.
-  </p>
-
-  <!-- Course Cards -->
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; max-width:1200px; margin:0 auto;">
-
-    <!-- Card 1 -->
-    <div style="background-color:#111827; border-radius:12px; overflow:hidden; flex:1 1 300px; max-width:350px; text-align:left; box-shadow:0 4px 20px rgba(0,0,0,0.5);">
-      <img src="./assets/image6.jpg" alt="Python code" style="width:100%; height:180px; object-fit:cover;">
-      <div style="padding:20px; position:relative;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-          <span style="background-color:#2563eb; color:#fff; font-size:12px; font-weight:600; padding:4px 10px; border-radius:9999px;">Beginner</span>
-          <span style="color:#94a3b8; font-size:12px;">12 weeks</span>
-        </div>
-        <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:10px;">Python Fundamentals</h3>
-        <p style="color:#94a3b8; font-size:14px; line-height:1.6; margin-bottom:20px;">
-          Master Python programming from basics to advanced concepts with hands-on projects and real-world applications.
-        </p>
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <span style="color:#3b82f6; font-size:18px; font-weight:700;">$49</span>
-          <button style="padding:8px 16px; background-color:#2563eb; border:none; border-radius:6px; color:#fff; font-size:14px; cursor:pointer;"
-          onmouseover="this.style.backgroundColor='#1e40af'"
-            onmouseout="this.style.backgroundColor='#2563eb'"
-          >Enroll Now</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div style="background-color:#111827; border-radius:12px; overflow:hidden; flex:1 1 300px; max-width:350px; text-align:left; box-shadow:0 4px 20px rgba(0,0,0,0.5);">
-      <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" alt="JavaScript code" style="width:100%; height:180px; object-fit:cover;">
-      <div style="padding:20px; position:relative;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-          <span style="background-color:#f59e0b; color:#fff; font-size:12px; font-weight:600; padding:4px 10px; border-radius:9999px;">Intermediate</span>
-          <span style="color:#94a3b8; font-size:12px;">16 weeks</span>
-        </div>
-        <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:10px;">JavaScript Mastery</h3>
-        <p style="color:#94a3b8; font-size:14px; line-height:1.6; margin-bottom:20px;">
-          Build dynamic web applications with modern JavaScript, ES6+, and popular frameworks like React.
-        </p>
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <span style="color:#3b82f6; font-size:18px; font-weight:700;">$79</span>
-          <button style="padding:8px 16px; background-color:#2563eb; border:none; border-radius:6px; color:#fff; font-size:14px; cursor:pointer;"
-          onmouseover="this.style.backgroundColor='#1e40af'"
-            onmouseout="this.style.backgroundColor='#2563eb'"
-          >Enroll Now</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div style="background-color:#111827; border-radius:12px; overflow:hidden; flex:1 1 300px; max-width:350px; text-align:left; box-shadow:0 4px 20px rgba(0,0,0,0.5);">
-      <img src="./assets/image2.jpg" alt="AI servers" style="width:100%; height:180px; object-fit:cover;">
-      <div style="padding:20px; position:relative;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-          <span style="background-color:#dc2626; color:#fff; font-size:12px; font-weight:600; padding:4px 10px; border-radius:9999px;">Advanced</span>
-          <span style="color:#94a3b8; font-size:12px;">20 weeks</span>
-        </div>
-        <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:10px;">Data Science & AI</h3>
-        <p style="color:#94a3b8; font-size:14px; line-height:1.6; margin-bottom:20px;">
-          Dive into machine learning, data analysis, and AI with Python, pandas, and popular ML libraries.
-        </p>
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <span style="color:#3b82f6; font-size:18px; font-weight:700;">$129</span>
-          <button style="padding:8px 16px; background-color:#2563eb; border:none; border-radius:6px; color:#fff; font-size:14px; cursor:pointer;"
-          onmouseover="this.style.backgroundColor='#1e40af'"
-            onmouseout="this.style.backgroundColor='#2563eb'"
-          >Enroll Now</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  </div>
 </div>
 
 
-    <!-- Success Stories Section -->
-    <div style="background-color:#0f172a; padding:80px 20px; text-align:center;">
+        <div class="bg-gray-900 py-20 px-4 md:px-0 text-center">
 
-      <!-- Section Heading -->
-      <h2 style="font-size:32px; font-weight:800; color:#fff; margin-bottom:16px;">
-        Success Stories
-      </h2>
-      <p style="font-size:16px; color:#94a3b8; max-width:700px; margin:0 auto 50px;">
-        Hear from our students who transformed their careers through ScratchBox.
-      </p>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+        Success Stories
+      </h2>
+      <p class="text-gray-400 text-base max-w-2xl mx-auto mb-12">
+        Hear from our students who transformed their careers through ScratchBox.
+      </p>
 
-      <!-- Testimonial Cards -->
-      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; max-width:1200px; margin:0 auto;">
+            <div class="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto">
 
-      <!-- Card 1 -->
-      <div style="background-color:#000; border-radius:12px; padding:30px; flex:1 1 300px; max-width:350px; text-align:left; color:#fff; border:1px solid #1e293b; transition:transform 0.3s, border-color 0.3s; cursor:pointer;"
-          onmouseover="this.style.transform='translateY(-6px)'; this.style.borderColor='#2563eb';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#1e293b';">
-        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-          <img src="" alt="Sarah Chen" style="width:48px; height:48px; border-radius:50%; object-fit:cover;">
-          <div>
-            <h3 style="font-size:16px; font-weight:700; margin-bottom:4px; transition:color 0.3s; cursor:pointer;"
-                onmouseover="this.style.color='#2563eb'"
-                onmouseout="this.style.color='#fff'">Sarah Chen</h3>
-            <p style="font-size:13px; color:#94a3b8; margin:0;">Software Engineer at Google</p>
-          </div>
+            <div class="bg-black border border-gray-800 rounded-xl p-8 flex-1 min-w-[300px] max-w-sm text-left text-white cursor-pointer hover:-translate-y-2 hover:border-blue-600 transition-transform duration-300">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="assets/image3.jpg" alt="Sarah Chen" class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <h3 class="text-lg font-bold mb-1 hover:text-blue-600 transition-colors">Sarah Chen</h3>
+            <p class="text-sm text-gray-400 m-0">Software Engineer at Google</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-200 italic mb-4">
+          "ScratchBox helped me transition from marketing to software engineering. The interactive lessons and real-time feedback made learning so much more engaging."
+        </p>
+        <p class="text-yellow-400 text-lg">★★★★★</p>
+      </div>
+
+            <div class="bg-black border border-gray-800 rounded-xl p-8 flex-1 min-w-[300px] max-w-sm text-left text-white cursor-pointer hover:-translate-y-2 hover:border-blue-600 transition-transform duration-300">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="assets/image5.jpg" alt="Marcus Johnson" class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <h3 class="text-lg font-bold mb-1 hover:text-blue-600 transition-colors">Marcus Johnson</h3>
+            <p class="text-sm text-gray-400 m-0">Full-Stack Developer at Spotify</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-200 italic mb-4">
+          "The progress tracking feature kept me motivated throughout my learning journey. I could see my improvement daily and it pushed me to keep going."
+        </p>
+        <p class="text-yellow-400 text-lg">★★★★★</p>
+      </div>
+
+            <div class="bg-black border border-gray-800 rounded-xl p-8 flex-1 min-w-[300px] max-w-sm text-left text-white cursor-pointer hover:-translate-y-2 hover:border-blue-600 transition-transform duration-300">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="assets/Gemini_Generated_Image_4ep9dz4ep9dz4ep9.png" alt="Emily Rodriguez" class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <h3 class="text-lg font-bold mb-1 hover:text-blue-600 transition-colors">Emily Rodriguez</h3>
+            <p class="text-sm text-gray-400 m-0">Data Scientist at Netflix</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-200 italic mb-4">
+          "The Data Science course was incredible. I went from zero programming knowledge to landing my dream job in just 6 months. Highly recommended!"
+        </p>
+        <p class="text-yellow-400 text-lg">★★★★★</p>
+      </div>
+    </div>
+  </div>
+
+<footer class="bg-[#0c0c0c] text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Subscribe to our newsletter</h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center max-w-2xl mx-auto">
+                <div class="relative w-full sm:w-3/4 mb-4 sm:mb-0 sm:mr-4">
+                    <input type="email" placeholder="Enter your email address" class="w-full bg-gray-200 text-gray-800 py-4 pl-12 pr-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 placeholder-gray-500">
+                    <img src="assets/email-8-svgrepo-com.svg" alt="Email Icon" class="h-6 w-6 absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-500">
+                </div>
+                <button class="w-full sm:w-auto bg-black text-white py-4 px-8 rounded-lg font-bold hover:bg-gray-800 transition-colors">
+                    Get Started
+                </button>
+            </div>
         </div>
-        <p style="font-size:14px; color:#e5e7eb; font-style:italic; margin-bottom:16px;">
-          "ScratchBox helped me transition from marketing to software engineering. The interactive lessons and real-time feedback made learning so much more engaging."
-        </p>
-        <p style="color:#facc15; font-size:16px;">★★★★★</p>
-      </div>
 
-      <!-- Card 2 -->
-      <div style="background-color:#000; border-radius:12px; padding:30px; flex:1 1 300px; max-width:350px; text-align:left; color:#fff; border:1px solid #1e293b; transition:transform 0.3s, border-color 0.3s; cursor:pointer;"
-          onmouseover="this.style.transform='translateY(-6px)'; this.style.borderColor='#2563eb';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#1e293b';">
-        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-          <img src="./assets/image3.jpg" alt="Marcus Johnson" style="width:48px; height:48px; border-radius:50%; object-fit:cover;">
-          <div>
-            <h3 style="font-size:16px; font-weight:700; margin-bottom:4px; transition:color 0.3s; cursor:pointer;"
-                onmouseover="this.style.color='#2563eb'"
-                onmouseout="this.style.color='#fff'">Marcus Johnson</h3>
-            <p style="font-size:13px; color:#94a3b8; margin:0;">Full-Stack Developer at Spotify</p>
-          </div>
+        <hr class="border-gray-800 my-16">
+
+        <div class="flex flex-col md:flex-row md:justify-between align-items-center md:items-center mobile-col">
+            <div class="flex flex-col mb-8 md:mb-0 md:flex-row md:items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="assets/Logo.png" alt="Codenscious Logo" class="h-20 w-25">
+                    <div class="flex flex-col">
+                        <h2 class="text-2xl font-semibold">Codenscious</h2>
+                        <p class="text-sl">The Code Conscious</p>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-0 md:ml-24">
+                    <p class="max-w-xs">IT Park, 28, Indore - Dhar Rd, Sinhasa, Indore, Madhya Pradesh 452009</p>
+                    <div class="flex flex-col space-y-4 md:flex-row md:space-x-16 md:space-y-0 mt-8">
+                        <div>
+                            <p class="font-bold">Phone Number</p>
+                            <p class="whitespace-nowrap">1-800-201-1019</p>
+                        </div>
+                        <div>
+                            <p class="font-bold">Email</p>
+                            <p>support@codenscious.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:space-x-12 mt-8 md:mt-0 mobile-col">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold underline mb-2">QUICK LINKS</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">About us</a></li>
+                        <li><a href="#" class="hover:underline text-sm">FAQ</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Contact us</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Blog</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold underline mb-2">SOCIAL</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">Facebook</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Instagram</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Twitter</a></li>
+                        <li><a href="#" class="hover:underline text-sm">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold underline mb-2">LEGAL</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">Terms of service</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <p style="font-size:14px; color:#e5e7eb; font-style:italic; margin-bottom:16px;">
-          "The progress tracking feature kept me motivated throughout my learning journey. I could see my improvement daily and it pushed me to keep going."
-        </p>
-        <p style="color:#facc15; font-size:16px;">★★★★★</p>
-      </div>
 
-      <!-- Card 3 -->
-      <div style="background-color:#000; border-radius:12px; padding:30px; flex:1 1 300px; max-width:350px; text-align:left; color:#fff; border:1px solid #1e293b; transition:transform 0.3s, border-color 0.3s; cursor:pointer;"
-          onmouseover="this.style.transform='translateY(-6px)'; this.style.borderColor='#2563eb';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#1e293b';">
-        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-          <img src="./assets/image5.jpg" alt="Emily Rodriguez" style="width:48px; height:48px; border-radius:50%; object-fit:cover;">
-          <div>
-            <h3 style="font-size:16px; font-weight:700; margin-bottom:4px; transition:color 0.3s; cursor:pointer;"
-                onmouseover="this.style.color='#2563eb'"
-                onmouseout="this.style.color='#fff'">Emily Rodriguez</h3>
-            <p style="font-size:13px; color:#94a3b8; margin:0;">Data Scientist at Netflix</p>
-          </div>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+            <p>&copy; 2025 Codenscious. All rights reserved.</p>
         </div>
-        <p style="font-size:14px; color:#e5e7eb; font-style:italic; margin-bottom:16px;">
-          "The Data Science course was incredible. I went from zero programming knowledge to landing my dream job in just 6 months. Highly recommended!"
-        </p>
-        <p style="color:#facc15; font-size:16px;">★★★★★</p>
-      </div>
-
-
-
-  </div>
-</div>
-
-<!-- Newsletter Section -->
-<div style="background:#000;color:#fff;text-align:center;padding:30px 20px;">
-  <h2 style="margin-bottom:20px;font-size:22px;">Subscribe to our newsletter</h2>
-  <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:10px;">
-    <input type="email" placeholder="Enter your email address" 
-           style="padding:12px 15px;border-radius:8px;border:none;width:280px;max-width:100%;outline:none;">
-    <button style="padding:12px 20px;border:none;border-radius:8px;background:#333;color:#fff;cursor:pointer;">
-      Get Started
-    </button>
-  </div>
-</div>
-
-<!-- Footer Section -->
-<div style="background:#000;color:#fff;padding:40px 40px;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:60px;">
-
-  <!-- Company Info -->
-  <div style="flex:1;min-width:220px;">
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:15px;">
-      <img src="./assets/Logo.png" alt="Codenscious Logo" style="width:80px; height:auto;">
-      <div>
-        <h3 style="margin:0;font-size:20px;font-weight:700;">Codenscious</h3>
-        <p style="margin:2px 0 0 0;font-size:13px;color:#94a3b8;">The Code Codenscious</p>
-      </div>
     </div>
-    <p style="margin:15px 0;font-size:14px;line-height:1.5; margin-bottom: 20px;">
-      IT Park, 28,<br>
-      Indore – Dhar Rd, Sinhasa,<br>
-      Indore, Madhya Pradesh 452009
-    </p>
-    <p style="margin:8px 0;font-size:14px;"><b>Phone:</b> 1-800-201-1019</p>
-    <p style="margin:8px 0;font-size:14px;"><b>Email:</b> support@codenscious.com</p>
-  </div>
-
-  <!-- Quick Links -->
-  <div style="flex:1;min-width:150px; margin-left: 60px;">
-    <h4 style="margin-bottom:12px;font-size:15px; ">QUICK LINKS</h4>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">About us</a></p>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">FAQ</a></p>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Contact us</a></p>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Blog</a></p>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Projects</a></p>
-  </div>
-
-  <!-- Social -->
-  <div style="flex:1;min-width:150px; margin-left: 60px;">
-    <h4 style="margin-bottom:12px;font-size:15px;">SOCIAL</h4>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Facebook</a></p>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Instagram</a></p>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Twitter</a></p>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">LinkedIn</a></p>
-  </div>
-
-  <!-- Legal -->
-  <div style="flex:1;min-width:150px; margin-left: 60px;">
-    <h4 style="margin-bottom:12px;font-size:15px;">LEGAL</h4>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Terms of service</a></p>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Privacy Policy</a></p>
-    <p style="margin:15px 0;"><a href="#" style="color:#aaa;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Cookie Policy</a></p>
-  </div>
-</div>
-
-<!-- Bottom Bar -->
-<div style="background:#000;color:#aaa;text-align:center;padding:15px;font-size:14px;border-top:1px solid #333;">
-  ©2025 <span style="color:#fff;">Codenscious</span>. All Rights Reserved
-</div>
+  </footer>
 
 
+<script>
+  const hamburger = document.getElementById('hamburger-menu');
+  const navLinks = document.getElementById('navbar-links');
 
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
