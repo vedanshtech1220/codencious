@@ -4,745 +4,333 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Procqy Hero Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            margin: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             background-color: #f8f9fa;
         }
-        * {
-            box-sizing: border-box;
+        
+        .bg-radial-gradient {
+            background-image: radial-gradient(circle at top left, #6D55EA, #4A37A8);
         }
     </style>
 </head>
-<body>
+<body class="bg-[#f8f9fa] antialiased">
+    <div class="bg-radial-gradient text-white overflow-hidden">
+        <header class="sticky top-0 z-1000 flex items-center justify-between p-4 md:p-6 lg:p-4 bg-white shadow-sm border-b border-gray-200 w-full transition-all duration-300">
+            <a href="#" class="text-[#2563EB] text-xl font-bold md:text-2xl">Procqy</a>
 
-    <div style="
-        background-image: radial-gradient(circle at top left, #6D55EA, #4A37A8);
-        color: #ffffff;
-        overflow: hidden; /* Ensures the corner radius of children doesn't overflow */
-    ">
+            <div class="hidden lg:flex items-center gap-8">
+                <nav class="flex flex-wrap items-center justify-end gap-8">
+                    <a href="#" class="text-[#343a40] font-medium hover:text-blue-600 transition-colors">Features</a>
+                    <a href="#" class="text-[#343a40] font-medium hover:text-blue-600 transition-colors">Solutions</a>
+                    <a href="#" class="text-[#343a40] font-medium hover:text-blue-600 transition-colors">Pricing</a>
+                    <a href="#" class="text-[#343a40] font-medium hover:text-blue-600 transition-colors">About</a>
+                </nav>
+                <a href="#" class="bg-[#0d6efd] text-white py-2 px-4 rounded-lg font-medium whitespace-nowrap hover:bg-blue-700 transition-colors">Get Started</a>
+            </div>
 
-       <header style="
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between; /* keep items apart */
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #e9ecef;
-">
-    <!-- Logo (left side) -->
-    <a href="#" style="text-decoration: none; color: #2563EB; font-size: 1.5rem; font-weight: bold;">Procqy</a>
+            <button id="hamburger" class="lg:hidden text-[#343a40] focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </header>
 
-    <!-- Wrapper for nav + button -->
-    <div style="display: flex; align-items: center; gap: 2rem;">
-        <nav style="
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end; /* push nav items right */
-            gap: 2rem;
-        ">
-            <a href="#" style="text-decoration: none; color: #343a40; font-weight: 500;">Features</a>
-            <a href="#" style="text-decoration: none; color: #343a40; font-weight: 500;">Solutions</a>
-            <a href="#" style="text-decoration: none; color: #343a40; font-weight: 500;">Pricing</a>
-            <a href="#" style="text-decoration: none; color: #343a40; font-weight: 500;">About</a>
-        </nav>
+        <div id="mobile-menu" class="hidden fixed inset-0 z-[999] bg-white transition-transform duration-300 transform -translate-y-full lg:hidden">
+            <div class="flex flex-col items-center justify-center h-full">
+                <button id="close-menu" class="absolute top-4 right-4 text-[#343a40] focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <nav class="flex flex-col items-center justify-center gap-8 text-2xl font-semibold">
+                    <a href="#" class="text-[#343a40] hover:text-blue-600 transition-colors">Features</a>
+                    <a href="#" class="text-[#343a40] hover:text-blue-600 transition-colors">Solutions</a>
+                    <a href="#" class="text-[#343a40] hover:text-blue-600 transition-colors">Pricing</a>
+                    <a href="#" class="text-[#343a40] hover:text-blue-600 transition-colors">About</a>
+                </nav>
+                <a href="#" class="mt-8 bg-[#0d6efd] text-white py-3 px-8 rounded-lg font-medium whitespace-nowrap hover:bg-blue-700 transition-colors text-lg">Get Started</a>
+            </div>
+        </div>
 
-        <a href="#" style="
-    background-color: #0d6efd;
-    color: white;
-    padding: 0.4rem 0.9rem; /* smaller vertical + horizontal */
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    white-space: nowrap;
-">Get Started</a>
-
-    </div>
-</header>
-
-
-        <div style="
-            display: flex;
-            flex-wrap: wrap; /* This is key for responsiveness: columns will stack on smaller screens */
-            align-items: center;
-            gap: 2rem; /* Space between text and image columns */
-            padding: 4rem 5% 6rem 5%; /* Top/Bottom padding and responsive Side padding */
-            min-height: 80vh;
-        ">
-
-            <div style="
-                flex: 1; /* Each column tries to take up equal space */
-                min-width: 320px; /* Ensures content doesn't get too squished before wrapping */
-                text-align: left;
-            ">
-                <h1 style="
-                    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size: min, preferred, max */
-                    font-weight: 700;
-                    line-height: 1.2;
-                    margin-bottom: 1.5rem;
-                ">Smart Procurement<br><span style="
-    background: linear-gradient(90deg, #BFDBFE);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-">Made Simple</span>
-</h1>
-                <p style="
-                    font-size: clamp(1rem, 2.5vw, 1.15rem);
-                    color: #EAEAFE;
-                    max-width: 500px; /* Prevents text line from being too long on wide screens */
-                    line-height: 1.6;
-                    margin-bottom: 2.5rem;
-                ">Transform your procurement process with cutting-edge technology. Cut costs by 30%, reduce delays by 50%, and gain complete visibility into your supply chain.</p>
-                
-                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-                    <a href="#" style="
-                        background-color: #ffffff;
-                        color: #4A37A8;
-                        padding: 1rem 2rem;
-                        border-radius: 8px;
-                        text-decoration: none;
-                        font-weight: 600;
-                        border: 1px solid transparent;
-                    ">Start Free Trial</a>
-                    <a href="#" style="
-                        background-color: transparent;
-                        color: #ffffff;
-                        padding: 1rem 2rem;
-                        border-radius: 8px;
-                        text-decoration: none;
-                        font-weight: 600;
-                        border: 1px solid #ffffff;
-                    ">Watch Demo</a>
+        <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12 px-5 py-16 md:py-24 lg:py-32 min-h-[80vh]">
+            <div class="flex-1 min-w-[320px] text-left">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 md:mb-8">
+                    Smart Procurement<br>
+                    <span class="bg-gradient-to-r from-[#BFDBFE] to-[#BFDBFE] text-transparent bg-clip-text">Made Simple</span>
+                </h1>
+                <p class="text-base sm:text-lg text-[#EAEAFE] max-w-xl leading-relaxed mb-8 md:mb-10">
+                    Transform your procurement process with cutting-edge technology. Cut costs by 30%, reduce delays by 50%, and gain complete visibility into your supply chain.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="bg-white text-[#4A37A8] py-4 px-8 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Start Free Trial</a>
+                    <a href="#" class="bg-transparent text-white py-4 px-8 rounded-lg font-semibold border border-white hover:bg-white hover:text-[#4A37A8] transition-colors">Watch Demo</a>
                 </div>
             </div>
 
-            <div style="
-                flex: 1; /* Each column tries to take up equal space */
-                min-width: 320px;
-                position: relative; /* Needed for positioning the badge */
-            ">
-                <img src="images/Container.svg" alt="Two professionals working on laptops in a modern office" style="
-                    width: 100%;
-                    max-width: 600px;
-                    height: auto;
-                    border-radius: 16px;
-                    display: block;
-                    margin: auto;
-                ">
-
-                <div style="
-                    position: absolute;
-                    top: -15px;
-                    right: 20px;
-                    background-color: #ffffff;
-                    color: #2563EB;
-                    padding: 0.75rem 1rem;
-                    border-radius: 12px;
-                    font-size: 0.9rem;
-                    text-align: center;
-                    line-height: 1.3;
-                    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-                ">
-                    <b style="font-size: 1.2rem; display: block;">30%</b>
+            <div class="flex-1 min-w-[320px] relative mt-12 lg:mt-0">
+                <img src="images/Container.svg" alt="Two professionals working on laptops in a modern office" class="w-full max-w-2xl h-auto rounded-2xl block mx-auto">
+                <div class="absolute top-[-15px] right-[20px] md:right-5 bg-white text-[#2563EB] p-3 md:p-4 rounded-xl text-center shadow-lg leading-snug">
+                    <b class="text-lg md:text-xl block">30%</b>
                     Cost Reduction
                 </div>
             </div>
         </div>
     </div>
 
-    <div style="
-    background-color: #ffffff;
-    padding: 5rem 5%; /* Generous padding on top/bottom and responsive padding on sides */
-    text-align: center;
-">
-    
-    <h2 style="
-        font-size: clamp(2rem, 4vw, 2.5rem); /* Responsive font size */
-        color: #212529;
-        font-weight: 700;
-        margin-top: 0;
-        margin-bottom: 1rem;
-    ">Why Choose Procqy?</h2>
-    
-    <p style="
-        font-size: clamp(1rem, 2.5vw, 1.15rem);
-        color: #4B5563;
-        max-width: 600px; /* Constrains line length for better readability */
-        margin: 0 auto 4rem auto; /* Centers the paragraph and adds space below */
-        line-height: 1.6;
-    ">Experience the future of procurement with our comprehensive platform designed for modern businesses.</p>
-    
-    <div style="
-        display: flex;
-        justify-content: center;
-        align-items: stretch; /* Makes cards equal height if they wrap to multiple lines */
-        flex-wrap: wrap; /* This is key: cards will stack vertically on small screens */
-        gap: 2rem; /* Responsive spacing between cards */
-    ">
-        
-        <div style="
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-">
-    <!-- Card 1 -->
-    <div style="
-        background-color: #ffffff;
-        padding: 2.5rem 2rem;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-        border: 1px solid #f0f0f0;
-        text-align: center;
-    ">
-        <div style="
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #DBEAFE;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 1.5rem auto;
-        ">
-            <!-- Dollar Icon -->
-            <img src="images/Vector.svg" alt="Dollar Icon" style="width: 24px; height: 24px;" />
-        </div>
-        <h3 style="font-size: 1.25rem; color: #212529; margin: 0 0 0.75rem;">Cut Costs</h3>
-        <p style="color: #6c757d; line-height: 1.6; margin: 0;">
-            Reduce procurement costs by up to 30% through intelligent sourcing, automated negotiations, and real-time market analysis.
+    <div class="bg-white px-5 py-16 md:py-20 lg:py-24 text-center">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-extrabold mt-0 mb-4">
+            Why Choose Procqy?
+        </h2>
+        <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10 md:mb-16">
+            Experience the future of procurement with our comprehensive platform designed for modern businesses.
         </p>
-    </div>
-
-    <!-- Card 2 -->
-    <div style="
-        background-color: #ffffff;
-        padding: 2.5rem 2rem;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-        border: 1px solid #f0f0f0;
-        text-align: center;
-    ">
-        <div style="
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #DCFCE7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 1.5rem auto;
-        ">
-            <!-- Example: Lightning Icon -->
-            <img src="images/SVG (1).svg" alt="Lightning Icon" style="width: 24px; height: 24px;" />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 p-4">
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-200 text-center flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                    <img src="images/Vector.svg" alt="Dollar Icon" class="w-6 h-6" />
+                </div>
+                <h3 class="text-xl md:text-2xl text-gray-900 font-semibold mb-2">Cut Costs</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Reduce procurement costs by up to 30% through intelligent sourcing, automated negotiations, and real-time market analysis.
+                </p>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-200 text-center flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                    <img src="images/SVG (1).svg" alt="Lightning Icon" class="w-6 h-6" />
+                </div>
+                <h3 class="text-xl md:text-2xl text-gray-900 font-semibold mb-2">Reduce Delays</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Streamline your procurement workflow and eliminate bottlenecks with automated approval chains and real-time tracking.
+                </p>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-200 text-center flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6">
+                    <img src="images/SVG (2).svg" alt="Visibility Icon" class="w-6 h-6" />
+                </div>
+                <h3 class="text-xl md:text-2xl text-gray-900 font-semibold mb-2">Full Visibility</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Gain complete transparency across your entire procurement process with advanced analytics and real-time reporting.
+                </p>
+            </div>
         </div>
-        <h3 style="font-size: 1.25rem; color: #212529; margin: 0 0 0.75rem;">Reduce Delays</h3>
-        <p style="color: #6c757d; line-height: 1.6; margin: 0;">
-            Streamline your procurement workflow and eliminate bottlenecks with automated approval chains and real-time tracking.
-        </p>
     </div>
 
-    <!-- Card 3 -->
-    <div style="
-        background-color: #ffffff;
-        padding: 2.5rem 2rem;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-        border: 1px solid #f0f0f0;
-        text-align: center;
-    ">
-        <div style="
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #F3E8FF;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 1.5rem auto;
-        ">
-            <!-- Another Icon (reuse or upload new) -->
-            <img src="images/SVG (2).svg" alt="Visibility Icon" style="width: 24px; height: 24px;" />
+    <div class="bg-gray-50 px-5 py-16 md:py-20 lg:py-24 text-center">
+        <h2 class="font-inter text-2xl md:text-3xl text-gray-900 font-extrabold mb-4 inline-block">Comprehensive Platform Modules</h2>
+        <p class="text-base md:text-lg text-gray-600 mx-auto mb-16 whitespace-nowrap max-w-3xl">Everything you need to manage your procurement process from start to finish.</p>
+        <div class="flex flex-wrap justify-center gap-8 md:gap-10 text-left">
+            <div class="bg-gray-100 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
+                <div class="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                    <img src="images/SVG (4).svg" alt="Store Management" class="w-6 h-6" />
+                </div>
+                <h3 class="text-xl text-gray-900 font-semibold mb-3">Store Management</h3>
+                <p class="text-gray-600 leading-relaxed">Comprehensive inventory tracking, automated reordering, and intelligent stock optimization.</p>
+            </div>
+            <div class="bg-green-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
+                <div class="bg-green-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                    <img src="images/SVG (3).svg" alt="Purchase Office Interface" class="w-6 h-6" />
+                </div>
+                <h3 class="text-xl text-gray-900 font-semibold mb-3">Purchase Office Interface</h3>
+                <p class="text-gray-600 leading-relaxed">Streamlined purchase order creation, vendor management, and procurement workflow automation.</p>
+            </div>
+            <div class="bg-purple-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
+                <div class="bg-purple-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                    <img src="images/SVG (8).svg" alt="Digital Gated Entry" class="w-6 h-6" />
+                </div>
+                <h3 class="text-xl text-gray-900 font-semibold mb-3">Digital Gated Entry</h3>
+                <p class="text-gray-600 leading-relaxed">Secure digital access control with automated entry logging and visitor management.</p>
+            </div>
+            <div class="bg-yellow-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
+                <div class="bg-orange-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                    <img src="images/SVG (6).svg" alt="Admin Panel" class="w-6 h-6" />
+                </div>
+                <h3 class="text-xl text-gray-900 font-semibold mb-3">Admin Panel</h3>
+                <p class="text-gray-600 leading-relaxed">Centralized control center for user management, system configuration, and platform oversight.</p>
+            </div>
+            <div class="bg-indigo-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
+                <div class="bg-indigo-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                    <img src="images/SVG (7).svg" alt="Analytics & Reporting" class="w-6 h-6" />
+                </div>
+                <h3 class="text-xl text-gray-900 font-semibold mb-3">Analytics & Reporting</h3>
+                <p class="text-gray-600 leading-relaxed">Advanced data insights, custom reports, and predictive analytics for informed decision-making.</p>
+            </div>
+            <div class="bg-cyan-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
+                <div class="bg-cyan-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                    <img src="images/SVG (5).svg" alt="Approval Chain Management" class="w-6 h-6" />
+                </div>
+                <h3 class="text-xl text-gray-900 font-semibold mb-3">Approval Chain Management</h3>
+                <p class="text-gray-600 leading-relaxed">Customizable approval workflows with automated routing and real-time status tracking.</p>
+            </div>
         </div>
-        <h3 style="font-size: 1.25rem; color: #212529; margin: 0 0 0.75rem;">Full Visibility</h3>
-        <p style="color: #6c757d; line-height: 1.6; margin: 0;">
-            Gain complete transparency across your entire procurement process with advanced analytics and real-time reporting.
-        </p>
-    </div>
-</div>
-
-    
-</div>
-
-<div style="
-    background-color: #f8f9fa; /* Light grey background for the section */
-    padding: 80px 5%; /* Padding as per your layout spec, with responsive sides */
-    text-align: center;
-">
-
-    <h2 style="
-    font-family: Inter, sans-serif;
-    color: #212529;
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    text-align: center;
-    display: inline-block;
-">Comprehensive Platform Modules</h2>
-
-<p style="
-    font-size: 18px;
-    color: #6c757d;
-    margin: 0 auto 4rem auto;
-    text-align: center;
-    white-space: nowrap;  /* Keeps it in one line */
-    max-width: 700px;     /* Wider than heading */
-">Everything you need to manage your procurement process from start to finish.</p>
-
-<div style="
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Wraps into rows */
-    gap: 2rem; /* Spacing between cards */
-    text-align: left;
-">
-
-    <!-- Card 1 -->
-    <div style="
-        background-color: #F8FAFF;
-        padding: 2rem;
-        border-radius: 16px;
-        flex: 1;
-        min-width: 300px;
-        max-width: 360px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    ">
-        <div style="background-color: #316ade; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-            <img src="images/SVG (3).svg" alt="Store Management" style="width: 24px; height: 24px;" />
-        </div>
-        <h3 style="font-size: 1.25rem; color: #212529; margin: 0 0 0.75rem;">Store Management</h3>
-        <p style="color: #6c757d; line-height: 1.6; margin: 0;">Comprehensive inventory tracking, automated reordering, and intelligent stock optimization.</p>
     </div>
 
-    <!-- Card 2 -->
-    <div style="
-        background-color: #F0FCF3;
-        padding: 2rem;
-        border-radius: 16px;
-        flex: 1;
-        min-width: 300px;
-        max-width: 360px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    ">
-        <div style="background-color: #16A34A; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-            <img src="images/SVG (4).svg" alt="Purchase Office Interface" style="width: 24px; height: 24px;" />
-        </div>
-        <h3 style="font-size: 1.25rem; color: #212529; margin: 0 0 0.75rem;">Purchase Office Interface</h3>
-        <p style="color: #6c757d; line-height: 1.6; margin: 0;">Streamlined purchase order creation, vendor management, and procurement workflow automation.</p>
-    </div>
-
-    <!-- Card 3 -->
-    <div style="
-        background-color: #FFF8FE;
-        padding: 2rem;
-        border-radius: 16px;
-        flex: 1;
-        min-width: 300px;
-        max-width: 360px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    ">
-        <div style="background-color: #9333EA; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-            <img src="images/SVG (5).svg" alt="Digital Gated Entry" style="width: 24px; height: 24px;" />
-        </div>
-        <h3 style="font-size: 1.25rem; color: #212529; margin: 0 0 0.75rem;">Digital Gated Entry</h3>
-        <p style="color: #6c757d; line-height: 1.6; margin: 0;">Secure digital access control with automated entry logging and visitor management.</p>
-    </div>
-
-    <!-- Card 4 -->
-    <div style="
-        background-color: #FFF9ED;
-        padding: 2rem;
-        border-radius: 16px;
-        flex: 1;
-        min-width: 300px;
-        max-width: 360px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    ">
-        <div style="background-color: #E85A19; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-            <img src="images/SVG (6).svg" alt="Admin Panel" style="width: 24px; height: 24px;" />
-        </div>
-        <h3 style="font-size: 1.25rem; color: #212529; margin: 0 0 0.75rem;">Admin Panel</h3>
-        <p style="color: #6c757d; line-height: 1.6; margin: 0;">Centralized control center for user management, system configuration, and platform oversight.</p>
-    </div>
-
-    <!-- Card 5 -->
-    <div style="
-        background-color: #F6F8FF;
-        padding: 2rem;
-        border-radius: 16px;
-        flex: 1;
-        min-width: 300px;
-        max-width: 360px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    ">
-        <div style="background-color: #4F46E5; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-            <img src="images/SVG (7).svg" alt="Analytics & Reporting" style="width: 24px; height: 24px;" />
-        </div>
-        <h3 style="font-size: 1.25rem; color: #212529; margin: 0 0 0.75rem;">Analytics & Reporting</h3>
-        <p style="color: #6c757d; line-height: 1.6; margin: 0;">Advanced data insights, custom reports, and predictive analytics for informed decision-making.</p>
-    </div>
-
-    <!-- Card 6 -->
-    <div style="
-        background-color: #F0FBFC;
-        padding: 2rem;
-        border-radius: 16px;
-        flex: 1;
-        min-width: 300px;
-        max-width: 360px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    ">
-        <div style="background-color: #0D9488; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-            <img src="images/SVG (8).svg" alt="Approval Chain Management" style="width: 24px; height: 24px;" />
-        </div>
-        <h3 style="font-size: 1.25rem; color: #212529; margin: 0 0 0.75rem;">Approval Chain Management</h3>
-        <p style="color: #6c757d; line-height: 1.6; margin: 0;">Customizable approval workflows with automated routing and real-time status tracking.</p>
-    </div>
-
-</div>
-
-
-    </div>
-
-</div>
-
-<div style="
-    background-color: #f8f9fa;
-    padding: 5rem 5%;
-    text-align: center;
-">
-
-    <h2 style="
-    font-family: Inter, sans-serif;
-    font-size: 28px;   /* Reduced size */
-    color: #212529;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-    text-align: center;
-    display: inline-block;
-">Trusted by Industry Leaders</h2>
-
-<p style="
-    font-size: 18px;   /* Subtitle size */
-    color: #4B5563;
-    margin: 0 auto 4rem auto;
-    text-align: center;
-    white-space: nowrap;  /* Keeps it in one line */
-    max-width: 700px;     /* Slightly wider than heading */
-">See what our clients say about their Procqy experience.</p>
-
-
-    <div style="
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        flex-wrap: wrap;
-        gap: 2rem;
-        text-align: left;
-    ">
-
-        <div style="
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-            border: 1px solid #f0f0f0;
-            flex: 1;
-            min-width: 300px;
-            max-width: 360px;
-            display: flex;
-            flex-direction: column; /* Ensures content inside aligns well */
-        ">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                <img src="images/Client.png" alt="Michael Chen" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
-                <div>
-                    <h4 style="margin: 0; font-size: 1.1rem; color: #212529;">Michael Chen</h4>
-                    <p style="margin: 0; color: #6c757d; font-size: 0.9rem;">Procurement Director, TechCorp</p>
+    <div class="bg-gray-50 px-5 py-16 md:py-20 lg:py-24 text-center">
+        <h2 class="font-inter text-2xl md:text-3xl text-gray-900 font-extrabold mb-3 inline-block">Trusted by Industry Leaders</h2>
+        <p class="text-base md:text-lg text-gray-600 mx-auto mb-16 whitespace-nowrap max-w-3xl">See what our clients say about their Procqy experience.</p>
+        <div class="flex flex-wrap justify-center items-stretch gap-8 text-left">
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex-1 min-w-[300px] max-w-[360px] flex flex-col">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="images/Client (1).png" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                        <h4 class="m-0 text-lg text-gray-900">Michael Chen</h4>
+                        <p class="m-0 text-sm text-gray-600">Procurement Director, TechCorp</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed mt-0 mb-6 flex-grow">"Procqy transformed our procurement process completely. We've seen a 35% reduction in costs and our approval times have decreased by 60%. The platform is intuitive and powerful."</p>
+                <div class="text-yellow-500">
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                 </div>
             </div>
-            <p style="color: #495057; line-height: 1.6; margin-top: 0; margin-bottom: 1.5rem; flex-grow: 1;">"Procqy transformed our procurement process completely. We've seen a 35% reduction in costs and our approval times have decreased by 60%. The platform is intuitive and powerful."</p>
-            <div style="color: #ffc107;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-            </div>
-        </div>
-
-        <div style="
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-            border: 1px solid #f0f0f0;
-            flex: 1;
-            min-width: 300px;
-            max-width: 360px;
-            display: flex;
-            flex-direction: column;
-        ">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                <img src="images/Client (1).png" alt="Sarah Johnson" style="width: 50px; height: 52px; border-radius: 50%; object-fit: cover; margin-bottom: 0.5rem;">
-                <div>
-                    <h4 style="margin: 0; font-size: 1.1rem; color: #212529;">Sarah Johnson</h4>
-                    <p style="margin: 0; color: #6c757d; font-size: 0.9rem;">Supply Chain Manager, GlobalManufacturing</p>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex-1 min-w-[300px] max-w-[360px] flex flex-col">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="images/Gemini_Generated_Image_4ep9dz4ep9dz4ep9.png" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                        <h4 class="m-0 text-lg text-gray-900">Sarah Johnson</h4>
+                        <p class="m-0 text-sm text-gray-600">Supply Chain Manager, GlobalManufacturing</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed mt-0 mb-6 flex-grow">"The visibility and control Procqy provides is unmatched. We can track every purchase from request to delivery. The analytics have helped us identify significant cost savings opportunities."</p>
+                <div class="text-yellow-500">
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                 </div>
             </div>
-            <p style="color: #495057; line-height: 1.6; margin-top: 0; margin-bottom: 1.5rem; flex-grow: 1;">"The visibility and control Procqy provides is unmatched. We can track every purchase from request to delivery. The analytics have helped us identify significant cost savings opportunities."</p>
-            <div style="color: #ffc107;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-            </div>
-        </div>
-
-        <div style="
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-            border: 1px solid #f0f0f0;
-            flex: 1;
-            min-width: 300px;
-            max-width: 360px;
-            display: flex;
-            flex-direction: column;
-        ">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                <img src="images/Client (1).png" alt="David Rodriguez" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
-                <div>
-                    <h4 style="margin: 0; font-size: 1.1rem; color: #212529;">David Rodriguez</h4>
-                    <p style="margin: 0; color: #6c757d; font-size: 0.9rem;">Operations Director, RetailChain</p>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex-1 min-w-[300px] max-w-[360px] flex flex-col">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="images/Client.png" alt="David Rodriguez" class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                        <h4 class="m-0 text-lg text-gray-900">David Rodriguez</h4>
+                        <p class="m-0 text-sm text-gray-600">Operations Director, RetailChain</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed mt-0 mb-6 flex-grow">"Implementation was seamless and the support team is exceptional. Procqy has streamlined our entire procurement workflow and improved vendor relationships significantly."</p>
+                <div class="text-yellow-500">
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                 </div>
             </div>
-            <p style="color: #495057; line-height: 1.6; margin-top: 0; margin-bottom: 1.5rem; flex-grow: 1;">"Implementation was seamless and the support team is exceptional. Procqy has streamlined our entire procurement workflow and improved vendor relationships significantly."</p>
-            <div style="color: #ffc107;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+        </div>
+    </div>
+
+    <div class="bg-blue-600 text-white px-5 py-16 md:py-20 lg:py-24 text-center flex flex-col items-center justify-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to Transform Your Procurement?</h2>
+        <p class="text-base md:text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed mb-10">Join thousands of companies already saving time and money with Procqy. Start your free trial today and experience the future of procurement.</p>
+        <div class="flex flex-wrap justify-center gap-4 mb-6">
+            <a href="#" class="bg-white text-blue-600 py-4 px-8 rounded-lg font-semibold border-2 border-transparent hover:bg-gray-100 transition-colors whitespace-nowrap">Start Free 30-Day Trial</a>
+            <a href="#" class="bg-transparent text-white py-4 px-8 rounded-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-colors whitespace-nowrap">Schedule Demo</a>
+        </div>
+        <p class="text-sm text-blue-200 mt-2">No credit card required &bull; Setup in minutes &bull; 24/7 support</p>
+    </div>
+
+    <footer class="bg-[#0c0c0c] text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Subscribe to our newsletter</h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center max-w-2xl mx-auto">
+                <div class="relative w-full sm:w-3/4 mb-4 sm:mb-0 sm:mr-4">
+                    <input type="email" placeholder="Enter your email address" class="w-full bg-gray-200 text-gray-800 py-4 pl-12 pr-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 placeholder-gray-500">
+                    <img src="images/email-8-svgrepo-com.svg" alt="Email Icon" class="h-6 w-6 absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-500">
+                </div>
+                <button class="w-full sm:w-auto bg-black text-white py-4 px-8 rounded-lg font-bold hover:bg-gray-800 transition-colors">
+                    Get Started
+                </button>
             </div>
         </div>
 
-    </div>
+        <hr class="border-gray-800 my-16">
 
-</div>
-
-<div style="
-    background-color: #0d6efd;
-    color: #ffffff;
-    padding: 5rem 5%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-">
-
-    <h2 style="
-        font-size: clamp(2rem, 4vw, 2.75rem);
-        font-weight: 700;
-            font-size: 34px; 
-        margin-top: 0;
-        margin-bottom: 1rem;
-    ">Ready to Transform Your Procurement?</h2>
-
-    <p style="
-        font-size: clamp(1rem,2.5vw, 1.15rem);
-        color: rgba(255, 255, 255, 0.9);
-        max-width: 750px; /* Constrains line length for readability */
-        margin: 0 auto 2.5rem auto;
-        line-height: 1.6;
-    ">Join thousands of companies already saving time and money with Procqy. Start your free trial today and experience the future of procurement.</p>
-
-    <div style="
-        display: flex;
-        flex-wrap: wrap; /* Allows buttons to stack on small screens */
-        justify-content: center;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-    ">
-        <a href="#" style="
-            background-color: #ffffff;
-            color: #0d6efd;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid transparent;
-            white-space: nowrap;
-        ">Start Free 30-Day Trial</a>
-        <a href="#" style="
-            background-color: transparent;
-            color: #ffffff;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid #ffffff;
-            white-space: nowrap;
-        ">Schedule Demo</a>
-    </div>
-
-    <p style="
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.8);
-        margin: 0;
-    ">No credit card required  •  Setup in minutes  •  24/7 support</p>
-
-</div>
-
-<footer style="
-    background-color: #000000;
-    color: #adb5bd; /* A light grey for default text */
-    font-family: system-ui, -apple-system, sans-serif;
-    padding: 5rem 5% 2rem 5%;
-">
-
-    <div style="text-align: center; max-width: 600px; margin: 0 auto 4rem auto;">
-        <h2 style="
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            color: #ffffff;
-            font-weight: 600;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-        ">Subscribe to our newsletter</h2>
-        <div style="
-            display: flex;
-            flex-wrap: wrap; /* Stacks input and button on small screens */
-            gap: 1rem;
-            justify-content: center;
-        ">
-            <div style="position: relative; flex-grow: 1; min-width: 250px;">
-                <span style="position: absolute; top: 50%; left: 16px; transform: translateY(-50%);">
-    <img src="images/image 59.png" alt="Email" width="20" height="20" style="display: block;">
-</span>
-
-                <input type="email" placeholder="Enter your email address" style="
-                    width: 100%;
-                    padding: 1rem 1rem 1rem 3rem; /* Padding left for icon */
-                    background-color: #e9ecef;
-                    border: none;
-                    border-radius: 8px;
-                    font-size: 1rem;
-                    color: #212529;
-                ">
+        <div class="flex flex-col md:flex-row md:justify-between align-items-center md:items-center mobile-col">
+            <div class="flex flex-col mb-8 md:mb-0 md:flex-row md:items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="images/image 58 (1).svg" alt="Codenscious Logo" class="h-20 w-25">
+                    <div class="flex flex-col">
+                        <h2 class="text-2xl font-semibold">Codenscious</h2>
+                        <p class="text-sl">The Code Conscious</p>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-0 md:ml-24">
+                    <p class="max-w-xs">IT Park, 28, Indore - Dhar Rd, Sinhasa, Indore, Madhya Pradesh 452009</p>
+                    <div class="flex flex-col space-y-4 md:flex-row md:space-x-16 md:space-y-0 mt-8">
+                        <div>
+                            <p class="font-bold">Phone Number</p>
+                            <p class="whitespace-nowrap">1-800-201-1019</p>
+                        </div>
+                        <div>
+                            <p class="font-bold">Email</p>
+                            <p>support@codenscious.com</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button style="
-                background-color: #131313;
-                color: #ffffff;
-                border: none;
-                padding: 1rem 2rem;
-                font-size: 1rem;
-                font-weight: 600;
-                border-radius: 8px;
-                cursor: pointer;
-            ">Get Started</button>
-        </div>
-    </div>
 
-    <div style="
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        padding-bottom: 3rem;
-        justify-content: space-between;
-    ">
-        <div style="flex: 2; min-width: 280px;">
-    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-  <img src="images/image 58 (1).svg" alt="Codenscious Logo" width="130" height="130" style="display: block;">
-  
-  <!-- Text Block -->
-  <div style="display: flex; flex-direction: column; justify-content: center;">
-    <h3 style="
-      color: #ffffff; 
-      font-size: 1.5rem; 
-      margin: 0 0 0.2rem 0; /* Pulls it a little upward */
-    ">
-      Codenscious
-    </h3>
-    <p style="margin: 0; line-height: 1.2; color: #adb5bd; font-size: 0.95rem;">
-      The Code Conscious
-    </p>
-  </div>
-</div>
-
-    <p style="line-height: 1.6; margin: 0;">IT Park, 28, <br>Indore - Dhar Rd, Sinhasa, <br>Indore, Madhya Pradesh 452009</p>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 3rem;">
-        <div>
-            <h5 style="color: #ffffff; margin: 0 0 0.5rem 0;">Phone Number</h5>
-            <p style="margin: 0;">1-800-201-1019</p>
-        </div>
-        <div>
-            <h5 style="color: #ffffff; margin: 0 0 0.5rem 0;">Email</h5>
-            <p style="margin: 0;">support@codenscious.com</p>
-        </div>
-    </div>
-</div>
-
-
-        <div style="flex: 1; min-width: 150px;">
-            <h4 style="color: #ffffff; margin-bottom: 1.5rem; font-weight: 600;">QUICK LINKS</h4>
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <a href="#" style="color: #adb5bd; text-decoration: none;">About us</a>
-                <a href="#" style="color: #adb5bd; text-decoration: none;">FAQ</a>
-                <a href="#" style="color: #adb5bd; text-decoration: none;">Contact us</a>
-                <a href="#" style="color: #adb5bd; text-decoration: none;">Blog</a>
-                <a href="#" style="color: #adb5bd; text-decoration: none;">Projects</a>
+            <div class="flex flex-col md:flex-row md:space-x-12 mt-8 md:mt-0 mobile-col">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold underline mb-2">QUICK LINKS</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">About us</a></li>
+                        <li><a href="#" class="hover:underline text-sm">FAQ</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Contact us</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Blog</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold underline mb-2">SOCIAL</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">Facebook</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Instagram</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Twitter</a></li>
+                        <li><a href="#" class="hover:underline text-sm">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold underline mb-2">LEGAL</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">Terms of service</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Cookie Policy</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div style="flex: 1; min-width: 150px;">
-            <h4 style="color: #ffffff; margin-bottom: 1.5rem; font-weight: 600;">SOCIAL</h4>
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <a href="#" style="color: #adb5bd; text-decoration: none;">Facebook</a>
-                <a href="#" style="color: #adb5bd; text-decoration: none;">Instagram</a>
-                <a href="#" style="color: #adb5bd; text-decoration: none;">Twitter</a>
-                <a href="#" style="color: #adb5bd; text-decoration: none;">LinkedIn</a>
-            </div>
-        </div>
-
-        <div style="flex: 1; min-width: 150px;">
-            <h4 style="color: #ffffff; margin-bottom: 1.5rem; font-weight: 600;">LEGAL</h4>
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <a href="#" style="color: #adb5bd; text-decoration: none;">Terms of service</a>
-                <a href="#" style="color: #adb5bd; text-decoration: none;">Privacy Policy</a>
-                <a href="#" style="color: #adb5bd; text-decoration: none;">Cookie Policy</a>
-            </div>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+            <p>&copy; 2025 Codenscious. All rights reserved.</p>
         </div>
     </div>
+  </footer>
 
-    <div style="
-        border-top: 1px solid #343a40;
-        padding-top: 2rem;
-        text-align: center;
-    ">
-        <p style="margin: 0; font-size: 0.9rem;">©2025 Codenscious. All Rights Reserved</p>
-    </div>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
 
-</footer>
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.remove('-translate-y-full');
+            }, 10);
+        });
 
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-y-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        });
+    </script>
 </body>
 </html>

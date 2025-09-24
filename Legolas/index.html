@@ -5,520 +5,321 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Legolas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom CSS for gradient text and hover effects */
+    .text-gradient-hero {
+      background-image: linear-gradient(90deg, #00d4d4, #0066ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient-infra {
+      background-image: linear-gradient(90deg, #60A5FA, #A78BFA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient-transform {
+      background-image: linear-gradient(90deg, #38BDF8, #3B82F6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient-stats {
+      background-image: linear-gradient(90deg, #38BDF8, #A78BFA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient-dashboard,
+    .text-gradient-smart-cities {
+      background-image: linear-gradient(90deg, #38BDF8, #60A5FA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient-cta {
+      background-image: linear-gradient(90deg, #2DD4BF, #3B82F6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient-trusted {
+      background-image: linear-gradient(90deg, #2DD4BF, #38BDF8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .shadow-teal-glow {
+      box-shadow: 0 4px 15px rgba(0, 102, 255, 0.4);
+    }
+
+    .shadow-blue-glow {
+      box-shadow: 16px 30px 70px -20px rgba(7, 195, 241, 0.25);
+    }
+
+    .shadow-teal-light-glow {
+      box-shadow: 0 8px 32px rgba(20, 184, 166, 0.1);
+    }
+
+    .bg-card-gradient-1 {
+      background: linear-gradient(145deg, #201710, #EA580C);
+    }
+
+    .bg-card-gradient-2 {
+      background: linear-gradient(145deg, #2DD4BF, #0D9488);
+    }
+
+    .bg-card-gradient-3 {
+      background: linear-gradient(145deg, #C084FC, #A855F7);
+    }
+
+    .bg-icon-gradient-1 {
+      background: linear-gradient(90deg, #06dec8, #347bed);
+    }
+
+    .bg-icon-gradient-2 {
+      background: linear-gradient(90deg, #3485b1, #9333EA);
+    }
+
+    .bg-icon-gradient-3 {
+      background: linear-gradient(90deg, #9e5de3, #db2733);
+    }
+  </style>
 </head>
 
-<body style="margin:0; font-family: Arial, Helvetica, sans-serif; background-color:#0B132B; color:white;">
-
-  <!-- Navbar -->
-  <header
-    style="position:sticky; top:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:10px 5%; background-color:#0B132B; border-bottom:1px solid rgba(255,255,255,0.08); backdrop-filter:blur(6px);">
-    <!-- Logo -->
-    <div style="display:flex; align-items:center; gap:10px;">
-      <div
-        style="width:35px; height:35px; border-radius:8px; background:linear-gradient(135deg,#00e6e6,#0066ff); display:flex; align-items:center; justify-content:center; font-weight:bold; color:white; font-size:18px;">
-        L</div>
-      <span style="font-size:23px; font-weight:700;">Legolas</span>
+<body class="bg-[#0B132B] text-white font-sans">
+  <header class="sticky top-0 z-50 flex items-center justify-between px-5 md:px-[5%] py-4 bg-[#0B132B]/90 border-b border-white/10 backdrop-blur-sm">
+    <div class="flex items-center gap-2">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-bold text-lg text-white">L</div>
+      <span class="text-2xl font-bold">Legolas</span>
     </div>
 
-    <!-- Nav Links -->
-    <nav style="display:flex; align-items:center; gap:30px;">
-      <a href="#" style="text-decoration:none; color:#d1d1d1; font-size:15px;">Features</a>
-      <a href="#" style="text-decoration:none; color:#d1d1d1; font-size:15px;">Solutions</a>
-      <a href="#" style="text-decoration:none; color:#d1d1d1; font-size:15px;">Pricing</a>
-      <a href="#" style="text-decoration:none; color:#d1d1d1; font-size:15px;">Contact</a>
-      <a href="#"
-        style="padding:10px 20px; border-radius:8px; background:linear-gradient(90deg,#00e6e6,#0066ff); color:white; font-weight:600; text-decoration:none; font-size:15px;">Get
-        Started</a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">Features</a>
+      <a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">Solutions</a>
+      <a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">Pricing</a>
+      <a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">Contact</a>
+      <a href="#" class="px-5 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-semibold text-sm hover:opacity-90 transition-opacity">Get Started</a>
     </nav>
+
+    <button id="menu-button" class="md:hidden text-gray-400 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
   </header>
 
-  <!-- Hero Section -->
-  <section style="text-align:center; padding:100px 20px;">
-    <h1 style="font-size:42px; font-weight:800; margin-bottom:20px; line-height:1.3;">
+  <nav id="mobile-menu" class="hidden md:hidden fixed top-[73px] left-0 w-full bg-[#0B132B] border-t border-white/10 p-5 flex flex-col items-center gap-4 z-40">
+    <a href="#" class="w-full text-center text-gray-300 text-base py-2 hover:bg-gray-800 rounded-lg transition-colors">Features</a>
+    <a href="#" class="w-full text-center text-gray-300 text-base py-2 hover:bg-gray-800 rounded-lg transition-colors">Solutions</a>
+    <a href="#" class="w-full text-center text-gray-300 text-base py-2 hover:bg-gray-800 rounded-lg transition-colors">Pricing</a>
+    <a href="#" class="w-full text-center text-gray-300 text-base py-2 hover:bg-gray-800 rounded-lg transition-colors">Contact</a>
+    <a href="#" class="w-full text-center px-5 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-semibold text-base mt-2 hover:opacity-90 transition-opacity">Get Started</a>
+  </nav>
+
+  <section class="text-center py-24 md:py-32 px-5">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight">
       A Clearer View <br>
-      <span
-        style="color:transparent; background:linear-gradient(90deg,#00d4d4,#0066ff); -webkit-background-clip:text; background-clip:text;">for
-        Safer Roads</span>
+      <span class="text-gradient-hero">for Safer Roads</span>
     </h1>
-    <p style="color:#b0b0b0; font-size:17px; max-width:600px; margin:0 auto 40px;">
-      Harness the power of AI to detect road defects in real-time, <br> optimize infrastructure budgets, and build
-      smarter, safer cities.
+    <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+      Harness the power of AI to detect road defects in real-time, optimize infrastructure budgets, and build smarter, safer cities.
     </p>
 
-    <!-- Buttons -->
-    <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
-      <a href="#"
-        style="padding:12px 28px; border-radius:10px; background:linear-gradient(90deg,#00e6e6,#0066ff); color:white; text-decoration:none; font-weight:600; font-size:15px; box-shadow:0 4px 15px rgba(0,102,255,0.4);">See
-        Demo</a>
-      <a href="#"
-        style="padding:12px 28px; border-radius:10px; border:2px solid #00e6e6; color:#00e6e6; text-decoration:none; font-weight:600; font-size:15px;">Start
-        Monitoring</a>
+    <div class="flex flex-col md:flex-row justify-center gap-5 md:gap-8">
+      <a href="#" class="px-7 py-3 md:px-8 md:py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-semibold text-sm md:text-base shadow-teal-glow hover:scale-105 transition-transform">See Demo</a>
+      <a href="#" class="px-7 py-3 md:px-8 md:py-4 rounded-xl border-2 border-cyan-400 text-cyan-400 font-semibold text-sm md:text-base hover:bg-cyan-400/10 transition-colors">Start Monitoring</a>
     </div>
   </section>
 
-  <!-- Responsive Styles -->
-  <style>
-    @media(max-width:768px) {
-      header nav {
-        display: none;
-      }
-
-      /* hide nav links on mobile */
-      h1 {
-        font-size: 32px !important;
-      }
-
-      p {
-        font-size: 15px !important;
-      }
-    }
-  </style>
-
-  <section
-    style="background-color: #0f172a; color: #ffffff; padding: 80px 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
-
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-
-      <h2 style="font-size: 42px; font-weight: 700; margin: 0 0 16px 0; line-height: 1.2;">
-        Intelligent Infrastructure
-        <br>
-        <span
-          style="background: linear-gradient(90deg, #60A5FA, #A78BFA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
-          Monitoring
-        </span>
+  <section class="bg-slate-900 text-white py-20 px-5">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+        Intelligent Infrastructure <br>
+        <span class="text-gradient-infra">Monitoring</span>
       </h2>
-
-      <p style="font-size: 18px; color: #d1d4db; max-width: 650px; margin: 0 auto 48px auto; line-height: 1.6;">
+      <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
         Explore how Legolas transforms road monitoring with AI-powered detection and real-time analytics
       </p>
 
-      <div style="border: 1px solid rgba(100, 116, 139, 0.5); border-radius: 24px; padding: 32px;">
-
-        <div style="display: flex; justify-content: center; align-items: stretch; gap: 32px; flex-wrap: wrap;">
-
-          <div
-            style="background-color: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 32px; text-align: left; position: relative; overflow: hidden; flex: 1; min-width: 280px; max-width: 350px;">
-            <div
-              style="position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: #2672ed; filter: blur(25px); opacity: 0.6; transform: translate(-50%, -50%);">
-            </div>
-            <div
-              style="position: absolute; top: 0; left: 0; width: 8px; height: 8px; border-radius: 50%; background-color: #ffffff; transform: translate(-50%, -50%);">
-            </div>
-
-            <div
-              style="width:64px; height:64px; border-radius:12px; margin-bottom:24px; display:flex; align-items:center; justify-content:center; background:linear-gradient(90deg,#06dec8,#347bed);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="border border-slate-700 rounded-3xl p-8">
+        <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 lg:gap-12">
+          <div class="bg-slate-800 border border-slate-700 rounded-2xl p-8 text-left relative overflow-hidden flex-1 min-w-[280px] max-w-sm">
+            <div class="absolute top-0 left-0 w-16 h-16 bg-blue-600 blur-lg opacity-60 transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute top-0 left-0 w-2 h-2 rounded-full bg-white transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="w-16 h-16 rounded-xl mb-6 flex items-center justify-center bg-icon-gradient-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
             </div>
-
-            <h3 style="font-size: 22px; font-weight: 600; margin: 0 0 12px 0;">
-              AI Vision
-            </h3>
-            <p style="color: #9ca3af; line-height: 1.6; margin: 0;">
-              Advanced computer vision <br> algorithms detect cracks, potholes, <br> and surface defects with 99.2% <br>
-              accuracy in real-time.
+            <h3 class="text-xl font-semibold mb-3">AI Vision</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Advanced computer vision algorithms detect cracks, potholes, and surface defects with 99.2% accuracy in real-time.
             </p>
           </div>
-
-          <div
-            style="background-color: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 32px; text-align: left; position: relative; overflow: hidden; flex: 1; min-width: 280px; max-width: 350px;">
-            <div
-              style="position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: #9333EA; filter: blur(25px); opacity: 0.6; transform: translate(-50%, -50%);">
-            </div>
-            <div
-              style="position: absolute; top: 0; left: 0; width: 8px; height: 8px; border-radius: 50%; background-color: #ffffff; transform: translate(-50%, -50%);">
-            </div>
-
-            <div
-              style="width: 64px; height: 64px; border-radius: 12px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; background: linear-gradient(90deg, #3485b1, #9333EA);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="bg-slate-800 border border-slate-700 rounded-2xl p-8 text-left relative overflow-hidden flex-1 min-w-[280px] max-w-sm">
+            <div class="absolute top-0 left-0 w-16 h-16 bg-purple-600 blur-lg opacity-60 transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute top-0 left-0 w-2 h-2 rounded-full bg-white transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="w-16 h-16 rounded-xl mb-6 flex items-center justify-center bg-icon-gradient-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
             </div>
-
-            <h3 style="font-size: 22px; font-weight: 600; margin: 0 0 12px 0;">
-              Geo-Tagging
-            </h3>
-            <p style="color: #9ca3af; line-height: 1.6; margin: 0;">
-              Precise GPS coordinates and <br> mapping integration for exact <br> defect location tracking and <br>
-              maintenance planning.
+            <h3 class="text-xl font-semibold mb-3">Geo-Tagging</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Precise GPS coordinates and mapping integration for exact defect location tracking and maintenance planning.
             </p>
           </div>
-
-          <div
-            style="background-color: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 32px; text-align: left; position: relative; overflow: hidden; flex: 1; min-width: 280px; max-width: 350px;">
-            <div
-              style="position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: #DB2777; filter: blur(25px); opacity: 0.6; transform: translate(-50%, -50%);">
+          <div class="bg-slate-800 border border-slate-700 rounded-2xl p-8 text-left relative overflow-hidden flex-1 min-w-[280px] max-w-sm">
+            <div class="absolute top-0 left-0 w-16 h-16 bg-pink-600 blur-lg opacity-60 transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute top-0 left-0 w-2 h-2 rounded-full bg-white transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="w-16 h-16 rounded-xl mb-6 flex items-center justify-center bg-icon-gradient-3">
+              <img src="Background.png" alt="Analytics icon placeholder" class="h-full w-full object-cover">
             </div>
-            <div
-              style="position: absolute; top: 0; left: 0; width: 8px; height: 8px; border-radius: 50%; background-color: #ffffff; transform: translate(-50%, -50%);">
-            </div>
-
-            <div
-              style="width: 64px; height: 64px; border-radius: 12px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; background: linear-gradient(90deg, #9e5de3, #db2733);">
-              <img src="Background.png" alt="">
-            </div>
-
-            <h3 style="font-size: 22px; font-weight: 600; margin: 0 0 12px 0;">
-              Analytics
-            </h3>
-            <p style="color: #9ca3af; line-height: 1.6; margin: 0;">
-              Comprehensive dashboards and <br> predictive insights to optimize <br> maintenance schedules and budget
-              <br> allocation.
+            <h3 class="text-xl font-semibold mb-3">Analytics</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Comprehensive dashboards and predictive insights to optimize maintenance schedules and budget allocation.
             </p>
           </div>
-
         </div>
       </div>
     </div>
   </section>
 
-  <style>
-    @media (max-width: 992px) {
-      .transform-grid {
-        grid-template-columns: 1fr !important;
-        /* Stack items into a single column */
-      }
+  <section class="bg-black text-white py-32 md:py-40 px-5">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-center text-3xl md:text-4xl lg:text-5xl font-bold mt-0 mb-20 leading-tight">
+      Transform Your <br>
+      <span class="text-gradient-transform">Infrastructure Impact</span>
+    </h2>
 
-      .transform-stat,
-      .transform-card {
-        text-align: center !important;
-        /* Center all text */
-      }
-
-      .connecting-line {
-        display: none !important;
-        /* Hide decorative lines on mobile */
-      }
-
-      .transform-stat-left {
-        justify-content: center !important;
-        /* Center the left-aligned stats */
-      }
-
-      /* Re-order items for a logical flow on mobile: Card -> Stat */
-      #detect-card {
-        order: 1;
-      }
-
-      #forty-stat {
-        order: 2;
-        margin-bottom: 40px;
-      }
-
-      #enhance-card {
-        order: 3;
-      }
-
-      #ninety-nine-stat {
-        order: 4;
-        margin-bottom: 40px;
-      }
-
-      #empower-card {
-        order: 5;
-      }
-
-      #twenty-four-seven-stat {
-        order: 6;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .section-padding {
-        padding: 80px 20px !important;
-        /* Reduce padding on smaller screens */
-      }
-
-      .main-heading {
-        font-size: 36px !important;
-        /* Reduce heading font size */
-      }
-
-      .stat-heading {
-        font-size: 60px !important;
-        /* Reduce statistic font size */
-      }
-    }
-  </style>
-
-  <section class="section-padding"
-    style="background-color: #000000; color: #ffffff; padding: 128px 80px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;">
-    <div style="max-width: 1100px; margin: 0 auto;">
-
-      <h2 class="main-heading"
-        style="text-align: center; font-size: 42px; font-weight: 700; margin-top: 0; margin-bottom: 80px; line-height: 1.3;">
-        Transform Your
-        <br>
-        <span
-          style="background: linear-gradient(90deg, #38BDF8, #3B82F6); -webkit-background-clip: text; color: transparent; background-clip: text;">Infrastructure
-          Impact</span>
-      </h2>
-
-      <div class="transform-grid"
-        style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px 80px; align-items: center;">
-
-        <div id="detect-card" class="transform-card"
-          style="background-color: #0F172A; border-radius: 16px; padding: 32px; position: relative;">
-          <div class="connecting-line"
-            style="position: absolute; left: 100%; top: 50%; width: 40px; height: 2px; background-color: #38BDF8; transform: translateY(-50%);">
-          </div>
-          <div
-            style="width: 48px; height: 48px; border-radius: 8px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #201710, #EA580C); ">
-            <img src="Background2.png" alt=""><span alt="Warning icon placeholder"></span>
-          </div>
-          <h3 style="font-size: 22px; margin: 0 0 12px 0;">Detect Issues Early</h3>
-          <p style="margin: 0; color: #9CA3AF; line-height: 1.6;">
-            AI-powered detection identifies cracks and defects before they become costly repairs, saving up to 40% on
-            maintenance budgets.
-          </p>
-        </div>
-
-        <div id="forty-stat" class="transform-stat" style="text-align: left;">
-          <h4 class="stat-heading"
-            style="font-size: 80px; font-weight: 700; margin: 0; background: linear-gradient(90deg, #38BDF8, #A78BFA); -webkit-background-clip: text; color: transparent; background-clip: text;">
-            40%</h4>
-          <p style="margin: 8px 0 0 0; color: #9CA3AF; font-size: 18px;">Cost Reduction</p>
-        </div>
-
-        <div id="ninety-nine-stat" class="transform-stat transform-stat-left"
-          style="text-align: right; display: flex; flex-direction: column; align-items: flex-end;">
-          <h4 class="stat-heading"
-            style="font-size: 80px; font-weight: 700; margin: 0; background: linear-gradient(90deg, #38BDF8, #A78BFA); -webkit-background-clip: text; color: transparent; background-clip: text;">
-            99.2%</h4>
-          <p style="margin: 8px 0 0 0; color: #9CA3AF; font-size: 18px;">Detection Accuracy</p>
-        </div>
-
-        <div id="enhance-card" class="transform-card"
-          style="background-color: #0F172A; border-radius: 16px; padding: 32px; position: relative;">
-          <div class="connecting-line"
-            style="position: absolute; right: 100%; top: 50%; width: 40px; height: 2px; background-color: #38BDF8; transform: translateY(-50%);">
-          </div>
-          <div
-            style="width: 48px; height: 48px; border-radius: 8px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #2DD4BF, #0D9488);">
-            <span alt="Shield icon placeholder"></span>
-            <img src="Background3.png" alt="">
-          </div>
-          <h3 style="font-size: 22px; margin: 0 0 12px 0;">Enhance Safety</h3>
-          <p style="margin: 0; color: #9CA3AF; line-height: 1.6;">
-            Proactive monitoring prevents accidents and ensures road safety standards, protecting both drivers and
-            infrastructure investments.
-          </p>
-        </div>
-
-        <div id="empower-card" class="transform-card"
-          style="background-color: #0F172A; border-radius: 16px; padding: 32px; position: relative;">
-          <div class="connecting-line"
-            style="position: absolute; left: 100%; top: 50%; width: 40px; height: 2px; background-color: #38BDF8; transform: translateY(-50%);">
-          </div>
-          <div
-            style="width: 48px; height: 48px; border-radius: 8px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #C084FC, #A855F7);">
-            <span alt="City building icon placeholder"></span>
-            <img src="Background4.png" alt="">
-          </div>
-          <h3 style="font-size: 22px; margin: 0 0 12px 0;">Empower Smart Cities</h3>
-          <p style="margin: 0; color: #9CA3AF; line-height: 1.6;">
-            Integrate with city planning systems to create data-driven infrastructure decisions and build the cities of
-            tomorrow.
-          </p>
-        </div>
-
-        <div id="twenty-four-seven-stat" class="transform-stat" style="text-align: left;">
-          <h4 class="stat-heading"
-            style="font-size: 80px; font-weight: 700; margin: 0; background: linear-gradient(90deg, #38BDF8, #A78BFA); -webkit-background-clip: text; color: transparent; background-clip: text;">
-            24/7</h4>
-          <p style="margin: 8px 0 0 0; color: #9CA3AF; font-size: 18px;">Real-time Monitoring</p>
-        </div>
-
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+      <div class="order-1 lg:order-1 bg-slate-900 rounded-2xl p-8 relative">
+        <h3 class="text-xl md:text-2xl font-semibold mb-3">Detect Issues Early</h3>
+        <p class="text-gray-400 leading-relaxed">
+          AI-powered detection identifies cracks and defects before they become costly repairs, saving up to 40% on maintenance budgets.
+        </p>
       </div>
 
+      <div class="order-2 lg:order-2 text-left">
+        <h4 class="text-5xl md:text-7xl lg:text-8xl font-bold m-0 text-gradient-stats">40%</h4>
+        <p class="mt-2 text-gray-400 text-lg">Cost Reduction</p>
+      </div>
+
+      <div class="order-3 lg:order-3 bg-slate-900 rounded-2xl p-8 relative">
+        <h3 class="text-xl md:text-2xl font-semibold mb-3">Enhance Safety</h3>
+        <p class="text-gray-400 leading-relaxed">
+          Proactive monitoring prevents accidents and ensures road safety standards, protecting both drivers and infrastructure investments.
+        </p>
+      </div>
+
+      <div class="order-4 lg:order-4 text-left">
+        <h4 class="text-5xl md:text-7xl lg:text-8xl font-bold m-0 text-gradient-stats">99.2%</h4>
+        <p class="mt-2 text-gray-400 text-lg">Detection Accuracy</p>
+      </div>
+
+      <div class="order-5 lg:order-5 bg-slate-900 rounded-2xl p-8 relative">
+        <h3 class="text-xl md:text-2xl font-semibold mb-3">Empower Smart Cities</h3>
+        <p class="text-gray-400 leading-relaxed">
+          Integrate with city planning systems to create data-driven infrastructure decisions and build the cities of tomorrow.
+        </p>
+      </div>
+
+      <div class="order-6 lg:order-6 text-left">
+        <h4 class="text-5xl md:text-7xl lg:text-8xl font-bold m-0 text-gradient-stats">24/7</h4>
+        <p class="mt-2 text-gray-400 text-lg">Real-time Monitoring</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <style>
-    /* Media query for responsive adjustments on tablets and mobile devices */
-    @media (max-width: 768px) {
-      .dashboard-section {
-        padding: 80px 20px !important;
-        /* Reduces padding on smaller screens */
-      }
-
-      .dashboard-heading {
-        font-size: 36px !important;
-        /* Adjusts heading font size for mobile */
-      }
-
-      .dashboard-subheading {
-        font-size: 16px !important;
-        /* Adjusts subheading font size */
-        margin-bottom: 48px !important;
-      }
-
-      .dashboard-bezel {
-        padding: 8px !important;
-        /* Reduces the frame size around the image */
-      }
-    }
-  </style>
-
-  <section class="dashboard-section"
-    style="background-color: #0f172a; background-image: radial-gradient(circle at 50% 30%, rgba(30, 41, 59, 0.8), #0f172a 70%); color: #ffffff; padding: 128px 80px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; text-align: center;">
-
-    <div style="max-width: 1200px; margin: 0 auto;">
-
-      <h2 class="dashboard-heading" style="font-size: 42px; font-weight: 700; margin: 0 0 16px 0; line-height: 1.3;">
+  <section class="bg-slate-900 text-white py-24 md:py-32 px-5 text-center">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
         Experience the
-        <span
-          style="display: block; background: linear-gradient(90deg, #38BDF8, #60A5FA); -webkit-background-clip: text; color: transparent; background-clip: text;">
-          Legolas Dashboard
-        </span>
+        <span class="block text-gradient-dashboard">Legolas Dashboard</span>
       </h2>
-      <p class="dashboard-subheading"
-        style="font-size: 18px; color: #9ca3af; max-width: 600px; margin: 0 auto 64px auto; line-height: 1.6;">
+      <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
         A comprehensive command center for road infrastructure monitoring and management
       </p>
 
-      <div style="border-radius: 20px; box-shadow: 16px 30px 70px -20px rgba(7, 195, 241, 0.25);">
-
-        <div class="dashboard-bezel"
-          style="background-color: #162031; border: 1px solid #334155; border-radius: 20px; padding: 16px; overflow: hidden;">
-
-          <img src="images/Legolas dashboard.png"
-            alt="A comprehensive dashboard showing charts for load time, bounce rate, and defects detected."
-            style="width: 100%; height: auto; display: block; border-radius: 12px;">
-
+      <div class="rounded-[20px] shadow-blue-glow">
+        <div class="bg-[#162031] border border-slate-700 rounded-[20px] p-4 overflow-hidden">
+          <img src="images/Legolas dashboard.png" alt="A comprehensive dashboard showing charts for load time, bounce rate, and defects detected." class="w-full h-auto block rounded-xl">
         </div>
       </div>
-
     </div>
   </section>
 
-  <style>
-    /* Media query for responsive adjustments */
-    @media (max-width: 768px) {
-      .smart-cities-section {
-        padding: 80px 20px !important;
-      }
-
-      .smart-cities-heading {
-        font-size: 36px !important;
-      }
-
-      .smart-cities-cards-container {
-        gap: 48px 16px !important;
-        /* Adjust gap for stacked cards */
-      }
-    }
-  </style>
-
-  <section class="smart-cities-section" style="position: relative; overflow: hidden; background-color: #0f172a; color: #ffffff; padding: 80px 10px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; text-align: center;  background-image: url('data:image/svg+xml,%3Csvg width=%221200%22 height=%22400%22 viewBox=%220 0 1200 400%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Crect x=%220%22 y=%22150%22 width=%2280%22 height=%22250%22 fill=%229CA3AF%22/%3E%3Crect x=%22120%22 y=%22100%22 width=%2280%22 height=%22300%22 fill=%229CA3AF%22/%3E%3Crect x=%22240%22 y=%22200%22 width=%2280%22 height=%22200%22 fill=%229CA3AF%22/%3E%3Crect x=%22360%22 y=%22120%22 width=%2280%22 height=%22280%22 fill=%229CA3AF%22/%3E%3Crect x=%22480%22 y=%2250%22 width=%2280%22 height=%22350%22 fill=%229CA3AF%22/%3E%3Crect x=%22600%22 y=%22180%22 width=%2280%22 height=%22220%22 fill=%229CA3AF%22/%3E%3Crect x=%22720%22 y=%2290%22 width=%2280%22 height=%22310%22 fill=%229CA3AF%22/%3E%3Crect x=%22840%22 y=%22160%22 width=%2280%22 height=%22240%22 fill=%229CA3AF%22/%3E%3Crect x=%22960%22 y=%22130%22 width=%2280%22 height=%22270%22 fill=%229CA3AF%22/%3E%3Crect x=%221080%22 y=%22200%22 width=%2280%22 height=%22200%22 fill=%229CA3AF%22/%3E%3C/svg%3E');
-background-repeat: no-repeat;
-background-position: center bottom;
-background-size: cover;                    ">
-
-    <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
-
-      <h2 class="smart-cities-heading" style="font-size: 42px; font-weight: 700; margin: 0 0 16px 0; line-height: 1.3;">
+  <section class="relative overflow-hidden bg-slate-900 text-white py-20 md:py-24 px-5 text-center">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
         Building Tomorrow's
-        <span
-          style="display: block; background: linear-gradient(90deg, #38BDF8, #60A5FA); -webkit-background-clip: text; color: transparent; background-clip: text;">
-          Smart Cities
-        </span>
+        <span class="block text-gradient-smart-cities">Smart Cities</span>
       </h2>
-      <p style="font-size: 18px; color: #9ca3af; max-width: 600px; margin: 0 auto 64px auto; line-height: 1.6;">
+      <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
         Legolas integrates seamlessly with urban infrastructure to create intelligent, responsive city systems
       </p>
 
-      <div class="smart-cities-cards-container"
-        style="display: flex; justify-content: center; align-items: flex-start; gap: 32px; flex-wrap: wrap;">
-
-        <div
-          style="flex: 1; min-width: 220px; max-width: 260px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
-          <div
-            style="width: 80px; height: 80px; border-radius: 16px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #2DD4BF, #14B8A6);">
-            <img src="Background5.png" alt="" style=" height: 80px; width: 80px;">
-
+      <div class="flex flex-wrap justify-center items-start gap-8">
+        <div class="flex flex-col items-center gap-4 flex-1 min-w-[220px] max-w-xs">
+          <div class="w-20 h-20 rounded-2xl mb-2 flex items-center justify-center bg-gradient-to-br from-teal-400 to-teal-600">
+            <img src="Background5.png" alt="Traffic icon" class="h-full w-full">
           </div>
-          <h3 style="font-size: 20px; font-weight: 600; margin: 0;">Traffic Management</h3>
-          <p style="color: #9ca3af; margin: 0; font-size: 16px;">Real-time traffic optimization</p>
+          <h3 class="text-xl font-semibold mb-0">Traffic Management</h3>
+          <p class="text-gray-400 m-0 text-base">Real-time traffic optimization</p>
         </div>
-
-        <div
-          style="flex: 1; min-width: 220px; max-width: 260px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
-          <div
-            style="width: 80px; height: 80px; border-radius: 16px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #A78BFA, #8B5CF6);">
-            <img src="Background6.png" alt="" style="height: 80px; width: 80px;">
+        <div class="flex flex-col items-center gap-4 flex-1 min-w-[220px] max-w-xs">
+          <div class="w-20 h-20 rounded-2xl mb-2 flex items-center justify-center bg-gradient-to-br from-purple-400 to-purple-600">
+            <img src="Background6.png" alt="Planning icon" class="h-full w-full">
           </div>
-          <h3 style="font-size: 20px; font-weight: 600; margin: 0;">Infrastructure Planning</h3>
-          <p style="color: #9ca3af; margin: 0; font-size: 16px;">Data-driven city development</p>
+          <h3 class="text-xl font-semibold mb-0">Infrastructure Planning</h3>
+          <p class="text-gray-400 m-0 text-base">Data-driven city development</p>
         </div>
-
-        <div
-          style="flex: 1; min-width: 220px; max-width: 260px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
-          <div
-            style="width: 80px; height: 80px; border-radius: 16px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #F472B6, #EC4899);">
-            <img src="Background7.png" alt="" style="height: 80px; width: 80px;">
+        <div class="flex flex-col items-center gap-4 flex-1 min-w-[220px] max-w-xs">
+          <div class="w-20 h-20 rounded-2xl mb-2 flex items-center justify-center bg-gradient-to-br from-pink-400 to-pink-600">
+            <img src="Background2.png" alt="Emergency icon" class="h-full w-full">
           </div>
-          <h3 style="font-size: 20px; font-weight: 600; margin: 0;">Emergency Response</h3>
-          <p style="color: #9ca3af; margin: 0; font-size: 16px;">Rapid incident detection</p>
+          <h3 class="text-xl font-semibold mb-0">Emergency Response</h3>
+          <p class="text-gray-400 m-0 text-base">Rapid incident detection</p>
         </div>
-
-        <div
-          style="flex: 1; min-width: 220px; max-width: 260px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
-          <div
-            style="width: 80px; height: 80px; border-radius: 16px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #F87171, #EF4444);">
-            <img src="Background8.png" alt="" style="height: 80px; width: 80px;">
+        <div class="flex flex-col items-center gap-4 flex-1 min-w-[220px] max-w-xs">
+          <div class="w-20 h-20 rounded-2xl mb-2 flex items-center justify-center bg-gradient-to-br from-red-400 to-red-600">
+            <img src="Background8.png" alt="Budget icon" class="h-full w-full">
           </div>
-          <h3 style="font-size: 20px; font-weight: 600; margin: 0;">Budget Optimization</h3>
-          <p style="color: #9ca3af; margin: 0; font-size: 16px;">Cost-effective maintenance</p>
+          <h3 class="text-xl font-semibold mb-0">Budget Optimization</h3>
+          <p class="text-gray-400 m-0 text-base">Cost-effective maintenance</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <style>
-    /* Media query for responsive adjustments */
-    @media (max-width: 768px) {
-      .testimonials-section {
-        padding: 80px 20px !important;
-      }
-
-      .testimonials-heading {
-        font-size: 36px !important;
-      }
-    }
-  </style>
-
-  <section class="testimonials-section"
-    style="background-color: #000000; color: #ffffff; padding: 128px 80px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; text-align: center;">
-
-    <div style="max-width: 1200px; margin: 0 auto;">
-
-      <h2 class="testimonials-heading" style="font-size: 42px; font-weight: 700; margin: 0 0 64px 0; line-height: 1.3;">
+  <section class="bg-black text-white py-24 md:py-32 px-5 text-center">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 leading-tight">
         Trusted by
-        <span
-          style="display: block; background: linear-gradient(90deg, #2DD4BF, #38BDF8); -webkit-background-clip: text; color: transparent; background-clip: text;">
-          Infrastructure Leaders
-        </span>
+        <span class="block text-gradient-trusted">Infrastructure Leaders</span>
       </h2>
 
-      <div style="display: flex;  justify-content: center; align-items: stretch; gap: 32px; flex-wrap: wrap;">
-
-        <div
-          style="flex: 1; min-width: 300px; max-width: 360px; background-color: #0F172A; border-radius: 16px; padding: 32px; text-align: left; border: 1px solid rgba(20, 184, 166, 0.3); box-shadow: 0 8px 32px rgba(20, 184, 166, 0.1); display: flex; flex-direction: column; gap: 24px;">
-          <div style="display: flex; align-items: center; gap: 16px;">
-            <img src="John Martinez.png" alt="Profile picture of John Martinez"
-              style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background-color: #334155;">
-            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
-              <h4 style="margin: 0; font-size: 18px; font-weight: 600;">John Martinez</h4>
-              <p style="margin: 0; font-size: 14px; color: #9CA3AF;">City Engineer, Austin</p>
-              <div style="display: flex;  gap: 4px; margin-top: 4px;">
+      <div class="flex flex-wrap justify-center items-stretch gap-8">
+        <div class="flex-1 min-w-[300px] max-w-md bg-slate-900 rounded-2xl p-8 text-left border border-teal-500/30 shadow-teal-light-glow flex flex-col justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <img src="John Martinez.png" alt="Profile picture of John Martinez" class="w-16 h-16 rounded-full object-cover bg-slate-700">
+            <div class="flex flex-col items-start gap-1">
+              <h4 class="m-0 text-lg font-semibold">John Martinez</h4>
+              <p class="m-0 text-sm text-gray-400">City Engineer, Austin</p>
+              <div class="flex gap-1 mt-1">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21" />
                 </svg>
@@ -537,20 +338,15 @@ background-size: cover;                    ">
               </div>
             </div>
           </div>
-          <p style="margin: 0; color: #D1D5DB; line-height: 1.6; font-size: 16px;">"Legolas has revolutionized our road
-            maintenance approach. We've reduced emergency repairs by 60% and our citizens are noticing the difference."
-          </p>
+          <p class="m-0 text-gray-300 leading-relaxed text-base">"Legolas has revolutionized our road maintenance approach. We've reduced emergency repairs by 60% and our citizens are noticing the difference."</p>
         </div>
-
-        <div
-          style="flex: 1; min-width: 300px; max-width: 360px; background-color: #0F172A; border-radius: 16px; padding: 32px; text-align: left; border: 1px solid rgba(20, 184, 166, 0.3); box-shadow: 0 8px 32px rgba(20, 184, 166, 0.1); display: flex; flex-direction: column; gap: 24px;">
-          <div style="display: flex; align-items: center; gap: 16px;">
-            <img src="Screenshot_17-9-2025_183227_chatgpt.com.jpeg" alt="Profile picture of Sarah Chen"
-              style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background-color: #334155;">
-            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
-              <h4 style="margin: 0; font-size: 18px; font-weight: 600;">Sarah Chen</h4>
-              <p style="margin: 0; font-size: 14px; color: #9CA3AF;">Infrastructure Director, Seattle</p>
-              <div style="display: flex; gap: 4px; margin-top: 4px;">
+        <div class="flex-1 min-w-[300px] max-w-md bg-slate-900 rounded-2xl p-8 text-left border border-teal-500/30 shadow-teal-light-glow flex flex-col justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <img src="Screenshot_17-9-2025_183227_chatgpt.com.jpeg" alt="Profile picture of Sarah Chen" class="w-16 h-16 rounded-full object-cover bg-slate-700">
+            <div class="flex flex-col items-start gap-1">
+              <h4 class="m-0 text-lg font-semibold">Sarah Chen</h4>
+              <p class="m-0 text-sm text-gray-400">Infrastructure Director, Seattle</p>
+              <div class="flex gap-1 mt-1">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                 </svg>
@@ -569,20 +365,15 @@ background-size: cover;                    ">
               </div>
             </div>
           </div>
-          <p style="margin: 0; color: #D1D5DB; line-height: 1.6; font-size: 16px;">"The AI accuracy is incredible.
-            Legolas detected critical issues we would have missed, potentially saving lives and millions in
-            infrastructure damage."</p>
+          <p class="m-0 text-gray-300 leading-relaxed text-base">"The AI accuracy is incredible. Legolas detected critical issues we would have missed, potentially saving lives and millions in infrastructure damage."</p>
         </div>
-
-        <div
-          style="flex: 1; min-width: 300px; max-width: 360px; background-color: #0F172A; border-radius: 16px; padding: 32px; text-align: left; border: 1px solid rgba(20, 184, 166, 0.3); box-shadow: 0 8px 32px rgba(20, 184, 166, 0.1); display: flex; flex-direction: column; gap: 24px;">
-          <div style="display: flex; align-items: center; gap: 16px;">
-            <img src="Michael Thompson.png" alt="Profile picture of Michael Thompson"
-              style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background-color: #334155;">
-            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
-              <h4 style="margin: 0; font-size: 18px; font-weight: 600;">Michael Thompson</h4>
-              <p style="margin: 0; font-size: 14px; color: #9CA3AF;">Public Works Manager, Denver</p>
-              <div style="display: flex; gap: 4px; margin-top: 4px;">
+        <div class="flex-1 min-w-[300px] max-w-md bg-slate-900 rounded-2xl p-8 text-left border border-teal-500/30 shadow-teal-light-glow flex flex-col justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <img src="Michael Thompson.png" alt="Profile picture of Michael Thompson" class="w-16 h-16 rounded-full object-cover bg-slate-700">
+            <div class="flex flex-col items-start gap-1">
+              <h4 class="m-0 text-lg font-semibold">Michael Thompson</h4>
+              <p class="m-0 text-sm text-gray-400">Public Works Manager, Denver</p>
+              <div class="flex gap-1 mt-1">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                 </svg>
@@ -601,214 +392,118 @@ background-size: cover;                    ">
               </div>
             </div>
           </div>
-          <p style="margin: 0; color: #D1D5DB; line-height: 1.6; font-size: 16px;">"Implementation was seamless and the
-            ROI was immediate. Our maintenance teams are more efficient and our budget allocation is data-driven."</p>
+          <p class="m-0 text-gray-300 leading-relaxed text-base">"Implementation was seamless and the ROI was immediate. Our maintenance teams are more efficient and our budget allocation is data-driven."</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <style>
-    /* This style block is used for the button's hover effect and for responsive adjustments.
-  */
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px -10px rgba(45, 212, 191, 0.5) !important;
-    }
-
-    @media (max-width: 768px) {
-      .cta-section {
-        padding: 80px 20px !important;
-      }
-
-      .cta-heading {
-        font-size: 36px !important;
-      }
-
-      .cta-subheading {
-        font-size: 16px !important;
-      }
-    }
-  </style>
-
-  <section class="cta-section"
-    style="background-color: #0f172a; background-image: radial-gradient(ellipse at center, rgba(30, 41, 59, 0.7), #0f172a 70%); color: #ffffff; padding: 128px 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; text-align: center;">
-
-    <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
-
-      <h2 class="cta-heading" style="font-size: 48px; font-weight: 700; margin: 0 0 16px 0; line-height: 1.2;">
+  <section class="bg-slate-900 text-white py-24 md:py-32 px-5 text-center">
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
         Build the Future of
-        <span
-          style="display: block; background: linear-gradient(90deg, #2DD4BF, #38BDF8); -webkit-background-clip: text; color: transparent; background-clip: text;">
-          Safer Roads with Legolas
-        </span>
+        <span class="block text-gradient-cta">Safer Roads with Legolas</span>
       </h2>
-
-      <p class="cta-subheading"
-        style="font-size: 18px; color: #9ca3af; max-width: 600px; margin: 0 auto 40px auto; line-height: 1.6;">
+      <p class="text-gray-400 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
         Join the infrastructure revolution. Start monitoring your roads with AI-powered precision today.
       </p>
-
-      <a href="#" class="cta-button"
-        style="display: inline-block; background: linear-gradient(90deg, #2DD4BF, #3B82F6); color: #ffffff; font-size: 18px; font-weight: 700; padding: 16px 48px; border-radius: 18px; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 10px 30px -10px rgba(45, 212, 191, 0.4);">
+      <a href="#" class="inline-block bg-gradient-to-r from-teal-400 to-blue-600 text-white text-lg font-bold px-12 py-4 rounded-3xl no-underline transition-all duration-300 hover:scale-105 hover:shadow-teal-glow">
         Book a Demo
       </a>
-
-      <p style="font-size: 14px; color: #9ca3af; margin-top: 24px;">
+      <p class="text-sm text-gray-400 mt-6">
         No credit card required &bull; 30-day free trial &bull; Setup in minutes
       </p>
-
     </div>
   </section>
-  <style>
-    /* This style block handles responsive adjustments and link hover effects. */
-    .footer-link:hover {
-      color: #ffffff !important;
-      text-decoration: underline !important;
-    }
 
-    .footer-submit-button:hover {
-      background-color: #374151 !important;
-    }
-
-    @media (max-width: 768px) {
-      .footer-grid {
-        flex-direction: column !important;
-        /* Stack columns vertically on mobile */
-        align-items: flex-start !important;
-      }
-
-      .footer-newsletter-form {
-        flex-direction: column !important;
-        /* Stack form elements */
-        align-items: stretch !important;
-      }
-
-      .footer-input,
-      .footer-submit-button {
-        width: 100%;
-      }
-    }
-  </style>
-
-  <footer
-    style="background-color: #000000; color: #E5E7EB; padding: 80px 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-
-      <div style="text-align: center; margin-bottom: 64px;">
-        <h3 style="font-size: 28px; font-weight: 600; margin: 0 0 24px 0;">Subscribe to our newsletter</h3>
-        <form class="footer-newsletter-form"
-          style="display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap;">
-          <div style="position: relative; flex-grow: 1; max-width: 400px;">
-            <div
-              style="position: absolute; top: 50%; left: 16px; transform: translateY(-50%); color: #6B7280; display: flex; align-items: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
+  <footer class="bg-[#0c0c0c] text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Subscribe to our newsletter</h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center max-w-2xl mx-auto">
+                <div class="relative w-full sm:w-3/4 mb-4 sm:mb-0 sm:mr-4">
+                    <input type="email" placeholder="Enter your email address" class="w-full bg-gray-200 text-gray-800 py-4 pl-12 pr-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 placeholder-gray-500">
+                    <img src="images/email-8-svgrepo-com.svg" alt="Email Icon" class="h-6 w-6 absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-500">
+                </div>
+                <button class="w-full sm:w-auto bg-black text-white py-4 px-8 rounded-lg font-bold hover:bg-gray-800 transition-colors">
+                    Get Started
+                </button>
             </div>
-            <input type="email" placeholder="Enter your email address" class="footer-input"
-              style="background-color: #E5E7EB; color: #111827; border: none; border-radius: 8px; padding: 14px 14px 14px 48px; font-size: 16px; width: 100%; box-sizing: border-box;">
-          </div>
-          <button type="submit" class="footer-submit-button"
-            style="background-color: #1F2937; color: #ffffff; border: none; border-radius: 8px; padding: 14px 28px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background-color 0.2s ease;">
-            Get Started
-          </button>
-        </form>
-      </div>
-
-      <div class="footer-grid"
-        style="display: flex; justify-content: space-between; gap: 48px; flex-wrap: wrap; margin-bottom: 64px;">
-
-        <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 24px;">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
-            <img src="codencious logo.png" alt="">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="7 8 3 12 7 16"></polyline>
-              <polyline points="17 8 21 12 17 16"></polyline>
-              <line x1="14" y1="4" x2="10" y2="20"></line>
-            </svg>
-            <div>
-              <h4 style="font-size: 28px; font-weight: 700; margin: 0;">Codenscious</h4>
-              <p style="font-size: 17px; color: #c8cfdb; margin-top: 8px;">The Code Conscious</p>
-            </div>
-          </div>
-          <p style="margin: 0; line-height: 1.6; color: #c8cfdb; font-size: 17px;">IT Park, 28,<br>Indore - Dhar Rd,
-            Sinhasa,<br>Indore, Madhya Pradesh 452009</p>
-          <div style="display: flex; justify-content: start; gap: 80px; align-items: flex-start;">
-            <div>
-              <h5 style="font-size: 17px; font-weight: 600; color: #c8cfdb; margin: 0 0 8px 0;  white-space: nowrap; ">
-                Phone Number</h5>
-              <p style="margin: 0;  white-space: nowrap;">1-800-201-1019</p>
-            </div>
-            <div>
-              <h5 style="font-size: 17px; font-weight: 600; color: #c8cfdb; margin: 0 0 8px 0; margin-left: 40px;">Email
-              </h5>
-              <p style="margin: 0; margin-left: 40px;">support@codenscious.com</p>
-            </div>
-          </div>
         </div>
 
-        <div style="flex: 1; min-width: 150px;">
-          <h5
-            style="font-size: 17px; font-weight: 600; color: #c8cfdb; margin: 0 0 16px 0; text-transform: uppercase; margin-top: 10px; margin-left: 100px;">
-            Quick Links</h5>
-          <ul
-            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;  margin-left: 100px; ">
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">About us</a></li>
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">FAQ</a></li>
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">Contact us</a></li>
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">Blog</a></li>
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">Projects</a></li>
-          </ul>
+        <hr class="border-gray-800 my-16">
+
+        <div class="flex flex-col md:flex-row md:justify-between align-items-center md:items-center mobile-col">
+            <div class="flex flex-col mb-8 md:mb-0 md:flex-row md:items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="codencious logo.png" alt="Codenscious Logo" class="h-20 w-25">
+                    <div class="flex flex-col">
+                        <h2 class="text-2xl font-semibold">Codenscious</h2>
+                        <p class="text-sl">The Code Conscious</p>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-0 md:ml-24">
+                    <p class="max-w-xs">IT Park, 28, Indore - Dhar Rd, Sinhasa, Indore, Madhya Pradesh 452009</p>
+                    <div class="flex flex-col space-y-4 md:flex-row md:space-x-16 md:space-y-0 mt-8">
+                        <div>
+                            <p class="font-bold">Phone Number</p>
+                            <p class="whitespace-nowrap">1-800-201-1019</p>
+                        </div>
+                        <div>
+                            <p class="font-bold">Email</p>
+                            <p>support@codenscious.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:space-x-12 mt-8 md:mt-0 mobile-col">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold underline mb-2">QUICK LINKS</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">About us</a></li>
+                        <li><a href="#" class="hover:underline text-sm">FAQ</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Contact us</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Blog</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold underline mb-2">SOCIAL</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">Facebook</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Instagram</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Twitter</a></li>
+                        <li><a href="#" class="hover:underline text-sm">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold underline mb-2">LEGAL</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline text-sm">Terms of service</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline text-sm">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div style="flex: 1; min-width: 150px;">
-          <h5
-            style="font-size: 14px; font-weight: 600; color: #c8cfdb; margin: 0 0 16px 0; text-transform: uppercase; margin-top: 10px; margin-left: 100px;">
-            Social</h5>
-          <ul
-            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; margin-left: 100px;">
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">Facebook</a></li>
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">Instagram</a></li>
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">Twitter</a></li>
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">LinkedIn</a></li>
-          </ul>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+            <p>&copy; 2025 Codenscious. All rights reserved.</p>
         </div>
-
-        <div style="flex: 1; min-width: 150px;">
-          <h5
-            style="font-size: 14px; font-weight: 600; color: #c8cfdb; margin: 0 0 16px 0; text-transform: uppercase; margin-top: 10px; margin-left: 100px;">
-            Legal</h5>
-          <ul
-            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; margin-left: 100px;">
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">Terms of service</a></li>
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">Privacy Policy</a></li>
-            <li><a href="#" class="footer-link"
-                style="color: #E5E7EB; text-decoration: none; transition: color 0.2s;">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div style="border-top: 1px solid #374151; padding-top: 32px; text-align: center;">
-        <p style="font-size: 14px; color: #c8cfdb; margin: 0;">&copy;2025 Codenscious. All Rights Reserved</p>
-      </div>
-
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuButton = document.getElementById('menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
 
 </body>
 
