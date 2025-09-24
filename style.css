@@ -1242,6 +1242,51 @@ body.navbar-visible #hero {
     align-items: center;
 }
 
+/* Small phones (≤480px) */
+@media (max-width: 480px) {
+    .projects-pin {
+        position: relative;   /* no sticky */
+        height: auto;         /* adjust height to content */
+        padding: 1rem;        /* breathing space */
+        display: block;       /* simpler layout */
+    }
+}
+
+/* Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .projects-pin {
+        position: relative;
+        height: auto;
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Medium Laptops (769px – 1280px) */
+@media (min-width: 769px) and (max-width: 1280px) {
+    .projects-pin {
+        position: sticky;
+        top: 0;
+        height: 90vh;  /* not full height, but close */
+        display: grid;
+        align-items: center;
+    }
+}
+
+/* Large Screens (1281px and above) */
+@media (min-width: 1281px) {
+    .projects-pin {
+        position: sticky;
+        top: 0;
+        height: 100vh; /* fullscreen sticky */
+        display: grid;
+        align-items: center;
+    }
+}
+
+
 #productsBg,
 #projectsBg {
     position: absolute;
@@ -1727,10 +1772,23 @@ body.navbar-visible #hero {
     --transition: 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Default (Desktop First) */
 .projects-seq .cards-track {
+    display: grid;
+    grid-auto-flow: column;
     grid-auto-columns: var(--card-w);
     gap: var(--card-gap);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
 }
+
+
+
+
+
+
+
 
 .projects-seq .product-card {
     height: var(--card-h);
@@ -1746,6 +1804,7 @@ body.navbar-visible #hero {
     --scale: 1;
     transform: translate3d(calc(var(--offset, 0) * 1px), 0, 0) scale(var(--scale));
     transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+    scroll-snap-align: center;
 }
 
 .projects-seq .product-card.is-hovered {
@@ -1761,6 +1820,7 @@ body.navbar-visible #hero {
 .projects-seq .pc-title {
     font-size: 2.25rem;
     color: var(--title-color, #1e3a8a);
+    line-height: 1.2;
 }
 
 .projects-seq .pc-desc {
@@ -1769,6 +1829,7 @@ body.navbar-visible #hero {
     font-size: 1.125rem;
 }
 
+/* Pattern Overlay */
 .projects-seq .product-card::after {
     content: "";
     position: absolute;
@@ -1781,42 +1842,30 @@ body.navbar-visible #hero {
     pointer-events: none;
 }
 
-.projects-seq .product-card:nth-child(1) {
-    --card-bg: #eaf0ff;
-    --title-color: #1e40af;
-    --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='arcs' width='48' height='48' patternUnits='userSpaceOnUse'><circle cx='0' cy='48' r='24' fill='none' stroke='%23b6c6ff' stroke-width='1'/><circle cx='0' cy='48' r='48' fill='none' stroke='%23b6c6ff' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23arcs)'/></svg>");
+/* 🎯 Breakpoints */
+
+/* Extra Small Phones (≤480px) */
+@media (max-width: 480px) {
+    .projects-seq {
+        --card-w: 90vw;
+        --card-h: 400px;
+        --spread-step: 12;
+    }
+
+    .projects-seq .pc-title {
+        font-size: 1.5rem;
+    }
+
+    .projects-seq .pc-desc {
+        font-size: 1rem;
+    }
+
+    .projects-seq .product-card-inner {
+        padding: 1.25rem;
+    }
 }
 
-.projects-seq .product-card:nth-child(2) {
-    --card-bg: #e6fffb;
-    --title-color: #0f766e;
-    --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='waves' width='24' height='16' patternUnits='userSpaceOnUse'><path d='M0 8 Q6 0 12 8 T24 8' fill='none' stroke='%2396f0de' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23waves)'/></svg>");
-}
-
-.projects-seq .product-card:nth-child(3) {
-    --card-bg: #fff6ec;
-    --title-color: #a16207;
-    --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='waves2' width='24' height='16' patternUnits='userSpaceOnUse'><path d='M0 8 Q6 0 12 8 T24 8' fill='none' stroke='%23ffd2ad' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23waves2)'/></svg>");
-}
-
-.projects-seq .product-card:nth-child(4) {
-    --card-bg: #efe9ff;
-    --title-color: #7c3aed;
-    --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='dots' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='8' cy='8' r='2' fill='%238ea0ff' /></pattern></defs><rect width='100%' height='100%' fill='url(%23dots)'/></svg>");
-}
-
-.projects-seq .product-card:nth-child(5) {
-    --card-bg: #eaf4ff;
-    --title-color: #1d4ed8;
-    --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='waves3' width='24' height='16' patternUnits='userSpaceOnUse'><path d='M0 8 Q6 0 12 8 T24 8' fill='none' stroke='%23b7d3ff' stroke-width='1'/></pattern></defs><rect width='100%' height='100%' fill='url(%23waves3)'/></svg>");
-}
-
-.projects-seq .product-card:nth-child(6) {
-    --card-bg: #ecfff5;
-    --title-color: #047857;
-    --pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='180' viewBox='0 0 240 180'><defs><pattern id='dots2' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='8' cy='8' r='2' fill='%2306c194' /></pattern></defs><rect width='100%' height='100%' fill='url(%23dots2)'/></svg>");
-}
-
+/* Small Devices (481px – 768px) */
 @media (max-width: 768px) {
     .projects-seq {
         --card-w: 86vw;
@@ -1828,18 +1877,67 @@ body.navbar-visible #hero {
         font-size: 1.9rem;
     }
 
+    .projects-seq .pc-desc {
+        font-size: 1.05rem;
+    }
+
     .projects-seq .product-card-inner {
         padding: 1.75rem;
     }
 }
 
+/* Tablets (769px – 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .projects-seq {
         --card-w: 360px;
         --card-h: 520px;
         --spread-step: 20;
     }
+
+    .projects-seq .pc-title {
+        font-size: 2rem;
+    }
+
+    .projects-seq .pc-desc {
+        font-size: 1.1rem;
+    }
 }
+
+/* Medium Laptops (1025px – 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .projects-seq {
+        --card-w: 380px;
+        --card-h: 540px;
+        --spread-step: 22;
+    }
+}
+
+/* Large Screens (1281px – 1536px) */
+@media (min-width: 1281px) and (max-width: 1536px) {
+    .projects-seq {
+        --card-w: 420px;
+        --card-h: 560px;
+        --spread-step: 26;
+    }
+}
+
+/* Ultra-wide Screens (1537px+) */
+@media (min-width: 1537px) {
+    .projects-seq {
+        --card-w: 460px;
+        --card-h: 600px;
+        --spread-step: 28;
+    }
+
+    .projects-seq .pc-title {
+        font-size: 2.5rem;
+    }
+
+    .projects-seq .pc-desc {
+        font-size: 1.25rem;
+    }
+}
+
 
 .scale-on-scroll {
     transform: scale(0.8);
@@ -2365,13 +2463,11 @@ body.navbar-visible #hero {
 
 .product-card-container {
     display: flex;
-    overflow-x: auto;
     gap: 1.5rem;
     margin-top: 4rem;
     padding-bottom: 1.5rem;
     scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    overflow-x: scroll;
 }
 
 .product-card-container::-webkit-scrollbar {
@@ -2441,3 +2537,122 @@ body {
         width: 5%;
     }
 }
+
+/* Default: Desktop & Laptop view (current look preserved) */
+.retail-card,
+.retail-card1,
+.retail-card2,
+.retail-card3,
+.retail-card4,
+.retail-card5 {
+    position: relative;
+    overflow: hidden;
+    min-width: 320px; /* ensure consistency */
+    height: auto;
+}
+
+.retail-card .product-card-inner,
+.retail-card1 .product-card-inner,
+.retail-card2 .product-card-inner,
+.retail-card3 .product-card-inner,
+.retail-card4 .product-card-inner,
+.retail-card5 .product-card-inner {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* Mobile & Tablet Responsive (below 1024px) */
+@media (max-width: 1024px) {
+    .cards-track {
+        display: flex;
+        flex-direction: column;  /* vertical stacking */
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    .retail-card,
+    .retail-card1,
+    .retail-card2,
+    .retail-card3,
+    .retail-card4,
+    .retail-card5 {
+        width: 100%;            /* full width */
+        max-width: 100%;        /* prevent horizontal overflow */
+        height: auto;           /* auto adjust height */
+        border-radius: 14px;    /* keep corners smooth */
+    }
+
+    .retail-card::before,
+    .retail-card1::before,
+    .retail-card2::before,
+    .retail-card3::before,
+    .retail-card4::before,
+    .retail-card5::before {
+        background-size: cover;   /* responsive bg */
+        background-position: center;
+    }
+}
+
+/* Default (Desktop/Laptop) - current look same rahega */
+.products-seq .cards-track,
+.projects-seq .cards-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(260px, 380px);
+    gap: 1.25rem;
+    overflow-x: visible;
+    overflow-y: hidden;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 1;
+    width: max-content;
+    margin: 0 auto;
+    scrollbar-width: none;
+}
+
+.products-seq .cards-track::-webkit-scrollbar,
+.projects-seq .cards-track::-webkit-scrollbar {
+    display: none;
+}
+
+.products-seq .cards-track>*,
+.projects-seq .cards-track>* {
+    min-width: 0;
+}
+
+
+/* 📱 Mobile & Tablet Responsive */
+@media (max-width: 1024px) {
+    .products-seq .cards-track,
+    .projects-seq .cards-track {
+        display: flex;
+        flex-direction: column;   /* vertical stack */
+        align-items: center;      /* center cards */
+        width: 100%;              /* full responsive width */
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 1.25rem;
+        padding: 1rem 1rem 2rem 1rem;
+        
+      
+    }
+
+    .products-seq .cards-track>*,
+    .projects-seq .cards-track>* {
+        width: 100%;
+        max-width: 360px;   /* standard card size */
+        height: auto;
+    }
+}
+
+/* 📱 Small mobiles ke liye aur compact */
+@media (max-width: 600px) {
+    .products-seq .cards-track>*,
+    .projects-seq .cards-track>* {
+        max-width: 90%;  
+    }
+}
+
