@@ -5,234 +5,285 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Procqy Hero Section</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background-color: #f8f9fa;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'procqy-purple': '#6D55EA',
+                        'procqy-dark-purple': '#4A37A8',
+                        'procqy-blue': '#0d6efd',
+                        'procqy-light-blue': '#2563EB',
+                        'procqy-bg-light': '#f8f9fa',
+                        'procqy-text-faint': '#EAEAFE',
+                        'gray-dark-text': '#343a40',
+                        'gray-light-text': '#adb5bd',
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'radial-gradient(circle at top left, #6D55EA, #4A37A8)',
+                    },
+                }
+            }
         }
-        
-        .bg-radial-gradient {
-            background-image: radial-gradient(circle at top left, #6D55EA, #4A37A8);
-        }
-    </style>
+    </script>
 </head>
-<body class="bg-[#f8f9fa] antialiased">
-    <div class="bg-radial-gradient text-white overflow-hidden">
-        <header class="sticky top-0 z-1000 flex items-center justify-between p-4 md:p-6 lg:p-4 bg-white shadow-sm border-b border-gray-200 w-full transition-all duration-300">
-            <a href="#" class="text-[#2563EB] text-xl font-bold md:text-2xl">Procqy</a>
+<body class="m-0 font-sans antialiased bg-procqy-bg-light">
 
-            <div class="hidden lg:flex items-center gap-8">
-                <nav class="flex flex-wrap items-center justify-end gap-8">
-                    <a href="#" class="text-[#343a40] font-medium hover:text-blue-600 transition-colors">Features</a>
-                    <a href="#" class="text-[#343a40] font-medium hover:text-blue-600 transition-colors">Solutions</a>
-                    <a href="#" class="text-[#343a40] font-medium hover:text-blue-600 transition-colors">Pricing</a>
-                    <a href="#" class="text-[#343a40] font-medium hover:text-blue-600 transition-colors">About</a>
+    <div class="bg-hero-gradient text-white overflow-hidden">
+
+        <header class="sticky top-0 z-20 flex justify-between items-center px-5 md:px-[5%] py-4 bg-white shadow-md border-b border-gray-200">
+            <a href="#" class="no-underline text-gray-900 font-bold text-2xl font-bold md:text-2xl">Procqy</a>
+
+            <div class="flex items-center gap-4 md:gap-8">
+                <nav class="hidden md:flex flex-wrap justify-end gap-8">
+                    <a href="#" class="no-underline text-gray-dark-text font-medium hover:text-procqy-blue transition-colors">Features</a>
+                    <a href="#" class="no-underline text-gray-dark-text font-medium hover:text-procqy-blue transition-colors">Solutions</a>
+                    <a href="#" class="no-underline text-gray-dark-text font-medium hover:text-procqy-blue transition-colors">Pricing</a>
+                    <a href="#" class="no-underline text-gray-dark-text font-medium hover:text-procqy-blue transition-colors">About</a>
                 </nav>
-                <a href="#" class="bg-[#0d6efd] text-white py-2 px-4 rounded-lg font-medium whitespace-nowrap hover:bg-blue-700 transition-colors">Get Started</a>
-            </div>
 
-            <button id="hamburger" class="lg:hidden text-[#343a40] focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
+                <a href="#" class="hidden md:block bg-procqy-blue text-white px-3.5 py-1.5 rounded-lg no-underline font-medium whitespace-nowrap hover:bg-blue-600 transition-colors">
+                    Get Started
+                </a>
+
+                <button id="menu-toggle" class="md:hidden text-gray-dark-text p-2">
+                    <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
         </header>
 
-        <div id="mobile-menu" class="hidden fixed inset-0 z-[999] bg-white transition-transform duration-300 transform -translate-y-full lg:hidden">
-            <div class="flex flex-col items-center justify-center h-full">
-                <button id="close-menu" class="absolute top-4 right-4 text-[#343a40] focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-                <nav class="flex flex-col items-center justify-center gap-8 text-2xl font-semibold">
-                    <a href="#" class="text-[#343a40] hover:text-blue-600 transition-colors">Features</a>
-                    <a href="#" class="text-[#343a40] hover:text-blue-600 transition-colors">Solutions</a>
-                    <a href="#" class="text-[#343a40] hover:text-blue-600 transition-colors">Pricing</a>
-                    <a href="#" class="text-[#343a40] hover:text-blue-600 transition-colors">About</a>
-                </nav>
-                <a href="#" class="mt-8 bg-[#0d6efd] text-white py-3 px-8 rounded-lg font-medium whitespace-nowrap hover:bg-blue-700 transition-colors text-lg">Get Started</a>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-[65px] left-0 w-full bg-white border-b border-gray-200 z-10 py-4 shadow-xl">
+            <div class="flex flex-col space-y-3 px-5">
+                <a href="#" class="text-gray-dark-text text-base py-2 hover:text-procqy-blue hover:bg-gray-100 rounded-md px-3 transition-colors duration-300">Features</a>
+                <a href="#" class="text-gray-dark-text text-base py-2 hover:text-procqy-blue hover:bg-gray-100 rounded-md px-3 transition-colors duration-300">Solutions</a>
+                <a href="#" class="text-gray-dark-text text-base py-2 hover:text-procqy-blue hover:bg-gray-100 rounded-md px-3 transition-colors duration-300">Pricing</a>
+                <a href="#" class="text-gray-dark-text text-base py-2 hover:text-procqy-blue hover:bg-gray-100 rounded-md px-3 transition-colors duration-300">About</a>
+                <a href="#" class="bg-procqy-blue text-white px-4 py-2 mt-2 rounded-lg no-underline font-medium whitespace-nowrap text-center hover:bg-blue-600 transition-colors">
+                    Get Started
+                </a>
             </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12 px-5 py-16 md:py-24 lg:py-32 min-h-[80vh]">
+        <div class="flex flex-wrap items-center gap-8 md:gap-16 lg:gap-24 px-5 md:px-[5%] py-16 md:py-20 lg:py-24 min-h-[80vh]">
+
             <div class="flex-1 min-w-[320px] text-left">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 md:mb-8">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                     Smart Procurement<br>
-                    <span class="bg-gradient-to-r from-[#BFDBFE] to-[#BFDBFE] text-transparent bg-clip-text">Made Simple</span>
+                    <span class="bg-gradient-to-r from-blue-200 to-transparent bg-clip-text">Made Simple</span>
                 </h1>
-                <p class="text-base sm:text-lg text-[#EAEAFE] max-w-xl leading-relaxed mb-8 md:mb-10">
+                <p class="text-base sm:text-lg text-procqy-text-faint max-w-lg leading-relaxed mb-10">
                     Transform your procurement process with cutting-edge technology. Cut costs by 30%, reduce delays by 50%, and gain complete visibility into your supply chain.
                 </p>
+                  
                 <div class="flex flex-wrap gap-4">
-                    <a href="#" class="bg-white text-[#4A37A8] py-4 px-8 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Start Free Trial</a>
-                    <a href="#" class="bg-transparent text-white py-4 px-8 rounded-lg font-semibold border border-white hover:bg-white hover:text-[#4A37A8] transition-colors">Watch Demo</a>
+                    <a href="#" class="bg-white text-procqy-dark-purple px-8 py-4 rounded-lg no-underline font-semibold border border-transparent hover:bg-gray-100 transition-colors whitespace-nowrap">
+                        Start Free Trial
+                    </a>
+                    <a href="#" class="bg-transparent text-white px-8 py-4 rounded-lg no-underline font-semibold border border-white hover:bg-white/10 transition-colors whitespace-nowrap">
+                        Watch Demo
+                    </a>
                 </div>
             </div>
 
-            <div class="flex-1 min-w-[320px] relative mt-12 lg:mt-0">
-                <img src="images/Container.svg" alt="Two professionals working on laptops in a modern office" class="w-full max-w-2xl h-auto rounded-2xl block mx-auto">
-                <div class="absolute top-[-15px] right-[20px] md:right-5 bg-white text-[#2563EB] p-3 md:p-4 rounded-xl text-center shadow-lg leading-snug">
-                    <b class="text-lg md:text-xl block">30%</b>
+            <div class="flex-1 min-w-[320px] relative mt-10 md:mt-0">
+                <img src="images/Container.svg" alt="Two professionals working on laptops in a modern office" class="w-full max-w-xl lg:max-w-none h-auto rounded-2xl block mx-auto">
+
+                <div class="absolute -top-4 right-5 md:right-10 lg:right-5 bg-white text-procqy-light-blue p-3 sm:p-4 rounded-xl text-sm text-center leading-tight shadow-xl">
+                    <b class="text-xl sm:text-2xl block">30%</b>
                     Cost Reduction
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="bg-white px-5 py-16 md:py-20 lg:py-24 text-center">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-extrabold mt-0 mb-4">
-            Why Choose Procqy?
-        </h2>
-        <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10 md:mb-16">
+    <div class="bg-white py-20 px-5 md:px-[5%] text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Procqy?</h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed">
             Experience the future of procurement with our comprehensive platform designed for modern businesses.
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 p-4">
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-200 text-center flex flex-col items-center">
-                <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-5">
+            
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center transition-all duration-300 hover:shadow-xl hover:border-blue-200">
+                <div class="w-16 h-16 rounded-full bg-blue-100 flex justify-center items-center mx-auto mb-6">
                     <img src="images/Vector.svg" alt="Dollar Icon" class="w-6 h-6" />
                 </div>
-                <h3 class="text-xl md:text-2xl text-gray-900 font-semibold mb-2">Cut Costs</h3>
-                <p class="text-gray-600 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Cut Costs</h3>
+                <p class="text-gray-600 leading-relaxed m-0">
                     Reduce procurement costs by up to 30% through intelligent sourcing, automated negotiations, and real-time market analysis.
                 </p>
             </div>
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-200 text-center flex flex-col items-center">
-                <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center transition-all duration-300 hover:shadow-xl hover:border-green-200">
+                <div class="w-16 h-16 rounded-full bg-green-100 flex justify-center items-center mx-auto mb-6">
                     <img src="images/SVG (1).svg" alt="Lightning Icon" class="w-6 h-6" />
                 </div>
-                <h3 class="text-xl md:text-2xl text-gray-900 font-semibold mb-2">Reduce Delays</h3>
-                <p class="text-gray-600 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Reduce Delays</h3>
+                <p class="text-gray-600 leading-relaxed m-0">
                     Streamline your procurement workflow and eliminate bottlenecks with automated approval chains and real-time tracking.
                 </p>
             </div>
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-200 text-center flex flex-col items-center">
-                <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6">
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center transition-all duration-300 hover:shadow-xl hover:border-purple-200">
+                <div class="w-16 h-16 rounded-full bg-purple-100 flex justify-center items-center mx-auto mb-6">
                     <img src="images/SVG (2).svg" alt="Visibility Icon" class="w-6 h-6" />
                 </div>
-                <h3 class="text-xl md:text-2xl text-gray-900 font-semibold mb-2">Full Visibility</h3>
-                <p class="text-gray-600 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Full Visibility</h3>
+                <p class="text-gray-600 leading-relaxed m-0">
                     Gain complete transparency across your entire procurement process with advanced analytics and real-time reporting.
                 </p>
             </div>
         </div>
     </div>
 
-    <div class="bg-gray-50 px-5 py-16 md:py-20 lg:py-24 text-center">
-        <h2 class="font-inter text-2xl md:text-3xl text-gray-900 font-extrabold mb-4 inline-block">Comprehensive Platform Modules</h2>
-        <p class="text-base md:text-lg text-gray-600 mx-auto mb-16 whitespace-nowrap max-w-3xl">Everything you need to manage your procurement process from start to finish.</p>
-        <div class="flex flex-wrap justify-center gap-8 md:gap-10 text-left">
-            <div class="bg-gray-100 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
-                <div class="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-                    <img src="images/SVG (4).svg" alt="Store Management" class="w-6 h-6" />
+    <div class="bg-procqy-bg-light py-20 px-5 md:px-[5%] text-center">
+        <h2 class="font-sans text-2xl md:text-3xl font-bold text-gray-900 mb-4 inline-block">
+            Comprehensive Platform Modules
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto mb-16 leading-relaxed whitespace-normal">
+            Everything you need to manage your procurement process from start to finish.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto text-left">
+
+            <div class="bg-blue-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-sm md:max-w-none shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-blue-700 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                    <img src="images/SVG (3).svg" alt="Store Management" class="w-6 h-6" />
                 </div>
-                <h3 class="text-xl text-gray-900 font-semibold mb-3">Store Management</h3>
-                <p class="text-gray-600 leading-relaxed">Comprehensive inventory tracking, automated reordering, and intelligent stock optimization.</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Store Management</h3>
+                <p class="text-gray-600 leading-relaxed m-0">Comprehensive inventory tracking, automated reordering, and intelligent stock optimization.</p>
             </div>
-            <div class="bg-green-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
-                <div class="bg-green-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-                    <img src="images/SVG (3).svg" alt="Purchase Office Interface" class="w-6 h-6" />
+
+            <div class="bg-green-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-sm md:max-w-none shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                    <img src="images/SVG (4).svg" alt="Purchase Office Interface" class="w-6 h-6" />
                 </div>
-                <h3 class="text-xl text-gray-900 font-semibold mb-3">Purchase Office Interface</h3>
-                <p class="text-gray-600 leading-relaxed">Streamlined purchase order creation, vendor management, and procurement workflow automation.</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Purchase Office Interface</h3>
+                <p class="text-gray-600 leading-relaxed m-0">Streamlined purchase order creation, vendor management, and procurement workflow automation.</p>
             </div>
-            <div class="bg-purple-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
-                <div class="bg-purple-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-                    <img src="images/SVG (8).svg" alt="Digital Gated Entry" class="w-6 h-6" />
+
+            <div class="bg-purple-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-sm md:max-w-none shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-purple-700 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                    <img src="images/SVG (5).svg" alt="Digital Gated Entry" class="w-6 h-6" />
                 </div>
-                <h3 class="text-xl text-gray-900 font-semibold mb-3">Digital Gated Entry</h3>
-                <p class="text-gray-600 leading-relaxed">Secure digital access control with automated entry logging and visitor management.</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Digital Gated Entry</h3>
+                <p class="text-gray-600 leading-relaxed m-0">Secure digital access control with automated entry logging and visitor management.</p>
             </div>
-            <div class="bg-yellow-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
-                <div class="bg-orange-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+
+            <div class="bg-yellow-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-sm md:max-w-none shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-700 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                     <img src="images/SVG (6).svg" alt="Admin Panel" class="w-6 h-6" />
                 </div>
-                <h3 class="text-xl text-gray-900 font-semibold mb-3">Admin Panel</h3>
-                <p class="text-gray-600 leading-relaxed">Centralized control center for user management, system configuration, and platform oversight.</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Admin Panel</h3>
+                <p class="text-gray-600 leading-relaxed m-0">Centralized control center for user management, system configuration, and platform oversight.</p>
             </div>
-            <div class="bg-indigo-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
-                <div class="bg-indigo-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+
+            <div class="bg-indigo-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-sm md:max-w-none shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-indigo-700 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                     <img src="images/SVG (7).svg" alt="Analytics & Reporting" class="w-6 h-6" />
                 </div>
-                <h3 class="text-xl text-gray-900 font-semibold mb-3">Analytics & Reporting</h3>
-                <p class="text-gray-600 leading-relaxed">Advanced data insights, custom reports, and predictive analytics for informed decision-making.</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Analytics & Reporting</h3>
+                <p class="text-gray-600 leading-relaxed m-0">Advanced data insights, custom reports, and predictive analytics for informed decision-making.</p>
             </div>
-            <div class="bg-cyan-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-[360px] shadow-sm">
-                <div class="bg-cyan-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-                    <img src="images/SVG (5).svg" alt="Approval Chain Management" class="w-6 h-6" />
+
+            <div class="bg-cyan-50 p-8 rounded-2xl flex-1 min-w-[300px] max-w-sm md:max-w-none shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-teal-700 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                    <img src="images/SVG (8).svg" alt="Approval Chain Management" class="w-6 h-6" />
                 </div>
-                <h3 class="text-xl text-gray-900 font-semibold mb-3">Approval Chain Management</h3>
-                <p class="text-gray-600 leading-relaxed">Customizable approval workflows with automated routing and real-time status tracking.</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Approval Chain Management</h3>
+                <p class="text-gray-600 leading-relaxed m-0">Customizable approval workflows with automated routing and real-time status tracking.</p>
             </div>
+
         </div>
     </div>
 
-    <div class="bg-gray-50 px-5 py-16 md:py-20 lg:py-24 text-center">
-        <h2 class="font-inter text-2xl md:text-3xl text-gray-900 font-extrabold mb-3 inline-block">Trusted by Industry Leaders</h2>
-        <p class="text-base md:text-lg text-gray-600 mx-auto mb-16 whitespace-nowrap max-w-3xl">See what our clients say about their Procqy experience.</p>
-        <div class="flex flex-wrap justify-center items-stretch gap-8 text-left">
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex-1 min-w-[300px] max-w-[360px] flex flex-col">
+    <div class="bg-procqy-bg-light py-20 px-5 md:px-[5%] text-center">
+        <h2 class="font-sans text-3xl md:text-4xl font-bold text-gray-900 mb-3 inline-block">
+            Trusted by Industry Leaders
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed whitespace-normal">
+            See what our clients say about their Procqy experience.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto text-left">
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex-1 min-w-[300px] max-w-sm flex flex-col transition-shadow duration-300 hover:shadow-xl">
                 <div class="flex items-center gap-4 mb-6">
-                    <img src="images/Client (1).png" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover">
+                    <img src="images/Client.png" alt="Michael Chen" class="w-[50px] h-[50px] rounded-full object-cover">
                     <div>
-                        <h4 class="m-0 text-lg text-gray-900">Michael Chen</h4>
-                        <p class="m-0 text-sm text-gray-600">Procurement Director, TechCorp</p>
+                        <h4 class="m-0 text-lg font-semibold text-gray-900">Michael Chen</h4>
+                        <p class="m-0 text-gray-600 text-sm">Procurement Director, TechCorp</p>
                     </div>
                 </div>
                 <p class="text-gray-700 leading-relaxed mt-0 mb-6 flex-grow">"Procqy transformed our procurement process completely. We've seen a 35% reduction in costs and our approval times have decreased by 60%. The platform is intuitive and powerful."</p>
-                <div class="text-yellow-500">
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <div class="text-yellow-500 text-xl space-x-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                 </div>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex-1 min-w-[300px] max-w-[360px] flex flex-col">
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex-1 min-w-[300px] max-w-sm flex flex-col transition-shadow duration-300 hover:shadow-xl">
                 <div class="flex items-center gap-4 mb-6">
-                    <img src="images/Gemini_Generated_Image_4ep9dz4ep9dz4ep9.png" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover">
+                    <img src="images/Gemini_Generated_Image_4ep9dz4ep9dz4ep9.png" alt="Sarah Johnson" class="w-[50px] h-[52px] rounded-full object-cover">
                     <div>
-                        <h4 class="m-0 text-lg text-gray-900">Sarah Johnson</h4>
-                        <p class="m-0 text-sm text-gray-600">Supply Chain Manager, GlobalManufacturing</p>
+                        <h4 class="m-0 text-lg font-semibold text-gray-900">Sarah Johnson</h4>
+                        <p class="m-0 text-gray-600 text-sm">Supply Chain Manager, GlobalManufacturing</p>
                     </div>
                 </div>
                 <p class="text-gray-700 leading-relaxed mt-0 mb-6 flex-grow">"The visibility and control Procqy provides is unmatched. We can track every purchase from request to delivery. The analytics have helped us identify significant cost savings opportunities."</p>
-                <div class="text-yellow-500">
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <div class="text-yellow-500 text-xl space-x-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                 </div>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex-1 min-w-[300px] max-w-[360px] flex flex-col">
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex-1 min-w-[300px] max-w-sm flex flex-col transition-shadow duration-300 hover:shadow-xl">
                 <div class="flex items-center gap-4 mb-6">
-                    <img src="images/Client.png" alt="David Rodriguez" class="w-12 h-12 rounded-full object-cover">
+                    <img src="images/Client (1).png" alt="David Rodriguez" class="w-[50px] h-[50px] rounded-full object-cover">
                     <div>
-                        <h4 class="m-0 text-lg text-gray-900">David Rodriguez</h4>
-                        <p class="m-0 text-sm text-gray-600">Operations Director, RetailChain</p>
+                        <h4 class="m-0 text-lg font-semibold text-gray-900">David Rodriguez</h4>
+                        <p class="m-0 text-gray-600 text-sm">Operations Director, RetailChain</p>
                     </div>
                 </div>
                 <p class="text-gray-700 leading-relaxed mt-0 mb-6 flex-grow">"Implementation was seamless and the support team is exceptional. Procqy has streamlined our entire procurement workflow and improved vendor relationships significantly."</p>
-                <div class="text-yellow-500">
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                    <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <div class="text-yellow-500 text-xl space-x-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                 </div>
             </div>
+
         </div>
     </div>
 
-    <div class="bg-blue-600 text-white px-5 py-16 md:py-20 lg:py-24 text-center flex flex-col items-center justify-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to Transform Your Procurement?</h2>
-        <p class="text-base md:text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed mb-10">Join thousands of companies already saving time and money with Procqy. Start your free trial today and experience the future of procurement.</p>
+    <div class="bg-procqy-blue text-white py-20 px-5 md:px-[5%] text-center flex flex-col items-center justify-center">
+
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Procurement?</h2>
+
+        <p class="text-base sm:text-lg text-white/90 max-w-3xl mx-auto mb-10 leading-relaxed">
+            Join thousands of companies already saving time and money with Procqy. Start your free trial today and experience the future of procurement.
+        </p>
+
         <div class="flex flex-wrap justify-center gap-4 mb-6">
-            <a href="#" class="bg-white text-blue-600 py-4 px-8 rounded-lg font-semibold border-2 border-transparent hover:bg-gray-100 transition-colors whitespace-nowrap">Start Free 30-Day Trial</a>
-            <a href="#" class="bg-transparent text-white py-4 px-8 rounded-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-colors whitespace-nowrap">Schedule Demo</a>
+            <a href="#" class="bg-white text-procqy-blue px-8 py-4 rounded-lg no-underline font-semibold border-2 border-transparent whitespace-nowrap hover:bg-gray-100 transition-colors">
+                Start Free 30-Day Trial
+            </a>
+            <a href="#" class="bg-transparent text-white px-8 py-4 rounded-lg no-underline font-semibold border-2 border-white whitespace-nowrap hover:bg-white/10 transition-colors">
+                Schedule Demo
+            </a>
         </div>
-        <p class="text-sm text-blue-200 mt-2">No credit card required &bull; Setup in minutes &bull; 24/7 support</p>
+
+        <p class="text-sm text-white/80 m-0">No credit card required &nbsp;•&nbsp; Setup in minutes &nbsp;•&nbsp; 24/7 support</p>
+
     </div>
 
     <footer class="bg-[#0c0c0c] text-white py-16 px-4 sm:px-6 lg:px-8">
@@ -266,11 +317,11 @@
                     <div class="flex flex-col space-y-4 md:flex-row md:space-x-16 md:space-y-0 mt-8">
                         <div>
                             <p class="font-bold">Phone Number</p>
-                            <p class="whitespace-nowrap">1-800-201-1019</p>
+                            <p class="whitespace-nowrap hover:underline cursor-pointer">1-800-201-1019</p>
                         </div>
                         <div>
                             <p class="font-bold">Email</p>
-                            <p>support@codenscious.com</p>
+                            <p class="whitespace-nowrap hover:underline cursor-pointer">support@codenscious.com</p>
                         </div>
                     </div>
                 </div>
@@ -314,23 +365,22 @@
   </footer>
 
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMenu = document.getElementById('close-menu');
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
 
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            setTimeout(() => {
-                mobileMenu.classList.remove('-translate-y-full');
-            }, 10);
-        });
+            menuToggle.addEventListener('click', () => {
+                // Toggle the 'hidden' class on the mobile menu
+                mobileMenu.classList.toggle('hidden');
 
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.add('-translate-y-full');
-            setTimeout(() => {
-                mobileMenu.classList.add('hidden');
-            }, 300);
+                // Toggle the icons
+                iconOpen.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
+            });
         });
     </script>
+
 </body>
 </html>
