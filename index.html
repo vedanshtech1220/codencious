@@ -136,10 +136,10 @@
             <div class="marquee">
                 <div class="marquee-content">
                     <div
-                        class="bg-black border-t-2 border-b-2 rounded-tl-3xl rounded-tr-3xl border-zinc-700 overflow-hidden whitespace-nowrap">
+                        class="bg-black border-t-2 border-b-2 rounded-tl-3xl rounded-tr-3xl border-zinc-700 overflow-hidden whitespace-nowrap h-5px">
                         <h1
-                            class="heading-font text-[20rem] leading-[1.5] font-light tracking-tight uppercase text-gray-700">
-                            THIS IS NOT AN AGENCY THIS IS NOT AN AGENCY
+                            class="heading-font text-[13rem] leading-[1.5] font-light tracking-tight uppercase text-gray-700">
+                            ARCHITECTING PRODUCT THAT LEAD MARKET ARCHITECTING PRODUCT THAT LEAD MARKET
                         </h1>
                     </div>
                 </div>
@@ -336,7 +336,7 @@
                 </div>
         </section>
 
-        <section id="products" class="scroll-snap-section bg-black">
+        <section id="products" class="scroll-snap-section bg-black hidden md:block">
             <div class="container mx-auto px-6 py-24 md:py-32">
                 <div class="fade-in text-center max-w-4xl mx-auto">
                     <p class="sub-heading" style="padding-left: 0;">Our Products</p>
@@ -510,6 +510,88 @@
                 </style>
             </div>
         </section>
+        <!-- ✅ MOBILE/TABLET: Vertical stacked version -->
+        <section id="products-mobile" class="scroll-snap-section bg-black block md:hidden">
+            <div class="container mx-auto px-6 py-24 md:py-32">
+                <div class="fade-in text-center max-w-4xl mx-auto">
+                    <p class="sub-heading" style="padding-left: 0;">Our Products</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 mt-10">
+                    <!-- Card 1 -->
+                    <a href="Legolas/index.html" style="text-decoration: none; color: inherit;">
+                        <div class="product-card bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900">
+                            <div class="p-8 flex flex-col items-center text-center h-full">
+                                <div
+                                    class="w-20 h-20 mb-4 bg-indigo-900/30 overflow-hidden flex items-center justify-center">
+                                    <img src="images/Legolas.png" alt="Legolas Logo"
+                                        class="w-full h-full object-cover transform scale-80" />
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Legolas</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    Legolas is an AI system that detects and maps road defects in real time for safer,
+                                    smarter maintenance.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 2 -->
+                    <a href="ScratchBox/index.html" style="text-decoration: none; color: inherit;">
+                        <div class="product-card bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900">
+                            <div class="p-8 flex flex-col items-center text-center h-full">
+                                <div
+                                    class="w-20 h-20 mb-4 bg-indigo-900/30 overflow-hidden flex items-center justify-center">
+                                    <img src="images/Scratchbox.png" alt="ScratchBox Logo"
+                                        class="w-full h-full object-cover transform scale-80" />
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">ScratchBox</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    ScratchBox is a smart AI-powered coding platform with instant feedback, secure
+                                    coding, and teaching tools.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 3 -->
+                    <a href="Civa/Civa/index.html" style="text-decoration: none; color: inherit;">
+                        <div class="product-card bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900">
+                            <div class="p-8 flex flex-col items-center text-center h-full">
+                                <div
+                                    class="w-20 h-20 mb-4 bg-indigo-900/30 overflow-hidden flex items-center justify-center">
+                                    <img src="images/Civa.jpg" alt="Civa Logo"
+                                        class="w-full h-full object-cover transform scale-100" />
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Civa</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    CIVA is a smart AI-powered security system that turns any camera into a proactive
+                                    threat detector with real-time alerts.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 4 -->
+                    <a href="Procqy/index.html" style="text-decoration: none; color: inherit;">
+                        <div class="product-card bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900">
+                            <div class="p-8 flex flex-col items-center text-center h-full">
+                                <div
+                                    class="w-20 h-20 mb-4 bg-indigo-900/30 overflow-hidden flex items-center justify-center">
+                                    <img src="images/Procqy.jpg" alt="Procqy Logo"
+                                        class="w-full h-full object-cover transform scale-100" />
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Procqy</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    Procqy is smart procurement software that unifies teams, cuts costs, and drives
+                                    transparent growth decisions.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
         <section id="projects" class="scroll-snap-section bg-black">
             <div class="container mx-auto px-6 py-15 md:py-28">
                 <div class="fade-in text-center max-w-4xl mx-auto">
@@ -568,7 +650,8 @@
                                     </div>
                                 </article>
                             </a>
-                            <a href="smart home/smart home/indexFinal.html" style="text-decoration: none; color: inherit;">
+                            <a href="smart home/smart home/indexFinal.html"
+                                style="text-decoration: none; color: inherit;">
                                 <article class="product-card retail-card3">
                                     <div class="product-card-inner">
                                         <h3 class="pc-title heading-font">Smart Home</h3>
